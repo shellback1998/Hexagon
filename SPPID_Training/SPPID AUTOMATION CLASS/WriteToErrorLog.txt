@@ -1,0 +1,12 @@
+'this function write a line of string to log file
+Private Sub WriteToErrorLog(strMessage As String)
+    Dim intFileNumber As Integer
+
+
+    'write message to error log file
+    intFileNumber = FreeFile()
+    Open Environ("TEMP") & "\SPATraining.log" For Output As #intFileNumber  'or you could just write over it using "for append as
+    Print #intFileNumber, Date & " " & Time & "   " & strMessage
+    Close #intFileNumber
+End Sub
+

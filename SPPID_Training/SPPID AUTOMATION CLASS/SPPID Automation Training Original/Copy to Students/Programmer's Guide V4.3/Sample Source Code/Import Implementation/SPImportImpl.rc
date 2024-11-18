@@ -1,0 +1,69 @@
+//Localization
+STRINGTABLE DISCARDABLE 
+BEGIN
+	20		"MS Sans Serif"
+	21		"8"	//COMMENT: Asian Languages must change point size of font
+END
+
+//SPImportImpl class module
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	102               "File: '"
+	103               "' Not Found."
+	104               "Warning"
+	105               "' does not contain stream number '"
+	106               "'. Continue ?"
+	107               "None of the sheets in workbook '"
+	108               "' were recognized as valid import sheets."
+	109               "SmartPlant Import"
+	110               "Click here to search for a stream data file."
+	111               "Import Log"
+	112               "Close"
+	113               "Stream Number"
+	114               "Select a stream number from the list, or key in a stream number and select OK."
+	115               "&File name:"
+	116               "&Browse..."
+	117               "OK"
+	118               "Cancel"
+	119               "Stream Data File Location"
+	120               "Error --> "
+	121               "Catalog explorer root path has not been set in Project Options."
+	122               "Item: "
+	123               "SmartPlant import log"
+	124               "Date: "
+	125               "Error"
+	126               "Initializing..."
+	127               "Creating stockpile symbol"
+	128               "Creating symbol..."
+	129               "Starting Microsoft Excel"
+	130               "Starting Excel..."
+	131               "Error --> Cannot start Microsoft Excel."
+	132               "Opening workbook..."
+	133               "Opening workbook '"
+	134               "Error --> Cannot open workbook '"
+	135               "Processing sheets..."
+	136               "Starting import of sheet '"
+	137               "Closing Excel workbook"
+	138               "Importing stream data"
+	139               "Importing stream ("
+	140               " of "
+	141               "Initializing stream data import"
+	142               "Importing stream data from file"
+	143               "Importing item (1 of "
+	144               "Creating new item"
+	145               "Error --> Cannot find symbol file '"
+	146               "Updating item properties"
+	147               "Importing item ("
+	148               "Getting data from sheet '"
+	149               "Reading data from Excel..."
+	150               "Updating database"
+	151               "Error --> Invalid file type"
+	152               "Error encountered while setting value for "
+	153               "Error --> Invalid attribute name"
+	154               "Error --> Unable to set value for "
+	155               "&Stream ID:"
+        156               "Import log:"
+
+END
+

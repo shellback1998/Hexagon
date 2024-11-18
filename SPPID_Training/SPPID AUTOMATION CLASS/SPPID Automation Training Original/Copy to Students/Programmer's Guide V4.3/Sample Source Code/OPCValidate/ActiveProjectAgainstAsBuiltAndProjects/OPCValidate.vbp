@@ -1,0 +1,47 @@
+Type=OleDll
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINDOWS\System32\stdole2.tlb#OLE Automation
+Reference=*\G{704DC69E-50F1-4F22-B174-79481F6ADF36}#1.0#0#..\..\..\..\..\bin\LMForeignCalc.dll#Intergraph SmartPlant PID Foreign Calculation Adapter
+Reference=*\G{425D14E8-A0C1-4F4A-9FB8-4D7CA982F144}#2.0#0#..\..\..\..\..\bin\Llama.dll#Intergraph SmartPlant P&ID Logical Model Automation
+Class=SPForeignCalc; SPForeignCalc.cls
+Module=ErrorLogging; ErrorLogging.bas
+ResFile32="OPCValidate.RES"
+Startup="(None)"
+HelpFile=""
+Title="OPCValidate"
+ExeName32="OPCValidate.dll"
+Command32=""
+Name="OPCValidate"
+HelpContextID="0"
+Description="Intergraph SmartPlant OPC Validation"
+CompatibleMode="2"
+CompatibleEXE32="OPCValidate.dll"
+VersionCompatible32="1"
+MajorVer=4
+MinorVer=1
+RevisionVer=100
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="Intergraph Corp"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=-1
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+ThreadingModel=1
+
+[RVB]
+DeleteClass1=SPForeignCalc
+DeleteClass2=Class1
+
+[MS Transaction Server]
+AutoRefresh=1

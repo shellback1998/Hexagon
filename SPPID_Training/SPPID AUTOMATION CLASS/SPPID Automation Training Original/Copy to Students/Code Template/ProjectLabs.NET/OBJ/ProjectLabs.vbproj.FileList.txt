@@ -1,0 +1,11 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.IDisplaySetinf.dll
+obj\Debug\Interop.ISPClientData3.dll
+obj\Debug\Interop.Llama.dll
+obj\Debug\Interop.LMForeignCalc.dll
+obj\Debug\Interop.PIDCacheAccessInfLib.dll
+obj\Debug\Interop.PidObjectManagerInf.dll
+obj\Debug\Interop.Plaice.dll
+obj\Debug\ProjectLabs.vbproj.ResolveComReference.cache
+obj\Debug\ProjectLabs.frmMain.resources
+obj\Debug\ProjectLabs.vbproj.GenerateResource.Cache

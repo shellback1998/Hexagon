@@ -1,0 +1,172 @@
+Private Sub cmdOptLab1_Click()
+    Dim datasource As LMADataSource
+    
+    If Not blnUsePIDDatasource Then
+        Set datasource = New LMADataSource
+    Else
+        Set datasource = PIDDataSource
+    End If
+    
+    Dim objInstr As LMInstrument
+    Set objInstr = datasource.GetInstrument("229A72EF2AE1471083AA16B7B57179F9")
+    
+    Dim strPipeRunItemTag As String
+    strPipeRunItemTag = GetPipeRunTagFromInstr(objInstr, datasource)
+    
+    MsgBox strPipeRunItemTag
+End Sub
+
+
+Private Function GetPipeRunTagFromInstr(objInstr As LMInstrument, datasource As LMADataSource) As String
+    Dim objSymbol As LMSymbol
+    Dim objConnector As LMConnector
+    Dim objConnectedRun As LMPlantItem
+    Dim objConnectToProcessRun As LMConnector
+    Dim objPipeRun As LMPipeRun
+    
+    Set objSymbol = datasource.GetSymbol(objInstr.Representations.Nth(1).ID)
+    
+    For Each objConnector In objSymbol.Connect1Connectors
+        Set objConnectedRun = datasource.GetPlantItem(objConnector.ModelItemID)
+        If objConnectedRun.Attributes("PlantItemType") = "Pipe Run" Then
+            Set objConnectToProcessRun = objConnector
+            Exit For
+        End If
+    Next
+    
+    If objConnectToProcessRun Is Nothing Then
+        For Each objConnector In objSymbol.Connect2Connectors
+            Set objConnectedRun = datasource.GetPlantItem(objConnector.ModelItemID)
+            If objConnectedRun.Attributes("PlantItemType") = "PipeRun" Then
+                Set objConnectToProcessRun = objConnector
+                Exit For
+            End If
+        Next
+    End If
+    
+    If Not objConnectToProcessRun Is Nothing Then
+        If objConnectToProcessRun.ConnectItem1SymbolID <> objSymbol.ID Then
+            Set objPipeRun = datasource.GetPipeRun(objConnectToProcessRun.ConnectItem1SymbolObject.ModelItemID)
+        Else
+            Set objPipeRun = datasource.GetPipeRun(objConnectToProcessRun.ConnectItem2SymbolObject.ModelItemID)
+        End If
+        
+        If Not objPipeRun Is Nothing Then
+            GetPipeRunTagFromInstr = objPipeRun.Attributes("ItemTag").Value
+        End If
+    End If
+End Function
+
+
+Private Sub cmdFind_Click()
+    Dim objPlacement As Placement
+    Dim datasource As LMADataSource
+    Dim objLabelPersist As LMLabelPersist
+    Dim strFileName As String
+    Dim Points(1 To 2) As Double
+    Dim objNewLabel As LMLabelPersist
+    Dim blnDelete As Boolean
+    Dim i As Long
+    Dim colFileNames As Collection
+    Dim objParentRep As LMRepresentation
+    Dim objLabels As LMLabelPersists
+    
+    Set objPlacement = New Placement
+    Set datasource = objPlacement.PIDDataSource
+    
+        Set colFileNames = New Collection
+        colFileNames.Add "\Piping\Labels - Piping Segments\Line Number.sym"
+        
+        Set objLabels = GetLabels(datasource, colFileNames)
+    
+    For Each objLabelPersist In objLabels
+        Debug.Print objLabelPersist.RepresentationObject.ModelItemID
+        Debug.Print objLabelPersist.Attributes("LabelType")
+        'If objLabelPersist.Attributes("LabelType") = "Attribute Break" Then
+            Points(1) = 0
+            Points(2) = 0
+            Points(1) = objLabelPersist.Attributes("XCoordinate")
+            Points(2) = objLabelPersist.Attributes("YCoordinate")
+            strFileName = ""
+            strFileName = objLabelPersist.Attributes("FileName")
+            Set objParentRep = objLabelPersist.RepresentationObject
+            'try to delete the existing label first
+            blnDelete = False
+            blnDelete = objPlacement.PIDRemovePlacement(objLabelPersist.AsLMRepresentation)
+            If blnDelete Then 'after successful delete, then add new label
+                Set objNewLabel = Nothing
+                Set objNewLabel = objPlacement.PIDPlaceLabel(strFileName, Points, labeleditem:=objParentRep)
+                If objNewLabel Is Nothing Then
+                    MsgBox "Failed to place new label!"
+                Else
+                    i = i + 1
+                    Debug.Print objNewLabel.ID
+                End If
+            End If
+        'End If
+    Next
+    cmdExit.SetFocus
+    MsgBox "Done!" & " Total " & i & " out of " & " total " & objLabels.Count & " bad labels have been fixed."
+    Set objNewLabel = Nothing
+    Set objPlacement = Nothing
+    Set datasource = Nothing
+    Set objLabelPersist = Nothing
+    Set objParentRep = Nothing
+
+End Sub
+
+
+Private Function GetLabels(datasource As LMADataSource, colFileNames As Collection) As LMLabelPersists
+    
+'    Set datasource = New LMADataSource
+    
+    Dim i As Long
+    Dim objFilter1 As LMAFilter
+    Dim objFilter2 As LMAFilter
+    Dim objFilter As LMAFilter
+    
+    Set objFilter1 = New LMAFilter
+    Set objFilter2 = New LMAFilter
+    Set objFilter = New LMAFilter
+    
+    objFilter1.ItemType = "LabelPersist"
+    objFilter1.Criteria.AddNew ("FirstOne")
+    objFilter1.Criteria.Item("FirstOne").SourceAttributeName = "Representation.SP_DrawingId"
+    objFilter1.Criteria.Item("FirstOne").ValueAttribute = datasource.PIDMgr.Drawing.ID
+    objFilter1.Criteria.Item("FirstOne").Operator = "="
+    objFilter1.Criteria.AddNew ("SecondOne")
+    objFilter1.Criteria.Item("SecondOne").SourceAttributeName = "ItemStatus"
+    objFilter1.Criteria.Item("SecondOne").ValueAttribute = 1
+    objFilter1.Criteria.Item("SecondOne").Operator = "="
+    objFilter1.Criteria.Item("SecondOne").Conjunctive = True
+    objFilter1.Criteria.AddNew ("ThirdOne")
+    objFilter1.Criteria.Item("ThirdOne").SourceAttributeName = "LabelType"
+    objFilter1.Criteria.Item("ThirdOne").ValueAttribute = 3 '1 for Title Block, 2 for Flow Arow, 3 for Component, 4 for Attribute Break
+    objFilter1.Criteria.Item("ThirdOne").Operator = "="
+    objFilter1.Criteria.Item("ThirdOne").Conjunctive = True
+    
+    objFilter2.ItemType = "LabelPersist"
+    For i = 1 To colFileNames.Count
+        objFilter2.Criteria.AddNew ("New" & i)
+        objFilter2.Criteria.Item("New" & i).SourceAttributeName = "FileName"
+        objFilter2.Criteria.Item("New" & i).ValueAttribute = colFileNames.Item(i)
+        objFilter2.Criteria.Item("New" & i).Operator = "="
+        objFilter2.Criteria.Item("New" & i).Conjunctive = False
+    Next
+    
+    objFilter.ItemType = "LabelPersist"
+    objFilter.FilterType = 1 '1 for compound filter, 0 for simple filter
+    objFilter.ChildLMAFilters.Add objFilter1
+    objFilter.ChildLMAFilters.Add objFilter2
+    objFilter.Conjunctive = True
+    
+    Dim label As LMLabelPersist
+    Dim labels As LMLabelPersists
+    Set labels = New LMLabelPersists
+    labels.Collect datasource, Filter:=objFilter
+    
+    Set objFilter = Nothing
+    Set GetLabels = labels
+    Set labels = Nothing
+
+End Function
