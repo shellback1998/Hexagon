@@ -1,0 +1,888 @@
+﻿<?xml version ="1.0" encoding="UTF-8"?>
+<Container CompSchema="" Scope="ToolSchema" SoftwareVersion="03.08.00.26" SchemaVersion="03.08.00.19 Plus29922" SDECIMAL=".">
+   <SPMapClassDef>
+      <IObject UID="{5601D0A3-109C-4000-B303-EAFBC5F9DC24}" Name="Plant"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <Rel>
+      <IObject UID="{3DCCB339-8984-4FDE-B7EE-055043DB0AFD}"/>
+      <IRel UID1="IPlant" UID2="{5601D0A3-109C-4000-B303-EAFBC5F9DC24}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{F17F6DF4-CB0F-4562-8DA6-1A87330EFC3D}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{6F4124CD-6437-42DC-BFBD-0BDD58F512BA}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{0401B1A0-78C3-4A57-A4D4-1CCEAC3EB4B4}"/>
+      <IRel UID1="{5601D0A3-109C-4000-B303-EAFBC5F9DC24}" UID2="{F17F6DF4-CB0F-4562-8DA6-1A87330EFC3D}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{843B2D05-48D9-4D4D-8D51-95E1529A6BD5}"/>
+      <IRel UID1="{5601D0A3-109C-4000-B303-EAFBC5F9DC24}" UID2="{6F4124CD-6437-42DC-BFBD-0BDD58F512BA}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <SPMapClassDef>
+      <IObject UID="{7C84B0B6-679D-4A37-870A-2C85FA1D0D0E}" Name="Area"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <Rel>
+      <IObject UID="{CCFF2C25-4E2A-49C9-BCB5-BB7F2591346B}"/>
+      <IRel UID1="IFunctionalArea" UID2="{7C84B0B6-679D-4A37-870A-2C85FA1D0D0E}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{1AC14E41-6525-435B-90CE-CAA80FF1FF8C}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{F184A2F8-2DB6-47A4-9529-69B277492E35}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{A60FD59F-D267-442B-8EDF-6AF908FE02CA}"/>
+      <IRel UID1="{7C84B0B6-679D-4A37-870A-2C85FA1D0D0E}" UID2="{1AC14E41-6525-435B-90CE-CAA80FF1FF8C}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{8C7041F4-25C0-48A6-BADE-ECA87F4E6C32}"/>
+      <IRel UID1="{7C84B0B6-679D-4A37-870A-2C85FA1D0D0E}" UID2="{F184A2F8-2DB6-47A4-9529-69B277492E35}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <SPMapClassDef>
+      <IObject UID="{508BA11E-151D-4DB2-BF1A-2461DEB83D16}" Name="Unit"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <SPMapPropertyDef>
+      <IObject UID="{72A0F4D6-316B-4207-A600-4AC938D14A3C}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{B2F02F57-FFFB-41D5-9AD6-6364423AD0F8}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{FD3C951D-F02F-4932-8A8C-67D3F6A7AF7A}"/>
+      <IRel UID1="{508BA11E-151D-4DB2-BF1A-2461DEB83D16}" UID2="{72A0F4D6-316B-4207-A600-4AC938D14A3C}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{AA867948-7F01-4D62-A799-1DEBD10B9887}"/>
+      <IRel UID1="{508BA11E-151D-4DB2-BF1A-2461DEB83D16}" UID2="{B2F02F57-FFFB-41D5-9AD6-6364423AD0F8}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C8951A69-A8D7-47D9-BFF8-2234303EABDD}"/>
+      <IRel UID1="IFunctionalUnit" UID2="{508BA11E-151D-4DB2-BF1A-2461DEB83D16}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{39F9B9AD-DD65-4994-8719-EE0200AFC524}"/>
+      <IRel UID1="Name" UID2="{72A0F4D6-316B-4207-A600-4AC938D14A3C}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{3257100E-494D-46C2-AE39-721BB1D7FE53}"/>
+      <IRel UID1="Description" UID2="{B2F02F57-FFFB-41D5-9AD6-6364423AD0F8}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{EBA80157-21A5-4118-B165-F4B3D48AB9AC}"/>
+      <IRel UID1="Name" UID2="{F17F6DF4-CB0F-4562-8DA6-1A87330EFC3D}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C8EB48E5-56E7-4E91-90CA-F7EE2780874E}"/>
+      <IRel UID1="Description" UID2="{6F4124CD-6437-42DC-BFBD-0BDD58F512BA}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D8E7E07A-09B5-4E69-80CC-85345CB5B4C3}"/>
+      <IRel UID1="Name" UID2="{1AC14E41-6525-435B-90CE-CAA80FF1FF8C}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{6854F650-950E-4871-A53E-21737D46D92D}"/>
+      <IRel UID1="Description" UID2="{F184A2F8-2DB6-47A4-9529-69B277492E35}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <SPMapClassDef>
+      <IObject UID="{A7C624D5-8074-4D0F-BE34-1E9EF6D58694}" Name="Controller"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <Rel>
+      <IObject UID="{E5E06DA0-270B-445C-A835-AA8A3580C434}"/>
+      <IRel UID1="IProcessControllerOcc" UID2="{A7C624D5-8074-4D0F-BE34-1E9EF6D58694}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{82AB080C-53E6-41A8-B7F7-8E370C550091}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{2B0E46B4-83A0-4DEF-95F3-6EE3161F22D8}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{DAB14C58-7071-4117-9C4B-F2CD451964EF}"/>
+      <IRel UID1="{A7C624D5-8074-4D0F-BE34-1E9EF6D58694}" UID2="{82AB080C-53E6-41A8-B7F7-8E370C550091}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B07EDCBE-D8DA-429F-9587-8B7CC7248AE3}"/>
+      <IRel UID1="{A7C624D5-8074-4D0F-BE34-1E9EF6D58694}" UID2="{2B0E46B4-83A0-4DEF-95F3-6EE3161F22D8}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D2933BB3-6F29-49B7-817A-CA11E0A52F6C}"/>
+      <IRel UID1="Name" UID2="{82AB080C-53E6-41A8-B7F7-8E370C550091}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E28EFD19-9AB4-4F6F-AD01-19FEAAF97E53}"/>
+      <IRel UID1="Description" UID2="{2B0E46B4-83A0-4DEF-95F3-6EE3161F22D8}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <SPMapClassDef>
+      <IObject UID="{46C144CB-6340-44F5-906B-4FBAACC765E2}" Name="IOCard"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <Rel>
+      <IObject UID="{F5E7D2A1-6A5A-41AB-B264-3BA81AFF51A3}"/>
+      <IRel UID1="IIOCardOcc" UID2="{46C144CB-6340-44F5-906B-4FBAACC765E2}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{0161BEED-D6D8-4FBD-AC05-4C754B899CEC}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{24859126-4C60-40BA-B5F5-912DEEB850FF}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{BD19C72B-E472-480A-8116-95EB1F2CE8C6}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="{0161BEED-D6D8-4FBD-AC05-4C754B899CEC}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{832A4DDC-019A-43B3-9E3A-D96018625CB7}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="{24859126-4C60-40BA-B5F5-912DEEB850FF}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{F800DC3B-33FE-4F5D-8B81-876EDF6333D0}"/>
+      <IRel UID1="Name" UID2="{0161BEED-D6D8-4FBD-AC05-4C754B899CEC}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C179532E-9C41-4905-841F-D2F7C82C351E}"/>
+      <IRel UID1="Description" UID2="{24859126-4C60-40BA-B5F5-912DEEB850FF}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <SPMapClassDef>
+      <IObject UID="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" Name="Channel"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <Rel>
+      <IObject UID="{125C9BCE-A666-43C0-8B2B-A3DD7BDE5C6B}"/>
+      <IRel UID1="ISignalChannel" UID2="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{6F6CAD5B-79C1-474C-BD95-AD2B1FCA11CE}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{226F2F40-B19F-4B7A-9A75-650882F05EF2}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{5266FC25-2537-421F-BE7F-866724CD07BA}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{6F6CAD5B-79C1-474C-BD95-AD2B1FCA11CE}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B96BA515-AA8C-4828-8D84-B426B7A53A37}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{226F2F40-B19F-4B7A-9A75-650882F05EF2}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B3231998-38B6-48A6-87D8-477678DB2887}"/>
+      <IRel UID1="Name" UID2="{6F6CAD5B-79C1-474C-BD95-AD2B1FCA11CE}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{DA1FDCF8-EAB8-481E-B92A-0CE2E77582B7}"/>
+      <IRel UID1="Description" UID2="{226F2F40-B19F-4B7A-9A75-650882F05EF2}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <SPMapClassDef>
+      <IObject UID="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" Name="IOTag"/>
+      <IMapObject/>
+      <IMapClassDef/>
+   </SPMapClassDef>
+   <Rel>
+      <IObject UID="{48D61327-A1F1-426B-A368-820D571F18F9}"/>
+      <IRel UID1="IControlSysIO" UID2="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" DefUID="ClassToMapClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{14A83EEC-B2D6-4F54-830B-DAC78C00BFCB}" Name="Name"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{39C7EBD1-B9D0-4FCA-BACE-CF029F9AC461}" Name="Description"/>
+      <IMapObject/>
+      <IMapPropDef/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{AB765656-0B01-4E44-81FF-1D8A7F05D83A}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{14A83EEC-B2D6-4F54-830B-DAC78C00BFCB}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B60F2CB0-72DD-4ADA-BA56-D93441415D76}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{39C7EBD1-B9D0-4FCA-BACE-CF029F9AC461}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{74E6CD57-C97D-479B-B32C-83B5C2DBF7CB}"/>
+      <IRel UID1="Name" UID2="{14A83EEC-B2D6-4F54-830B-DAC78C00BFCB}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{17D2FED5-F864-47F8-8E23-B7835AE789E5}"/>
+      <IRel UID1="Description" UID2="{39C7EBD1-B9D0-4FCA-BACE-CF029F9AC461}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{CE32E221-AD18-4CB8-9FB7-D48B37F3F8F6}"/>
+      <IRel UID1="{A7C624D5-8074-4D0F-BE34-1E9EF6D58694}" UID2="CSController" DefUID="MapClassToClass"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{69A16CD7-16D4-4A1A-AE9E-8938AC307A4F}"/>
+      <IRel UID1="{82AB080C-53E6-41A8-B7F7-8E370C550091}" UID2="Name" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSController"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{37F78DA3-1D76-4AAE-B4C3-605AB48B2601}"/>
+      <IRel UID1="{2B0E46B4-83A0-4DEF-95F3-6EE3161F22D8}" UID2="Description" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSController"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{7E0F51A6-830F-4DC3-959A-940EBF4A31CE}" Name="Series"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{C647A3A9-B6C3-443E-AA3F-BCC7938E2B04}" Name="Family"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{2C68AE42-3B3C-4B1B-A69C-DF205CB3E4F6}" Name="Model"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{7970A456-3ACA-4AFE-91D4-BDDB37783FF8}" Name="Slot"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{21684E8C-B245-49D4-A2D3-D9C83945FD62}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="{7E0F51A6-830F-4DC3-959A-940EBF4A31CE}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{46A97538-C603-4D7A-AE13-FFD55AEB3C80}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="{C647A3A9-B6C3-443E-AA3F-BCC7938E2B04}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C1B33D3B-14C5-4304-9EE6-566189645E7F}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="{2C68AE42-3B3C-4B1B-A69C-DF205CB3E4F6}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D6EE8EF8-D092-4B77-908D-A2C565D3E605}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="{7970A456-3ACA-4AFE-91D4-BDDB37783FF8}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{F56788D3-8A50-491D-8869-CA8F1602962A}"/>
+      <IRel UID1="{46C144CB-6340-44F5-906B-4FBAACC765E2}" UID2="CSIOCard" DefUID="MapClassToClass"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{7B051C42-AC58-441A-91CE-5595EA319134}"/>
+      <IRel UID1="{0161BEED-D6D8-4FBD-AC05-4C754B899CEC}" UID2="Name" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSIOCard"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{6CB6BE41-E3AB-4C43-951D-9AFE30DA4411}"/>
+      <IRel UID1="{24859126-4C60-40BA-B5F5-912DEEB850FF}" UID2="Description" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSIOCard"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{72405CBB-E0B7-4173-900D-08E3DEA339C3}"/>
+      <IRel UID1="{2C68AE42-3B3C-4B1B-A69C-DF205CB3E4F6}" UID2="IOCardModuleNumber" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSIOCard"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{8624330A-1245-444E-9777-345AA93E5443}"/>
+      <IRel UID1="{7E0F51A6-830F-4DC3-959A-940EBF4A31CE}" UID2="IOCardSeries" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSIOCard"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{9757776D-EB9C-4124-ABC6-F4EE7EAF0782}"/>
+      <IRel UID1="{7970A456-3ACA-4AFE-91D4-BDDB37783FF8}" UID2="IOCardSlotPosition" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSIOCard"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{2FFE3B0F-1F82-42D6-AC9A-FB20A097DD1E}"/>
+      <IRel UID1="{C647A3A9-B6C3-443E-AA3F-BCC7938E2B04}" UID2="IOCardClass" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSIOCard"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{CE918303-0FAA-4BD5-954E-79C975F4343F}"/>
+      <IRel UID1="IOCardModuleNumber" UID2="{2C68AE42-3B3C-4B1B-A69C-DF205CB3E4F6}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{AF50F561-AFBA-4433-8CAE-C141F23B0099}"/>
+      <IRel UID1="IOCardSeries" UID2="{7E0F51A6-830F-4DC3-959A-940EBF4A31CE}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{41AEDB2D-9FA6-4DEF-B7E6-31AD4761E0FE}"/>
+      <IRel UID1="IOCardSlotPosition" UID2="{7970A456-3ACA-4AFE-91D4-BDDB37783FF8}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C6FCB2F1-D5B6-423B-B960-0098D8553979}"/>
+      <IRel UID1="IOCardClass" UID2="{C647A3A9-B6C3-443E-AA3F-BCC7938E2B04}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{BE183796-9979-4675-90BD-52662C165A73}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="CSSignalChannel" DefUID="MapClassToClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{12720BCC-BE2E-45CA-8E5E-09217B104705}" Name="Address"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{2A4375F3-C716-4924-ADFC-9ECA6E085022}" Name="Position"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{011FA73B-78E1-4999-B8CD-BDE113818159}" Name="Enabled"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{B95FCE53-1C9C-4127-9892-A77DB309AF89}" Name="RangeMin"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{2A03B4E6-B2DC-4106-BC48-08D22E52530B}" Name="RangeMax"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{6AF69F6F-3640-47F5-BA4E-F1544DFCD74D}" Name="RangeUnits"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{DD3A983D-F70B-45F6-8A20-207C897F94BD}" Name="FlowDirection"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{E2EC19E7-86FB-4BF9-91FE-AF6759C02700}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{12720BCC-BE2E-45CA-8E5E-09217B104705}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{8839317B-102D-4540-AFEB-B09B11D281A3}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{2A4375F3-C716-4924-ADFC-9ECA6E085022}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E30206FF-C597-47BC-BD6B-EDAC91F3F1B6}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{011FA73B-78E1-4999-B8CD-BDE113818159}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E861212E-724D-44C7-8BFF-7BE60B7FC6E5}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{B95FCE53-1C9C-4127-9892-A77DB309AF89}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{DD7E1FD1-9D26-4D7D-B94A-76877CE7DE16}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{2A03B4E6-B2DC-4106-BC48-08D22E52530B}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{09D88762-A470-4273-A716-F685FBC9951D}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{6AF69F6F-3640-47F5-BA4E-F1544DFCD74D}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{A11795A3-67EC-48BC-8B96-41B4BDB3D99F}"/>
+      <IRel UID1="{0BA693CE-80B9-490B-AB3E-16C58522E6D2}" UID2="{DD3A983D-F70B-45F6-8A20-207C897F94BD}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{783706D9-9980-4E68-9B6F-49DE26C79A8A}"/>
+      <IRel UID1="{12720BCC-BE2E-45CA-8E5E-09217B104705}" UID2="ChannelAddress" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{4C296481-4CCE-45AB-A57B-8D24EA84A908}"/>
+      <IRel UID1="{226F2F40-B19F-4B7A-9A75-650882F05EF2}" UID2="Description" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C54F3539-69A9-4C18-9212-07C036744174}"/>
+      <IRel UID1="{6F6CAD5B-79C1-474C-BD95-AD2B1FCA11CE}" UID2="Name" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{94DE1D98-BC70-4353-A45A-6AF6762AEC7E}"/>
+      <IRel UID1="{011FA73B-78E1-4999-B8CD-BDE113818159}" UID2="ChannelEnabled" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{FABA2DA4-EFEC-4CB3-8852-25E1535FAF59}"/>
+      <IRel UID1="{2A4375F3-C716-4924-ADFC-9ECA6E085022}" UID2="ChannelPosition" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{1D737EAD-26AF-432A-AE2C-F623A61A7699}"/>
+      <IRel UID1="{2A03B4E6-B2DC-4106-BC48-08D22E52530B}" UID2="ChannelRangeMax" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{0AEFD815-0A02-4B0F-B464-13CE99B710CB}"/>
+      <IRel UID1="{B95FCE53-1C9C-4127-9892-A77DB309AF89}" UID2="ChannelRangeMin" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{88A8F074-6AB3-4F6C-B310-763B03619379}"/>
+      <IRel UID1="{6AF69F6F-3640-47F5-BA4E-F1544DFCD74D}" UID2="ChannelRange_EngineeringUnits" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{A37D51D8-DA03-44E8-A4E6-1DCFD5A2F71C}"/>
+      <IRel UID1="{DD3A983D-F70B-45F6-8A20-207C897F94BD}" UID2="ConnectionFlowDirection" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSSignalChannel"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{5D0E3231-6C71-461F-87CF-A047B4892B65}"/>
+      <IRel UID1="ChannelAddress" UID2="{12720BCC-BE2E-45CA-8E5E-09217B104705}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{37AEDC19-B0EF-4906-8A50-4205A15713F2}"/>
+      <IRel UID1="ChannelEnabled" UID2="{011FA73B-78E1-4999-B8CD-BDE113818159}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{F679B30B-1DE6-41A2-8F60-2B7458E1361B}"/>
+      <IRel UID1="ConnectionFlowDirection" UID2="{DD3A983D-F70B-45F6-8A20-207C897F94BD}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{6B10FE86-BB6D-460F-9E80-D7338363CFD3}"/>
+      <IRel UID1="ChannelPosition" UID2="{2A4375F3-C716-4924-ADFC-9ECA6E085022}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{FD158648-F69E-42C9-BD40-8799C7992E1B}"/>
+      <IRel UID1="ChannelRangeMax" UID2="{2A03B4E6-B2DC-4106-BC48-08D22E52530B}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{184F6A3A-C6A2-4E47-96C0-56812682D796}"/>
+      <IRel UID1="ChannelRangeMin" UID2="{B95FCE53-1C9C-4127-9892-A77DB309AF89}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{742492DB-6EE6-4DAF-AA01-7FE8CF94DBA3}"/>
+      <IRel UID1="ChannelRange_EngineeringUnits" UID2="{6AF69F6F-3640-47F5-BA4E-F1544DFCD74D}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{7E72B8CF-C003-41C2-9F1D-644D741F5DCD}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="CSControlSysIO" DefUID="MapClassToClass"/>
+   </Rel>
+   <SPMapPropertyDef>
+      <IObject UID="{691DF611-1653-469D-852F-556DF1B33409}" Name="FunctionBlockName"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{84876978-CB2D-4560-BAC3-706C4D02B580}" Name="FunctionBlockType"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{BDB10DAC-BCBB-4F46-9E8D-707229B67DD3}" Name="FunctionBlockIOTermination"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{B1AC7914-9CEE-491C-B21F-ABBF93C30372}" Name="ControlStrategyDrawingNumber"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{ABA8E332-07CB-4F60-B27A-442F2A6E4505}" Name="LimitLow"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{9D9DB3D9-954A-42B9-A94E-5951F3FCB0D3}" Name="LimitLowLow"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{4750282C-43A2-4358-BAA9-8E9430909E9E}" Name="LimitLowLowLow"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{61F3F96B-2CE2-463E-9B10-5EB51DA79FB4}" Name="LimitHigh"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{5F0CC6D9-F872-42D7-97D7-84764E3E543F}" Name="LimitHighHigh"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{31D4D4FE-512F-46AF-91A2-BD78350AEC25}" Name="LimitHighHighHigh"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{656F28F9-BA76-4A27-8412-F08A0A11E4B9}" Name="LimitUnits"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{F85870A8-CFC4-4BCA-9098-B01ECD35830D}" Name="LimitPrecision"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{AF8342BC-362B-416A-8765-7D8F26EFBFD6}" Name="AlarmSetPoint"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{CC3424CB-6A70-48AB-9690-9759D98C5BF1}" Name="AlarmPriority"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{D2438736-A288-45B1-BCAC-B2FD73FCEB34}" Name="AlarmDelay"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{965E13B0-E64E-4A25-BF4A-7216FD8A87BD}" Name="ScaleHigh"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{8C24B934-4DD5-4ED0-9294-87F9F793536F}" Name="ScaleLow"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{6AA5992F-0525-41FC-B353-D45F37B228BF}" Name="ScaleUnits"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <SPMapPropertyDef>
+      <IObject UID="{3871333F-8684-4615-A359-1547DB31B90F}" Name="ScalePrecision"/>
+      <IMapObject/>
+      <IMapPropDef MapPropType=""/>
+      <IMapPropertyDef/>
+   </SPMapPropertyDef>
+   <Rel>
+      <IObject UID="{6FE355ED-98BB-4F86-BC7A-21483DC515AA}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{691DF611-1653-469D-852F-556DF1B33409}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{327C4A54-C2EC-4F31-9A23-811D822B1EBE}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{84876978-CB2D-4560-BAC3-706C4D02B580}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{1103FBDD-72A1-4248-8F44-79AD7FDB57C9}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{BDB10DAC-BCBB-4F46-9E8D-707229B67DD3}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{8B9D9F09-E22F-4A2D-86AE-FDBA742BC057}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{B1AC7914-9CEE-491C-B21F-ABBF93C30372}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{938F4D00-7626-40E5-8126-E693E210AEAB}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{ABA8E332-07CB-4F60-B27A-442F2A6E4505}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{1B99F895-9417-4580-ABCD-95F877CC91CE}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{9D9DB3D9-954A-42B9-A94E-5951F3FCB0D3}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{AA2D015B-9B6E-47F6-B77A-8DBE4A343F04}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{4750282C-43A2-4358-BAA9-8E9430909E9E}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{5DA01A8F-3FB3-4DAD-9C3F-17FE704D25A9}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{61F3F96B-2CE2-463E-9B10-5EB51DA79FB4}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{19DE691D-8B98-4613-AF44-4A2D86F38BA0}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{5F0CC6D9-F872-42D7-97D7-84764E3E543F}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{9A34008D-D4E2-4CD3-9D2C-E59ADFA5EC1D}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{31D4D4FE-512F-46AF-91A2-BD78350AEC25}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{7968EE13-67DA-4216-A345-9569CB63EA65}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{656F28F9-BA76-4A27-8412-F08A0A11E4B9}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{F8B1F546-CDF3-4811-9904-FC5E0CBBCBE6}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{F85870A8-CFC4-4BCA-9098-B01ECD35830D}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{CE8D04BD-0B8A-40CF-A065-63CF8783503A}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{AF8342BC-362B-416A-8765-7D8F26EFBFD6}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{CD887DF0-F1F2-4255-8990-6B3E35132957}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{CC3424CB-6A70-48AB-9690-9759D98C5BF1}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{4400EBEE-74E5-4073-9E72-41B8C9C8B6C8}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{D2438736-A288-45B1-BCAC-B2FD73FCEB34}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{A01B7C44-2B51-4875-9D6C-4DDCDBA20FD6}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{965E13B0-E64E-4A25-BF4A-7216FD8A87BD}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{BF4445FF-555F-460B-BD13-AE359A37107E}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{8C24B934-4DD5-4ED0-9294-87F9F793536F}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{992F9E8C-5444-4C92-B0A5-FD01D96A40F4}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{6AA5992F-0525-41FC-B353-D45F37B228BF}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C83537E3-87D8-4E93-81E7-7BDD6AA14ABC}"/>
+      <IRel UID1="{5AAE9690-1B25-4A4A-BFF8-A79F406BCE70}" UID2="{3871333F-8684-4615-A359-1547DB31B90F}" DefUID="MapClassMapProperties"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{2FD0D81D-131C-49A1-8D57-520001611FDB}"/>
+      <IRel UID1="{14A83EEC-B2D6-4F54-830B-DAC78C00BFCB}" UID2="Name" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{ECA84377-DDA3-4CAE-8924-EE08DA0AF391}"/>
+      <IRel UID1="{39C7EBD1-B9D0-4FCA-BACE-CF029F9AC461}" UID2="Description" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{BEC6F943-F665-4A89-84B8-8BC2836294AD}"/>
+      <IRel UID1="{CC3424CB-6A70-48AB-9690-9759D98C5BF1}" UID2="Alarm_Priority" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E3D6E707-CD99-4115-A1B1-3AFE872446A8}"/>
+      <IRel UID1="{D2438736-A288-45B1-BCAC-B2FD73FCEB34}" UID2="Alarm_TimeDelay" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{173A87DB-DB08-4A7D-A559-2E2D03D4C7D5}"/>
+      <IRel UID1="{AF8342BC-362B-416A-8765-7D8F26EFBFD6}" UID2="Alarm_Setpoint" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{3032C62F-DB9D-467C-B40B-A26381062C6E}"/>
+      <IRel UID1="{B1AC7914-9CEE-491C-B21F-ABBF93C30372}" UID2="ControlStrategyDrawingNumber" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{F6864CE4-5CC1-40DD-9C0E-CF4327F03DBF}"/>
+      <IRel UID1="{BDB10DAC-BCBB-4F46-9E8D-707229B67DD3}" UID2="DCSFunctionBlockIOTermination" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B698F338-B9B4-4806-8153-8EE02FFCA75D}"/>
+      <IRel UID1="{691DF611-1653-469D-852F-556DF1B33409}" UID2="DCSFunctionBlockName" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{608E6F62-F7DE-4886-AAF6-99CDC66857B0}"/>
+      <IRel UID1="{84876978-CB2D-4560-BAC3-706C4D02B580}" UID2="DCSFunctionBlockType" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{7CE51892-E707-4E58-B926-60EC76F62157}"/>
+      <IRel UID1="{61F3F96B-2CE2-463E-9B10-5EB51DA79FB4}" UID2="Limit_High" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B55D8615-19A4-476F-9B15-8F1AD9656007}"/>
+      <IRel UID1="{5F0CC6D9-F872-42D7-97D7-84764E3E543F}" UID2="Limit_HighHigh" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{21C16D1F-A3AD-41DF-80C1-4752254740F8}"/>
+      <IRel UID1="{31D4D4FE-512F-46AF-91A2-BD78350AEC25}" UID2="Limit_HighHighHigh" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{7FF810A5-0A68-4850-AF75-2926301CF4B7}"/>
+      <IRel UID1="{ABA8E332-07CB-4F60-B27A-442F2A6E4505}" UID2="Limit_Low" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{8B55A39D-16C6-4EF3-9929-FF7DA130286B}"/>
+      <IRel UID1="{9D9DB3D9-954A-42B9-A94E-5951F3FCB0D3}" UID2="Limit_LowLow" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{439C6E5B-E0E5-47BC-AE7B-901E0D2D151C}"/>
+      <IRel UID1="{4750282C-43A2-4358-BAA9-8E9430909E9E}" UID2="Limit_LowLowLow" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E8D26FEC-021E-4FCE-99F1-A6D1155CAD8E}"/>
+      <IRel UID1="{F85870A8-CFC4-4BCA-9098-B01ECD35830D}" UID2="Limit_DecimalPlaces" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{9645EAD7-C0CE-4919-BDF4-DA31700D97E6}"/>
+      <IRel UID1="{656F28F9-BA76-4A27-8412-F08A0A11E4B9}" UID2="Limit_High_EngineeringUnits" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{22B0AF10-906C-4F45-BDFF-5A010AD4751B}"/>
+      <IRel UID1="{965E13B0-E64E-4A25-BF4A-7216FD8A87BD}" UID2="ProcessScale_HighScale" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{32642407-B231-4045-ADF7-D97C3C2CE543}"/>
+      <IRel UID1="{8C24B934-4DD5-4ED0-9294-87F9F793536F}" UID2="ProcessScale_LowScale" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C687B3BB-8FFD-4A6E-A200-701DA770D26E}"/>
+      <IRel UID1="{3871333F-8684-4615-A359-1547DB31B90F}" UID2="ProcessScale_DecimalPlaces" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{96B6CF9C-45CC-415C-A750-B8522E4C219E}"/>
+      <IRel UID1="{6AA5992F-0525-41FC-B353-D45F37B228BF}" UID2="ProcessScale_EngineeringUnits" DefUID="MapPropertyToProperty"/>
+      <IMapRel End2MapValue="CSControlSysIO"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D8594353-233F-419E-A42D-A2A24358002F}"/>
+      <IRel UID1="Alarm_TimeDelay" UID2="{D2438736-A288-45B1-BCAC-B2FD73FCEB34}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{65472FDB-AD02-4A79-AFBC-F2440A68CB1F}"/>
+      <IRel UID1="Alarm_Priority" UID2="{CC3424CB-6A70-48AB-9690-9759D98C5BF1}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{6E1400E1-01CA-4AC6-9CB2-53BE474B24C6}"/>
+      <IRel UID1="Alarm_Setpoint" UID2="{AF8342BC-362B-416A-8765-7D8F26EFBFD6}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{C938A7EF-517B-482B-B4B6-FB5755353008}"/>
+      <IRel UID1="ControlStrategyDrawingNumber" UID2="{B1AC7914-9CEE-491C-B21F-ABBF93C30372}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D60E3086-96BB-479B-9E27-6CF23306007D}"/>
+      <IRel UID1="DCSFunctionBlockIOTermination" UID2="{BDB10DAC-BCBB-4F46-9E8D-707229B67DD3}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{B397E388-B0AA-46CF-8547-B0D2201A81AB}"/>
+      <IRel UID1="DCSFunctionBlockName" UID2="{691DF611-1653-469D-852F-556DF1B33409}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{90D79DBB-DFD1-4801-9CDB-048592BB54D5}"/>
+      <IRel UID1="DCSFunctionBlockType" UID2="{84876978-CB2D-4560-BAC3-706C4D02B580}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{2064883D-473A-4173-A599-535568EB8FE0}"/>
+      <IRel UID1="Limit_High" UID2="{61F3F96B-2CE2-463E-9B10-5EB51DA79FB4}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{9B83C171-1604-45CD-A309-E2F826D72E74}"/>
+      <IRel UID1="Limit_HighHigh" UID2="{5F0CC6D9-F872-42D7-97D7-84764E3E543F}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{DCAFB9D0-01D4-4FF3-A9D3-4824D57C4592}"/>
+      <IRel UID1="Limit_HighHighHigh" UID2="{31D4D4FE-512F-46AF-91A2-BD78350AEC25}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E5D24D63-5971-4F72-B37D-2F6A5D6CA00C}"/>
+      <IRel UID1="Limit_Low" UID2="{ABA8E332-07CB-4F60-B27A-442F2A6E4505}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{3FBD32AF-94B0-483F-89B6-51ABB7D3A7EE}"/>
+      <IRel UID1="Limit_LowLow" UID2="{9D9DB3D9-954A-42B9-A94E-5951F3FCB0D3}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{DFCAA953-2E73-4E6B-9683-5016B5A7299E}"/>
+      <IRel UID1="Limit_LowLowLow" UID2="{4750282C-43A2-4358-BAA9-8E9430909E9E}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{9B78DBD6-4A4C-4B8A-8C90-D06F2DB1BE03}"/>
+      <IRel UID1="Limit_DecimalPlaces" UID2="{F85870A8-CFC4-4BCA-9098-B01ECD35830D}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D5C9EAD8-519B-45B3-BB86-92F9EABA7E71}"/>
+      <IRel UID1="Limit_High_EngineeringUnits" UID2="{656F28F9-BA76-4A27-8412-F08A0A11E4B9}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{A3EB018E-3A23-4B8E-9E12-99998968561D}"/>
+      <IRel UID1="ProcessScale_HighScale" UID2="{965E13B0-E64E-4A25-BF4A-7216FD8A87BD}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{0B89F3E5-C65F-4731-96F6-757066C8D4EE}"/>
+      <IRel UID1="ProcessScale_LowScale" UID2="{8C24B934-4DD5-4ED0-9294-87F9F793536F}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{4D2A871B-A415-40C7-AC99-E5611A05A89A}"/>
+      <IRel UID1="ProcessScale_DecimalPlaces" UID2="{3871333F-8684-4615-A359-1547DB31B90F}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D89B06E1-91A0-4086-A99A-874C95AB81D8}"/>
+      <IRel UID1="ProcessScale_EngineeringUnits" UID2="{6AA5992F-0525-41FC-B353-D45F37B228BF}" DefUID="PropertyToMapProperty"/>
+   </Rel>
+  </Container>

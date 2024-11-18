@@ -1,0 +1,16 @@
+.\bin\Project1.exe
+.\bin\Project1.pdb
+.\bin\Project1.xml
+.\bin\Interop.CompSchemaCont.dll
+.\bin\Interop.ConstraintIntfcLib.dll
+.\bin\Interop.SchemaCompInterfaces.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.CompSchemaCont.dll
+obj\Debug\Interop.ConstraintIntfcLib.dll
+obj\Debug\Interop.SchemaCompInterfaces.dll
+obj\Debug\Project1.vbproj.ResolveComReference.cache
+obj\Debug\Project1.Form1.resources
+obj\Debug\Project1.vbproj.GenerateResource.Cache
+obj\Debug\Project1.exe
+obj\Debug\Project1.xml
+obj\Debug\Project1.pdb

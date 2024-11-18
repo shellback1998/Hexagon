@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Ex2">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Ex2.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Ex2.suo">
+</Property><Property Name="Date" Value="Monday, May 18, 2009">
+</Property><Property Name="Time" Value="9:20 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Ex2.sln" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Ex2.suo" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2.suo">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2.vbproj" Description="Project file successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2.vbproj">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2.vbproj.user" Description="Project user file successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2.vbproj.user">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="AssemblyInfo.vb" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2F.Designer.vb" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2F.Designer.vb">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2F.vb" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2F.vb">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="_UpgradeReport.htm" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\_UpgradeReport.htm">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2F.resX" Description="File successfully backed up as C:\Documents and Settings\Scott.gaudet\My Documents\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 4 -- Example 2\Backup\Ex2F.resX">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Ex2" Source="Ex2.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Ex2.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Ex2.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Ex2" Source="Ex2.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

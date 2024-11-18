@@ -1,0 +1,370 @@
+﻿<?xml version ="1.0" encoding="UTF-8"?>
+<Container CompSchema="ControlSystemComponent" Scope="Data" SoftwareVersion="03.08.00.26" SchemaVersion="03.08.00.19 Plus29922" SDECIMAL=".">
+   <CSController>
+      <IObject UID="{C89ED51D-E90D-4986-8481-F29D7E299588}" Name="Zeppelin01"/>
+      <IProcessControllerOcc ControllerCardIsRedundant="N"/>
+      <IEquipmentOcc/>
+      <IElectricalEquipmentOcc/>
+      <IPlannedMatl/>
+      <INonDrawingItem/>
+      <IPBSItem ConstructionStatus=""/>
+      <IPartOcc CatalogName="" CatalogPartNumber=""/>
+      <IManufacturedItem Manufacturer=""/>
+      <IElecPowerConsumer AverageActiveLoad="" ConsumedActiveLoad="" ConsumedApparentLoad="" ConsumedReactiveLoad="" ElecDemandFactor="" XCoincidenceFactor="" YCoincidenceFactor="" ZCoincidenceFactor="" ZZCoincidenceFactor="" ParticularActiveLoad="" ParticularApparentLoad="" ParticularPower=""/>
+<IRackSlotOccupant/>
+   </CSController>
+   <Rel>
+      <IObject UID="9E38651A-AFB3-11DB-9160-2BD755D89593"/>
+      <IRel UID1="{C89ED51D-E90D-4986-8481-F29D7E299588}" UID2="N3-FMEMVGOFYVRS-GAMN9ATT" DefUID="PBSItemCollection"/>
+   </Rel>
+   <CSDocument>
+      <IObject UID="{83332DAD-815F-428C-B7AC-A0F3347CA6D6}" Name="Frampton02"/>
+      <ICSDocument/>
+      <IDocument DocCategory="@EE77" DocTitle="" DocType="SPI DCS Configuration"/>
+      <IDocVersionComposition/>
+      <INonDrawingDocument/>
+      <INonDrawingItemCollection/>
+      <IWBSDocument/>
+      <IWBSItem/>
+      <IWBSItemCollection/>
+   </CSDocument>
+   <Rel>
+      <IObject UID="{F1ECD7B9-4030-4035-8803-C740A586ABA4}"/>
+      <IRel UID1="{C89ED51D-E90D-4986-8481-F29D7E299588}" UID2="{83332DAD-815F-428C-B7AC-A0F3347CA6D6}" DefUID="NonDrawingItemCollection"/>
+   </Rel>
+   <CSIOCard>
+      <IObject UID="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" Name="C1"/>
+      <IElectricalContactComposition/>
+      <IRackSlotOccupant/>
+      <ISignalPortComposition/>
+      <IIOCardOcc IOCardIsRedundant="Y" IOCardModuleNumber="CC-TAIX01"/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IManufacturedItem ManufacturerName="Honeywell" ManufacturerModelNumber=""/>
+      <IIOCard IOCardType="CC-PAIH01" IOCardClass="Analog Input" IOCardSeries="Conventional"/>
+   </CSIOCard>
+   <CSIOCard>
+      <IObject UID="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" Name="C2"/>
+      <IElectricalContactComposition/>
+      <IRackSlotOccupant/>
+      <ISignalPortComposition/>
+      <IIOCardOcc IOCardIsRedundant="Y" IOCardModuleNumber="CC-TAIX01"/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IManufacturedItem ManufacturerName="Honeywell"/>
+      <IIOCard IOCardType="CC-PAIH01" IOCardClass="Analog Input" IOCardSeries="Conventional" IOCardSlotPosition=""/>
+   </CSIOCard>
+   <Rel>
+      <IObject UID="{09AA1BC6-1749-4A64-9187-B139E1726D93}"/>
+      <IRel UID1="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" UID2="{C89ED51D-E90D-4986-8481-F29D7E299588}" DefUID="IOCardController"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{8AA74A90-4C7A-4473-8EAA-FD4E4D896214}"/>
+      <IRel UID1="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" UID2="{C89ED51D-E90D-4986-8481-F29D7E299588}" DefUID="IOCardController"/>
+   </Rel>
+   <CSSignalChannel>
+      <IObject UID="{0AEEBE4C-1ACE-4C09-B7E8-FD7D16E29925}" Name="C1-01"/>
+      <ISignalChannel ChannelEnabled="Y" ChannelPosition="1" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalConnection PointMode="SI"/>
+	<ISignalPort/>
+   </CSSignalChannel>
+   <CSSignalChannel>
+      <IObject UID="{7F8BFB02-FAE4-438E-A4B9-FF6E3B552224}" Name="C1-02"/>
+      <ISignalChannel ChannelEnabled="Y" ChannelPosition="2" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalConnection PointMode="SI"/>
+	<ISignalPort/>
+   </CSSignalChannel>
+   <CSSignalChannel>
+      <IObject UID="{EC38CEB7-9A67-4B81-AFAA-C201D02F8B19}" Name="C1-03"/>
+      <ISignalChannel ChannelPosition="3" ChannelEnabled="Y" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalConnection PointMode="SI"/>
+	<ISignalPort/>
+   </CSSignalChannel>
+   <CSSignalChannel>
+      <IObject UID="{28EA0DF4-331F-4C5E-8261-5E4B76ACEFD5}" Name="C1-04"/>
+      <ISignalChannel ChannelPosition="4" ChannelEnabled="Y" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalConnection PointMode="SI"/>
+	<ISignalPort/>
+   </CSSignalChannel>
+   <Rel>
+      <IObject UID="{0BB5578C-89CF-4973-A631-40482067EA62}"/>
+      <IRel UID1="{0AEEBE4C-1ACE-4C09-B7E8-FD7D16E29925}" UID2="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{A87600EA-2DDB-4CF5-B311-0F603ACEABCD}"/>
+      <IRel UID1="{7F8BFB02-FAE4-438E-A4B9-FF6E3B552224}" UID2="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{E52DCDF6-CF4A-45BD-95F5-F2710B5D765E}"/>
+      <IRel UID1="{EC38CEB7-9A67-4B81-AFAA-C201D02F8B19}" UID2="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{D7EDD668-7BAC-409B-8B30-033BA3E77664}"/>
+      <IRel UID1="{28EA0DF4-331F-4C5E-8261-5E4B76ACEFD5}" UID2="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSSignalChannel>
+      <IObject UID="{A0843A23-1643-464C-8B4F-AB6B73E8258E}" Name="C2-01"/>
+      <ISignalChannel ChannelPosition="1" ChannelEnabled="Y" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalPort/>
+      <ISignalConnection PointMode="SI"/>
+   </CSSignalChannel>
+   <Rel>
+      <IObject UID="{887D9DA4-0F37-4D38-A9CF-FD909EB01AB1}"/>
+      <IRel UID1="{A0843A23-1643-464C-8B4F-AB6B73E8258E}" UID2="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSSignalChannel>
+      <IObject UID="{1C4C4AFB-A887-4D7D-A1D8-ACFAAF2D316D}" Name="C2-02"/>
+      <ISignalChannel ChannelPosition="2" ChannelEnabled="Y" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalPort/>
+      <ISignalConnection PointMode="SI"/>
+ 	<ISignalPort/>
+  </CSSignalChannel>
+   <Rel>
+      <IObject UID="{CA79FF86-DDA9-4D0A-8E30-C3A7762C57B1}"/>
+      <IRel UID1="{1C4C4AFB-A887-4D7D-A1D8-ACFAAF2D316D}" UID2="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSSignalChannel>
+      <IObject UID="{F8F4B625-6EA9-4926-B8AC-295C93A1E78D}" Name="C2-03"/>
+      <ISignalChannel ChannelPosition="3" ChannelEnabled="Y" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalPort/>
+      <ISignalConnection PointMode="SI"/>
+	<ISignalPort/>
+   </CSSignalChannel>
+   <Rel>
+      <IObject UID="{AC583A59-4845-47E9-94FF-FBDF6542E981}"/>
+      <IRel UID1="{F8F4B625-6EA9-4926-B8AC-295C93A1E78D}" UID2="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSSignalChannel>
+      <IObject UID="{8AAC924B-29F7-4389-AAA1-C58570A3BFB6}" Name="C2-04"/>
+      <ISignalChannel ChannelPosition="4" ChannelEnabled="Y" ChannelTypeDesc="Unknown" ChannelRangeMin="0.0" ChannelRangeMax="12.0" ChannelRange_EngineeringUnits="V"/>
+      <INonDrawingItem/>
+      <IPlannedFacility/>
+      <ISignalPort/>
+      <ISignalConnection PointMode="SI"/>
+	<ISignalPort/>
+   </CSSignalChannel>
+   <Rel>
+      <IObject UID="{223A25A9-4A91-4CBA-B837-D72A5E84EEF9}"/>
+      <IRel UID1="{8AAC924B-29F7-4389-AAA1-C58570A3BFB6}" UID2="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSControlSysIO>
+      <IObject UID="{56C24E52-9AC8-413C-B527-C5C0BB148B68}" Name="FE-101"/>
+      <IControlSysIO DCSFunctionBlockType="AO" DCSControlAction="Direct" DCSFunctionBlockIOTermination="" ControlStrategyDrawingNumber="Zeppelin01-ABC-123"/>
+      <INamedControlSysIO IOTagPrefix=""/>
+      <IPlannedFacility/>
+      <INonDrawingItem/>
+      <IScaledInstrument ProcessScale_HighScale="12.0" ProcessScale_LowScale="0.0" ProcessScale_EngineeringUnits="V" ProcessScale_DecimalPlaces="1" LinearizationType="Direct"/>
+      <IDCSScaledInstrument DCSTargetRange="5.0" DCSScale_Accuracy="1" DCSScale_EngineeringUnits="V" DCSScale_HighScale="12.0" DCSScale_LowScale="0.0"/>
+      <ILimits_AlarmOrTrip Limit_LowLowLow="10.0" Limit_LowLowLow_EngineeringUnits="m^3/min" Limit_LowLow="15.0" Limit_LowLow_EngineeringUnits="m^3/min" Limit_Low="20.0" Limit_Low_EngineeringUnits="m^3/min" Limit_High="90.0" Limit_High_EngineeringUnits="m^3/min" Limit_HighHigh="95.0" Limit_HighHigh_EngineeringUnits="m^3/min" Limit_HighHighHigh="100.0" Limit_HighHighHigh_EngineeringUnits="m^3/min" Limit_DecimalPlaces="1" Alarm_Setpoint=""/>
+   </CSControlSysIO>
+   <Rel>
+      <IObject UID="{D51FA16F-6ECD-465D-B67E-7E791553E782}"/>
+      <IRel UID1="{56C24E52-9AC8-413C-B527-C5C0BB148B68}" UID2="{0AEEBE4C-1ACE-4C09-B7E8-FD7D16E29925}" DefUID="ControlSysIOSignalChannel"/>
+   </Rel>
+   <CSControlSysIO>
+      <IObject UID="{CF3F0023-74A1-4EA4-B3E7-8DC945A5C8AE}" Name="FT-101"/>
+      <IControlSysIO DCSFunctionBlockType="AO" DCSFunctionBlockIOTermination="" DCSControlAction="Direct" ControlStrategyDrawingNumber="Zeppelin01-ABC-123"/>
+      <INamedControlSysIO/>
+      <IPlannedFacility/>
+      <INonDrawingItem/>
+      <IScaledInstrument ProcessScale_HighScale="12.0" ProcessScale_LowScale="0.0" ProcessScale_EngineeringUnits="V" ProcessScale_DecimalPlaces="1" LinearizationType="Direct"/>
+      <IDCSScaledInstrument DCSScale_HighScale="12.0" DCSScale_LowScale="0.0" DCSScale_EngineeringUnits="V" DCSScale_Accuracy="1" DCSTargetRange="5.0"/>
+      <ILimits_AlarmOrTrip Limit_LowLowLow="10.0" Limit_LowLowLow_EngineeringUnits="m^3/min" Limit_LowLow="15.0" Limit_LowLow_EngineeringUnits="m^3/min" Limit_Low="20.0" Limit_Low_EngineeringUnits="m^3/min" Limit_High="90.0" Limit_High_EngineeringUnits="m^3/min" Limit_HighHigh="95.0" Limit_HighHigh_EngineeringUnits="m^3/min" Limit_HighHighHigh="100.0" Limit_HighHighHigh_EngineeringUnits="m^3/min" Limit_DecimalPlaces="1" Alarm_Setpoint=""/>
+   </CSControlSysIO>
+   <Rel>
+      <IObject UID="{0CF4B04E-A3FA-4530-B0D1-6EEDBEFE786B}"/>
+      <IRel UID1="{CF3F0023-74A1-4EA4-B3E7-8DC945A5C8AE}" UID2="{7F8BFB02-FAE4-438E-A4B9-FF6E3B552224}" DefUID="ControlSysIOSignalChannel"/>
+   </Rel>
+   <CSControlSysIO>
+      <IObject UID="{23DA64E6-47E6-4742-BC41-792AE19DD6F0}" Name="FC-101" Description="Flow on output from Zeppelin01"/>
+      <IControlSysIO DCSFunctionBlockType="AO" DCSFunctionBlockIOTermination="" DCSControlAction="Direct" ControlStrategyDrawingNumber="Zeppelin01-ABC-123"/>
+      <INamedControlSysIO IOTagPrefix=""/>
+      <IPlannedFacility/>
+      <INonDrawingItem/>
+      <IScaledInstrument ProcessScale_HighScale="11.0" ProcessScale_LowScale="1.0" ProcessScale_EngineeringUnits="V" ProcessScale_DecimalPlaces="1" LinearizationType="Direct"/>
+      <IDCSScaledInstrument DCSScale_HighScale="11.0" DCSScale_LowScale="1.0" DCSScale_EngineeringUnits="V" DCSScale_Accuracy="1" DCSTargetRange="5.0"/>
+      <ILimits_AlarmOrTrip Limit_LowLowLow="10.0" Limit_LowLowLow_EngineeringUnits="m^3/min" Limit_LowLow="15.0" Limit_LowLow_EngineeringUnits="m^3/min" Limit_Low="20.0" Limit_Low_EngineeringUnits="m^3/min" Limit_High="90.0" Limit_High_EngineeringUnits="m^3/min" Limit_HighHigh="95.0" Limit_HighHigh_EngineeringUnits="m^3/min" Limit_HighHighHigh="100.0" Limit_HighHighHigh_EngineeringUnits="m^3/min" Limit_DecimalPlaces="1" Alarm_Setpoint=""/>
+   </CSControlSysIO>
+   <Rel>
+      <IObject UID="{3E99F996-E653-488B-8295-3D9BCFC66A5F}"/>
+      <IRel UID1="{23DA64E6-47E6-4742-BC41-792AE19DD6F0}" UID2="{EC38CEB7-9A67-4B81-AFAA-C201D02F8B19}" DefUID="ControlSysIOSignalChannel"/>
+   </Rel>
+   <CSInstrument>
+      <IObject UID="{02B31480-6E92-4378-B14C-2B62E36CC615}" Name="FE-101"/>
+      <IInstrumentOcc/>
+      <IPBSItemCollection/>
+      <INonDrawingItem/>
+      <IPlannedMatl/>
+      <IInstrument InstrumentType3="Flow Element" InstrumentType="FE" ProcFunc="@EE3F3"/>
+      <ISignalConnection SignalType="Type K"/>
+      <IManufacturedItem ManufacturerName="Honeywell" ManufacturerModelNumber=""/>
+      <IScaledInstrument ProcessScale_HighScale="12.0" ProcessScale_LowScale="0.0" ProcessScale_EngineeringUnits="V" ProcessScale_DecimalPlaces="1" LinearizationType="Direct"/>
+      <IDCSScaledInstrument DCSScale_HighScale="12.0" DCSScale_LowScale="0.0" DCSScale_EngineeringUnits="V" DCSScale_Accuracy="1" DCSTargetRange="5.0"/>
+<ISignalPortComposition/>
+   </CSInstrument>
+   <Rel>
+      <IObject UID="{5AEB610C-78F4-4CDA-85F8-BCFFAA2050ED}"/>
+      <IRel UID1="{0AEEBE4C-1ACE-4C09-B7E8-FD7D16E29925}" UID2="{02B31480-6E92-4378-B14C-2B62E36CC615}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSInstrument>
+      <IObject UID="{01D198AE-3376-4E76-93F4-5DF9C4F4BE98}" Name="FT-101"/>
+      <IInstrumentOcc/>
+      <IPBSItemCollection/>
+      <INonDrawingItem/>
+      <IPlannedMatl/>
+      <IInstrument ProcFunc="@EE3F3" InstrumentType3="Flow Transmitter" InstrumentType="FT"/>
+      <IPBSItem ConstructionStatus="@FutureConstruction" ConstructionStatus2="Future"/>
+      <ISignalConnection SignalType="Type E"/>
+      <IManufacturedItem ManufacturerName="Honeywell"/>
+      <IDCSScaledInstrument DCSScale_HighScale="12.0" DCSScale_LowScale="0.0" DCSScale_EngineeringUnits="V" DCSScale_Accuracy="1" DCSTargetRange="5.0"/>
+      <IScaledInstrument ProcessScale_HighScale="12.0" ProcessScale_LowScale="0.0" ProcessScale_EngineeringUnits="V" ProcessScale_DecimalPlaces="1" LinearizationType="Direct"/>
+<ISignalPortComposition/>
+   </CSInstrument>
+   <Rel>
+      <IObject UID="{330B26C1-2347-4D1E-812F-7F3F2700749B}"/>
+      <IRel UID1="{7F8BFB02-FAE4-438E-A4B9-FF6E3B552224}" UID2="{01D198AE-3376-4E76-93F4-5DF9C4F4BE98}" DefUID="SignalPortComposition"/>
+   </Rel>
+   <CSDCSPanel>
+      <IObject UID="{0C2CBEDA-63E3-4C45-90CA-02479BBD2915}" Name="Frampton02"/>
+      <IDCSPanelOcc/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <IElectricalEquipmentOcc/>
+      <IElectricalPanelOcc/>
+      <INonDrawingItem/>
+      <IPBSItemCollection/>
+      <IEquipment EqType0="@{9B816F73-B770-4C72-8A52-7B19B232C7A8}" EqType1="DCS cabinet"/>
+<IRackCollection/>
+   </CSDCSPanel>
+   <CSCabinetRack>
+      <IObject UID="{97F2C2D0-207D-4B13-8FF8-7015AC9D5EFD}" Name="Kiss03"/>
+      <IElectricalCabinetMember/>
+      <IRackSlotComposition/>
+      <IRackOcc/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <INonDrawingItem/>
+      <IPlannedMatl/>
+      <IPBSItemCollection/>
+<IRack/>
+   </CSCabinetRack>
+   <Rel>
+      <IObject UID="{E16F59EA-A27F-4BAD-8164-ADA0ECD2CD35}"/>
+      <IRel UID1="{97F2C2D0-207D-4B13-8FF8-7015AC9D5EFD}" UID2="{0C2CBEDA-63E3-4C45-90CA-02479BBD2915}" DefUID="Racks"/>
+   </Rel>
+   <CSCabinetRack>
+      <IObject UID="{820B0999-5D37-43C8-B32B-85FDC2E4F12A}" Name="Springsteen04"/>
+      <IElectricalCabinetMember/>
+      <IRackSlotComposition/>
+      <IRackOcc/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <INonDrawingItem/>
+      <IPlannedMatl/>
+      <IPBSItemCollection/>
+<IRack/>
+   </CSCabinetRack>
+   <Rel>
+      <IObject UID="{91B94D5A-EA92-4AC1-810A-F11F9504FFD1}"/>
+      <IRel UID1="{820B0999-5D37-43C8-B32B-85FDC2E4F12A}" UID2="{0C2CBEDA-63E3-4C45-90CA-02479BBD2915}" DefUID="Racks"/>
+   </Rel>
+   <CSSlot>
+      <IObject UID="{C8E1D1DC-6FB6-4138-9F3D-D0D613772146}" Name="Slot 1"/>
+      <IRackSlotOcc/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <IRackSlot/>
+   </CSSlot>
+   <Rel>
+      <IObject UID="{6CDBE9AF-71EA-47C6-8A33-C22AEE984197}"/>
+      <IRel UID1="{C8E1D1DC-6FB6-4138-9F3D-D0D613772146}" UID2="{97F2C2D0-207D-4B13-8FF8-7015AC9D5EFD}" DefUID="RackSlots"/>
+   </Rel>
+   <CSSlot>
+      <IObject UID="{101CFBD4-EE17-41EA-ADBF-DB76E73CE664}" Name="Slot 2"/>
+      <IRackSlotOcc/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <IRackSlot/>
+   </CSSlot>
+   <Rel>
+      <IObject UID="{85C45186-F22C-4E78-9464-C944772F5A62}"/>
+      <IRel UID1="{101CFBD4-EE17-41EA-ADBF-DB76E73CE664}" UID2="{97F2C2D0-207D-4B13-8FF8-7015AC9D5EFD}" DefUID="RackSlots"/>
+   </Rel>
+   <CSSlot>
+      <IObject UID="{7E749200-3AC5-44B5-A2CC-E93618B14C30}" Name="Slot 1"/>
+      <IRackSlotOcc/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <IRackSlot/>
+   </CSSlot>
+   <Rel>
+      <IObject UID="{CD0F5152-2714-4E7D-B9A9-77A85A85442E}"/>
+      <IRel UID1="{7E749200-3AC5-44B5-A2CC-E93618B14C30}" UID2="{820B0999-5D37-43C8-B32B-85FDC2E4F12A}" DefUID="RackSlots"/>
+   </Rel>
+   <CSSlot>
+      <IObject UID="{24EC92A6-6DD1-44E6-BB62-B9BF57B8811A}" Name="Slot 2"/>
+      <IRackSlotOcc/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <IRackSlot/>
+   </CSSlot>
+   <Rel>
+      <IObject UID="{B5160152-AA7C-42A5-8579-E9150815AC7F}"/>
+      <IRel UID1="{24EC92A6-6DD1-44E6-BB62-B9BF57B8811A}" UID2="{820B0999-5D37-43C8-B32B-85FDC2E4F12A}" DefUID="RackSlots"/>
+   </Rel>
+   <CSSlot>
+      <IObject UID="{0D794A6B-4732-454F-A3B0-8E0A68D2DBA9}" Name="Slot 3"/>
+      <IRackSlotOcc/>
+      <INonDrawingItem/>
+      <IElectricalEquipmentOcc/>
+      <IEquipmentOcc/>
+      <IPlannedMatl/>
+      <IRackSlot/>
+   </CSSlot>
+   <Rel>
+      <IObject UID="{20F2FBB7-475B-4F83-968A-86593CB2A472}"/>
+      <IRel UID1="{0D794A6B-4732-454F-A3B0-8E0A68D2DBA9}" UID2="{97F2C2D0-207D-4B13-8FF8-7015AC9D5EFD}" DefUID="RackSlots"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{391C6862-24E5-4C35-87F5-77969881D95D}"/>
+      <IRel UID1="{C8E1D1DC-6FB6-4138-9F3D-D0D613772146}" UID2="{C89ED51D-E90D-4986-8481-F29D7E299588}" DefUID="SlotOccupant"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{62C2AC86-BE7F-4ED4-9E73-674CC159D823}"/>
+      <IRel UID1="{101CFBD4-EE17-41EA-ADBF-DB76E73CE664}" UID2="{F7BCEA39-BD70-4E37-8652-42337E86BAB3}" DefUID="SlotOccupant"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{716B7B5E-5BDA-4787-B3AF-67EF8D9CCC65}"/>
+      <IRel UID1="{0D794A6B-4732-454F-A3B0-8E0A68D2DBA9}" UID2="{D38F3E18-9DE7-48C0-9DFD-A070603197BB}" DefUID="SlotOccupant"/>
+   </Rel>
+   <Rel>
+      <IObject UID="{ED8D45E4-E5CB-4723-B986-809B6DE11390}"/>
+      <IRel UID1="{0C2CBEDA-63E3-4C45-90CA-02479BBD2915}" UID2="{83332DAD-815F-428C-B7AC-A0F3347CA6D6}" DefUID="NonDrawingItemCollection"/>
+   </Rel>
+  </Container>

@@ -1,0 +1,16 @@
+.\bin\Ex3.exe
+.\bin\Ex3.pdb
+.\bin\Ex3.xml
+.\bin\Interop.CompSchemaCont.dll
+.\bin\Interop.ConstraintIntfcLib.dll
+.\bin\Interop.SchemaCompInterfaces.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.CompSchemaCont.dll
+obj\Debug\Interop.ConstraintIntfcLib.dll
+obj\Debug\Interop.SchemaCompInterfaces.dll
+obj\Debug\Ex3.vbproj.ResolveComReference.cache
+obj\Debug\Ex3.Ex3F.resources
+obj\Debug\Ex3.vbproj.GenerateResource.Cache
+obj\Debug\Ex3.exe
+obj\Debug\Ex3.xml
+obj\Debug\Ex3.pdb

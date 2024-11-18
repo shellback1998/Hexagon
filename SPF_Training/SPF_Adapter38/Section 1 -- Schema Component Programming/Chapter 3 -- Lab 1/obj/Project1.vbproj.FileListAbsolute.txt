@@ -1,0 +1,3 @@
+C:\Documents and Settings\scott.gaudet\Desktop\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 3 -- Lab 1\obj\Debug\Project1.exe
+C:\Documents and Settings\scott.gaudet\Desktop\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 3 -- Lab 1\obj\Debug\Project1.xml
+C:\Documents and Settings\scott.gaudet\Desktop\SP_Adapter\Section 1 -- Schema Component Programming\Chapter 3 -- Lab 1\obj\Debug\Project1.pdb

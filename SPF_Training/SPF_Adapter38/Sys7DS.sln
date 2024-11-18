@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sys7DSApp", "Sys7DSApp\Sys7DSApp.vbproj", "{990A1C8F-ACBD-4D29-8BC3-79AA98507EAD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sys7DAL", "Sys7DAL\Sys7DAL.vbproj", "{C868D012-FBBE-4BFC-A5E7-B59470A4A536}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sys7Adapter", "Sys7Adapter\Sys7Adapter.vbproj", "{3762F22A-A08C-4303-A994-C743D3FF8B43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{990A1C8F-ACBD-4D29-8BC3-79AA98507EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990A1C8F-ACBD-4D29-8BC3-79AA98507EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990A1C8F-ACBD-4D29-8BC3-79AA98507EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990A1C8F-ACBD-4D29-8BC3-79AA98507EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C868D012-FBBE-4BFC-A5E7-B59470A4A536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C868D012-FBBE-4BFC-A5E7-B59470A4A536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C868D012-FBBE-4BFC-A5E7-B59470A4A536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C868D012-FBBE-4BFC-A5E7-B59470A4A536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3762F22A-A08C-4303-A994-C743D3FF8B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3762F22A-A08C-4303-A994-C743D3FF8B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3762F22A-A08C-4303-A994-C743D3FF8B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3762F22A-A08C-4303-A994-C743D3FF8B43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
