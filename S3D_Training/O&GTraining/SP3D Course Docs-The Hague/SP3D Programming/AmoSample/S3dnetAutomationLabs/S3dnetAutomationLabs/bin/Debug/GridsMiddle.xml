@@ -1,0 +1,2125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GridsMiddle</name>
+    </assembly>
+    <members>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridElevationPlane">
+            <summary>
+            GridElevationPlane Class is derived from GridPlaneBase class. GridElevationPlane 
+            Class will implement some interfaces and expose its own properties and methods 
+            so that they can be modified.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridPlaneBase">
+            <summary>
+            This is the abstract class to be derived by GridElevationPlane, GridPlane, and 
+            GridRadialPlane.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private constructor for the GridPlane base class.
+            </summary>
+            <param name="oBOP">Private business object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.#ctor">
+            <summary>
+            Public constructor for the GridPlane base class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.Finalize">
+            <summary>
+            Destructor for the GridPlane base class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.GetBoundaries(Ingr.SP3D.Common.Middle.BusinessObject@,Ingr.SP3D.Common.Middle.BusinessObject@)">
+            <summary>
+            Returns the boundaries of the given grid plane.
+            </summary>
+            <param name="oBoundary1">Boundary 1.</param>
+            <param name="oBoundary2">Boundary 2.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.GetGridLine(Ingr.SP3D.Grids.Middle.GridPlaneBase)">
+            <summary>
+            Returns a grid line which results from the intersection of the plane and 
+            the given grid plane base. 
+            The combinition could be either ElevationPlane and GridPlane or 
+            ElevationPlane and GridRadialPlane.
+            </summary>
+            <param name="oGridPlaneBase">Grid plane Base.</param>
+            <returns>GridLine object.</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:System.ArgumentNullException">The base plane object is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds a child to the system.
+            </summary>
+            <param name="oChild">System child object.</param>
+             <exception cref="T:System.ArgumentNullException">Argument passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the new orientation of the grid plane base coordinate system.
+            </summary>
+            <param name="oNewXAxis">New X-axis to be set on the coordinate system.</param>
+            <param name="oNewYAxis">New Y-axis to be set on the coordinate system.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the name of an item.  This implementation removes any existing
+            relationship with a name rule, which in most cases is appropriate when giving
+            an object a user-defined name.
+            <para>This method must be overitten by classes for which this is not the appropriate
+            behavior.</para>
+            </summary>
+            <param name="Name">The new name string.</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.AddBoundary(Ingr.SP3D.Common.Middle.ComplexString3d)">
+            <summary>
+            Adds a boundary to the plane.
+            </summary>
+            <param name="iCS">ComplexString3d object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.RemoveBoundary(System.Int32)">
+            <summary>
+            Removes the boundary at specified index.
+            </summary>
+            <param name="i">Integer index.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.RemoveAllBoundaries">
+            <summary>
+            Removes all boundaries on the plane.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.GetBoundary(System.Int32,Ingr.SP3D.Common.Middle.ComplexString3d@)">
+            <summary>
+            Gets the boundary at specified index.
+            </summary>
+            <param name="i">Returns the boundary at index i.</param>
+            <param name="oCS">Output boundary.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.SetBoundary(System.Int32,Ingr.SP3D.Common.Middle.ComplexString3d)">
+            <summary>
+            Sets the boundary at specified index.
+            <para>Note: This method is not adding a boundary, but replacing the boundary which is at index.</para>
+            </summary>
+            <param name="i">Integer index.</param>
+            <param name="iCS">ComplexString3d object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.GetBoundaries(System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.ComplexString3d}@)">
+            <summary>
+            Gets all the boundaries.
+            </summary>
+            <param name="colCS">Collection of ComplexString3d objects.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.SetBoundaries(System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.ComplexString3d})">
+            <summary>
+            Sets the boundaries.
+            This removes any previous boundaries.
+            </summary>
+            <param name="colCS">Collection of ComplexString3d objects.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlaneBase.AddHole(Ingr.SP3D.Common.Middle.ComplexString3d)">
+            <summary>
+            Adds a hole to existing one or more boundaries.
+            </summary>
+            <param name="iCS">ComplexString3d defining a hole.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Axis">
+            <summary>
+            Gets the type of axis to which this plane belongs. 
+            From the axis, the user can retrieve the properties such as AxisType.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.GridLines">
+            <summary>
+            Gets a list of grid lines on this grid plane base.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.NestingLevel">
+            <summary>
+            Gets or sets the nesting level of the grid plane base.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.DistanceFromOrigin">
+            <summary>
+            Gets or sets the position of the grid plane base from the reference plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.SystemChildren">
+            <summary>
+            Implementation of the SystemChildren property by getting a ReadOnlyCollection of ISystemChild objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property.  Uses the
+            system helper of CommonMiddle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Range">
+            <summary>
+            Gets the range of the object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.XAxis">
+            <summary>
+            Gets the X-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.YAxis">
+            <summary>
+            Gets the Y-axis the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.ZAxis">
+            <summary>
+            Gets the Z-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Origin">
+            <summary>
+            Gets or sets the position of the arc.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Matrix">
+            <summary>
+            Gets or sets the grid arc matrix.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule associated with the grid elevation plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Name">
+            <summary>
+            Gets the read-only name.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.OriginOid">
+            <summary>
+            Gets or sets the Oid associated with the object in the application of origin. 
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.OriginAppName">
+            <summary>
+            Gets or sets the name of the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.OriginAppDesc">
+            <summary>
+            Gets or sets the description associated with the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.OriginAppId">
+            <summary>
+            Gets or sets the ID associated with the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.EDIFlag">
+            <summary>
+            Gets or sets the EDI flag; currently for future use.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.RootPoint">
+            <summary>
+            Gets or sets the root point of the plane.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Normal">
+            <summary>
+            Gets or sets the plane normal.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.UDirection">
+            <summary>
+            Gets or sets the plane U-direction.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.VDirection">
+            <summary>
+            Gets the V-direction.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.Reversed">
+            <summary>
+            Gets or sets whether reversed.  Getting reverses the V-direction of the plane.
+            Normally (Reversed = False) the V-direction is determined by normal X U-direction.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlaneBase.BoundaryCount">
+            <summary>
+            Gets the number of boundaries.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for GridElevationPlane
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridElevationPlane.
+            </summary>
+            <param name="oPBO">Private Business Object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.#ctor(System.Double,Ingr.SP3D.Grids.Middle.GridAxis)">
+            <summary>
+            Creates an Elevation Plane at the given position on the given axis, which is the Parent system
+            The Parent System has to an Axis
+            </summary>
+            <param name="Position">Position of the Elevation Plane</param>
+            <param name="oAxis">Axis</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.ElevationPlaneExistsException">Elevation Plane already exists.</exception>
+            <exception cref="T:System.ArgumentNullException">Null Argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidAxisException">Invalid Axis Type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactoryClass Exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper Exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">IsPlaneAtLocation Exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateElevationPlaneException">CreateElevationPlane Exception.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.CreateGridArcs(Ingr.SP3D.Grids.Middle.GridCylinder)">
+            <summary>
+            Create and returns a list of GridArcs for the given cylinder and the elevation plane. 
+            </summary>
+            <param name="oGridCylinder">Grid Cylinder</param>
+            <returns>List of Grid Arcs.</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission Denied.</exception>
+            <exception cref="T:System.ArgumentNullException">Null Argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactoryClass Exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateGridArcsByIntersectionException">CreateGridArcsByIntersection Exception.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.CreateGridLine(Ingr.SP3D.Grids.Middle.GridPlaneBase)">
+            <summary>
+            Creates and returns GridLine for the given plane base and this elevation plane. 
+            </summary>
+            <param name="oPlane">Grid Plane Base</param>
+            <returns>GridLine</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission Denied.</exception>
+            <exception cref="T:System.ArgumentNullException">Null Argument is passed.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.GetReferenceElevationPlane(Ingr.SP3D.Grids.Middle.ReferenceType,Ingr.SP3D.Grids.Middle.NestingLevelType)">
+            <summary>
+            This method returns the reference object based on the reference type and the nesting level. 
+            The reference object will be a GridElevationPlane corresponding to the given 
+            ReferenceType and NestingLevelType.
+            </summary>
+            <param name="eRefType">Reference Type</param>
+            <param name="eNestType">Nesting Level Type</param>
+            <returns>GridElevationPlane</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException">Invalid Reference Type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidNestingException">Invalid Nesting Level Type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoReferenceException">No Reference Object.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetReferenceException">GetReference Exception.</exception>       
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridElevationPlane.GetGridArcsOnCylinder(Ingr.SP3D.Grids.Middle.GridCylinder)">
+            <summary>
+            Returns a read-only collection of GridArcs which are resulting from the intersection of 
+            this elevation plane and the given cylinder.
+            </summary>
+            <param name="oGridCylinder">Grid Cylinder</param>
+            <returns>List of Grid Arcs.</returns>
+            <exception cref="T:System.ArgumentNullException">Null Argument is passed.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridElevationPlane.GridArcs">
+            <summary>
+            Returns a list of GridArcs on this elevation plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper Exception</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.EnumGridLinesFromElevationPlaneException">EnumGridLinesFromElevationPlane Exception</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridElevationPlane.Type">
+            <summary>
+            Sets or returns the Enum type of plane for this elevation plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission Denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">GetProperty Exception</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">SetProperty Exception</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridAxis">
+            <summary>
+            GridAxis class implements certain interfaces and exposes its own properties 
+            and methods so that they can be modified.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for GridAxis
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridAxis.
+            </summary>
+            <param name="oPBO">Private Business Object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.#ctor(Ingr.SP3D.Common.Middle.CoordinateSystem,Ingr.SP3D.Grids.Middle.AxisType)">
+            <summary>
+            Creates a GridAxis object of the requested axis type. The axis object will
+            belong to the coordinate system that is passed as an input argument. The
+            constructor verifies that the axis of the same type is not already present
+            on the given coordinate system.
+            </summary>
+            <param name="oCS">Coordinate system.</param>
+            <param name="eAxisType">Axis type.</param>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidAxisException">Invalid axis type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.AxisExistsException">The axis already exists.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetAxisObjectFromCSException">Get axis object from coordinate system failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.AddPlane(System.Double)">
+            <summary>
+            Creates the plane at the given position by getting the axis type.
+            </summary>
+            <param name="oPosition">Position of the plane.</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Access denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException">Plane already exists at that location.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidPositionException">Position is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">Plane is at location failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.AddPlanes(System.Double,System.Double,System.Double)">
+            <summary>
+            Creates the planes from the specified starting position to the specified end position with 
+            the spacing provided.
+            </summary>
+            <param name="oFrom">Starting point.</param>
+            <param name="oTo">Ending point.</param>
+            <param name="dSpacing">Spacing between two planes.</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Access denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidArgumentException">Invalid argument.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException">Plane already exists at that location.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidPositionException">Position is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">Plane is at location failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds a child to the system.
+            </summary>
+            <param name="oChild">System child object.</param>
+            <exception cref="T:System.ArgumentNullException">Argument passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridAxis.CreatePlane(Ingr.SP3D.Grids.Middle.AxisType,System.Double,System.String)">
+            <summary>
+            /
+            </summary>
+            <param name="eAxisType">Axis Type</param>
+            <param name="oPos">Position</param>
+            <param name="strPlaneName"> Plane Name</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException">Plane already exists at that location</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidPositionException">Position is invalid</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper Exception</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">IsPlaneAtLocation Exception</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.AxisType">
+            <summary>
+            Gets the axis type of the grid axis.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Failed to get the property.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.CoordinateSystem">
+            <summary>
+            Gets the coordinate system associated with this grid axis.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetCSException">Failed to get the coordinate system.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.Unitvector">
+            <summary>
+            Gets the unit vector of this grid axis.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.SystemChildren">
+            <summary>
+            Implementation of the SystemChildren property. Gets a ReadOnlyCollection of ISystemChild obejcts.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property.  Uses the
+            system helper of CommonMiddle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.Range">
+            <summary>
+             Gets the range of the grid axis.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.OriginOid">
+            <summary>
+            Gets or sets the Oid associated with the object in the application of the origin. 
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.OriginAppName">
+            <summary>
+            Gets or sets the name of the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.OriginAppDesc">
+            <summary>
+            Gets or sets the description associated with the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.OriginAppId">
+            <summary>
+            Gets or sets the ID associated with the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridAxis.EDIFlag">
+            <summary>
+            Gets or sets the EDI flag; currently for future use.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.ReferenceType">
+            <summary>
+            Defines the reference plane from which the plane is referenced.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ReferenceType.Origin">
+            <summary>
+            Defines the reference plane from the origin.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ReferenceType.Previous">
+            <summary>
+            Defines the reference plane from the previous plane.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ReferenceType.Next">
+            <summary>
+            Defines the reference plane from the next plane.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ReferenceType.Last">
+            <summary>
+            Defines the reference plane from the last plane.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.NestingLevelType">
+            <summary>
+            List of nesting level enumerated types. Defines the nesting level for the planes.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.NestingLevelType.Primary">
+            <summary>
+            Default nesting level.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.NestingLevelType.Secondary">
+            <summary>
+            Between two adjacent planes, a difference of only one level is allowed. Therefore, secondary planes are only allowed between two primary planes.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.NestingLevelType.Tertiary">
+            <summary>
+            Tertiary planes are only allowed between two secondary planes.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.NestingLevelType.Any">
+            <summary>
+            Any of the nesting level type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.NestingLevelType.Same">
+            <summary>
+            Same nesting level type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.AxisType">
+            <summary>
+            List of axis enumerated types.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.AxisType.X">
+            <summary>
+            X axis type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.AxisType.Y">
+            <summary>
+            Y axis type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.AxisType.Z">
+            <summary>
+            Z axis type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.AxisType.Radial">
+            <summary>
+            Radial axis type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.AxisType.Cylindrical">
+            <summary>
+            Cylindrical axis type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.ArcQuadrant">
+            <summary>
+             List of arc enumerated quadrant types.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ArcQuadrant.Quadrant1">
+            <summary>
+            Quadrant 1 – Represents PostiveXAndPositiveY.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ArcQuadrant.Quadrant2">
+            <summary>
+            Quadrant 2 – Represents PostiveXAndNegativeY.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ArcQuadrant.Quadrant3">
+            <summary>
+            Quadrant 3 – Represents NegativeXAndNegativeY.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ArcQuadrant.Quadrant4">
+            <summary>
+            Quadrant 4 – Represents NegativeXAndPostiveY.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridPlaneType">
+            <summary>
+            List of grid plane enumerated types. These are codelisted values defined in the metadata.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.GridPlaneType.Undefined">
+            <summary>
+            Undefined grid plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.GridPlaneType.ColumnNS">
+            <summary>
+            N-S grid plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.GridPlaneType.ColumnEW">
+            <summary>
+            E-W grid plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.GridPlaneType.Expansion">
+            <summary>
+            Expansion joint grid plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.GridPlaneType.CenterLine">
+            <summary>
+            Center line grid plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.GridPlaneType.MidShip">
+            <summary>
+            Midship grid plane type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.ElevationPlaneType">
+            <summary>
+            List of elevation plane enumerated types. These are codelisted values defined in the metadata.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.Undefined">
+            <summary>
+            Undefined elevation plane type. 
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.TOS">
+            <summary>
+            Top of steel elevation plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.TOC">
+            <summary>
+            Top of concrete elevation plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.BOBP">
+            <summary>
+            Bottom of baseplate elevation plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.BOC">
+            <summary>
+            Bottom of concrete elevation plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.Splice">
+            <summary>
+            Column splice elevation plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.Grade">
+            <summary>
+            Grade elevation plane type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.ElevationPlaneType.WaterLine">
+            <summary>
+            Waterline elevation plane type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridsErrorConstants">
+            <summary>
+            List of error constants used by the Grids application.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridsHelper">
+            <summary>
+            This class provides common functionality that is used to implement the IEDIData interface methods.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridsHelper.GetStringProperty(Ingr.SP3D.Common.Middle.BusinessObject,System.String,System.String)">
+            <summary>
+            Gets a string property for the given business object using generic property access.
+            </summary>
+            <param name="oBusinessObject"> Business object.</param>
+            <param name="strIntName"> Interface name.</param>
+            <param name="strPropName"> Property name on the interface.</param>
+            <returns> The string property value.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridsHelper.GetLongProperty(Ingr.SP3D.Common.Middle.BusinessObject,System.String,System.String)">
+            <summary>
+            Gets a long property for the given business object using generic property access.
+            </summary>
+            <param name="oBusinessObject"> Business object implementing IJStructEDIData.</param>
+            <param name="strIntName"> Interface name.</param>
+            <param name="strPropName"> Property name on the interface.</param>
+            <returns> The long property value.</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridPlane">
+            <summary>
+            GridPlane class is derived from GridPlaneBase class. GridPlane class implements 
+            certain interfaces and exposes its own properties and methods so that 
+            they can be modified.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlane.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for GridPlane
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlane.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridPlane.
+            </summary>
+            <param name="oPBO">Private Business Object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlane.#ctor(System.Double,Ingr.SP3D.Grids.Middle.GridAxis)">
+            <summary>
+            Creates a GridPlane object at the give position on the given axis type, which can be obtained from the parent system.
+            The parent system must be the axis.
+            </summary>
+            <param name="Position">Position of the grid plane.</param>
+            <param name="oAxis">Axis of the grid plane.</param>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException">Grid plane already exists.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidAxisException">Invalid axis.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactory class failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">Plane at the location failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateGridPlaneException">Creating a grid plane failed.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlane.CreateGridLine(Ingr.SP3D.Grids.Middle.GridElevationPlane)">
+            <summary>
+            Creates and returns a grid line for the given elevation plane and this grid plane. 
+            </summary>
+            <param name="oElevPlane">Elevation plane.</param>
+            <returns>GridLine</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactory class failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateGridLineByIntersectionException">Creating a grid line by intersection failed.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridPlane.GetReferenceGridPlane(Ingr.SP3D.Grids.Middle.ReferenceType,Ingr.SP3D.Grids.Middle.NestingLevelType)">
+            <summary>
+            Returns the reference object based on the reference type and the nesting level. 
+            The reference object will be a GridPlane corresponding to the given ReferenceType and NestingLevelType.
+            </summary>
+            <param name="eRefType">Reference type.</param>
+            <param name="eNestType">Nesting level type.</param>
+            <returns>GridPlane</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException">Invalid reference type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidNestingException">Invalid nesting level type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoReferenceException">No reference object.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetReferenceException">Failed to get reference.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlane.Angle">
+            <summary>
+            Gets the angle of this grid plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Failed to get the property.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlane.RotationAxis">
+            <summary>
+            Gets the rotation axis of this grid plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelperClass exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetCoordinateSystemOfPlaneException">Failed to get the coordinate system of the plane.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetAxisObjectFromCSException">Failed to get the axis object from the coordinate system.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridPlane.Type">
+            <summary>
+            Gets or sets the type of plane of this grid plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Failed to get the property.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">Failed to set the property.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridArc">
+            <summary>
+            GridArc class implements certain interfaces and exposes its own properties and methods 
+            so that they can be modified.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridArc.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for GridArc.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridArc.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridArc.
+            </summary>
+            <param name="oPBO">Private Business Object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridArc.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds a child to the system.
+            </summary>
+            <param name="oChild">System child object.</param>
+            <exception cref="T:System.ArgumentNullException">Argument passed is a null failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridArc.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the new orientation of the grid arc coordinate system.
+            </summary>
+            <param name="oNewXAxis">New X-axis to be set on coordinate system.</param>
+            <param name="oNewYAxis">New Y-axis to be set on coordinate system.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.ElevationPlane">
+            <summary>
+            Gets the GridElevationPlane object used to construct this GridArc. Position of 
+            the elevation of the GridArc can be obtained from the position of this elevation
+            plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetParentException">Getting the parent failed.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.Quadrant">
+             <summary>
+             Gets the quadrant to which this GridArc belongs. The returned enumerated type indicates whether it is 
+             in the quadrant which has plus or minus -X/Y.
+             </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Getting the property failure.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.RadialCylinder">
+            <summary>
+            Gets the GridCylinder used to construct this GridArc. Position of the elevation
+            of the GridArc can be obtained from the position of this elevation plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetParentException">Getting the parent failure.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.SystemChildren">
+            <summary>
+            Implementation of the SystemChildren property. Gets the ReadOnlyCollection of ISystemChild objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property. Uses the
+            system helper of CommonMiddle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.Range">
+            <summary>
+             Gets the range of the grid arc.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Common.Middle.CmnException">Unable to retrieve the .NET object.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.XAxis">
+             <summary>
+             Gets the X-axis of the grid arc local coordinate system.
+             </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.YAxis">
+            <summary>
+            Gets the Y-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.ZAxis">
+            <summary>
+            Gets the Z-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.Origin">
+            <summary>
+            Gets or sets the position of the arc.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.Matrix">
+            <summary>
+            Gets or sets the grid arc matrix.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.OriginOid">
+            <summary>
+            Gets or sets the oid associated with the object in the application of the origin. 
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.OriginAppName">
+            <summary>
+            Gets or sets the name of the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.OriginAppDesc">
+            <summary>
+            Gets or sets the description associated with the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.OriginAppId">
+            <summary>
+            Gets or sets the ID associated with the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridArc.EDIFlag">
+            <summary>
+            Gets or sets EDI flag; currently for future use.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs">
+            <summary>
+            Grids resource identifiers.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrSPGFactoryClass">
+            <summary>
+            Failed to Create an instance of SPGFactoryClass.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrMiddleHelper">
+            <summary>
+            Failed to Create an instance of SPGMiddleHelper.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetParent">
+            <summary>
+            Error in Calling GetParent Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetCS">
+            <summary>
+            Error in Calling GetCS Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrAxisFromCS">
+            <summary>
+            Error in Calling AxisFromCS Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrNullArguments">
+            <summary>
+            Null Arguments Passed.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrIsPlaneAtLocation">
+            <summary>
+            Error in Calling ISPlaneAtLocation.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetCSFromPlane">
+            <summary>
+            Failed to Get CS of the Plane.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrSetProperty">
+            <summary>
+            Error in Setting the Property Value
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetProperty">
+            <summary>
+            Error in Getting the Property Value
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetRadialCylinder">
+            <summary>
+            Error in Calling GetRadialCylinder Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrCreateArcsByIntersection">
+            <summary>
+            Error in Calling CreateArcsByIntersection Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetBounderies">
+            <summary>
+            Error in Calling GetBounderies Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetReference">
+            <summary>
+            Error in Calling GetReference Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrCreateElevationPlane">
+            <summary>
+            Error in Calling CreateElevationPlane Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrEnumGridLinesFromElevationPlane">
+            <summary>
+            Error in Calling EnumGridLinesFromElevationPlane Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrEnumGridLinesFromGridPlane">
+            <summary>
+            Error in Calling EnumGridLinesFromGridPlane Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrCreateGridPlane">
+            <summary>
+            Error in Calling CreateGridPlane Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGridLinebyIntersection">
+            <summary>
+            Error in Calling GridLinebyIntersection Method.
+            </summary>        
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrCreateGridRadialPlane">
+            <summary>
+            Error in Calling CreateGridRadialPlane Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrNoPermission">
+            <summary>
+            Permission Denied
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrNoImplementation">
+            <summary>
+            No Implementation
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrAxisType">
+            <summary>
+            Invalid Axis Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrAxisExists">
+            <summary>
+            Axis Aready Exists
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGridPlaneExists">
+            <summary>
+            Grid Plane Already Exists
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrUnexpected">
+            <summary>
+            Unexpected Failure in retrieving the Object
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrPosition">
+            <summary>
+            Error in Calling Position Method.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrNestingLevelType">
+            <summary>
+            Invalid Nesting Level Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrReferenceType">
+            <summary>
+            Invalid Reference Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrNoReference">
+            <summary>
+            No Reference Object
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrPlaneType">
+            <summary>
+            Invalid Plane Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrCyliderPlaneExists">
+            <summary>
+            Grid Cylider Plane Already Exists
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGridRadialPlaneExists">
+            <summary>
+            Grid Radial Plane Already Exists
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGridelevationPlaneExists">
+            <summary>
+            Grid elevation Plane Already Exists
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrInvalidArguments">
+            <summary>
+            Invalid Arguments
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrNotImplementedByGridLine">
+            <summary>
+            Not Implemented By GridLine
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrCOMObjectIsNull">
+            <summary>
+            Unable to get COM object from SOM object
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetRootPoint">
+            <summary>
+            Error in calling GetRootPoint method
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetNormal">
+            <summary>
+            Error in calling GetNormal method
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetUDirection">
+            <summary>
+            Error in calling GetUDirection method
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetVDirection">
+            <summary>
+            Error in calling GetVDirection method
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.ErrGetCoordinateSystem">
+            <summary>
+            Error in geting the coordinate system
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.DEFAULT_RESOURCE">
+            <summary>
+            Default Resoure Name
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Grids.Middle.Services.GridsResourceIDs.DEFAULT_ASSEMBLY">
+            <summary>
+            Default Assembly Name
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.NoReferenceException">
+            <summary>
+            This exception is thrown if no reference object is found for the given reference type 
+            and nesting level type.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.NoReferenceException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if no reference object is found for the given reference type 
+            and nesting level type.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.AxisExistsException">
+            <summary>
+            This exception is thrown if the axis already exists.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.AxisExistsException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if the axis already exists.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.InvalidAxisException">
+            <summary>
+            This exception is thrown if the axis is not a valid axis type.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.InvalidAxisException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if the axis is not a valid axis type.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.ElevationPlaneExistsException">
+            <summary>
+            This exception is thrown if elevation plane already exists at that location.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.ElevationPlaneExistsException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if elevation plane already exists at that location.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.InvalidNestingException">
+            <summary>
+            This exception is thrown only during the set property. The exception is thrown if the 
+            nesting level type is not valid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.InvalidNestingException.#ctor(System.String)">
+            <summary>
+            This exception is thrown only during the set property. The exception is thrown if the 
+            nesting level type is not valid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.InvalidPositionException">
+            <summary>
+            This exception is thrown only during the set property. The exception is thrown if the 
+            Grids object position is set outside from its previous and next radial cylinder.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.InvalidPositionException.#ctor(System.String)">
+            <summary>
+            This exception is thrown only during the set property. The exception is thrown if the 
+            Grids object position is set outside from its previous and next radial cylinder.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException">
+            <summary>
+            This exception is thrown when the reference type is not valid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException.#ctor(System.String)">
+            <summary>
+            This exception is thrown when the reference type is not valid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GridArcExistsException">
+            <summary>
+            This exception is thrown if the grid arc already exists for the given elevation
+            plane and the radial cylinder.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GridArcExistsException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if the grid arc already exists for the given elevation
+            plane and the radial cylinder.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GridLineExistsException">
+            <summary>
+            This exception is thrown if the grid line already exists.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GridLineExistsException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if the grid line already exists.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException">
+            <summary>
+             This exception is thrown if the grid plane already exists at that location.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if the grid plane already exists at that location.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GridLineMethodNotImplementedException">
+            <summary>
+            This exception is raised when some of the derived methods from base classes are not implemented. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GridLineMethodNotImplementedException.#ctor(System.String)">
+            <summary>
+            This exception is raised when some of the derived methods from base classes are not implemented. 
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GridCylinderExistsException">
+            <summary>
+            This exception is thrown if the grid cylinder already exists at that location.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GridCylinderExistsException.#ctor(System.String)">
+            <summary>
+            This exception is thrown if the grid cylinder already exists at that location.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.InvalidArgumentException">
+            <summary>
+            This exception is raised when the arguments that are passed in as parameters
+            to the methods are not valid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.InvalidArgumentException.#ctor(System.String)">
+            <summary>
+            This exception is raised when the arguments that are passed in as 
+            parameters to the methods are not valid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">
+            <summary>
+            This exception is raised when the Grid object does not have write 
+            permission.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.NoAccessException.#ctor(System.String)">
+            <summary>
+            This exception is raised when the Grid object does not have 
+            write permission.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SPGFactoryClass.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SPGFactoryClassException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SPGMiddleHelper.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SPGMiddleHelperException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetParentException">
+            <summary>
+            This exception is thrown when a COMException occurs calling ISPGNavigate.GetParent method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetParentException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetParentException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetCSException">
+            <summary>
+            This exception is thrown when a COMException occurs calling GetCS method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetCSException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetCSException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetAxisObjectFromCSException">
+            <summary>
+            This exception is thrown when a COMException occurs calling GetAxisObjectFromCS method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetAxisObjectFromCSException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetAxisObjectFromCSException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">
+            <summary>
+            This exception is thrown when a COMException occurs calling IsPlaneAtLocation method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the IsPlaneAtLocationException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetCoordinateSystemOfPlaneException">
+            <summary>
+            This exception is thrown when a COMException occurs calling GetCoordinateSystemOfPlane method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetCoordinateSystemOfPlaneException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetCoordinateSystemOfPlaneException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">
+            <summary>
+            This exception is thrown when a COMException occurs calling Set property.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.SetPropertyException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SetPropertyException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">
+            <summary>
+            This exception is thrown when a COMException occurs calling Get property.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetPropertyException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetPropertyException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.CreateRadialCylinderException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateRadialCylinder method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.CreateRadialCylinderException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CreateRadialCylinderException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.CreateGridArcsByIntersectionException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateGridArcsByIntersection method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.CreateGridArcsByIntersectionException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CreateGridArcsByIntersectionException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetBoundingException">
+            <summary>
+            This exception is thrown when a COMException occurs calling GetBounding method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetBoundingException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetBoundingException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetReferenceException">
+            <summary>
+            This exception is thrown when a COMException occurs calling GetReference method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetReferenceException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetReferenceException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.CreateElevationPlaneException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateElevationPlane method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.CreateElevationPlaneException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CreateElevationPlaneException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.EnumGridLinesFromElevationPlaneException">
+            <summary>
+            This exception is thrown when a COMException occurs calling EnumGridLinesFromElevationPlane method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.EnumGridLinesFromElevationPlaneException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the EnumGridLinesFromElevationPlaneException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.EnumGridLinesFromGridPlaneException">
+            <summary>
+            This exception is thrown when a COMException occurs calling EnumGridLinesFromGridPlane method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.EnumGridLinesFromGridPlaneException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the EnumGridLinesFromGridPlaneException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.CreateGridPlaneException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateGridPlane method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.CreateGridPlaneException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CreateGridPlaneException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.CreateGridLineByIntersectionException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateGridLineByIntersection method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.CreateGridLineByIntersectionException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CreateGridLineByIntersectionException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.CreateRadialPlaneException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateRadialPlane method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.CreateRadialPlaneException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CreateRadialPlaneException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GridPlaneMethodNotImplementedException">
+            <summary>
+            This exception is raised when some of the derived methods from IPlane are not implemented. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GridPlaneMethodNotImplementedException.#ctor(System.String)">
+             <summary>
+            Initializes a new instance of the GridPlaneMethodNotImplementedException class.  
+             </summary>
+             <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.COMObjectNullException">
+            <summary>
+            This exception is raised when a SmartPlant 3D .NET object fails to return a COM object. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.COMObjectNullException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the COMObjectNullException class. 
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetRootPointException">
+            <summary>
+            This exception is raised when COMException occurs while calling GetRootPoint method. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetRootPointException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetRootPointException class with a reference 
+            to the inner COMException that is the cause of this exception.  
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetNormalException">
+            <summary>
+            This exception is raised when COMException occurs while calling GetNormal method. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetNormalException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetNormalException class with a reference 
+            to the inner COMException that is the cause of this exception.   
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetUDirectionException">
+            <summary>
+            This exception is raised when a COMException occurs while calling GetUDirection method. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetUDirectionException.#ctor(System.Runtime.InteropServices.COMException)">
+             <summary>
+            Initializes a new instance of the GetUDirectionException class with a reference 
+             to the inner COMException that is the cause of this exception.  
+             </summary>
+             <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.GetVDirectionException">
+            <summary>
+            This exception is raised when a COMException occurs while calling GetVDirection method. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.GetVDirectionException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the GetVDirectionException class with a reference 
+            to the inner COMException that is the cause of this exception. 
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Exceptions.FailedToGetCoordinateSystemException">
+            <summary>
+            This exception is thrown when the code fails to get the coordinate system object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Exceptions.FailedToGetCoordinateSystemException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the CmnFailedToGetLocationException. 
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridCylinder">
+            <summary>
+            GridCylinder class implements certain interfaces and exposes its own properties and 
+            methods so that they can be modified.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for GridCylinder
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridCylinder.
+            </summary>
+            <param name="oPBO">Private Business Object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.#ctor(System.Double,Ingr.SP3D.Grids.Middle.GridAxis)">
+            <summary>
+            Creates a GridCylinder object at the given position and the parent system. 
+            The parent system object must be an Axis object.
+            </summary>
+            <param name="Position">Position of the grid cylinder.</param>
+            <param name="oAxis">Axis object.</param>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidAxisException">Invalid axis type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridCylinderExistsException">Grid cylinder already exists.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactoryClass exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelperClass exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">Is plane at location failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateRadialCylinderException">Creating radial cylinder failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridCylinderExistsException">Grid cylinder exists failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.CreateGridArcs(Ingr.SP3D.Grids.Middle.GridElevationPlane)">
+            <summary>
+            Creates and returns a list of GridArc objects for the given cylinder and this elevation plane. 
+            </summary>
+            <param name="oElevPlane">Elevation plane.</param>
+            <returns>List of GridArc objects.</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Middle.CmnException">Invalid index.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactoryClass exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateGridArcsByIntersectionException">Creating grid arcs by intersection failed.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.GetBoundaries(Ingr.SP3D.Common.Middle.BusinessObject@,Ingr.SP3D.Common.Middle.BusinessObject@)">
+            <summary>
+            Returns the boundaries of the grid cylinder.
+            </summary>
+            <param name="oBoundary1">Boundary 1</param>
+            <param name="oBoundary2">Boundary 2</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetBoundingException">Getting bounding failed.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.GetGridArcsOnElvationPlane(Ingr.SP3D.Grids.Middle.GridElevationPlane)">
+            <summary>
+            Returns a read-only collection of GridArc objects resulting from the intersection of this radial cylinder.
+            and the given elevation plane.
+            </summary>
+            <param name="oElevPlane">Grid elevation plane.</param>
+            <returns>List of GridArc objects.</returns>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.GetReferenceGridCylinder(Ingr.SP3D.Grids.Middle.ReferenceType,Ingr.SP3D.Grids.Middle.NestingLevelType)">
+            <summary>
+            Returns the reference object based on the reference type and the nesting level.
+            The reference object will be a GridRadialCylinder corresponding to the given ReferenceType
+            and NestingLevelType.
+            </summary>
+            <param name="eRefType">Reference type enumerator.</param>
+            <param name="eNestType">Nesting level type enumerator.</param>
+            <returns>GridCylinder object.</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException">Invalid reference type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidNestingException">Invalid nesting level type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoReferenceException">No reference object.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetReferenceException">Getting reference failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds a child to the system.
+            </summary>
+            <param name="oChild">System child object.</param>
+            <exception cref="T:System.ArgumentNullException">Argument passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the new orientation of the grid cylinder.
+            </summary>
+            <param name="oNewXAxis">New X-axis to be set on the coordinate system.</param>
+            <param name="oNewYAxis">New Y-axis to be set on the coordinate system.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridCylinder.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the name of an item.  This implementation removes any existing
+            relationship with a name rule, which in most cases is appropriate when giving
+            an object a user-defined name.
+            
+            <para>This method must be overitten by classes for which this is not the appropriate
+            behavior.</para>
+            </summary>
+            <param name="Name">The new name string.</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.Axis">
+            <summary>
+            Gets the type of axis to which this radial cylinder belongs.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetCoordinateSystemOfPlaneException">Get the coordinate system of plane failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetAxisObjectFromCSException">Get the axis object from coordinate system failure.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.GridArcs">
+            <summary>
+            Gets a list of grid arcs on all the elevation planes belonging to this radial cylinder.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.NestingLevel">
+            <summary>
+            Gets the nesting level of this radial cylinder.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Getting the property failed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">Setting the property failed.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.DistanceFromOrigin">
+            <summary>
+            Gets or sets the position of this radial cylinder.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Getting the property failed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">Setting the property failed.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.Type">
+            <summary>
+            Gets the type of radial cylinder.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Getting the property failed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">Setting the property failed.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.SystemChildren">
+            <summary>
+            Implementation of the SystemChildren property by getting a ReadOnlyCollection of ISystemChild objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property.  Uses the
+            system helper of CommonMiddle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.Range">
+            <summary>
+            Gets the range of the cylinder plane.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.XAxis">
+            <summary>
+            Gets the X-axis of grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.YAxis">
+            <summary>
+            Gets the Y-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.ZAxis">
+            <summary>
+            Gets the Z-axis of grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.Origin">
+            <summary>
+            Gets or sets the position of the arc.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.Matrix">
+            <summary>
+            Gets or sets the grid arc matrix.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule associated with the grid radial cylinder.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.Name">
+            <summary>
+            Gets the read-only name.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.OriginOid">
+            <summary>
+            Gets or sets the Oid associated with the object in the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.OriginAppName">
+            <summary>
+            Gets or sets the name of the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.OriginAppDesc">
+            <summary>
+            Gets or sets the description associated with the application of the origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.OriginAppId">
+            <summary>
+            Gets or sets the ID associated with the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridCylinder.EDIFlag">
+            <summary>
+            Gets or sets the EDI flag; currently for future use.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridsLocalizer.GetString(System.Int32,System.String)">
+            <summary>
+            Returns the localized string. 
+            </summary>
+            <param name="iID">Resource identifier.</param>
+            <param name="defMsgStr">Default string.</param>
+            <returns>String</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridShipCoordinateSystem">
+            <summary>
+            GridShipCoordinateSystem class derives from the CoordinateSystem class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridShipCoordinateSystem.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private constructor for the GridShipCoordinateSystem base class.
+            </summary>
+            <param name="oBOP">Private business object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridShipCoordinateSystem.Finalize">
+            <summary>
+            Destructor for the GridShipCoordinate System base class
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridRadialPlane">
+            <summary>
+            GridRadialPlane class is derived from GridPlaneBase class. GridRadialPlane class 
+            implements certain interfaces and exposes its own properties and methods so that 
+            they can be modified.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridRadialPlane.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for GridRadialPlane
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridRadialPlane.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridRadialPlane
+            </summary>
+            <param name="oPBO">Private Business Object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridRadialPlane.#ctor(System.Double,Ingr.SP3D.Grids.Middle.GridAxis)">
+            <summary>
+            Creates a RadialPlane object at the given position and with the parent system. 
+            The parent system object must be an Axis object of radial axis type.
+            </summary>
+            <param name="Position">Position of the radial grid plane.</param>
+            <param name="oAxis">Axis object.</param>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidAxisException">Invalid axis type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridPlaneExistsException">Grid radial plane already existed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactory class failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGMiddleHelperException">SPGMiddleHelper exception.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.IsPlaneAtLocationException">Plane at location failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateRadialPlaneException">Creating radial plane failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridRadialPlane.CreateGridLine(Ingr.SP3D.Grids.Middle.GridElevationPlane)">
+            <summary>
+            Creates and returns a GridLine object for the given elevation plane and this radial plane. 
+            </summary>
+            <param name="oElevPlane">Elevation plane.</param>
+            <returns>GridLine object.</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:System.ArgumentNullException">Null argument is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SPGFactoryClassException">SPGFactory class failure.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.CreateGridLineByIntersectionException">Creating a grid line by intersection failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridRadialPlane.GetReferenceRadialPlane(Ingr.SP3D.Grids.Middle.ReferenceType,Ingr.SP3D.Grids.Middle.NestingLevelType)">
+            <summary>
+             Returns the reference object based on the reference type and the nesting level. 
+            The reference object will be a GridRadialPlane corresponding to the given ReferenceType and NestingLevelType.
+            </summary>
+            <param name="eRefType">Reference type enumerator.</param>
+            <param name="eNestType">Nesting level type enumerator.</param>
+            <returns>GridRadialPlane object.</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException">Invalid reference type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidNestingException">Invalid nesting level type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoReferenceException">No reference object.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetReferenceException">Get reference exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridRadialPlane.Type">
+            <summary>
+            Gets or sets the type of plane of this radial plane.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetPropertyException">Failed to get the property.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.SetPropertyException">Failed to set the property.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridLine">
+            <summary>.
+            GridLine class implements certain interfaces and exposes its own properties and methods.
+            This class derives from Line3D. The methods on the interfaces of 
+            Line3d and Curve3D, which are not required by GridLine, are overridden and thrown
+            NotImplementedException.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridLine.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for GridLine.
+            </summary>
+            <param name="oPBO">Private Business Object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridLine.GetReferenceGridLine(Ingr.SP3D.Grids.Middle.ReferenceType,Ingr.SP3D.Grids.Middle.NestingLevelType)">
+            <summary>
+            Returns the reference object based on the reference type and the 
+            nesting level. The reference object will be a GridLine corresponding to the 
+            same elevation plane for the given ReferenceType and NestingLevelType.
+            </summary>
+            <param name="eRefType">Reference type enumerator.</param>
+            <param name="eNestType">Nesting level type enumerator.</param>
+            <returns>GridLine</returns>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidReferenceTypeException">Invalid reference type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.InvalidNestingException">Invalid nesting level type.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.NoReferenceException">No reference object.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetReferenceException">Getting reference failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridLine.GetBoundaries(Ingr.SP3D.Common.Middle.BusinessObject@,Ingr.SP3D.Common.Middle.BusinessObject@)">
+            <summary>
+            Returns the boundaries of this grid line.
+            </summary>
+            <param name="oBoundary1">Boundary 1.</param>
+            <param name="oBoundary2">Boundary 2.</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetBoundingException">Getting the bounding failure.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridLine.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds a child to the system.
+            </summary>
+            <param name="oChild">System child.</param>
+            <exception cref="T:System.ArgumentNullException">Argument passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridLine.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the new orientation of the grid line.
+            </summary>
+            <param name="oNewXAxis">New X-axis to be set on the coordinate system.</param>
+            <param name="oNewYAxis">New Y-axis to be set on the coordinate system.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridLine.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the grid line.
+            </summary>
+            <param name="oT4X4">Matrix4X4 object.</param>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridLineMethodNotImplementedException">Grid line method not implemented.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.ElevationPlane">
+            <summary>
+            Gets the grid elevation plane which is used to construct this grid arc. The position
+            of the elevation of the grid arc can be obtained from the position of this 
+            elevation plane.
+            </summary>
+             <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetParentException">Getting the parent failure.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.IntersectingPlane">
+            <summary>
+            Gets the intersecting plane used to construct this grid line. The intersecting plane
+            can be either a grid plane or a grid radial plane.
+            </summary>
+             <exception cref="T:Ingr.SP3D.Grids.Exceptions.GetParentException">Getting the parent failure.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.SystemChildren">
+            <summary>
+            Implementation of the SystemChildren property by getting a ReadOnlyCollection of ISystemChild objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property.  Uses the
+            system helper of CommonMiddle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.XAxis">
+            <summary>
+            Gets the X-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.YAxis">
+            <summary>
+            Gets the Y-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.ZAxis">
+            <summary>
+            Gets the Z-axis of the grid arc local coordinate system.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.Origin">
+            <summary>
+            Gets or sets the position of the line.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.Matrix">
+            <summary>
+            Gets or sets the grid arc matrix.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Not implemented exception.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.StartPoint">
+            <summary>
+            Gets or sets the start point of the line.
+            <para>Note: Do not call this routine to set if your line is infinite.</para>
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridLineMethodNotImplementedException">Grid line method not implemented.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.EndPoint">
+            <summary>
+            Gets or sets the end point of the line.
+            <para>Note: Do not call this routine to set if your line is infinite.</para>
+            </summary>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.GridLineMethodNotImplementedException">Grid line method not implemented.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.OriginOid">
+            <summary>
+            Gets or sets the Oid associated with the object in the application of origin. 
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.OriginAppName">
+            <summary>
+            Gets or sets the name of the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.OriginAppDesc">
+            <summary>
+            Gets or sets the description associated with the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.OriginAppId">
+            <summary>
+            Gets or sets the ID associated with the application of origin.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Grids.Middle.GridLine.EDIFlag">
+            <summary>
+            Gets or sets the EDI flag; currently for future use.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Grids.Middle.GridsAPIHelper">
+            <summary>
+            Helper class for grids common API functions.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridsAPIHelper.#ctor">
+            <summary>
+            Constructor for GridsAPIHelper.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridsAPIHelper.GetCoordinateSystemsFromDB(Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.Common.Middle.CoordinateSystem.CoordinateSystemType)">
+            <summary>
+            Queries the database and returns the requested type of coordinate systems. 
+            </summary>
+            <param name="oConnection">SP3DConnection object.</param>
+            <param name="eCoordinateSystemType">Enumerated value of CoordinateSystemType.</param>
+            <returns>Collection of CoordinateSystem objects.</returns>
+            <exception cref="T:System.ArgumentNullException">SP3DConnection object is null.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.FailedToGetCoordinateSystemException">Failed to get the coordinate system exception.</exception> 
+        </member>
+        <member name="M:Ingr.SP3D.Grids.Middle.GridsAPIHelper.GetCoordinateSystemsFromDB(Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Queries the database and returns both the grids type and ship type coordinate systems.
+            </summary>
+            <param name="oConnection">SP3DConnection object.</param>
+            <returns>Collection of CoordinateSystem objects.</returns>
+            <exception cref="T:System.ArgumentNullException">SP3DConnection is null.</exception>
+            <exception cref="T:Ingr.SP3D.Grids.Exceptions.FailedToGetCoordinateSystemException">Failed to get the coordinate system exception.</exception> 
+        </member>
+    </members>
+</doc>

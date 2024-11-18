@@ -1,0 +1,1 @@
+call regsvr32 /u SP3DAutomation.ocx

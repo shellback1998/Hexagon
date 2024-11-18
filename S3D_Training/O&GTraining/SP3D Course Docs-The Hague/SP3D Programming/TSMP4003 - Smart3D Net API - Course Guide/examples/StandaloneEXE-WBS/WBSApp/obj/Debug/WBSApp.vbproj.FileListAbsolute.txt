@@ -1,0 +1,23 @@
+C:\Prasad-VM\WBS\WBSApp\bin\Debug\WBSApp.exe
+C:\Prasad-VM\WBS\WBSApp\bin\Debug\WBSApp.pdb
+C:\Prasad-VM\WBS\WBSApp\bin\Debug\WBSApp.xml
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\WBSApp.WBSAppForm.resources
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\WBSApp.Resources.resources
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\WBSApp.vbproj.GenerateResource.Cache
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\WBSApp.exe
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\WBSApp.xml
+C:\Prasad-VM\WBS\WBSApp\obj\Debug\WBSApp.pdb
+C:\Prasad-VM\WBS\WBSApp\bin\Debug\SP3DCustomSymbolDefinition.dll
+C:\Prasad-VM\WBS\WBSApp\bin\Debug\SymbolEntities.dll
+C:\Prasad-VM\WBS\WBSApp\bin\Debug\SymbolGeometryHelper.dll
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\bin\Debug\WBSApp.exe
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\bin\Debug\WBSApp.pdb
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\bin\Debug\WBSApp.xml
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\WBSApp.WBSAppForm.resources
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\WBSApp.Resources.resources
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\WBSApp.vbproj.GenerateResource.Cache
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\WBSApp.exe
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\WBSApp.xml
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Debug\WBSApp.pdb

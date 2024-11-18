@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="SmartPlant To Do List P&amp;ID Values"
+ Description="Special label for SMartPlant Todo List">
+   <QUERIES>
+      <QUERY
+       Name="SmartPlant To Do List P&amp;ID Values"
+       Site="User"
+       Path="SmartPlant To Do List P&amp;ID Values.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="SmartPlant To Do List P&amp;ID Values"
+    Site="User"
+    Path="SmartPlant To Do List P&amp;ID Values.rfm" />
+</REPORT_TEMPLATE>
+

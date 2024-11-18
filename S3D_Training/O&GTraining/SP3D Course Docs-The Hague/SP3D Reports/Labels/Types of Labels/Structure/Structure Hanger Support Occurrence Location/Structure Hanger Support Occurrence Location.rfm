@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Structure Hanger Support Occurrence Location" Description="">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<FORMATTING_PARAMETERS Name="Structure Hanger Support Occurrence Location" Site="User" Path="Structure Hanger Support Occurrence Location.rfp"/>
+	<RTF_LABEL>
+		<POINTS>
+			<POINT Name="Occurrence Location" X="X" Y="Y" Z="Z" Matrix="MyTransformA" UOM="Location">
+				<READOUT>
+					<DIRECTION/>
+					<VALUE/>
+				</READOUT>
+			</POINT>
+		</POINTS>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<POSITION Visible="Yes" Axis="X" Point="Occurrence Location">
+						<!--FORMAT_EXPRESSION	Expression='@@@@@@@@@@@@@@@@@@@@'/-->
+					</POSITION>
+					<TEXT Visible="Yes" Value="     "/>
+					<POSITION Visible="Yes" Axis="Y" Point="Occurrence Location">
+						<FORMAT_EXPRESSION Expression="@@@@@@@@@@@@@@@@@@@@"/>
+					</POSITION>
+					<TEXT Visible="Yes" Value="     "/>
+					<POSITION Visible="Yes" Axis="Z" Point="Occurrence Location">
+						<FORMAT_EXPRESSION Expression="@@@@@@@@@@@@@@@@@@@@"/>
+					</POSITION>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

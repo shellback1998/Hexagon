@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="End Preparation 3" Description="End preparation of port 3"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CPipePortData"
+    Action=""
+    Arg="3" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[
+       SELECT ' ' AS Dummy
+       ]]>
+   </SQL>
+
+   <QUERY_PARAMETERS
+    Name="End Preparation 3
+"
+    Site="User"
+    Path="End Preparation 3.rqp" />
+</REPORT_QUERY>
+

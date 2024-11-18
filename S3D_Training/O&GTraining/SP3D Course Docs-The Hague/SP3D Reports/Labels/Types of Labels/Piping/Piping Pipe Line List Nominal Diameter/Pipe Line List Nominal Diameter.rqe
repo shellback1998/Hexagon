@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Pipe Line List Nominal Diameter"
+ Description="Pipe Line List Nominal Diameter"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="NPD"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJRtePipeRun"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="NPDUnitType"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJRtePipeRun"
+             DestinationProperty="NPDUnitType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

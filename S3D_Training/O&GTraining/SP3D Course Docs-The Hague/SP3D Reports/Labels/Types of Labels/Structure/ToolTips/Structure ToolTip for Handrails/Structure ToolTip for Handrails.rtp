@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Structure ToolTip for Handrails"
+ Description="Tooltip for Handrails">
+   <QUERIES>
+      <QUERY
+       Name="Handrail"
+       Site="User"
+       Description=" "
+       Path="Structure ToolTip for Handrails.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Handrail"
+    Site="User"
+    Description=" "
+    Path="Structure ToolTip for Handrails.rfm" />
+</REPORT_TEMPLATE>
+

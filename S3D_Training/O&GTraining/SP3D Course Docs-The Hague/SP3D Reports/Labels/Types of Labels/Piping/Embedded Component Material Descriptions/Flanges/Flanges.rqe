@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_QUERY
+ Name="Flanges"
+ Description="Material Description Label for Flanges"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+SELECT	Pcom.CommodityType_LongValue, 
+		dbo.REPORTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS 'NPD1', 
+		'in' AS 'NPDUnitType1',
+		'Piping' AS 'Category',
+		NULL AS 'BoltDiameter', 
+		dbo.REPORTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS 'NPD2', 
+		'in' AS 'NPDUnitType2',
+		'[Ports]' AS PortsInfo, 
+		Mfd.FlangeFaceSurfaceFinish_ShortValue as FlngFaceSurFinish_ShortValue, 
+		Pcom.LiningMaterial_ShortValue, 
+		Pcom.GeometricIndustryStandard_ShortValue as GeomIndStandard_ShortValue, 
+		mcd.Manufacturer_ShortValue, 
+		Pcom.MaterialsGrade_ShortValue, 
+		Mfd.MiscRequisitionClassification_ShortValue as MiscReqClassfn_ShortValue 
+FROM JRteCompOccur pc
+JOIN xmadefrom xmf on xmf.oidorigin = pc.oid
+JOIN JDPipeComponent_CL Pcom on pcom.oid = xmf.oiddestination
+JOIN xpartocctomaterialcontroldata xptmcd on xptmcd.oidorigin = pc.oid
+JOIN JGenericMaterialControlData_CL mcd on mcd.oid = xptmcd.oiddestination
+JOIN JUAManufacturerData_CL Mfd ON (Pcom.Oid = Mfd.Oid) 
+WHERE pc.oid = ? 
+           ]]>
+   </SQL>
+
+   <ORASQL
+    Timeout="0">
+      <![CDATA[ 
+SELECT	ClPco.LONGSTRINGVALUE as CommodityType_LongValue, 
+		RPTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS NPD1, 
+		'in' AS NPDUnitType1,
+		'Piping' AS Category,
+		NULL AS BoltDiameter, 
+		RPTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS NPD2, 
+		'in' AS NPDUnitType2, 
+		'[Ports]' AS PortsInfo, 
+		ClFFSF.SHORTSTRINGVALUE as FlngFaceSurFinish_ShortValue, 
+		ClLM.SHORTSTRINGVALUE as LiningMaterial_ShortValue, 
+		ClGIS.SHORTSTRINGVALUE as GeomIndStandard_ShortValue,
+		ClMfd.SHORTSTRINGVALUE As Manufacturer_ShortValue,
+		ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue,
+		ClMRC.SHORTSTRINGVALUE as MiscReqClassfn_ShortValue 
+FROM JRteCompOccur pc
+JOIN xmadeFROM xmf on xmf.oidorigin = pc.oid
+JOIN JDPIPECOMPONENT Pcom on Pcom.oid = xmf.oiddestination
+JOIN CL_PIPINGCOMMODITYTYPE ClPco (ClPco.VALUEID = Pcom.COMMODITYTYPE) 
+JOIN JUAManufacturerData Mfd ON (Pcom.Oid = Mfd.Oid) 
+JOIN xpartocctomaterialcontroldata xptmcd on xptmcd.oidorigin = pc.oid
+JOIN JGenericMaterialControlData mcd on mcd.oid = xptmcd.oiddestination
+Left OUTER JOIN CL_FLANGEFACESURFACEFINISH ClFFSF on (Mfd.FlangeFaceSurfaceFinish = ClFFSF.VALUEID)
+JOIN CL_LININGMATERIAL ClLM on (ClLM.VALUEID = Pcom.LiningMaterial)
+JOIN CL_GEOMETRICINDUSTRYSTANDARD ClGIS on (ClGIS.VALUEID= pcom.GeometricIndustryStandard)
+JOIN CL_MANUFACTURER ClMfd on (ClMfd.VALUEID = mcd.Manufacturer)
+JOIN CL_MATERIALSGRADE ClMGr on (ClMGr.VALUEID = Pcom.MaterialsGrade)
+Left OUTER JOIN CL_MISCREQUISITIONCLASSIFICATI ClMRC on (Mfd.MiscRequisitionClassification = ClMRC.VALUEID) 
+WHERE pc.oid = ? 
+           ]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS
+    Name="Flanges"
+    Site="User"
+    Path="Flanges.rqp" />
+</REPORT_QUERY>
+

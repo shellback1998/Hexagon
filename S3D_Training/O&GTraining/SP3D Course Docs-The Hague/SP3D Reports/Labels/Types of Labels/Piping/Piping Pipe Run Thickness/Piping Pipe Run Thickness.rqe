@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Pipe Run Thickness" Description=" " RequiresFilter="No">
+   <DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg="" />
+
+   <SQL Timeout="0">
+      <![CDATA[
+      		SELECT	pp.WallThicknessOrGrooveSetback AS WallThickness 
+  			FROM XMadeFrom rmf
+			LEFT JOIN XPartContainsNozzles rpcn on rpcn.oidorigin = rmf.oiddestination
+			LEFT JOIN JCatalogPipePort pp on pp.oid = rpcn.oiddestination
+			WHERE pp.TerminationClass = 10 and pp.PortIndex=2 and rmf.oidorigin=?
+		]]>
+   </SQL>
+
+   <QUERY_PARAMETERS Name="Piping Pipe Run Thickness" Site="User" Path="Piping Pipe Run Thickness.rqp" />
+</REPORT_QUERY>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Structure Linear Member Computed DryWeight" Description="">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="Expression" Arg="Product"/>
+	<FORMATTING_PARAMETERS Name="Structure Linear Member Computed DryWeight" Site="User" Path="Structure Linear Member Computed DryWeight.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="UnitWeight" UOM="Weight" Visible="No"/>
+					<PHYSICAL Column="CutLength" UOM="Weight" Visible="No"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

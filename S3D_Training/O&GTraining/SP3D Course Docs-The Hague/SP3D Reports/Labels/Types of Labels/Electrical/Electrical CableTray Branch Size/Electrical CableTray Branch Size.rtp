@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical CableTray Branch Size" Description=""><QUERIES><QUERY Name="Electrical CableTray Branch Size" Site="User" Path="Electrical CableTray Branch Size.rqe"/></QUERIES><FORMATTING Name="Electrical CableTray Branch Size" Site="User" Path="Electrical CableTray Branch Size.rfm"/></REPORT_TEMPLATE>

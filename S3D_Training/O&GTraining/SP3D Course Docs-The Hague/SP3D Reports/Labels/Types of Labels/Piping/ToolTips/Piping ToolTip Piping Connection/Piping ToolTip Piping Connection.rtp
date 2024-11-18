@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="Piping ToolTip Piping Connection"
+ Description="Example of a Label for Piping Connection">
+   <QUERIES>
+      <QUERY
+       Name="Piping ToolTip Piping Connection"
+       Site="User"
+       Path="Piping ToolTip Piping Connection.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Piping ToolTip Piping Connection"
+    Site="User"
+    Path="Piping ToolTip Piping Connection.rfm" />
+</REPORT_TEMPLATE>
+

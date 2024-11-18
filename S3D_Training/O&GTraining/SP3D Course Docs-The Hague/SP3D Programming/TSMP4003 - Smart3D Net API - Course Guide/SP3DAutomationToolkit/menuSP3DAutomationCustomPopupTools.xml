@@ -1,0 +1,31 @@
+<xml>
+  <!-- 
+  As an Advanced Configuration, you can add your own 
+    MenuItem entries or Menu Entries here. 
+  Ensure you do not use an id attribute for your menuitems, especially if 
+    you are copying the entries from the product menu xml files.
+  You can use all the Menuitem constructs as allowed in the product - i.e. with 
+    action=NormalCmd or action=HighPriorityCmd 
+    or an existing entry like action=mnuViewFit or action=mnuEditProperties
+    
+  If you edit this file incorrectly, you will get error messageboxes during
+  startup of SmartPlant/Marine 3D.
+  
+  To serve as an example, this file as delivered has entries commented out.
+  (see lines with BEGIN COMMENT and END COMMENT below)
+  /-->
+  
+ <Menuitem caption="-"/>
+ 
+ <!-- DO NOT EDIT ANYTHING ABOVE THIS LINE -->
+  
+ <!-- BEGIN COMMENT : DELETE THIS LINE to make your changes
+  
+  <Menuitem caption="&amp;Fit"  action="mnuViewFit"/>
+  <Menuitem caption="-" />
+  <Menu caption="Custom-Menu">
+     <Menuitem caption="&amp;Properties"  action="mnuEditProperties"/>
+  </Menu>
+  
+  END COMMENT: DELETE THIS LINE to make your changes -->
+</xml>

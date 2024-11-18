@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="HVAC CFM" Description="">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="Expression" Arg="Product" />
+
+   <FORMATTING_PARAMETERS Name="HVAC CFM" Site="User" Path="HVAC CFM.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}}{\colortbl ;\red0\green0\blue0;}\viewkind4\uc1\pard\lang1033\f0\fs16 " ToParse="no" Visible="yes" />
+
+               <PHYSICAL Column="Depth" UOM="FlowRate" Visible="yes" />
+
+               <PHYSICAL Column="Width" UOM="FlowRate" Visible="yes" />
+
+               <PHYSICAL Column="Velocity" UOM="FlowRate" Visible="yes" />
+
+               <TEXT Value=" \par }" ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

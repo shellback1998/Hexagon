@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\Custom Symbols\Piping\DotNetTraining.dll
+C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\Custom Symbols\Piping\DotNetTraining.pdb
+C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\Custom Symbols\Piping\DotNetTraining.xml
+C:\Users\Student\Documents\Visual Studio 2010\Projects\DotNetTraining\DotNetTraining\obj\Release\DotNetTraining.Resources.resources
+C:\Users\Student\Documents\Visual Studio 2010\Projects\DotNetTraining\DotNetTraining\obj\Release\DotNetTraining.vbproj.GenerateResource.Cache
+C:\Users\Student\Documents\Visual Studio 2010\Projects\DotNetTraining\DotNetTraining\obj\Release\DotNetTraining.dll
+C:\Users\Student\Documents\Visual Studio 2010\Projects\DotNetTraining\DotNetTraining\obj\Release\DotNetTraining.xml
+C:\Users\Student\Documents\Visual Studio 2010\Projects\DotNetTraining\DotNetTraining\obj\Release\DotNetTraining.pdb

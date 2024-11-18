@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Vessel Occurrence Location Z (Up)" Description=" "><QUERIES><QUERY Name="Equipment Vessel Occurrence Location Z (Up)" Site="User" Path="Equipment Vessel Occurrence Location Z (Up).rqe"/></QUERIES><FORMATTING Name="Equipment Vessel Occurrence Location Z (Up)" Site="User" Path="Equipment Vessel Occurrence Location Z (Up).rfm"/></REPORT_TEMPLATE>

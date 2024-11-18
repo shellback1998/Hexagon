@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Off-line Instruments" Description="Material Description Label for Off-line Instruments">
+<QUERIES>
+<QUERY Name="Off-line Instruments" Site="User" Path="Off-line Instruments.rqe"/>
+</QUERIES>
+<FORMATTING Name="Off-line Instruments" Site="User" Path="Off-line Instruments.rfm"/>
+</REPORT_TEMPLATE>
+

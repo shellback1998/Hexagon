@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Report Template (No Query)" Description="Empty Format Definition">
+	<DESIGN_TIME Progid="SP3DReportFormatDesigner.ExcelReport" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DExcelFormat.SP3DReport" Action="DoFormatting" Arg="False"/>
+	<FORMATTING_PARAMETERS Name="Report Template (No Query)" Site="User" Path="SampleDotNetReport.rfp"/>
+	<LAYOUT_TEMPLATE Type="External" Site="User" Path="SampleDotNetReport.xls"/>
+</REPORT_FORMATTING>

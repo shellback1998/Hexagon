@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Fabricated Weight" Description="Dry weight"><QUERIES><QUERY Name="HVAC Fabricated Weight" Site="User" Path="HVAC Fabricated Weight.rqe"/></QUERIES><FORMATTING Name="HVAC Fabricated Weight" Site="User" Path="HVAC Fabricated Weight.rfm"/></REPORT_TEMPLATE>

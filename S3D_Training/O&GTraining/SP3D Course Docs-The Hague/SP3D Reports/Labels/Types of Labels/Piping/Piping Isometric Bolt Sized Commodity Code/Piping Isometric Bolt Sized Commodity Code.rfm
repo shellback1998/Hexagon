@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Isometric Bolt Sized Commodity Code" Description="A label of the SizedCommodityCode attribute from the IJUASizedBoltData interface">
+<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+<FORMATTING_PARAMETERS Name="Piping Isometric Bolt Sized Commodity Code" Site="User" Path="Piping Isometric Bolt Sized Commodity Code.rfp"/>
+<LAYOUT_TEMPLATE Type="Internal"/>
+<RTF_LABEL>
+    <BLOCKS>
+	<BLOCK Action="Visible">
+	    <TOKENS>
+		<DATA Column="Sized Commodity Code" ToParse="NO" Visible="yes"/>
+	    </TOKENS>
+	</BLOCK>
+    </BLOCKS>
+</RTF_LABEL>
+</REPORT_FORMATTING>

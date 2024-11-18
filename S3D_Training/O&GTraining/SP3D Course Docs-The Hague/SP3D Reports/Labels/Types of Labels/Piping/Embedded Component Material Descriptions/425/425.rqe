@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="425"
+ Description="Get RPAD Data"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="Angle"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJBendBranchAngle"
+             DestinationProperty="Angle"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="RPadWidth"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJUARPad"
+             DestinationProperty="RPadWidth"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="Part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="RPadThickness"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJUARPad"
+             DestinationProperty="RPadThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="Part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

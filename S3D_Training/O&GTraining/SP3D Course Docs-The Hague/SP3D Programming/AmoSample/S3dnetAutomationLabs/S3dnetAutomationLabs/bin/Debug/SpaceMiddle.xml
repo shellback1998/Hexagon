@@ -1,0 +1,1033 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpaceMiddle</name>
+    </assembly>
+    <members>
+        <member name="T:Ingr.SP3D.Space.Middle.InterferenceSpace">
+            <summary>
+            InterferenceSpace class derives from the abstract SpaceBase class.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.SpaceBase">
+            <summary>
+            This is the abstract class to be derived by AreaSpace, ZoneSpace, and InterferenceSpace classes. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private constructor for the SpaceEntity base class.
+            </summary>
+            <param name="oBOP">Private business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.#ctor">
+            <summary>
+            Public constructor for the Spacebase class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.Finalize">
+            <summary>
+            Destructor for the SpaceBase class
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.GetSpaceInputs">
+            <summary>
+            Gets the input collection of a Space object. 
+            i.e., for ByPoints type of construction, SpaceInputs collection consists of points (Point 3D objects) and
+            for ByPlaneAndOffset type of construction the collection consists of 1 plane, 3 points, and 2 offset values.
+            </summary>
+            <returns>Collection of SpaceInputs objects.</returns>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreationGetInputsException">Failed GetInputs method.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.SetSpaceInputs(System.Collections.ObjectModel.Collection{Ingr.SP3D.Space.Middle.SpaceInputs})">
+            <summary>
+            Sets the input collection of a Space object. i.e., through 
+            SetSpaceInputs method, the user can modify the existing Space object and its 
+            properties. 
+            <para>For ByPoints construction SpaceInputs collection consists of points and
+            for ByPlaneAndOffset construction it consists of 1 plane, 3 points, and 2 offset values.</para>
+            </summary>
+            <param name="oSpaceInputs">Inputs collection.</param>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidInputCollection">Invalid SpaceInputs collection.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidArgumentException">Invalid collection type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidOffsetValues">Offset 1 should be greater than offset 2.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidBooleanOperationTypeException">Invalid boolean operation type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidConstructionType">Invalid construction type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreationSetInputsException">Failed SetInputs method.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.GetSystemChildHelper">
+            <summary>
+            Private utility method to get and manage the system child helper object.
+            </summary>
+            <returns>m_oSystemChildHelper - Occurrence to the system child helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.AddSpaceChild(Ingr.SP3D.Common.Middle.ISpaceChild)">
+            <summary>
+            Adds the specified object as a child to parent object.
+            </summary>
+            <param name="oChild">Space child interface.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Performs a transformation. 
+            </summary>
+            <param name="oT4X4">Transformation matrix.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the orientation of the space entity.
+            </summary>
+            <param name="xAxisNew">X-axis of the space that needs to be set.</param>
+            <param name="yAxisNew">Y-axis of the space that needs to be set.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceBase.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the name of an item.  This implementation removes any existing
+            relationship with a name rule, which in most cases is appropriate when giving
+            an object a user-defined name.
+            <para>
+            This method must be overidden by classes for which this is not the appropriate
+            behavior.</para>
+            </summary>
+            <param name="Name">The new name string.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.Part">
+            <summary>
+            Part property returns the Space object type (i.e., Area, Zone, or Interference)
+            and also can set another part type of same part class.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidPartType">Part should belong to the same part class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidArgumentException">Invalid part type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceEntitySpaceDefinitionException">Failed space definition method.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.ConstructionType">
+            <summary>
+            Gets the space construction type for the Space object.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidConstructionType">Invalid object.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.AssociatedObject">
+            <summary>
+            Gets the SP3D object that is associated to the 
+            Space entity object. If there is no object associated to the space entity, 
+            then the property returns null.
+            <para>The Set property associates the input SP3D object to the space entity.
+            If Nothing is set, then the association (if it exists) of the space entity 
+            with the SP3D object is removed.</para>
+            </summary>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.NoAccessException">Permission denied.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceAssociationAEFactoryException">Failed to create SpaceAssociationAEFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceGetActiveEntityException">Failed Get_ActiveEntity method.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceAssociatedSpaceException">Failed AssociatedEntity method.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceObjectMatrixException">Failed ObjectMatrix method.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceAddAssociatedSpaceException">Failed AddAssociatedSpace method.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property.  Uses the
+            system helper of CommonMiddle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.SpaceChildren">
+            <summary>
+            Gets the collection of space children of the parent object. An empty list is returned if there are
+            no children for the parent object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.SpaceParent">
+            <summary>
+            Gets or sets the space parent of space component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.Range">
+            <summary>
+            Gets the range.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule associated to the space area.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.XAxis">
+            <summary>
+            Gets the X-axis of the Space object local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.YAxis">
+            <summary>
+            Gets the Y-axis of the Space object local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.ZAxis">
+            <summary>
+            Gets the Z-axis of the Space object local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.Origin">
+            <summary>
+            Gets the position of the Space object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.Matrix">
+            <summary>
+            Gets the space matrix.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.SpaceBase.Name">
+            <summary>
+            Read-only Name property.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.InterferenceSpace.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor for InterferenceSpace.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.InterferenceSpace.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for InterferenceSpace.
+            </summary>
+            <param name="oPBO">PrivateBusinessObject</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.InterferenceSpace.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Space.Middle.SpaceConstructionType,Ingr.SP3D.Common.Middle.ISpaceParent,System.Collections.ObjectModel.Collection{Ingr.SP3D.Space.Middle.SpaceInputs})">
+            <summary>
+            Creates a Space interference for the given construction type, parent collection, and under the space parent that is passed in to the 
+            constructor.
+            </summary>
+            <param name="oPart">Space part.</param>
+            <param name="eConstructionType">Construction type.</param>
+            <param name="oSpaceparent">Space parent.</param>
+            <param name="oInputCollection">Input collection.</param>
+            <exception cref="T:System.ArgumentNullException">The arguments passed are null and invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidPartType">Invalid part type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidConstructionType">Invalid construction type is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidInputCollection">Invalid input collection.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceFactoryClassException">Failed to create SpaceFactory Object.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreateEntityException">Failed CreateEntity method in SpaceFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidOffsetValues">Invalid offset values.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpacePrimitiveFactoryClassException">Failed to create SpacePrimitiveFactory object.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreateSpacePrimitiveException">Failed CreatePrimitiveEntity method in SpacePrimitiveFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidBooleanOperationTypeException">Invalid boolean operation type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreationSetInputsException">Failed SetInputs method.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.ZoneSpace">
+            <summary>
+            ZoneSpace class derives from the abstract SpaceBase class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.ZoneSpace.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor for ZoneSpace.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.ZoneSpace.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for ZoneSpace object.
+            </summary>
+            <param name="oPBO">Private Business Object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.ZoneSpace.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Space.Middle.SpaceConstructionType,Ingr.SP3D.Common.Middle.ISpaceParent,System.Collections.ObjectModel.Collection{Ingr.SP3D.Space.Middle.SpaceInputs})">
+            <summary>
+            Creates a space zone for the given construction type, parent collection and under the space parent that is passed in to the 
+            constructor.
+            </summary>
+            <param name="oPart">Space part.</param>
+            <param name="eConstructionType">Type of construction.</param>
+            <param name="oSpaceparent">Space parent.</param>
+            <param name="oInputCollection">Input collection.</param>
+            <exception cref="T:System.ArgumentNullException">The arguments passed are null and invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidPartType">Invalid part type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidConstructionType">Invalid construction type is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidInputCollection">Invalid input collection.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceFactoryClassException">Failed to create SpaceFactory object.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreateEntityException">Failed CreateEntity method in SpaceFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidOffsetValues">Invalid offset values.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpacePrimitiveFactoryClassException">Failed to create SpacePrimitiveFactory object.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreateSpacePrimitiveException">Failed CreatePrimitiveEntity method in SpacePrimitiveFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidBooleanOperationTypeException">Invalid boolean operation type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreationSetInputsException">Failed SetInputs method.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceHelper.CreateSpaceEntityObject(System.String,Ingr.SP3D.Space.Middle.SpaceConstructionType,Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.ISpaceParent,System.Collections.ObjectModel.Collection{Ingr.SP3D.Space.Middle.SpaceInputs})">
+            <summary>
+            This is the helper method that is used for creatng Space objects depending upon the
+            type of Space object (Whether it is an Area, Interference or Zone) passed as an input. 
+            </summary>
+            <param name="SpaceProgID">ProgID of the Space object.</param>
+            <param name="eConstructionType">Type of construction.</param>
+            <param name="oPart">Part</param>
+            <param name="oSOMSpaceparent">Parent of the Space object.</param>
+            <param name="oParentCollection">Input collection.</param>
+            <returns>object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceHelper.GetProxyFromPart(Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.ReferenceData.Middle.Part)">
+            <summary>
+            Gets the proxy from given part.
+            </summary>
+            <param name="oModelConn">SP3DConnection</param>
+            <param name="oPart">Part</param>
+            <returns>object oCOMPartProxyObj</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceHelper.HideInputPoint(SP3DPIA.SpaceEntity.IJPoint)">
+            <summary>
+            Hides the input point.
+            </summary>
+            <param name="oPoint">SP3DPIA.SpaceEntity.IJPoint</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.SpaceLocalizer">
+            <summary>
+            Class for the SpaceLocalizer definition.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceLocalizer.GetString(System.Int32,System.String)">
+            <summary>
+            This method returns the localized string. 
+            </summary>
+            <param name="iID">Resource identifier.</param>
+            <param name="defMsgStr">Default string.</param>
+            <returns>String</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.CommonSpaceErrorConstants">
+            <summary>
+            List of error constants used by the CommonSpace application.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.SpaceConstructionType">
+            <summary>
+            This enumerator contains all the available construction types.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.SpaceByPlaneOffset">
+            <summary>
+            Plane and offset construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.SpaceBy2Points">
+            <summary>
+            2 points construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.SpaceByPath">
+            <summary>
+            Path construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.SpaceBy4Points">
+            <summary>
+            4 points construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.SpaceByPrimitive">
+            <summary>
+            Primitive construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.BoundBySpace">
+            <summary>
+            Bound construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceConstructionType.MergeBySpace">
+            <summary>
+            Merge construction type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.BooleanOperationType">
+            <summary>
+            This enumerator contains the list of all the available Boolean operation types.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.BooleanOperationType.BoolNoOperation">
+            <summary>
+            No Boolean operation type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.BooleanOperationType.UnionOperation">
+            <summary>
+            Union Boolean operation type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.BooleanOperationType.IntersectionOperation">
+            <summary>
+            Intersection Boolean operation type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.BooleanOperationType.DifferenceOperation">
+            <summary>
+            Difference Boolean operation type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.SpaceInputs">
+            <summary>
+            This class is a .NET transient class that is used for taking inputs while creating
+            the Space objects(AreaSpace, ZoneSpace, InterferenceSpace) and also during their
+            modification.
+            </summary>
+            <example>
+            <code>
+            For SpaceBy2Points: Requires two Point3D objects to be passed.
+            oSpaceInputs[0].InputObject = Point3D(1);
+            oSpaceInputs[1].InputObject = Point3D(2);
+            oParentColl.Add(oSpaceInputs[0]);
+            oParentColl.Add(oSpaceInputs[1]);
+            
+            For SpaceBy4Points: Requires 4 Point3d Objects to be passed. 
+            oSpaceInputs[0].InputObject = Point3D(1);
+            oSpaceInputs[1].InputObject = Point3D(2);
+            oSpaceInputs[2].InputObject = Point3D(3);
+            oSpaceInputs[3].InputObject = Point3D(4);
+            oParentColl.Add(oSpaceInputs[0]);
+            oParentColl.Add(oSpaceInputs[1]);
+            oParentColl.Add(oSpaceInputs[2]);
+            oParentColl.Add(oSpaceInputs[3]);
+            
+            For Space using PlaneAndOffset: Requires 1Plane, 3 Point3D objects, and 2 offset values.
+            oSpaceInputs [0].InputObject = Plane;
+            offset values
+            oSpaceInputs [0].Offsets.Add(2.0);
+            oSpaceInputs [0].Offsets.Add(1.0);
+            oSpaceInputs [1].InputObject = Point3D(1);
+            oSpaceInputs [2].InputObject = Point3D(2);
+            oSpaceInputs [3].InputObject = Point3D(3);
+            oParentColl.Add(oSpaceInputs [0]);
+            oParentColl.Add(oSpaceInputs [1]);
+            oParentColl.Add(oSpaceInputs [2]);
+            oParentColl.Add(oSpaceInputs [3]);
+            
+            For Space using Primitive: Requires 1 ShapeObject and 1 Point 3D object.
+            oSpaceInputs [0].InputObject = Shape;
+            oSpaceInputs [1].InputObject = Point3D;
+            oParentColl.Add(oSpaceInputs [0]);
+            oParentColl.Add(oSpaceInputs [1]);
+            
+            For Space using Bound/Merge: Requires 2 or more volumes and the associated operation type. Currently, in space we cannot change the operation type once it is created.
+            Usage during creation time:
+            oSpaceInputs [0].InputObject =Volume1;
+            oSpaceInputs [0].BooleanOperationType = BooleanOperationType.UnionOperation;
+            oSpaceInputs [1].InputObject = Volume2;
+            oSpaceInputs [1].BooleanOperationType = BooleanOperationType.UnionOperation;
+            oParentColl.Add(oSpaceInputs [0]);
+            oParentColl.Add(oSpaceInputs [1]);
+            
+            For Space using ByPath: Requires 1 CrossSection and 1 Path(Sketch Path).
+            oSpaceInputs [0].InputObject = CrossSection;
+            oSpaceInputs [1].InputObject = Path(Sketch Path);
+            oParentColl.Add(oSpaceInputs [0]);
+            oParentColl.Add(oSpaceInputs [1]);
+            </code>
+            </example>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceInputs.InputObject">
+            <summary>
+            Input object. 
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceInputs.Offsets">
+            <summary>
+            Offset values used for plane and offset construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.SpaceInputs.BooleanOperationType">
+            <summary>
+            Boolean operation type used for merge and bound construction type.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.SpaceInputs.#ctor">
+            <summary>
+            Constructor for transient class space inputs.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidParentException">
+            <summary>
+            This exception is raised when the parent is invalid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidParentException.#ctor(System.String)">
+            <summary>
+             Instantiates when calling routines do not have a proper parent system object passed as arguments.
+            </summary>
+            <param name="strMessage"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidConstructionType">
+            <summary>
+            This exception is raised when the construction type is invalid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidConstructionType.#ctor(System.String)">
+            <summary>
+            This exception is raised when the the construction type is invalid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.NoImplementation">
+            <summary>
+            This exception is raised when there is no implementation for a 
+            particular method or a property.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.NoImplementation.#ctor(System.String)">
+            <summary>
+            This exception is raised when there is no implementation for a 
+            particular method or a property.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidOffsetValues">
+            <summary>
+            This exception is raised when the given offset values are not valid. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidOffsetValues.#ctor(System.String)">
+            <summary>
+             This exception is raised when the given offset values are not valid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidBooleanOperationTypeException">
+            <summary>
+            This exception is raised when the given Boolean operation type is not valid. 
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidBooleanOperationTypeException.#ctor(System.String)">
+            <summary>
+            This exception is raised when the given Boolean operation type is not valid. 
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidArgumentException">
+            <summary>
+            This exception is raised when the arguments that are passed in as parameters
+            to the methods are not valid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidArgumentException.#ctor(System.String)">
+            <summary>
+            This exception is raised when the arguments that are passed in as parameters
+            to the methods are not valid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.NoAccessException">
+            <summary>
+            This exception is raised when the Space object does not have write permissions.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.NoAccessException.#ctor(System.String)">
+            <summary>
+            This exception would be raised when the Space object does not have write permissions.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidPartType">
+            <summary>
+            This exception is raised when the catalog part used for Space object creation 
+            is not valid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidPartType.#ctor(System.String)">
+            <summary>
+            This exception is raised when the catalog part used for Space object creation 
+            is not valid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.InvalidInputCollection">
+            <summary>
+            This exception is raised when the input collection is invalid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.InvalidInputCollection.#ctor(System.String)">
+            <summary>
+            This exception is raised when the input collection is invalid.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceCreationSetInputsException">
+            <summary>
+            This exception is thrown when a COMException occurs calling IJSpaceCreation.SetInputs method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceCreationSetInputsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceIJSpaceCreationSetInputsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceCreationGetInputsException">
+            <summary>
+            This exception is thrown when a COMException occurs calling IJSpaceCreation.GetInputs method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceCreationGetInputsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceCreationGetInputsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceFactoryClassException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SpaceFactoryClass.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceFactoryClassException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceFactoryClassException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceCreateEntityException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CreateEntity method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceCreateEntityException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceCreateEntityException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceCSpaceFolderFactoryClassException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CSpaceFolderFactoryClass.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceCSpaceFolderFactoryClassException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceCSpaceFolderFactoryClassException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceCSpaceFolderCreateEntityException">
+            <summary>
+            This exception is thrown when a COMException occurs calling CSpaceFolder.CreateEntity method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceCSpaceFolderCreateEntityException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceCSpaceFolderCreateEntityException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceEntitySpaceDefinitionException">
+            <summary>
+            This exception is thrown when a COMException occurs calling IJSpaceEntity.SpaceDefinition method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceEntitySpaceDefinitionException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceEntitySpaceDefinitionException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceAssociationAEFactoryException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SpaceAssociationAEFactory.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceAssociationAEFactoryException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceAssociationAEFactoryException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceGetActiveEntityException">
+            <summary>
+            This exception is thrown when a COMException occurs calling AssociationAEFactory.get_ActiveEntity method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceGetActiveEntityException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceGetActiveEntityException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceObjectMatrixException">
+            <summary>
+            This exception is thrown when a COMException occurs calling AssociationAEFactory.SpaceDefinition method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceObjectMatrixException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceObjectMatrixException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceAddAssociatedSpaceException">
+            <summary>
+            This exception is thrown when a COMException occurs calling AssociationAEFactory.SpaceAddAssociatedSpaceException method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceAddAssociatedSpaceException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceAddAssociatedSpaceException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceAssociatedSpaceException">
+            <summary>
+            This exception is thrown when a COMException occurs calling AssociationAEFactory.SpaceAssociatedSpaceException method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceAssociatedSpaceException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceAssociatedSpaceException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceCreateSpacePrimitiveException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SpacePrimitiveFactoryClass.CreateSpacePrimitive method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceCreateSpacePrimitiveException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceCreateSpacePrimitiveException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpacePrimitiveFactoryClassException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SpacePrimitiveFactoryClass.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpacePrimitiveFactoryClassException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpacePrimitiveFactoryClassException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.SpaceFolderClassGetAllSpacesException">
+            <summary>
+            This exception is thrown when a COMException occurs calling SpaceFolder.GetAllSpaces.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.SpaceFolderClassGetAllSpacesException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SpaceFolderClassGetAllSpacesException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Exceptions.CreateInstanceException">
+            <summary>
+            This exception is thrown when the CreateInstance call falis for the VBSOMHelper.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Exceptions.CreateInstanceException.#ctor">
+            <summary>
+            Initializes a new instance of the CreateInstanceException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs">
+            <summary>
+            Common Space resource identifiers.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrInvalidArguments">
+            <summary>
+            Invalid arguments.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSetSpaceInputs">
+            <summary>
+            Failed to set the inputs on Space object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrGetSpaceInputs">
+            <summary>
+            Failed to get the inputs from Space object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSpaceFactoryCreation">
+            <summary>
+            Failed to create an instance of SpaceFactoryClass.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrCreateSpaceEntity">
+            <summary>
+            Failed to create Space entity.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSpaceFolderFactoryCreation">
+            <summary>
+            Failed to create an instance of SpaceFolderFactoryClass.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrCreateSpaceFolderEntity">
+            <summary>
+            Failed to create SpaceFolder entity.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrPart">
+            <summary>
+            Failed to set the part.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSpaceAssociationAEFactoryCreation">
+            <summary>
+            Failed to create an instance of SpaceAssociationAEFactory class.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrGetActiveEntity">
+            <summary>
+            Failed to get active entity from AssociationAEFactory.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSetObjectMatrix">
+            <summary>
+            Failed to set object matrix on association active entity.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrAddAssociatedSpaceAE">
+            <summary>
+            Failed to add associated space to active entity.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrAssociatedSpaceAE">
+            <summary>
+            Failed to associate space to active entity.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSpacePrimitiveCreation">
+            <summary>
+            Failed to create space primitive.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSpacePrimitiveFactoryCreation">
+            <summary>
+            Failed to create PrimitiveFactory object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrOffsetValuesCannotbeUsed">
+            <summary>
+            Offset values not required for this type of construction.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrInvalidBooleanOperation">
+            <summary>
+            Invalid Boolean operation type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrNullArguments">
+            <summary>
+            The folder parent object is null.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrInvalidConstructionType">
+            <summary>
+            Invalid construction type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrNoPermission">
+            <summary>
+            Permission denied.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrInvalidInputs">
+            <summary>
+            Invalid inputs.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrInvalidOffsetValues">
+            <summary>
+            offset 1 should be greater than offset 2.
+            </summary>        
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrShapeModification">
+            <summary>
+            Cannot modify the shape.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrNoImplementation">
+            <summary>
+            No implementation.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrPartType">
+            <summary>
+            Invalid part type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrPartClassType">
+            <summary>
+            Invalid part class type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrOffsetsRequired">
+            <summary>
+            Offset values required for plane and offset construction.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrInvalidObject">
+            <summary>
+            Invalid object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrUnexpected">
+            <summary>
+            Unexpected failure in retrieving the object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrTransform">
+            <summary>
+            Unexpected failure in retrieving the object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrModifyingSOMObject">
+            <summary>
+            Unable to modify the .NET object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrSpaceFolderGetAllSpaces">
+            <summary>
+            Failed to get Collection Of Spaces.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.ErrCreateInstance">
+            <summary>
+            Failed to create runtime VBSomHelper object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.DEFAULT_RESOURCE">
+            <summary>
+            Default resource name.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Space.Middle.Services.SpaceResourceIDs.DEFAULT_ASSEMBLY">
+            <summary>
+            Default assembly name.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.FolderSpace">
+            <summary>
+            FolderSpace class definition.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.FolderSpace.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor for FolderSpace.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.FolderSpace.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for FolderSpace object.
+            </summary>
+            <param name="oPBO">Private business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.FolderSpace.#ctor(Ingr.SP3D.Common.Middle.ISpaceParent)">
+            <summary>
+            Creates the FolderSpace object under the space parent that is passed in 
+            as a parameter to the constructor.
+            </summary>
+            <param name="oSpaceparent">Space parent.</param>
+            <exception cref="T:System.ArgumentNullException">The folder parent object is null.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCSpaceFolderFactoryClassException">Failed to create SpaceFolderFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCSpaceFolderCreateEntityException">Failed CreateEntity method in SpaceFolderFactory class.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.FolderSpace.GetAllSpaces">
+            <summary>
+            This is the helper method used to get the collection of root level spaces 
+            under the selected space folder. 
+            </summary>
+            <returns>Collection of SpaceBase objects.</returns>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceFolderClassGetAllSpacesException">Failed to get the collection of spaces.</exception> 
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.FolderSpace.AddSpaceChild(Ingr.SP3D.Common.Middle.ISpaceChild)">
+            <summary>
+            Adds the specified object as a child to parent object.
+            </summary>
+            <param name="oChild">Child object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.FolderSpace.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the name of an item.  This implementation removes any existing
+            relationship with a name rule, which in most cases is appropriate when giving
+            an object a user-defined name.
+            
+            This method must be overitten by classes for which this is not the appropriate
+            behavior.
+            </summary>
+            <param name="Name">The new name string.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.FolderSpace.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.FolderSpace.SpaceChildren">
+            <summary>
+            Returns the collection of space children of the parent object. An empty list is returned if there are
+            no children for the parent object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.FolderSpace.SpaceParent">
+            <summary>
+            Gets or sets the space parent of space component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Space.Middle.FolderSpace.Name">
+            <summary>
+            Gets the read-only name.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Space.Middle.AreaSpace">
+            <summary>
+            AreaSpace class derives from the abstract SpaceBase class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.AreaSpace.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor for AreaSpace
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.AreaSpace.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object wrapper constructor for AreaSpace.
+            </summary>
+            <param name="oPBO">Private Business Object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Space.Middle.AreaSpace.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Space.Middle.SpaceConstructionType,Ingr.SP3D.Common.Middle.ISpaceParent,System.Collections.ObjectModel.Collection{Ingr.SP3D.Space.Middle.SpaceInputs})">
+            <summary>
+            Creates a space area for the given construction type, parent collection, and under the Space parent that is passed into the 
+            constructor.
+            </summary>
+            <param name="oPart">Space part.</param>
+            <param name="eConstructionType">Type of construction.</param>
+            <param name="oSpaceparent">Space parent.</param>
+            <param name="oInputCollection">Inputs collection.</param>
+            <exception cref="T:System.ArgumentNullException">The arguments passed are null and invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidPartType">Invalid part type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidConstructionType">Invalid construction type is passed.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidInputCollection">Invalid input collection.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceFactoryClassException">Failed to create SpaceFactory object.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreateEntityException">Failed CreateEntity method in SpaceFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidOffsetValues">Invalid offset values.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpacePrimitiveFactoryClassException">Failed to create SpacePrimitiveFactory object.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreateSpacePrimitiveException">Failed CreatePrimitiveEntity method in SpacePrimitiveFactory class.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.InvalidBooleanOperationTypeException">Invalid Boolean operation type.</exception>
+            <exception cref="T:Ingr.SP3D.Space.Exceptions.SpaceCreationSetInputsException">Failed SetInputs method.</exception>
+        </member>
+    </members>
+</doc>

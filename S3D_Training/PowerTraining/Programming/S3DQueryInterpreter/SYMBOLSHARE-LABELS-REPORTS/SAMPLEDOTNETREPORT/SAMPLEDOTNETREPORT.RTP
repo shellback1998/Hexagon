@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Report Template (No Query)" Description="Empty MetaTemplate for Reporting">
+	<QUERIES>
+		<QUERY Name="FBQ" Site="User" Path="SampleDotNetReport.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Report Template (No Query)" Site="User" Path="SampleDotNetReport.rfm"/>
+	<DISPLAY Name="Report Template (No Query)" Site="User" Path="SampleDotNetReport.rdy"/>
+</REPORT_TEMPLATE>

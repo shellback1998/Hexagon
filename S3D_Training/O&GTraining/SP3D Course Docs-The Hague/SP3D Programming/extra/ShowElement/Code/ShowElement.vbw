@@ -1,0 +1,10 @@
+ShowObject = 0, 0, 0, 0, C
+frmShowElement = 44, 58, 741, 547, , 88, 63, 785, 605, C
+CoreTraderKeys = 0, 0, 0, 0, C
+modHelper = 110, 145, 807, 634, 
+modLogAS = 66, 87, 763, 576, 
+clsObject = 220, 220, 981, 719, 
+modSpecial = 0, 0, 0, 0, C
+clsShow = 0, 0, 0, 0, C
+clsEmpty = 0, 0, 0, 0, C
+frmMessages = 0, 0, 0, 0, C, 0, 0, 0, 0, C

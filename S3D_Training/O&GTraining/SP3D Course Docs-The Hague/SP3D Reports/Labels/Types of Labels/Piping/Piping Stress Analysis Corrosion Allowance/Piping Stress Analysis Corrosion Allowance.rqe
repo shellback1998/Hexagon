@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Piping Stress Analysis Corrosion Allowance"
+ Description="Corrosion Allowance per part, for export to stress analysis"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="CorrosionAllowance"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJCorrosionAllowanceRule"
+             DestinationProperty="CorrosionAllowance"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathRun"
+                   RelationCollection="Spec"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDPipeSpec"
+                   RelationCollection="CorrosionAllowance"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

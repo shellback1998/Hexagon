@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Component Sequence ID" Description="Piping Component Sequence ID"><QUERIES><QUERY Name="Piping Component Sequence ID" Site="User" Path="Piping Component Sequence ID.rqe"/></QUERIES><FORMATTING Name="Piping Component Sequence ID" Site="User" Path="Piping Component Sequence ID.rfm"/></REPORT_TEMPLATE>

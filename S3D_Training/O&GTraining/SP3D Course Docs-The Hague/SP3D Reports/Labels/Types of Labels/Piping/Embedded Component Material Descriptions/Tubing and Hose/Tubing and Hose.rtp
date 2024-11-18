@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Tubing and Hose" Description="Example of a Label for PipeComponent">
+<QUERIES>
+<QUERY Name="Tubing and Hose" Site="User" Path="Tubing and Hose.rqe"/>
+</QUERIES>
+<FORMATTING Name="Tubing and Hose" Site="User" Path="Tubing and Hose.rfm"/>
+</REPORT_TEMPLATE>
+

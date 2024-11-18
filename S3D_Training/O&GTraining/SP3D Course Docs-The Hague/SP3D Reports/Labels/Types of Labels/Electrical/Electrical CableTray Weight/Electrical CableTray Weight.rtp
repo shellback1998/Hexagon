@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical CableTray Weight" Description="Dry weight"><QUERIES><QUERY Name="Electrical CableTray Weight" Site="User" Path="Electrical CableTray Weight.rqe"/></QUERIES><FORMATTING Name="Electrical CableTray Weight" Site="User" Path="Electrical CableTray Weight.rfm"/></REPORT_TEMPLATE>

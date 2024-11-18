@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="SmartPlant To Do List Property Names"
+ Description="Special label for SmartPlant Todo List">
+   <QUERIES>
+      <QUERY
+       Name="SmartPlant To Do List Property Names"
+       Site="User"
+       Path="SmartPlant To Do List Property Names.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="SmartPlant To Do List Property Names"
+    Site="User"
+    Path="SmartPlant To Do List Property Names.rfm" />
+</REPORT_TEMPLATE>
+

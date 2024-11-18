@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Component NPD" Description="Comp NPD1 X NPD2">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="Piping Component NPD" Site="User" Path="Piping Component NPD.rfp" />
+
+   <RTF_LABEL>
+      <NPDDEFS>
+         <NPDDEF Name="NPD1" NPDProp="NPD1" NPDUnitTypeProp="NPDUnitType1" UOM="NPD" />
+
+         <NPDDEF Name="NPD2" NPDProp="NPD2" NPDUnitTypeProp="NPDUnitType2" UOM="NPD" />
+      </NPDDEFS>
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+<!-- This block is for piping, piping components, and instruments -->
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="Category">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Bolts" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="No" Column="Category">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Nuts" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="No" Column="Category">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Washers" StateOfValue="Raw" />
+               </DATA>
+
+               <NPD Visible="Yes" NPDDEF="NPD1" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+<!-- This block is for Bolts only. -->
+            <RULE RuleOperator="Any" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="Category">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Bolts" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="No" Column="Category">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Nuts" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="No" Column="Category">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Washers" StateOfValue="Raw" />
+               </DATA>
+
+               <PHYSICAL Visible="Yes" Column="BoltDiameter" UOM="BoltDiameter" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=" x "/>
+
+               <NPD Visible="No" NPDDEF="NPD2">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="0" StateOfValue="Raw" />
+               </NPD>
+
+               <NPD Visible="No" NPDDEF="NPD2">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </NPD>
+
+               <NPD Visible="Yes" NPDDEF="NPD2">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="NPD1" OperandType1="Variable" StateOfValue="Raw" />
+               </NPD>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

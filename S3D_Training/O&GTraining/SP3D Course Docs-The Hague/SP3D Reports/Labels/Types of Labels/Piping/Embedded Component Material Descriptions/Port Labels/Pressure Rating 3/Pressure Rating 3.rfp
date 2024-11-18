@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS
+ Name="Pressure Rating 3"
+ Description="Pressure Rating of port 3">
+   <DESIGN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DPrompts.ctlTab"
+    Action=""
+    Arg="" />
+
+   <UOMS>
+      <UOM
+       Name="Length"
+       CanInherit="No"
+       Type="DISTANCE"
+       Primary="mm"
+       Secondary=""
+       Tertiary=""
+       UnitsDisplayed="no"
+       PrecisionType="Decimal"
+       DecimalPrecision="1"
+       FractionalPrecision=""
+       LeadingZero=""
+       TrailingZeros="yes"
+       ReduceFraction="no" />
+   </UOMS>
+</FORMATTING_PARAMETERS>
+

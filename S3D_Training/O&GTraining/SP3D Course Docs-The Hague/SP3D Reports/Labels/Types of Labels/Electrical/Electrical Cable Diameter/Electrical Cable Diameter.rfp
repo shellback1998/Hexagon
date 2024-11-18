@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Electrical Cable Diameter" Description="Diameter">
+   <DESIGN_TIME Progid="" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg="" />
+
+   <UOMS>
+      <UOM Name="Diameter" CanInherit="Yes" Type="DISTANCE" Primary="m" Secondary="" Tertiary="" UnitsDisplayed="no" PrecisionType="Decimal" DecimalPrecision="3" FractionalPrecision="" LeadingZero="yes" TrailingZeros="yes" ReduceFraction="" />
+   </UOMS>
+</FORMATTING_PARAMETERS>
+

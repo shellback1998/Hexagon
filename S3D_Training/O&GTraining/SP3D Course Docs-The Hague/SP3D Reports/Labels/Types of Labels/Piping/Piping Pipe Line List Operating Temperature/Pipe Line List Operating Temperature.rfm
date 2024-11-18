@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Pipe Line List Operating Temperature" Description="Pipe Line List Operating Maximum Temperature">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS Name="Pipe Line List Operating Temperature" Site="User" Path="Pipe Line List Operating Temperature.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="Any" RuleOperand="False" />
+            <TOKENS>
+               <PHYSICAL Column="OperatingTemperature" UOM="Operating Temperature" Visible="yes" >
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="0" ConditionOperand2="" StateOfValue="Raw" />
+               </PHYSICAL>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_QUERY Name="Off-line Instruments" Description="Material Description Label for Off-line Instruments" RequiresFilter="No">
+<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+<SQL Timeout="0"><![CDATA[ 
+	select Pcom.CommodityType_LongValue, 
+	Mfd.ValveManufacturer_ShortValue, Mfd.ValveModelNumber_ShortValue,
+	Mfd.MiscRequisitionClassification_ShortValue as MiscReqClassfn_ShortValue from dbo.JDPipeComponent_CL Pcom 
+	Left OUTER join dbo.JUAManufacturerData_CL Mfd ON (pcom.oid = Mfd.oid)	
+	join xmadefrom rmf ON (pcom.oid = rmf.oiddestination)
+	where rmf.oidorigin = ?
+    	]]></SQL>
+<ORASQL Timeout="0">
+	<![CDATA[
+	select ClPco.LONGSTRINGVALUE as CommodityType_LongValue,
+	ClVMf.SHORTSTRINGVALUE as ValveManufacturer_ShortValue, ClVMN.SHORTSTRINGVALUE as ValveModelNumber_ShortValue,
+	ClMRC.SHORTSTRINGVALUE as MiscReqClassfn_ShortValue 
+ 	from CL_PIPINGCOMMODITYTYPE ClPco 
+	join JDPIPECOMPONENT Pcom on (ClPco.VALUEID = Pcom.COMMODITYTYPE) 
+	Left OUTER join JUAManufacturerData Mfd ON (Pcom.Oid = Mfd.Oid)
+	Left OUTER join CL_VALVEMANUFACTURER ClVMf on (ClVMf.VALUEID = Mfd.ValveManufacturer)
+	Left OUTER join CL_VALVEMODELNUMBER ClVMN  on (ClVMN.VALUEID = Mfd.ValveModelNumber)
+	Left OUTER join CL_MISCREQUISITIONCLASSIFICATI ClMRC on (Mfd.MiscRequisitionClassification = ClMRC.VALUEID) 
+        join xmadefrom rmf ON (pcom.oid = rmf.oiddestination) 
+        where rmf.oidorigin = ?
+    	]]></ORASQL>
+<QUERY_PARAMETERS Name="Off-line Instruments" Site="User" Path="Off-line Instruments.rqp"/>
+</REPORT_QUERY>
+

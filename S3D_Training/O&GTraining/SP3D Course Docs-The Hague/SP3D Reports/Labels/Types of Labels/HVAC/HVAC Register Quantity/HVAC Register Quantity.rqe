@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="HVAC Register Quantity" Description="Quantities" RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/><SQL Timeout="0"><![CDATA[Select null as QuantityEach, null as QuantityType]]></SQL><QUERY_PARAMETERS Name="HVAC Register Quantity" Site="User" Path="HVAC Register Quantity.rqp"/></REPORT_QUERY>

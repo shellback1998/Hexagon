@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="412" Description="Comp sch/thk 1x2" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0"><![CDATA[
+	SELECT '[401] x [407]' AS SizeSchedule
+]]></SQL>
+	<ORASQL Timeout="0"><![CDATA[
+	SELECT '[401] x [407]' AS SizeSchedule FROM Dual
+]]></ORASQL>
+	<QUERY_PARAMETERS Name="412" Site="User" Path="412.rqp"/></REPORT_QUERY>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Common Occurrence Location" Description=" "><QUERIES><QUERY Name="Common Occurrence Location" Site="User" Path="Common Occurrence Location.rqe"/></QUERIES><FORMATTING Name="Common Occurrence Location" Site="User" Path="Common Occurrence Location.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Piping NPD with Unit" Description="NPD with units"><QUERIES><QUERY Name="Piping Piping NPD with Unit" Site="User" Path="Piping Piping NPD with Unit.rqe"/></QUERIES><FORMATTING Name="Piping Piping NPD with Unit" Site="User" Path="Piping Piping NPD with Unit.rfm"/></REPORT_TEMPLATE>

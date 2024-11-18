@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_FORMATTING Name="Off-line Instruments" Description="Material Description Label for Off-line Instruments">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="Off-line Instruments" Site="User" Path="Off-line Instruments.rfp" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="CommodityType_LongValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="NO" Column="ValveManufacturer_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="Yes" Column="ValveManufacturer_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="NO" Column="ValveModelNumber_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="Yes" Column="ValveModelNumber_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="No" Column="MiscReqClassfn_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="Yes" Column="MiscRequisitionClassification_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="NULL" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

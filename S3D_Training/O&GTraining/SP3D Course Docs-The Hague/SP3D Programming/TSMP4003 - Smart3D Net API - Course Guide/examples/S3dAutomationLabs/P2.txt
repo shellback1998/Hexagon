@@ -1,0 +1,45 @@
+ObjectType=Systems\PipingSystems
+Hierarchy=1
+-Name=MyPipingSystemB
+-Name=PipingSystem12
+Name=PipingSystem2
+writeall=
+
+objectType=Systems\UnitSystems
+Stop=Add Unitsystem: U01abc
+Hierarchy=2
+Name=U01abc
+writeall=
+
+objectType=Equipment&Furnishing\EquipmentTypes
+stop=Add 1 Equipment
+writeall=
+name=HorPumpBB5Asm-E-1-0001
+
+objectType=Cableway\Cableways
+stop=Add 1 Cableway
+writeall=
+Name=ElectricalSystem-1-0001-ET--0004
+
+objectType=Equipment&Furnishing\EquipmentTypes
+stop=Clear Select set and add 4 Equipments
+clear=
+Hierarchy=0
+names=HorPumpBB5Asm-E-1-0001,MyPump,abc,HorizontalShellTubeExchanger-E-1-0001
+
+
+
+objectType=Equipment&Furnishing\PipeNozzle
+
+stop="Clear and select all nozzles"
+clear=
+like=true
+name=*
+writeall=
+
+objectType=Equipment&Furnishing\PipeNozzle
+
+stop="Clear and select all Discharge nozzles"
+clear=
+like=true
+name=Discharge

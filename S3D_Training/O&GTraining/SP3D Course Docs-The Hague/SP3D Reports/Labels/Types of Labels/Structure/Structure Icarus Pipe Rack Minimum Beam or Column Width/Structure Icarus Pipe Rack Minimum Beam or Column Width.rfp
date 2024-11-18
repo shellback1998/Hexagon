@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Structure Icarus Pipe Rack Minimum Beam or Column Width" Description=" "><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/><UOMS><UOM Name="MinimumBeamOrColumnWidth" CanInherit="No" Type="DISTANCE" Primary="mm" Secondary="" Tertiary="" UnitsDisplayed="no" PrecisionType="Decimal" DecimalPrecision="0" FractionalPrecision="2" LeadingZero="" TrailingZeros="" ReduceFraction="yes"/></UOMS></FORMATTING_PARAMETERS>

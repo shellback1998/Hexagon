@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Structure ToolTip for MemberParts"
+ Description="Tooltip for Member Parts">
+   <QUERIES>
+      <QUERY
+       Name="MemberPart"
+       Site="User"
+       Path="Structure ToolTip for MemberParts.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="MemberPart"
+    Site="User"
+    Path="Structure ToolTip for MemberParts.rfm" />
+</REPORT_TEMPLATE>
+

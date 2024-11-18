@@ -1,0 +1,23 @@
+                         Programmer's File Editor
+                   Known Problems in the Current Release
+                   -------------------------------------
+
+This file details any known major problems that could not be addressed
+in time for publication of the 0.07.002 release. You should also consult
+the Frequently Asked Questions file FAQ.TXT, and the PFE home page
+on http://www.lancs.ac.uk/people/cpaap/pfe
+
+Items are flagged thus:
+
+  [PFE32] : item is specific to the 32-bit edition on all platforms
+  [WIN95] : item is specific to the 32-bit edition under Windows 95
+  [NT]    : item is specific to the 32-bit edition under Windows NT
+  [PFE16] : item is specific to the 16-bit edition
+
+
+--
+
+
+
+
+

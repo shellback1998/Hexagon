@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical Cable Position X (East)" Description=" "><QUERIES><QUERY Name="Electrical Cable Position X (East)" Site="User" Path="Electrical Cable Position X (East).rqe"/></QUERIES><FORMATTING Name="Electrical Cable Position X (East)" Site="User" Path="Electrical Cable Position X (East).rfm"/></REPORT_TEMPLATE>

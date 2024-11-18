@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Pipe Line List Nominal Diameter" Description="Pipe Line List Nominal Diameter">
+<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+<FORMATTING_PARAMETERS Name="Pipe Line List Nominal Diameter" Site="User" Path="Pipe Line List Nominal Diameter.rfp"/>
+<LAYOUT_TEMPLATE Type="Internal"/>
+<RTF_LABEL>
+    <BLOCKS>
+	<BLOCK Action="Visible">
+	    <TOKENS>
+		<PHYSICAL Column="NPD" UOM="NPD" Visible="yes"/>
+		<TEXT Value=" " ToParse="no" Visible="yes"/>
+		<DATA Column="NPDUnitType" ToParse="NO" Visible="yes"/>
+	    </TOKENS>
+	</BLOCK>
+    </BLOCKS>
+</RTF_LABEL>
+</REPORT_FORMATTING>

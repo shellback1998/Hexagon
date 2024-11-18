@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Stress Analysis Corrosion Allowance" Description="Corrosion Allowance per part, for export to stress analysis">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<FORMATTING_PARAMETERS Name="Piping Stress Analysis Corrosion Allowance" Site="User" Path="Piping Stress Analysis Corrosion Allowance.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="CorrosionAllowance" UOM="Length" Visible="yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

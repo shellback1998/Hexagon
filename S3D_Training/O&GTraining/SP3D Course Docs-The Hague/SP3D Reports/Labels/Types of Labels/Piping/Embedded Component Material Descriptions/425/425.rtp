@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="425" Description="RPAD width x thick">
+	<QUERIES>
+		<QUERY Name="425" Site="User" Description="Get RPAD Data" Path="425.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="425" Site="User" Description="RPAD Format" Path="425.rfm"/>
+</REPORT_TEMPLATE>

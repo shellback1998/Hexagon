@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="412" Description="Comp sch/thk 1x2">
+	<QUERIES>
+		<QUERY Name="412" Site="User" Description="Query to get the schedule thickness from Straight pipe " Path="412.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="412" Site="User" Description="Comp sch/thk 1x2" Path="412.rfm"/>
+</REPORT_TEMPLATE>

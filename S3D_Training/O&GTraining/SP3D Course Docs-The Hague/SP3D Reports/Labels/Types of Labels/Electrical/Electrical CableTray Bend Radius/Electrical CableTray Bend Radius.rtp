@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical CableTray Bend Radius" Description=""><QUERIES><QUERY Name="Electrical CableTray Bend Radius" Site="User" Path="Electrical CableTray Bend Radius.rqe"/></QUERIES><FORMATTING Name="Electrical CableTray Bend Radius" Site="User" Path="Electrical CableTray Bend Radius.rfm"/></REPORT_TEMPLATE>

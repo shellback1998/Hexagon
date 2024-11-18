@@ -1,0 +1,127 @@
+
+D:\PBS-ext\Process\DELIVERY\PDS\Pds63\SE390AA.A>D:\PBS-ext\Process\UTILS\Robocopy\robocopy.exe \\Td4ugr\DELIVERY\pds_63\SE390AA.A D:\PBS-ext\Process\DELIVERY\PDS\Pds63\SE390AA.A
+
+-----------------------------------------------------------------
+ROBOCOPY  :  Robust File Copy  :  Version 1.38  :  by Kevin Allen
+-----------------------------------------------------------------
+
+  Started : Fri Jan 16 09:54:08 1998
+
+   Source : \\Td4ugr\DELIVERY\pds_63\SE390AA.A\
+     Dest : D:\PBS-ext\Process\DELIVERY\PDS\Pds63\SE390AA.A\
+    Files : *.*
+
+---------------------------------------------------------------------------
+
+                     137  \\Td4ugr\DELIVERY\pds_63\SE390AA.A\
+    New File                   76660  Z13.7_
+    New File                   39415  Z14.1_
+    New File                  899057  Z14.7_
+    New File                  199856  Z15.1_
+    New File                   43178  Z15.7_
+    New File                   25339  Z16.1_
+    New File                   24386  Z16.7_
+    New File                    1513  Z17.1_
+    New File                   65523  Z17.7_
+    New File                  276684  Z18.1_
+    New File                   44654  Z18.7_
+    New File                  238285  Z19.1_
+    New File                     942  Z19.7_
+    New File                  177311  Z2.1_
+    New File                   39272  Z2.2_
+    New File                    4314  Z2.3_
+    New File                    2110  Z2.4
+    New File                    2110  Z2.5
+    New File                    4254  Z2.6
+    New File                    3700  Z2.7_
+    New File                   25107  Z2.8_
+    New File                   48640  Z2.9_
+    New File                    4279  Z20.1_
+    New File                   65523  Z20.7_
+    New File                     582  Z21.1_
+    New File                    8922  Z21.7_
+    New File                    7593  Z22.1_
+    New File                     453  Z22.7_
+    New File                      54  Z23.1_
+    New File                   14001  Z3.1_
+    New File                   45185  Z3.2_
+    New File                    4007  Z3.3_
+    New File                    4185  Z3.6
+    New File                   61231  Z3.7_
+    New File                 1759048  Z3.8_
+    New File                  164534  Z3.9_
+    New File                     168  Z4.1_
+    New File                     899  Z4.2_
+    New File                    1531  Z4.3_
+    New File                   42093  Z4.6
+    New File                  204822  Z4.7_
+    New File                 1774772  Z4.8_
+    New File                  154559  Z4.9_
+    New File                   11812  Z5.1_
+    New File                    1703  Z5.2_
+    New File                    1636  Z5.3_
+    New File                    2002  Z5.6
+    New File                   44475  Z5.7_
+    New File                    8775  Z5.8_
+    New File                  183001  Z5.9_
+    New File                     204  Z6.1_
+    New File                    2083  Z6.2_
+    New File                  347349  Z6.3_
+    New File                    2110  Z6.6
+    New File                  260833  Z6.7_
+    New File                     970  Z6.8_
+    New File                  471576  Z6.9_
+    New File                    1369  Z7.1_
+    New File                   27938  Z7.2_
+    New File                    4796  Z7.3_
+    New File                   42786  Z7.7_
+    New File                 1008890  Z7.8_
+    New File                   23635  Z7.9_
+    New File                     769  Z8.1_
+    New File                   45194  Z8.2_
+    New File                     631  Z8.3_
+    New File                  296640  Z8.7_
+    New File                  204906  Z8.8_
+    New File                   45487  Z8.9_
+    New File                  877116  Z9.1_
+    New File                     534  Z9.2_
+    New File                     219  Z9.3_
+    New File                  436851  Z9.7_
+    New File                   89453  Z9.8_
+    New File                   13615  Z9.9_
+    New File                  117248  zip.exe
+
+---------------------------------------------------------------------------
+
+                Total    Copied   Skipped  Mismatch    FAILED    Extras
+     Dirs :         1         0         1         0         0         0
+    Files :       137        76        61         0         0         0
+    Bytes :    34.6 m    10.6 m    24.0 m         0         0         0
+    Times :  0:27.297  0:24.722                      0:00.000  0:02.575
+
+    Ended : Fri Jan 16 09:54:36 1998
+
+D:\PBS-ext\Process\DELIVERY\PDS\Pds63\SE390AA.A>
+
+
+
+===========================================================================
+
+E:\Process\UTILS\Robocopy\robocopy.exe \\DIABLO\PBS\PDS_6.3_CD E:\Process\DELIVERY\PDS\Pds63 /XD Documents /e /v /R:10 /W:10 > C:\temp\dwnld2PDS.log
+E:\Process\UTILS\Robocopy\robocopy.exe \DIABLO\PBS\6.3_PRECERT \DIABLO\PBS\PDS_6.3_CD /L > C:\temp\diffPDS.log
+E:\Process\UTILS\Robocopy\robocopy.exe \DIABLO\PBS\6.3_PRECERT E:\Process\DELIVERY\PDS\Pds63 /L > C:\temp\diff2PDS.log
+
+C:\win32app\Robocopy\robocopy.exe \\RSTUCHL\Process\DELIVERY\PDS\Pds63 D:\PBSdeliv\6.3_PRECERT /e /v /XD Documents /R:10 /W:10 > C:\temp\dwnldPDS.log
+
+C:\win32app\Robocopy\robocopy.exe \\RSTUCHL\Process\DELIVERY\PDS\Pds63\SE218AA.A D:\PBSdeliv\6.3_PRECERT\SE218AA.A /e /v /R:10 /W:10 > C:\temp\dwnld3PDS.log
+C:\win32app\Robocopy\robocopy.exe \\RSTUCHL\Process\DELIVERY\PDS\Pds63\SE390AA.A D:\PBSdeliv\6.3_PRECERT\SE390AA.A /e /v /R:10 /W:10 > C:\temp\dwnld4PDS.log
+
+E:\Process\UTILS\Robocopy\robocopy.exe \\DIABLO\PBS\6.3_PRECERT D:\PBSdeliv\6.3_PRECERT /e /v /XD Documents /R:10 /W:10 > C:\temp\dwnldPDS.log
+
+
+E:\Process\UTILS\Robocopy\robocopy.exe \\diablo\PBS\FW_Plus\03.01.00.07 E:\Process\DELIVERY\FW_Plus\FW+3.1\Se332aa.a /e /v /R:10 /W:10 > C:\temp\dwnldFWP.log
+
+
+
+C:\win32app\utils\Robocopy\robocopy.exe "C:\Program Files\SmartPlant\P&ID Reference Data\Symbols" C:\DATA\HostFiles\RefData\Symbols /e /v /R:10 /W:10 > C:\temp\PID_refdata.log
+

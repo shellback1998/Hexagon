@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Stair"
+ Description="Tooltip for Stairs"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="SYSTEMName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJSystemChild"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="Parent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="SPAN"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJSPSCommonStairLadderProperties"
+             DestinationProperty="Span"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Height"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJSPSCommonStairLadderProperties"
+             DestinationProperty="Height"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Length"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJSPSCommonStairLadderProperties"
+             DestinationProperty="Length"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Proj"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJWBSProjectChild"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSProjectChild"
+                   RelationCollection="project"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Contract"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJWBSItemChild"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

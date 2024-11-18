@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MyRouteRunNameRules
+</name>
+</assembly>
+<members>
+<member name="P:MyRouteRunNameRules.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:MyRouteRunNameRules.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:MyRouteRunNameRules.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:MyRouteRunNameRules.PipeRunNameRule.ComputeName(Ingr.SP3D.Common.Middle.BusinessObject,System.Collections.ObjectModel.ReadOnlyCollection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.BusinessObject)">
+	<summary>
+  Creates a name for the object passed in. The name is based on the parents
+  name and object name.The Naming Parents are added in AddNamingParents().
+  Both these methods are called from naming rule semantic.
+ </summary>
+	<param name="oEntity">Child object that needs to have the naming rule naming.</param>
+	<param name="oParents">Naming parents collection.</param>
+	<param name="oActiveEntity">Naming rules active entity on which the NamingParentsString is stored.</param>
+</member><member name="M:MyRouteRunNameRules.PipeRunNameRule.GetNamingParents(Ingr.SP3D.Common.Middle.BusinessObject)">
+	<summary>
+ All the Naming Parents that need to participate in an objects naming are added here to the
+ Collection(Of BusinessObject). The parents added here are used in computing the name of the object in
+ ComputeName(). Both these methods are called from naming rule semantic.
+ </summary>
+	<param name="oEntity">Child object that needs to have the naming rule naming.</param>
+	<returns> Collection of parents that participate </returns>
+</member>
+</members>
+</doc>

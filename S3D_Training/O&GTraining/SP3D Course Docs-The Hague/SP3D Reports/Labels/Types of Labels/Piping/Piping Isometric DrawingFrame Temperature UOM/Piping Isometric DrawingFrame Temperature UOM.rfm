@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Isometric DrawingFrame Temperature UOM" Description="Sample Default Temperture UOM">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<FORMATTING_PARAMETERS Name="Piping Isometric DrawingFrame Temperature UOM" Site="User" Path="Piping Isometric DrawingFrame Temperature UOM.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="Field1" UOM="CELSIUS" Visible="yes"/>
+					<TEXT Visible="Yes" Value=" / "/>
+					<PHYSICAL Visible="Yes" Column="Field1" UOM="FAHRENHEIT"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

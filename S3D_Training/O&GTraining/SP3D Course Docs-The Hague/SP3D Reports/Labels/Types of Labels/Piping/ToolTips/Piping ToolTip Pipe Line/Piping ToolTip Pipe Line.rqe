@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Piping ToolTip Pipe Line"
+ Description="Example of a Label for PipeLine System"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="SequenceNumber"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJPipelineSystem"
+             SourceBOC=""
+             DestinationInterface="IJPipelineSystem"
+             DestinationProperty="SequenceNumber"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="FluidCode"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJPipelineSystem"
+             SourceBOC=""
+             DestinationInterface="IJPipelineSystem"
+             DestinationProperty="FluidCode"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJPipelineSystem"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

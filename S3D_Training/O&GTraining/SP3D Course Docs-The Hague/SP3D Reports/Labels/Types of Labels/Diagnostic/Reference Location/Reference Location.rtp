@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Reference Location" Description=" ">
+	<QUERIES>
+		<QUERY Name="Reference Location" Site="User" Path="Reference Location.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Reference Location" Site="User" Path="Reference Location.rfm"/>
+</REPORT_TEMPLATE>

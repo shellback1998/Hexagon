@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Jan. 9, 2007 	Modified format to better support thru-bolt connection
+-->	
+<REPORT_FORMATTING Name="Piping ToolTip Piping Connection" Description="Example of a Label for Piping Connection">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Sans Serif;}{\f1\fnil\fcharset0 MS Shell Dlg;}}{\colortbl ;\red0\green0\blue0;}\viewkind4\uc1\pard\f0\fs24\fs17Piping Connection: " ToParse="no" Visible="yes" />
+
+               <DATA Column="ConnectionType" ToParse="NO" Visible="yes" />
+ 
+               <TEXT Value="                                                                                  " ToParse="no" Visible="yes" />
+           </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="ConnectionType_Index" ToParse="NO" Visible="No">
+                  <CONDITION ConditionOperator="LessThanOrEqual" ConditionOperand1="2" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="\par \cf1 Bolt Quantity: \cf0 " ToParse="no" Visible="yes" />
+
+               <DATA Column="Bolts_Quantity" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="                                                                                  " ToParse="no" Visible="yes" />
+
+               <TEXT Value="\cf1 \par Bolts Description: \cf0 " ToParse="no" Visible="yes" />
+
+               <DATA Column="Bolts_Description" ToParse="NO" Visible="yes" />
+               
+               <TEXT Value="                                                                                  " ToParse="no" Visible="yes" />
+
+            </TOKENS>     
+         </BLOCK>
+
+         <BLOCK>
+            <TOKENS>
+               <TEXT Value="\par \f1 \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

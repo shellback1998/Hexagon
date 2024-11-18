@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QUERY_PARAMETERS Name="Structure Linear Member Weight" Description="Dry weight"><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="" Action="" Arg=""/><FIELDS><FIELD Name="OID" Index="1" DataType="OID" AllowMultiSelect="No" IsHidden="Yes" IsRequired="No" IsSelectableObject="No" Caption="OID" LookUp="" SQLType="GUID" DefaultValue="" DisplayedValue=""/></FIELDS></QUERY_PARAMETERS>

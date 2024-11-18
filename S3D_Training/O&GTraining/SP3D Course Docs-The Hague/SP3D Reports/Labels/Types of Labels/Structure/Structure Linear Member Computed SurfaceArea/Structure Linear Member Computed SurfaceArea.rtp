@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Linear Member Computed SurfaceArea" Description="">
+	<QUERIES>
+		<QUERY Name="Structure Linear Member Computed SurfaceArea" Site="User" Path="Structure Linear Member Computed SurfaceArea.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Structure Linear Member Computed SurfaceArea" Site="User" Path="Structure Linear Member Computed SurfaceArea.rfm"/>
+</REPORT_TEMPLATE>

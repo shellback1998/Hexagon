@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical CableTray Nominal Depth" Description=""><QUERIES><QUERY Name="Electrical CableTray Nominal Depth" Site="User" Path="Electrical CableTray Nominal Depth.rqe"/></QUERIES><FORMATTING Name="Electrical CableTray Nominal Depth" Site="User" Path="Electrical CableTray Nominal Depth.rfm"/></REPORT_TEMPLATE>

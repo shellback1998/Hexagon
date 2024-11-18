@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical Cable Impedance" Description="Impedance Rating"><QUERIES><QUERY Name="Electrical Cable Impedance" Site="User" Path="Electrical Cable Impedance.rqe"/></QUERIES><FORMATTING Name="Electrical Cable Impedance" Site="User" Path="Electrical Cable Impedance.rfm"/></REPORT_TEMPLATE>

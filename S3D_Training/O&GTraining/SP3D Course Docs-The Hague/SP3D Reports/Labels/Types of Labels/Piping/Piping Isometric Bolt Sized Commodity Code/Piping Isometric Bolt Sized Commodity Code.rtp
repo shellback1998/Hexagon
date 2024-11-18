@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Bolt Sized Commodity Code" Description="A label of the SizedCommodityCode attribute from the IJUASizedBoltData interface"><QUERIES><QUERY Name="Piping Isometric Bolt Sized Commodity Code" Site="User" Path="Piping Isometric Bolt Sized Commodity Code.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Bolt Sized Commodity Code" Site="User" Path="Piping Isometric Bolt Sized Commodity Code.rfm"/></REPORT_TEMPLATE>

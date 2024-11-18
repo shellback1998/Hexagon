@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="402" Description="Instrument Tag">
+	<QUERIES>
+		<QUERY Name="402" Site="User" Path="402.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="402" Site="User" Path="402.rfm"/>
+</REPORT_TEMPLATE>

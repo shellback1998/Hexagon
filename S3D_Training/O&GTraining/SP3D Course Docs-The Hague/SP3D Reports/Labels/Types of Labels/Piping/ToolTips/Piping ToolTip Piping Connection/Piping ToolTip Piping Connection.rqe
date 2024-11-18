@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Jan. 9, 2007 	Modified query to better support thru-bolt connection
+-->	
+<REPORT_QUERY
+ Name="Piping ToolTip Piping Connection"
+ Description="Example of a Label for Piping Connection"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[
+select  distinct
+		dc.ConnectionType				ConnectionType_Index,
+	    ct.shortstringvalue             ConnectionType,
+        case
+          when dc.connectiontype > 2 then 0
+          else b.boltquantity
+        end                             Bolts_Quantity,
+        case
+          when dc.connectiontype > 2 then ' '
+          else b.shortmaterialdescription
+        end                             Bolts_Description
+FROM jdistribconnection dc 
+JOIN cl_connectiontype ct ON ct.valueid = dc.connectiontype 
+LEFT JOIN ( Select xrcpo.oidorigin, rb.boltquantity, jbolt.shortmaterialdescription
+            FROM XRelConnectionAndPartOcc xrcpo 
+            JOIN jpartocc p ON p.oid = xrcpo.oiddestination 
+            JOIN XRelConnectionAndPartOcc xrcpo2 ON xrcpo2.oiddestination = p.oid 
+            JOIN jdistribconnection dc2 ON dc2.oid = xrcpo2.oidorigin 
+            JOIN XGeneratesConnectionItems xgci ON xgci.oidorigin = dc2.oid 
+            JOIN jrtebolt rb ON rb.oid = xgci.oiddestination 
+            JOIN XImpliedMatingParts ximp ON ximp.oidorigin = rb.oid 
+            JOIN jbolt ON jbolt.oid = ximp.oiddestination 
+          ) b on b.oidorigin = dc.oid 
+WHERE dc.oid = ?
+       ]]>
+   </SQL>
+
+   <ORASQL
+    Timeout="0">
+      <![CDATA[
+select  distinct
+		dc.ConnectionType				ConnectionType_Index,
+		ct.shortstringvalue             ConnectionType,
+        case
+          when dc.connectiontype > 2 then 0
+          else b.boltquantity
+        end                             Bolts_Quantity,
+        case
+          when dc.connectiontype > 2 then cast(' ' as nvarchar2(255))
+          else b.shortmaterialdescription
+        end                             Bolts_Description
+FROM jdistribconnection dc 
+JOIN cl_connectiontype ct ON ct.valueid = dc.connectiontype 
+LEFT JOIN ( Select xrcpo.oidorigin, rb.boltquantity, jbolt.shortmaterialdescription
+            FROM XRelConnectionAndPartOcc xrcpo 
+            JOIN jpartocc p ON p.oid = xrcpo.oiddestination 
+            JOIN XRelConnectionAndPartOcc xrcpo2 ON xrcpo2.oiddestination = p.oid 
+            JOIN jdistribconnection dc2 ON dc2.oid = xrcpo2.oidorigin 
+            JOIN XGeneratesConnectionItems xgci ON xgci.oidorigin = dc2.oid 
+            JOIN jrtebolt rb ON rb.oid = xgci.oiddestination 
+            JOIN XImpliedMatingParts ximp ON ximp.oidorigin = rb.oid 
+            JOIN jbolt ON jbolt.oid = ximp.oiddestination 
+          ) b on b.oidorigin = dc.oid 
+WHERE dc.oid = hextoraw(?)
+       ]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS
+    Name="Piping ToolTip Piping Connection"
+    Site="User"
+    Path="Piping ToolTip Piping Connection.rqp" />
+</REPORT_QUERY>
+

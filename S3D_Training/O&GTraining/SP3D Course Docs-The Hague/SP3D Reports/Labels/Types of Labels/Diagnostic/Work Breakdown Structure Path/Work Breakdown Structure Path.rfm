@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Work Breakdown Structure Path" Description="Work Breakdown Structure Path">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="GGGGPName" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="GGGPName" OperandType1="Variable" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="GGGPName" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="GGPName" OperandType1="Variable" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="GGPName" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="GPName" OperandType1="Variable" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="GPName" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="PName" OperandType1="Variable" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="GPNameAlt" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+					<DATA Column="GPName" Visible="No">
+						<CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="PName" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="PNameAlt" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+					<DATA Column="PName" Visible="No">
+						<CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+					<TEXT Value="/" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="Name" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

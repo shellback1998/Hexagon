@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Instrumentation Control Valves NPD with Unit Secondary" Description="NPD with units for secondary size"><QUERIES><QUERY Name="Instrumentation Control Valves NPD with Unit Secondary" Site="User" Path="Instrumentation Control Valves NPD with Unit Secondary.rqe"/></QUERIES><FORMATTING Name="Instrumentation Control Valves NPD with Unit Secondary" Site="User" Path="Instrumentation Control Valves NPD with Unit Secondary.rfm"/></REPORT_TEMPLATE>

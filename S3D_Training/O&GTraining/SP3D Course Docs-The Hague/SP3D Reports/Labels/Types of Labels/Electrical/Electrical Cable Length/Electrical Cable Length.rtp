@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical Cable Length" Description="Length"><QUERIES><QUERY Name="Electrical Cable Length" Site="User" Path="Electrical Cable Length.rqe"/></QUERIES><FORMATTING Name="Electrical Cable Length" Site="User" Path="Electrical Cable Length.rfm"/></REPORT_TEMPLATE>

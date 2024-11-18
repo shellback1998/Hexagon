@@ -1,0 +1,30 @@
+'----------------------------------------------------------------------------------------
+'Description
+' Function returns the CatalogResourceManager
+'----------------------------------------------------------------------------------------
+Private Function GetCatalogResourceManager() As IUnknown
+    Const METHOD = "GetCatalogResourceManager"
+    On Error GoTo ErrHandler
+    
+    Dim oDBTypeConfig As IJDBTypeConfiguration
+    Dim pConnMiddle As IJDConnectMiddle
+    Dim pAccessMiddle As IJDAccessMiddle
+    Dim jContext As IJContext
+    Set jContext = GetJContext()
+    Set oDBTypeConfig = jContext.GetService("DBTypeConfiguration")
+    Set pConnMiddle = jContext.GetService("ConnectMiddle")
+    Set pAccessMiddle = pConnMiddle
+ 
+    Dim strCatlogDB As String
+    strCatlogDB = oDBTypeConfig.get_DataBaseFromDBType("Catalog")
+    Set GetCatalogResourceManager = pAccessMiddle.GetResourceManager(strCatlogDB)
+    Set jContext = Nothing
+    Set oDBTypeConfig = Nothing
+    Set pConnMiddle = Nothing
+    Set pAccessMiddle = Nothing
+Exit Function
+ErrHandler:
+    m_oErrors.Add Err.Number, "GetCatalogResourceManager", Err.Description
+    Err.Raise E_FAIL
+End Function
+

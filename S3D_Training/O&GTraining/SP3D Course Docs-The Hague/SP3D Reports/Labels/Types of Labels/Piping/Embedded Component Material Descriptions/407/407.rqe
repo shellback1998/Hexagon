@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="407" Description="Comp sch/thk 2 " RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CPipePortData" Action="" Arg="2"/><SQL Timeout="0"><![CDATA[
+	SELECT ' ' AS Dummy
+	]]></SQL><QUERY_PARAMETERS Name="407" Site="User" Path="407.rqp"/></REPORT_QUERY>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Structure ToolTip Boundary Condition"
+ Description="Example of Query on Instanciated Object"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="XDisplacement"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="ISPSAnalysisBoundaryCondition"
+             DestinationProperty="XDisplacement"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="YDisplacement"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="ISPSAnalysisBoundaryCondition"
+             DestinationProperty="YDisplacement"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="ZDisplacement"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="ISPSAnalysisBoundaryCondition"
+             DestinationProperty="ZDisplacement"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="XRotation"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="ISPSAnalysisBoundaryCondition"
+             DestinationProperty="XRotation"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="YRotation"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="ISPSAnalysisBoundaryCondition"
+             DestinationProperty="YRotation"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="ZRotation"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="ISPSAnalysisBoundaryCondition"
+             DestinationProperty="ZRotation"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

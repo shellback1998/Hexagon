@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Pipe Run for Tooltips and Drawings" Description="Example of a Label for PipeRun">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Sans Serif;}}\viewkind4\uc1\pard\f0\fs17 " ToParse="no" Visible="yes"/>
+					<DATA Column="FluidCode" ToParse="NO" Visible="yes"/>
+					<TEXT Value="-" ToParse="no" Visible="yes"/>
+					<DATA Column="Name" ToParse="NO" Visible="yes"/>
+					<TEXT Value="-" ToParse="no" Visible="yes"/>
+					<DATA Column="NPD" ToParse="NO" Visible="yes"/>
+					<DATA Column="NPDUnits" ToParse="NO" Visible="yes"/>
+					<TEXT Value="-" ToParse="no" Visible="yes"/>
+					<DATA Column="PipeSpec" ToParse="NO" Visible="yes"/>
+					<TEXT Value="-" ToParse="no" Visible="yes"/>
+					<DATA Column="InsulationPurpose" ToParse="NO" Visible="yes"/>
+					<TEXT Value="\par }" ToParse="no" Visible="yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

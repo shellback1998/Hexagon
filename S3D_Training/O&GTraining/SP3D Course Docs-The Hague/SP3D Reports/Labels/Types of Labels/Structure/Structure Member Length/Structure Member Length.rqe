@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Structure Member Length" Description="Length" RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/><SQL Timeout="0"><![CDATA[
+		SELECT jrpo.Length AS Length
+		FROM JRteStockPartOccur jrpo
+		WHERE jrpo.oid = ? ]]></SQL><QUERY_PARAMETERS Name="Structure Member Length" Site="User" Path="Structure Member Length.rqp"/></REPORT_QUERY>

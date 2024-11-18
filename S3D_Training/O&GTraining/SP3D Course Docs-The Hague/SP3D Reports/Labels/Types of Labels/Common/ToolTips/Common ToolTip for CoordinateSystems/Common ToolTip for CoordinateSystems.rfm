@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_FORMATTING Name="CoordinateSystem" Description="Format for Tooltip for CoordinateSystems">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="CoordinateSystem" Site="User" Path="Common ToolTip for CoordinateSystems.rfp" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Sans Serif;}}\viewkind4\uc1\pard\f0\fs17 " Visible="Yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="Name: " Visible="Yes" />
+
+               <DATA Column="Name" Visible="yes" />
+
+               <TEXT Value=" \par Description: " Visible="Yes" />
+
+               <DATA Column="Desc" Visible="yes" />
+
+               <TEXT Value=" \par Easting: " Visible="Yes" />
+
+               <PHYSICAL Column="X" UOM="Length" Visible="Yes" />
+
+               <TEXT Value=" \par Northing:" Visible="Yes" />
+
+               <PHYSICAL Column="Y" UOM="Length" Visible="Yes" />
+
+               <TEXT Value=" \par Elevation: " Visible="Yes" />
+
+               <PHYSICAL Column="Z" UOM="Length" Visible="Yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value=" \par } " Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

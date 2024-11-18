@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC CFM" Description="Computed volume flow rate label"><QUERIES><QUERY Name="HVAC CFM" Site="User" Path="HVAC CFM.rqe"/></QUERIES><FORMATTING Name="HVAC CFM" Site="User" Path="HVAC CFM.rfm"/></REPORT_TEMPLATE>

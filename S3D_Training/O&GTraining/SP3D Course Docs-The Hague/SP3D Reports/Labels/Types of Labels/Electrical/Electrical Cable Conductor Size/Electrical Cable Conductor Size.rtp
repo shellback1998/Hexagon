@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical Cable Conductor Size" Description="Label for Cable Conductor Size"><QUERIES><QUERY Name="Electrical Cable Conductor Size" Site="User" Path="Electrical Cable Conductor Size.rqe"/></QUERIES><FORMATTING Name="Electrical Cable Conductor Size" Site="User" Path="Electrical Cable Conductor Size.rfm"/></REPORT_TEMPLATE>

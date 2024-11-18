@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Structure ToolTip Structural Member"
+ Description="Example of a Label for Structural Member"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DDrawingLabelQuery.CFireproofing"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="SectionName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="ISTRUCTCrossSection"
+             DestinationProperty="SectionName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="Generation6_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="ISPSPartPrismaticDesign"
+                   RelationCollection="Definition_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

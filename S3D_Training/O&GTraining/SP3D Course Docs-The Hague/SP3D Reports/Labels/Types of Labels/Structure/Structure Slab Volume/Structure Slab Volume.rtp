@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Volume" Description="">
+	<QUERIES>
+		<QUERY Name="Volume" Site="User" Path="Structure Slab Volume.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Volume" Site="User" Path="Structure Slab Volume.rfm"/>
+</REPORT_TEMPLATE>

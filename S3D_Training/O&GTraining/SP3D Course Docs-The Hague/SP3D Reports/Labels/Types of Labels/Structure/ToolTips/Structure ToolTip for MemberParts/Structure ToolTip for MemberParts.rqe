@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="MemberPart"
+ Description="Tooltip for Member Parts"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DDrawingLabelQuery.CFireproofing"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="SystemName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberSystemChild"
+                   RelationCollection="MemberDesignParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="ISPSMemberSystemSystemChild"
+                   RelationCollection="MemberSystemSystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="RefStd"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJReferenceStandard"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="Generation6_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="ISPSPartPrismaticDesign"
+                   RelationCollection="Definition_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJCrossSection"
+                   RelationCollection="PartClass"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDPartClass"
+                   RelationCollection="ReferenceStandard"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="CutLength"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="ISPSMemberPartPrismatic"
+             DestinationProperty="CutLength"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Material"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJDMaterial"
+             DestinationProperty="MaterialType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="MemberMaterialEdge_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="Yes"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="CardinalPoint"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="ISPSCrossSection"
+             DestinationProperty="CardinalPoint"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="Generation6_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="SectionName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IStructCrossSection"
+             DestinationProperty="SectionName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="MemberCSEdge_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="Yes"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Depth"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="ISTRUCTCrossSectionDimensions"
+             DestinationProperty="Depth"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="Generation6_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="ISPSPartPrismaticDesign"
+                   RelationCollection="Definition_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Width"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="ISTRUCTCrossSectionDimensions"
+             DestinationProperty="Width"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="Generation6_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="ISPSPartPrismaticDesign"
+                   RelationCollection="Definition_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="UserCreated"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJDObject"
+             DestinationProperty="UserCreated"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="ApprovalStatus"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJDObject"
+             DestinationProperty="ApprovalStatus"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Proj"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSProjectChild"
+                   RelationCollection="project"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Contract"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Electrical CableTray Quantity" Description="Cable Tray Quantities">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<FORMATTING_PARAMETERS Name="Electrical CableTray Quantity" Site="User" Path="Electrical CableTray Quantity.rfp"/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="False"/>
+				<TOKENS>
+					<PHYSICAL Column="QuantityTotal" UOM="Length" Visible="Yes"/>
+					<DATA Visible="No" Column="StockLength">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="QuantityTotal" Visible="Yes"/>
+					<DATA Column="StockLength" Visible="No">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

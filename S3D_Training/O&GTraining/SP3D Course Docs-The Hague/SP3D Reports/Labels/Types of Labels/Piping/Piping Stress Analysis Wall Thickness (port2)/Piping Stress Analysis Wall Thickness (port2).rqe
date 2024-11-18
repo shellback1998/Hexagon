@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Stress Analysis Wall Thickness (port2)" Description="Wall thickness per part, for export to stress analysis" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CPipePortData" Action="" Arg="2"/>
+	<SQL Timeout="0">
+		<![CDATA[
+             SELECT ' ' AS Dummy
+             ]]>
+	</SQL>
+	<QUERY_PARAMETERS Name="Piping Stress Analysis Wall Thickness (port2)" Site="User" Path="Piping Stress Analysis Wall Thickness (port2).rqp"/>
+</REPORT_QUERY>

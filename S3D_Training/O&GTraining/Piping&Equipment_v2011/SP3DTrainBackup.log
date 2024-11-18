@@ -1,0 +1,18 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+****** RESULTS OF SITE DATABASE AND SCHEMA BACKUP ******
+
+ÿþ1> 2> Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 744 pages for database 'SP3DTRAIN_SDB'file 'SP3DTrain_SDB'on file 1.Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 4 pages for database 'SP3DTRAIN_SDB'file'SP3DTrain_SDB_log' on file 1.Msg 3014Level 0State 1Server 102DIN\SQLEXPRESSLine 1BACKUP DATABASE successfully processed 748 pages in 1.125 seconds(5.192 MB/sec).
+
+ÿþ1> 2> Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 976 pages for database 'SP3DTRAIN_SDB_SCHEMA'file'APPREPOS' on file 2.Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 2 pages for database 'SP3DTRAIN_SDB_SCHEMA'file'APPREPOS_log' on file 2.Msg 3014Level 0State 1Server 102DIN\SQLEXPRESSLine 1BACKUP DATABASE successfully processed 978 pages in 0.941 seconds(8.115 MB/sec).
+              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+******RESULTS OF CATALOG DATABASE AND SCHEMA BACKUP******
+
+ÿþ1> 2> Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 66032 pages for database 'SP3DTrain_CDB'file 'catalogdb'on file 1.Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 2 pages for database 'SP3DTrain_CDB'file 'catalogdb_log'on file 1.Msg 3014Level 0State 1Server 102DIN\SQLEXPRESSLine 1BACKUP DATABASE successfully processed 66034 pages in 32.114 seconds(16.064 MB/sec).
+
+ÿþ1> 2> Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 12192 pages for database 'SP3DTrain_CDB_SCHEMA'file'APPREPOS' on file 2.Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 1 pages for database 'SP3DTrain_CDB_SCHEMA'file'APPREPOS_log' on file 2.Msg 3014Level 0State 1Server 102DIN\SQLEXPRESSLine 1BACKUP DATABASE successfully processed 12193 pages in 6.055 seconds(15.730 MB/sec).
+              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+****** RESULTS OF MODEL DATABASE BACKUP ******
+
+ÿþ1> 2> Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 23984 pages for database 'SP3DTrain_MDB'file'SP3DTrain_MDB' on file 1.Msg 4035Level 0State 1Server 102DIN\SQLEXPRESSLine 1Processed 6 pages for database 'SP3DTrain_MDB'file'SP3DTrain_MDB_log' on file 1.Msg 3014Level 0State 1Server 102DIN\SQLEXPRESSLine 1BACKUP DATABASE successfully processed 23990 pages in 12.966 seconds(14.454 MB/sec).

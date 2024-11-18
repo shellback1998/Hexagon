@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment with Repeating Nozzles" Description="List Equipment name and all the nozzle names, NPDs and End Preps that are connected on this Equipment"><QUERIES><QUERY Name="Equipment with Repeating Nozzles" Site="User" Path="Equipment with Repeating Nozzles.rqe"/></QUERIES><FORMATTING Name="Equipment with Repeating Nozzles" Site="User" Path="Equipment with Repeating Nozzles.rfm"/></REPORT_TEMPLATE>

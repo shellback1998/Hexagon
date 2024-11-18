@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Weld Joint Type" Description="Maps the port end preparation to a more general classification.">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+<!--
+   <FORMATTING_PARAMETERS Name="Weld Joint Type" Site="User" Path="Weld Joint Type.rfp" />
+-->
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}}\viewkind4\uc1\pard\lang1033\f0\fs17" ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <DATA Visible="Yes" Column="WeldJointType" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK>
+            <TOKENS>
+               <TEXT Value=" \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

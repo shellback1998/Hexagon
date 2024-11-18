@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Electrical Cable Diameter" Description="Diameter">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS Name="Electrical Cable Diameter" Site="User" Path="Electrical Cable Diameter.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}}\viewkind4\uc1\pard\lang1033\f0\fs17 " ToParse="no" Visible="yes" />
+
+               <PHYSICAL Column="Diameter" UOM="Diameter" Visible="yes" />
+
+               <TEXT Value=" \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

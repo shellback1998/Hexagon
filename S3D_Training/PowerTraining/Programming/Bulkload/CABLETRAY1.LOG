@@ -1,0 +1,149 @@
+Successfully Opened Input Log File: C:\Smart3D\Bulkload\CableTray1.log
+
+***********************************************************
+DATABASE SERVER NAME : TR2_B2\SQLExpress
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+MODE  : Plant
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: CustomInterfaces in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing CatalogRoot sheet in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing CatalogRoot sheet in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet: CableTraySpec in WorkBook: C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished processing sheet: CableTraySpec in workbook: C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet: ClassNodeType in WorkBook: C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished processing sheet: ClassNodeType in workbook: C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : Straight in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: Straight in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : CT90HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: CT90HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : CT60HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: CT60HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : CT45HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: CT45HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : CT30HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: CT30HBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : CT90VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+Finished Processing sheet: CT90VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:31 PM
+
+Processing sheet : CT90VOBendFRame in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:31 PM
+    Successfully Modified the PartClass Object : CT90VOBendFRame
+    Successfully modified the object in row [10]
+Finished Processing sheet: CT90VOBendFRame in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT90VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT90VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT60VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT60VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT60VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT60VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT45VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT45VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT45VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT45VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT30VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT30VIBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CT30VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CT30VOBend in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTTee in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTTee in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTReducingTee in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTReducingTee in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTExpandingTee in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTExpandingTee in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTTeeVD in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTTeeVD in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTTeeVU in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTTeeVU in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTHWyeLeft in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTHWyeLeft in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTHWyeRight in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTHWyeRight in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTCross in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTCross in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTExpRedCross in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTExpRedCross in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTStraightReducer in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTStraightReducer in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTLeftReducer in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTLeftReducer in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : CTRightReducer in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: CTRightReducer in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : BlindEndPlate in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: BlindEndPlate in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : LadderSplicePlate in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: LadderSplicePlate in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : SplicePlaVerAdjustable in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: SplicePlaVerAdjustable in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : BondingJumper in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: BondingJumper in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : BoxConnector in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: BoxConnector in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : R-Hierarchy in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: R-Hierarchy in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+Processing sheet : R-ClassNodeDescribes in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - Started at : 4/22/2015 3:33:33 PM
+Finished Processing sheet: R-ClassNodeDescribes in C:\Smart3D\Bulkload\CableTray1.xls Workbook  - finished at : 4/22/2015 3:33:33 PM
+
+
+
+Successfully appended all newly created GUIDs to their respective WorkBooks
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Adding User Types to the Object Type hierarchy...4/22/2015 3:33:35 PM
+
+Started Creating Views  at: 4/22/2015 3:33:41 PM
+
+Finished Loading Views at: 4/22/2015 3:33:42 PM
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

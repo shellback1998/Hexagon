@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Weld Joint Type" Description="Maps the port end preparation to a more general classification.">
+   <QUERIES>
+      <QUERY Name="Weld Joint Type" Site="User" Path="Piping Weld Joint Type.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="Weld Joint Type" Site="User" Path="Piping Weld Joint Type.rfm" />
+</REPORT_TEMPLATE>
+

@@ -1,0 +1,10 @@
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\bin\Release\WBSApp.exe
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\bin\Release\WBSApp.pdb
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\bin\Release\WBSApp.xml
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\ResolveAssemblyReference.cache
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\WBSApp.WBSAppForm.resources
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\WBSApp.Resources.resources
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\WBSApp.vbproj.GenerateResource.Cache
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\WBSApp.exe
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\WBSApp.xml
+C:\Prasad\D\Work\Training\SP3D .net API\StandaloneEXE-WBS\WBSApp\obj\Release\WBSApp.pdb

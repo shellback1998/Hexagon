@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Piping Pipe Run Insulation Thickness 2" Description=""><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/><UOMS><UOM Name="PipeInsulationThickness" CanInherit="No" Type="DISTANCE" Primary="mm" Secondary="" Tertiary="" UnitsDisplayed="no" PrecisionType="Decimal" DecimalPrecision="0" FractionalPrecision="2" LeadingZero="" TrailingZeros="" ReduceFraction="yes"/></UOMS></FORMATTING_PARAMETERS>

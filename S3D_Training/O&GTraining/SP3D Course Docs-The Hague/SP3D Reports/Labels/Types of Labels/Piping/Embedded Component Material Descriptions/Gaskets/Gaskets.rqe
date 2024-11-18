@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_QUERY Name="Gaskets" Description="Material Description Label for Gaskets" RequiresFilter="No">
+<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+<SQL Timeout="0"><![CDATA[ 
+	Select distinct JG.GasketType_ShortValue,
+	JEC.PressureRating_LongValue,
+	JG.ThicknessFor3DModel,
+	JG.Manufacturer_ShortValue, JG.StyleNumber_ShortValue, JG.GasketIndustryStandard_ShortValue as GsktIndStandard_ShortValue,
+	JG.MaterialsGrade_ShortValue, 
+	JG.FlangeFacing_ShortValue from dbo.JGasket_CL JG
+	join JGasketselectionFilter JGSF ON (JGSF.ContractorCommoditycode = JG.IndustryCommoditycode)
+	join JEndConditions_CL JEC ON (JGSF.oid = JEC.oid)
+	join XImpliedMatingParts Imp ON (JG.oid = Imp.oiddestination)
+	where Imp.oidOrigin= ?
+    	]]></SQL>
+<ORASQL Timeout="0">
+	<![CDATA[ 
+	Select distinct ClGsktT.SHORTSTRINGVALUE as GasketType_ShortValue,
+	ClPR.LONGSTRINGVALUE as PressureRating_LongValue, 
+	JG.ThicknessFor3DModel,
+	ClMfd.SHORTSTRINGVALUE as Manufacturer_ShortValue,
+	CLGSN.SHORTSTRINGVALUE as StyleNumber_ShortValue,
+	ClGIS.SHORTSTRINGVALUE as GsktIndStandard_ShortValue,	
+	ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue, 
+	ClFF.SHORTSTRINGVALUE as FlangeFacing_ShortValue
+	from CL_GasketType ClGsktT 
+	join JGasket JG ON (ClGsktT.VALUEID = JG.GasketType)
+	join JGasketselectionFilter JGSF ON (JGSF.ContractorCommoditycode = JG.IndustryCommoditycode)
+	join JEndConditions JEC ON (JGSF.oid = JEC.oid) 
+	join CL_PressureRating ClPR ON (ClPR.VALUEID = JEC.PressureRating)
+	join CL_MANUFACTURER ClMfd ON (ClMfd.VALUEID = JG.Manufacturer)
+	join CL_GasketStyleNumber CLGSN ON (CLGSN.VALUEID = JG.StyleNumber)
+	join CL_GEOMETRICINDUSTRYSTANDARD ClGIS on (ClGIS.VALUEID= JG.GasketIndustryStandard)
+	join CL_MATERIALSGRADE ClMGr on (ClMGr.VALUEID = JG.MaterialsGrade)
+	join CL_FLANGEFACING ClFF on (ClFF.VALUEID = JG.FlangeFacing)
+	join XImpliedMatingParts Imp ON (JG.oid = Imp.oiddestination)
+	where Imp.oidOrigin= ?
+    	]]></ORASQL>
+<QUERY_PARAMETERS Name="Gaskets" Site="User" Path="Gaskets.rqp"/>
+</REPORT_QUERY>
+

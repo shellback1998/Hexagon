@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="406" Description="Comp sch/thk 1 b">
+	<QUERIES>
+		<QUERY Name="406" Site="User" Description="Query to get the schedule thickness from Straight pipe port 1" Path="406.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="406" Site="User" Description="Comp sch/thk 1 b format" Path="406.rfm"/>
+</REPORT_TEMPLATE>

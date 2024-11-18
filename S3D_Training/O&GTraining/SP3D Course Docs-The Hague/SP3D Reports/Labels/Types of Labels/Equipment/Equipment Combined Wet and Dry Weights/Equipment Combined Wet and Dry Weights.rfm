@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Equipment Combined Wet and Dry Weights" Description="Wet weight and Dry weight">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<FORMATTING_PARAMETERS Name="Equipment Combined Wet and Dry Weights" Site="User" Path="Equipment Combined Wet and Dry Weights.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="DryWeight" UOM="Weight" Visible="yes"/>
+					<TEXT Visible="Yes" Value="  "/>
+					<PHYSICAL Visible="Yes" Column="WetWeight" UOM="Weight"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

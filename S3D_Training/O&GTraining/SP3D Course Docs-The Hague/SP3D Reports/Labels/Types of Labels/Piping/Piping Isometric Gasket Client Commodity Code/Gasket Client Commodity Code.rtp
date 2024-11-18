@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Gasket Client Commodity Code" Description="Piping Gasket Procurement Client Commodity Code"><QUERIES><QUERY Name="Gasket Client Commodity Code" Site="User" Path="Gasket Client Commodity Code.rqe"/></QUERIES><FORMATTING Name="Gasket Client Commodity Code" Site="User" Path="Gasket Client Commodity Code.rfm"/></REPORT_TEMPLATE>

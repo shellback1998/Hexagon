@@ -1,0 +1,17 @@
+SCC = This is a Source Code Control file
+
+[prjUpdateCode.vbp]
+SCC_Aux_Path =\\muc-ppm-mps\PPM_APP\Backup\03.DDM & DEVELOPMENT\SoftwareShare\PPO_SRC_Actual
+SCC_Project_Name =this project is not under source code control
+
+[ShowElement.vbp]
+SCC_Aux_Path = "\\muc-ppm-mps\PPM_APP\Backup\03.DDM & DEVELOPMENT\SoftwareShare\PPO_SRC_Actual"
+SCC_Project_Name = "$/SP3D/ShowElement/Code", SWHAAAAA
+
+[ShowElement_V7.vbp]
+SCC_Aux_Path =\\muc-ppm-mps\PPM_APP\Backup\03.DDM & DEVELOPMENT\SoftwareShare\PPO_SRC_Actual
+SCC_Project_Name =this project is not under source code control
+
+[User.vbp]
+SCC_Aux_Path =\\muc-ppm-mps\PPM_APP\Backup\03.DDM & DEVELOPMENT\SoftwareShare\PPO_SRC_Actual
+SCC_Project_Name =this project is not under source code control

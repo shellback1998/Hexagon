@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Reference Location" Description="Example of using parameters to format the units of measure
+		        and matrixes of coordinate systems.">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="" Action="" Arg=""/>
+	<UOMS>
+		<UOM Name="Location" Type="DISTANCE" Primary="ft" Secondary="in" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="0" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction="Yes" CanInherit="True"/>
+	</UOMS>
+	<MATRIXES>
+		<MATRIX LinkName="MyTransformA" DisplayName="Equipment Location" ModelName="" PosX="E " NegX="W " PosY="N " NegY="S " PosZ="U " NegZ="D " CanInherit="True"/>
+	</MATRIXES>
+</FORMATTING_PARAMETERS>

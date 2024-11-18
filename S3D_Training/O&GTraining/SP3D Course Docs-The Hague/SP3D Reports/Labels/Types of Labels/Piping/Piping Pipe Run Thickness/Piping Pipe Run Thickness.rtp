@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Pipe Run Thickness" Description=" "><QUERIES><QUERY Name="Piping Pipe Run Thickness" Site="User" Path="Piping Pipe Run Thickness.rqe"/></QUERIES><FORMATTING Name="Piping Pipe Run Thickness" Site="User" Path="Piping Pipe Run Thickness.rfm"/></REPORT_TEMPLATE>

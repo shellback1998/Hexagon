@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Damper Quantity" Description="Quantities"><QUERIES><QUERY Name="HVAC Damper Quantity" Site="User" Path="HVAC Damper Quantity.rqe"/></QUERIES><FORMATTING Name="HVAC Damper Quantity" Site="User" Path="HVAC Damper Quantity.rfm"/></REPORT_TEMPLATE>

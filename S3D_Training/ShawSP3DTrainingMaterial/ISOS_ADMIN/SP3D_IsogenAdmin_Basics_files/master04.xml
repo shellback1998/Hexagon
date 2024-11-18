@@ -1,0 +1,79 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout><v:background id="_x0000_s1025" o:bwmode="lightGrayScale"
+  fillcolor="white [0]" o:targetscreensize="800,600">
+  <v:fill src="master04_image001.jpg" o:title="" color2="#f8981d [5]"
+   recolor="t" type="frame"/>
+ </v:background><p:shaperange id="Text_x0020_Box_x0020_2">
+  <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+   o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="Text_x0020_Box_x0020_2" o:spid="_x0000_s1026"
+   type="#_x0000_t75" style='position:absolute;left:-4.375pt;top:364.75pt;
+   width:17.875pt;height:132.5pt;visibility:visible' o:gfxdata="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
+" o:userdrawn="t">
+   <v:imagedata src="master04_image002.png" o:title=""/>
+   <o:lock v:ext="edit" aspectratio="f"/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="Picture_x0020_5">
+  <v:shape id="Picture_x0020_5" o:spid="_x0000_s1027" type="#_x0000_t75" alt="ou-shawgrp"
+   style='position:absolute;left:317.125pt;top:517.875pt;width:84.875pt;
+   height:9.25pt;visibility:visible;mso-wrap-style:square' o:userdrawn="t">
+   <v:imagedata src="master04_image003.png" o:title="ou-shawgrp"/>
+  </v:shape></p:shaperange>
+</xml>

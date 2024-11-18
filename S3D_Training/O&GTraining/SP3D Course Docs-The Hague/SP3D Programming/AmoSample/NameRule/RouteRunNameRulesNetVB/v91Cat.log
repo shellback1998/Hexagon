@@ -1,0 +1,36 @@
+Successfully Opened Input Log File: C:\AmoSample\NameRule\RouteRunNameRulesNetVB\v91Cat.log
+
+***********************************************************
+DATABASE SERVER NAME : solids1002
+DATABASE NAME : v91Cat
+SCHEMA DATABASE NAME : v91Cat_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+***********************************************************
+
+
+Processing CatalogRoot sheet in C:\AmoSample\NameRule\RouteRunNameRulesNetVB\GenericNamingRules.xls Workbook  - Started at : 12/20/2010 12:58:53 PM
+Finished Processing CatalogRoot sheet in C:\AmoSample\NameRule\RouteRunNameRulesNetVB\GenericNamingRules.xls Workbook  - finished at : 12/20/2010 12:58:53 PM
+
+Processing NamingRules sheet in C:\AmoSample\NameRule\RouteRunNameRulesNetVB\GenericNamingRules.xls Workbook  - Started at : 12/20/2010 12:58:53 PM
+    Successfully modified the object  in row [36] in NamingRules WorkSheet of C:\AmoSample\NameRule\RouteRunNameRulesNetVB\GenericNamingRules.xls Workbook 
+Finished Processing NamingRules sheet in C:\AmoSample\NameRule\RouteRunNameRulesNetVB\GenericNamingRules.xls Workbook  - finished at : 12/20/2010 12:58:53 PM
+
+
+
+
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

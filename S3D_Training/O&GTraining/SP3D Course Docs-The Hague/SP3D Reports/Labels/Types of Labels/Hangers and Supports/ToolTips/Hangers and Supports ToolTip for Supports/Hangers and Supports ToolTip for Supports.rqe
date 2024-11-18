@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Support"
+ Description="Query for Tooltip for Supports"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="Pipeline"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJHgrSupport"
+                   RelationCollection="HgrSupport_RSLT_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJHgrSupport_AE"
+                   RelationCollection="SupportedPorts_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="thePathSystemInfo"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="MaxLoad"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJHgrSupport"
+             DestinationProperty="MaxLoad"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Proj"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJWBSProjectChild"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSProjectChild"
+                   RelationCollection="project"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Contract"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJWBSItemChild"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

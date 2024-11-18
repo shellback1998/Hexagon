@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE Name="Structure ToolTip Equipment Foundation" Description="Tooltip for EqpFoundation">
+   <QUERIES>
+      <QUERY Name="EqpFoundation" Site="User" Path="Structure ToolTip for Equipment Foundations.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="EqpFoundation" Site="User" Path="Structure ToolTip for Equipment Foundations.rfm" />
+</REPORT_TEMPLATE>
+

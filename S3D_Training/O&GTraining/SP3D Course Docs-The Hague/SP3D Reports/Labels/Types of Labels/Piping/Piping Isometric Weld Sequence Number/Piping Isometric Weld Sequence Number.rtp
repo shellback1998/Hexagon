@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Weld Sequence Number" Description="Label that outputs the weld's sequence number."><QUERIES><QUERY Name="Piping Isometric Weld Sequence Number" Site="User" Path="Piping Isometric Weld Sequence Number.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Weld Sequence Number" Site="User" Path="Piping Isometric Weld Sequence Number.rfm"/></REPORT_TEMPLATE>

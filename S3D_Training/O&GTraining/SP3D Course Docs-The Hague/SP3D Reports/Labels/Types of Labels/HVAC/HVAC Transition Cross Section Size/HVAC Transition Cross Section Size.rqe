@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="HVAC Transition Cross Section Size" Description="Duct Transition 1" RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DVBLabels.HVACTwoShapes" Action="" Arg=""/><SQL Timeout="0"><![CDATA[ 
+			
+		]]></SQL><QUERY_PARAMETERS Name="HVAC Transition Cross Section Size" Site="User" Path="HVAC Transition Cross Section Size.rqp"/></REPORT_QUERY>

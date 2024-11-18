@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_QUERY
+ Name="CoordinateSystem"
+ Description="Tooltip for CoordinateSystems">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+         select 
+          jname1.ItemName As 'Name',
+          jcoor.o0 As 'X',
+          jcoor.o1 As 'Y',
+          jcoor.o2 As 'Z',
+          jcoorp.Description As 'Desc'
+         from JDCoordinateSystem jcoor
+         Join JNamedItem jname1 on (jname1.oid = jcoor.oid)
+         Join SPGCoordinateSystemProperties jcoorp on (jcoorp.oid = jcoor.oid)
+         WHERE jcoor.oid = ?
+        ]]>
+   </SQL>
+
+   <QUERY_PARAMETERS
+    Name="ByOID"
+    Site="User"
+    Path="Common ToolTip for CoordinateSystems.rqp" />
+</REPORT_QUERY>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_FORMATTING Name="Support" Description="Format for Tooltip for Supports">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="Support" Site="User" Path="Hangers and Supports Description.rfp" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Sans Serif;}}\viewkind4\uc1\pard\f0\fs17 " Visible="Yes" />
+            </TOKENS>
+         </BLOCK>
+
+		 <BLOCK Action="Visible">
+		 	<TOKENS>
+               <DATA Visible="Yes" Column="Description"/>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="IsStructure">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="1" StateOfValue="Raw" />
+               </DATA>
+               <TEXT Value=", Length: "/>
+               <PHYSICAL Column="CutLength" UOM="Length" Visible="yes" />
+               <TEXT Value="           "/>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value=" \par} " Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

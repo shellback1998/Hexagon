@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="SampleDotNetLabel" Description="SampleDotNetLabel" TemplateVersion="07.00.44.16" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="S3DQueryInterpreter,S3DQueryInterpreter.SampleDotNetLabel" Action="" Arg="mm"/>
+	<RETURNED_PROPERTIES>
+		<RETURNED_PROPERTY Name="Name" SQLType="BStr">
+			<PATHS>
+				<PATH SourceType="*" SourceBOC="" DestinationInterface="IJNamedItem" DestinationProperty="Name" DestinationBOC="" Concatenate="No" PathSeparator="\"/>
+			</PATHS>
+		</RETURNED_PROPERTY>
+	</RETURNED_PROPERTIES>
+</REPORT_QUERY>

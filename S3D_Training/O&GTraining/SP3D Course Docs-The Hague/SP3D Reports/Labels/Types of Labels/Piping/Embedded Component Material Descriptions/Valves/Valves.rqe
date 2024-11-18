@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_QUERY
+ Name="Valves"
+ Description="Material Description Label for Valves"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+	SELECT	Pcom.CommodityType_LongValue, 
+			dbo.REPORTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS 'NPD1', 
+			'in' AS 'NPDUnitType1',
+			'Piping' AS 'Category',
+			NULL AS 'BoltDiameter', 
+			dbo.REPORTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS 'NPD2', 
+			'in' AS 'NPDUnitType2',
+			'[Ports]' AS PortsInfo, 
+			Mfd.ValveTrim_ShortValue,
+			Mfd.ValveManufacturer_ShortValue, 
+			Mfd.ValveModelNumber_ShortValue, 
+			Pcom.GeometricIndustryStandard_ShortValue as GeomIndStandard_ShortValue,
+			Pcom.MaterialsGrade_ShortValue, 
+			Mfd.MiscRequisitionClassification_ShortValue as MiscReqClassfn_ShortValue,
+			Pcom.LiningMaterial_ShortValue 
+	FROM JRteCompOccur co
+	JOIN xmadefrom rmf ON (co.oid = rmf.oidorigin)
+	JOIN dbo.JDPipeComponent_CL Pcom ON (pcom.oid = rmf.oiddestination)
+	JOIN dbo.JUAManufacturerData_CL Mfd ON (Pcom.Oid = Mfd.Oid)
+	WHERE co.oid = ?
+           ]]>
+   </SQL>
+
+   <ORASQL
+    Timeout="0">
+      <![CDATA[ 
+	SELECT 	ClPco.LONGSTRINGVALUE as CommodityType_LongValue, 
+			RPTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS NPD1, 
+			'in' AS NPDUnitType1,
+			'Piping' AS Category,
+			NULL AS BoltDiameter, 
+			RPTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS NPD2, 
+			'in' AS NPDUnitType2, 
+			'[Ports]' AS PortsInfo, 
+			ClVTr.SHORTSTRINGVALUE as ValveTrim_ShortValue,
+			ClVMf.SHORTSTRINGVALUE as ValveManufacturer_ShortValue, 
+			ClVMN.SHORTSTRINGVALUE as ValveModelNumber_ShortValue, 
+			ClGIS.SHORTSTRINGVALUE as GeomIndStandard_ShortValue,
+			ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue, 
+			ClMRC.SHORTSTRINGVALUE as MiscReqClassfn_ShortValue,
+			ClLM.SHORTSTRINGVALUE as LiningMaterial_ShortValue
+	FROM JRteCompOccur co
+	JOIN xmadefrom rmf ON (co.oid = rmf.oidorigin)
+	JOIN JDPIPECOMPONENT Pcom ON (pcom.oid = rmf.oiddestination)
+	JOIN CL_PIPINGCOMMODITYTYPE ClPco ON (ClPco.VALUEID = Pcom.COMMODITYTYPE)
+	JOIN JUAManufacturerData Mfd ON (Pcom.Oid = Mfd.Oid)
+	JOIN CL_VALVETRIM ClVTr ON (ClVTr.VALUEID = Mfd.ValveTrim)
+	JOIN CL_VALVEMANUFACTURER ClVMf ON (ClVMf.VALUEID = Mfd.ValveManufacturer)
+	JOIN CL_VALVEMODELNUMBER ClVMN  ON (ClVMN.VALUEID = Mfd.ValveModelNumber)
+	JOIN CL_GEOMETRICINDUSTRYSTANDARD ClGIS ON (ClGIS.VALUEID= pcom.GeometricIndustryStandard)
+	JOIN CL_MATERIALSGRADE ClMGr ON (ClMGr.VALUEID = Pcom.MaterialsGrade)
+	JOIN CL_MISCREQUISITIONCLASSIFICATI ClMRC ON (ClMRC.VALUEID = Mfd.MiscRequisitionClassification)
+	JOIN CL_LININGMATERIAL ClLM ON (ClLM.VALUEID = Pcom.LiningMaterial)
+	WHERE co.oid = ?
+           ]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS
+    Name="Valves"
+    Site="User"
+    Path="Valves.rqp" />
+</REPORT_QUERY>
+

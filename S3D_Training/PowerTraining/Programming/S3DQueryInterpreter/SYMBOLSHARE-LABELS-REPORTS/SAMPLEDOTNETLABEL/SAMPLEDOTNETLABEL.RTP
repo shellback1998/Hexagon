@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="SampleDotNetLabel" Description="SampleDotNetLabel">
+	<QUERIES>
+		<QUERY Name="SampleDotNetLabel" Site="User" Path="SampleDotNetLabel.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="SampleDotNetLabel" Site="User" Path="SampleDotNetLabel.rfm"/>
+</REPORT_TEMPLATE>

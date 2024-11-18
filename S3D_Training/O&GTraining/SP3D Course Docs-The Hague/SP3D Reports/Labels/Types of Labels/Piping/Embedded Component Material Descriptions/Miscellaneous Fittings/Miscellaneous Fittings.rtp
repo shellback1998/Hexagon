@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Miscellaneous Fittings" Description="Material Description Label for Miscellaneous Fittings">
+<QUERIES>
+	<QUERY Name="Miscellaneous Fittings" Site="User" Path="Miscellaneous Fittings.rqe"/>
+</QUERIES>
+<FORMATTING Name="Miscellaneous Fittings" Site="User" Path="Miscellaneous Fittings.rfm"/>
+</REPORT_TEMPLATE>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="429" Description="Face To Face Format">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<FORMATTING_PARAMETERS Name="429" Site="User" Path="429.rfp"/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="FacetoFace" UOM="FacetoFaceUnits" Visible="Yes"/>
+					<TEXT Value=" thk" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

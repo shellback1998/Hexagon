@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Common ToolTip for CoordinateSystems"
+ Description="Tooltip for coordinate systems">
+   <QUERIES>
+      <QUERY
+       Name="CoordinateSystem"
+       Site="User"
+       Path="Common ToolTip for CoordinateSystems.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="CoordinateSystem"
+    Site="User"
+    Path="Common ToolTip for CoordinateSystems.rfm" />
+</REPORT_TEMPLATE>
+

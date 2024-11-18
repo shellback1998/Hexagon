@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Pipe Line List Operating Pressure" Description="Pipe Line List Operating Maximum Pressure"><QUERIES><QUERY Name="Pipe Line List Operating Pressure" Site="User" Path="Pipe Line List Operating Pressure.rqe"/></QUERIES><FORMATTING Name="Pipe Line List Operating Pressure" Site="User" Path="Pipe Line List Operating Pressure.rfm"/></REPORT_TEMPLATE>

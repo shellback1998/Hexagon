@@ -1,0 +1,2457 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EquipmentMiddle</name>
+    </assembly>
+    <members>
+        <member name="T:Ingr.SP3D.Equipment.Middle.Equipment">
+            <summary>
+            Equipment class represents the SmartPlant 3D Equipment business object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.#ctor(System.String,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates an equipment under a given system and of the type of the provided part number.
+            </summary>
+            <param name="strPartNumber">Catalog part number from which the equipment is created.</param>
+            <param name="oParentSystem">Parent system under which the equipment is created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.#ctor(Ingr.SP3D.ReferenceData.Middle.EquipmentPart,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Constructs a smart equipment given an equipment part from the catalog and a system parent.
+            </summary>
+            <param name="oEquipPart">Catalog part object from which the equipment is created.</param>         
+            <param name="oParentSystem">Parent system under which the equipment is created.</param>
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Parent system passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.#ctor(Ingr.SP3D.ReferenceData.Middle.PartClass,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Constructs a smart design equipment given a part class from the catalog and a system parent.
+            </summary>
+            <param name="oPartClass">Catalog part class object from which a design equipment is created.</param>
+            <param name="oParentSystem">Parent system under which the design equipment is created.</param>
+            <exception cref="T:System.ArgumentNullException">Part class passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Parent system passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.#ctor(Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Copy constructor for equipment.
+            </summary>
+            <param name="oEquipmentToCopy">Equipment object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Equipment passed is null.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.FailedToExecuteTheSymbol">Failed to excecute the symbol.</exception>
+            <example>This example explains about how to use the copy constructor.
+            <code>
+            'Create Equipment.
+            Dim oEquip As Equipment = Nothing
+            Dim oEquip1 As Equipment = Nothing
+            'Call copy constructor
+            oEquip1 = New Equipment(oEquip)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds the given object as a child to the equipment.
+            </summary>
+            <param name="oChild">Objects implementing the ISystemChild interface.</param>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">Passed in child object is not valid to be added under equipment.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.GetConnectablePorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            gets the collection of ports given a port type that are free to be connected.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>Connectable ports collection.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.GetConnectedPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of ports given a port type that are already connected to other
+            objects.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>The collection of ports given a port type that are already connected.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.GetPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of ports given a port type, that are associated to the equipment.
+            All including connectable and connected ports are returned.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>The collection of ports given a port type.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.IsConnectedTo(Ingr.SP3D.Common.Middle.IConnectable,System.Collections.ObjectModel.ReadOnlyCollection{Ingr.SP3D.Common.Middle.IConnection}@)">
+            <summary>
+            Gets the collection of connection objects given the other side of the connectable object.
+            </summary>
+            <param name="oConnectable">Connectable object.</param>
+            <param name="oConnectionEnum">List Of objects connected to the given equipment through any of its ports.</param>
+            <returns>Boolean to represent whether the equipment is connected.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the orientation of the equipment.
+            </summary>
+            <param name="xAxisNew">X-axis of the equipment that needs to be set.</param>
+            <param name="yAxisNew">Y-axis of the equipment that needs to be set.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.CanPortbeDeleted(Ingr.SP3D.Common.Middle.IDistributionPort)">
+            <summary>
+            Checks whether the port passed in can be deleted.
+            </summary>
+            <param name="oPort">The port object on which the check for CanBeDeleted has to be done.</param>
+            <returns>Whether the port be deleted.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the equipment with the given matrix.
+            </summary>
+            <param name="oT4X4">Transformation matrix by which the equipment has to be transformed.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.Children(Ingr.SP3D.Equipment.Middle.EquipmentChildrenCategory)">
+            <summary>
+            Gets the children associated to the equipment.
+            </summary>
+            <param name="eCategory">EquipmentChildrenCategory enumerator.</param>
+            <returns>List of objects that implement the ISystemChild interface.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.MergeCollections(System.Collections.Generic.List{Ingr.SP3D.Common.Middle.RelationCollection})">
+            <summary>
+            Given a List of relation Collections this method merges all of them and returns
+            One Collection of ISystemChild in the form a list.
+            </summary>
+            <param name="oList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.MergeAllConstraints(System.Collections.Generic.List{Ingr.SP3D.Common.Middle.RelationCollection})">
+            <summary>
+            Given list of relation collections this method merges all of them into one list
+            of constraint types.
+            </summary>
+            <param name="oList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Equipment.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the user-defined name of an object.
+            </summary>
+            <param name="Name">The new name.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.SystemParent">
+            <summary>
+            Gets or sets the system parent associated to an equipment.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException"> "Parent is not found for this equipment, or it has more than one parent associated."</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.AssemblyParent">
+            <summary>
+            Gets or sets the assembly parent of the equipment.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException"> "Parent is not found for this equipment, or it has more than one parent associated."</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.WBSItemParents">
+            <summary>
+            WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.SystemChildren">
+            <summary>
+            Gets the children under the equipment.
+            </summary>
+            <returns>List of objects that implement the ISystemChild interface.</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.XAxis">
+            <summary>
+            Gets the X-axis of the equipment local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.YAxis">
+            <summary>
+            Gets the Y-axis of the equipment local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.ZAxis">
+            <summary>
+            Gets the Z-axis of the equipment local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.Origin">
+            <summary>
+            Gets or sets the position of the equipment.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.Matrix">
+            <summary>
+            Gets or sets the equipment matrix.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.Range">
+            <summary>
+            Gets the range of the equipment.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.CoordinateSystem">
+            <summary>
+            Gets the soft coordinate system object associated to the equipment.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.LocalCoordinateSystemMissingException">No coordinate system is associated to this equipment.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.Constraints">
+            <summary>
+            Gets the list of constraints associated to this equipment.
+            </summary>
+            <returns> List of constraint objects. </returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.Part">
+            <summary>
+            Gets the part.
+            </summary>
+            <example>This example explains about how to get or set the part.
+            <code>
+            'Define Equipment.
+            Dim oEquip As Equipment = Nothing
+            Dim oEquipmentPart As EquipmentPart
+            'Get part from Equipment
+            oEquipmentPart = oEquip.Part
+            </code>
+            </example>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule associated to the equipment.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.NamedItemHelperObj">
+            <summary>
+            Private utility method for managing the existance of the NamedItemHelper object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Equipment.Name">
+            <summary>
+            Gets the name of the object.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.ShapePrivate">
+            <summary>
+            ShapePrivate is a wrapper on Shape COM business object
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.#ctor">
+            <summary>
+            Default constructor with no arguments
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.#ctor(System.Object,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Constructor for the SOM to construct the private object of the component 
+            </summary>
+            <param name="oMoniker">Object Moniker to wrap</param> 
+            <param name="oConnection">SP3DConnection to wrap the business object with respective Private business object</param>  
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.CreateShape(Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates the Shape from the Part, adds it under the Parent and returns the Created Object
+            </summary>
+            <param name="oSp3dConn">Connection Object to the database where the shape needs to be created</param> 
+            <param name="oPart">Catalog part object from which Shape is created</param> 
+            <param name="oParent">Parent system under which the equipment is created</param> 
+            <returns>Created Shape Object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.CreateShape(System.String,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Create Shape for a given partNumber (string) and Parent
+            </summary>
+            <param name="strPartNumber">Catalog part number from which Shape is created</param> 
+            <param name="oParentSys">Parent system under which the Shape is created</param> 
+            <returns>Created Shape Object</returns> 
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_NOPARTFOUND">Part not found in the Catalog databse</exception>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_INVALIDPARENT">Could not interpret the System Parent passed</exception>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_ACCESSDENIED">Don't have permissions to create Shape</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the Shape with the given T4X4
+            </summary>
+            <param name="oT4X4"> Tranformation matrix by which the Shape has to be tranformed</param>
+            <exception cref="T:System.ArgumentNullException">The Tranformation Matrix should not be null</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.GetRange">
+            <summary>
+            Returns the RangeBox of the Shape.
+            </summary>
+            <returns>RangeBox of the Shape</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.GetDefaultNameRule(System.String)">
+            <summary>
+            Gets the default name rule
+            </summary>
+            <param name="strEntityName">Entity name</param>
+            <returns>IJDNameRuleHolder Object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ShapePrivate.IsAssemblyMember">
+            <summary>
+            Checks if the Shape is an assembly member of an Equipment
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.Representation">
+            <summary>
+            To get / set the Shape's Representation ID.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.Origin">
+            <summary>
+            Returns or sets the origin of the Shape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.XAxis">
+            <summary>
+            Returns or sets the X-Axis of the Shape coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.YAxis">
+            <summary>
+            Returns or sets the Y-Axis of the Shape coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.ZAxis">
+            <summary>
+            Returns or sets the Z-Axis of the Shape coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.CrossSetion">
+            <summary>
+            To Sets / Gets Returns or sets the CrossSetion of the PrismaticShape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.Path">
+            <summary>
+            To Sets / Gets the Path of the PrismaticShape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ShapePrivate.Matrix">
+            <summary>
+            Returns or sets the matrix of the shape.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.PortPlacementType">
+            <summary>
+            Enumerator for different possible placement types of ports.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Radial">
+            <summary>
+            Radial placement type; this is the default placement if not specified.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Tangential">
+            <summary>
+            Tangential placement type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Axial">
+            <summary>
+            Axial placement type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Skew">
+            <summary>
+            Skew placement type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Offset_Skew">
+            <summary>
+            Skew with offset.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Axial_Elbow">
+            <summary>
+            Axial placement for ports having an elbow.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Radial_Elbow">
+            <summary>
+            Radial placement for ports having an elbow.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Offset_Radial_Elbow">
+            <summary>
+            Combination of offset and radial for ports having an elbow.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Position_By_Plane_Axis">
+            <summary>
+            Placement type by position and axis.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.PortPlacementType.Position_By_Point">
+            <summary>
+            Placement type by a free 3D point.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.PortConstraint">
+            <summary>
+            Class to create constraints of ports with a reference geometry. Reference geometry can be
+            a parent equipment, equipment component, or any shape under the equipment for which a port is being
+            placed.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraint.#ctor">
+            <summary>
+            Internal constructor hidden to client.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraint.#ctor(Ingr.SP3D.Common.Middle.IPort,Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            Public constructor for creating the port constraint.
+            </summary>
+            <param name="oPort">IPort interface.</param>
+            <param name="oRefGeom">BusinessObject</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraint.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor that is needed for .NET to instantiate this object.
+            </summary>
+            <param name="oPB">PrivateBusinessObject</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortConstraint.PortPlacementType">
+            <summary>
+            Gets the port placement type of the given nozzle.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortConstraint.Port">
+            <summary>
+            Gets the Port object from port constraint. The port constraint object ties the Port object according
+            to the given properties on port constraint.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortConstraint.ReferenceGeometry">
+            <summary>
+            Gets or sets the reference geometry to be used for port constraint object.
+            The reference geometry could be either of Equipment, Equipment Component, or Shape.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.CableTrayPort">
+            <summary>
+            CableTrayPort class represents the SmartPlant 3D CableTrayPort object.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.DistributionPort">
+            <summary>
+            DistributionPort class represents the SmartPlant 3D DistributionPort object.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.GenericPort">
+            <summary>
+            GenericPort class is the base implementation class that wrappers all SmartPlant 3D port objects.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericPort.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericPort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericPort.IsAssemblyMember">
+            <summary>
+            Returns whether its a AssemblyMember or not
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericPort.SystemParent">
+            <summary>
+            Gets the system parent of the port.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException"> "Parent is not found for this port, or it has more than one parent associated."</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericPort.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericPort.Connectable">
+            <summary>
+            Gets the IConnectable of the Port.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericPort.Connections">
+            <summary>
+            Gets the collection of connections on the port.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericPort.PortType">
+            <summary>
+            Gets the port type of the port.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericPort.PortConstraint">
+            <summary>
+            Gets the PortConstraint object associated to the port.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.DistributionPort.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.DistributionPort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPort.IsConnected">
+            <summary>
+            Checks whether the distribution port is connected.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPort.Location">
+            <summary>
+            Gets or sets the location of the distribution port.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPort.NormalVector">
+            <summary>
+            Gets or sets the normal vector of the distribution port.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPort.RadialVector">
+            <summary>
+            Gets or sets the radial vector of the distribution port.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(System.String,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a cable tray nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>        
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32)">
+            <summary>
+            Creates a cable tray nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Creates a cable tray port for a given part number at the specified location and orientation.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the Nozzle.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a cable tray nozzle for a given part.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>        
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32)">
+            <summary>
+            Creates a cable tray nozzle for a given part.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Creates a cable tray port for a given part at the specified location and orientation.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the Nozzle.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(Ingr.SP3D.ReferenceData.Middle.CableTrayPortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Creates a cable tray nozzle for a given port definition.
+            </summary>
+            <param name="oCableTrayPortDef">Cable tray port definition of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(Ingr.SP3D.Equipment.Middle.CableTrayPort)">
+            <summary>
+            Copy constructor for cable tray port.
+            </summary>
+            <param name="oNozzleToCopy">Nozzle object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Nozzle passed is null.</exception>
+            <example>This example explains how to use Copy constructor.
+            <code>
+            'Create cable tray nozzle.
+            Dim oNozzle As CableTrayPort = Nothing        
+            'Call copy constructor
+            Dim oNozzle1 As CableTrayPort = Nothing
+            oNozzle1 = New CableTrayPort(oNozzle)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CableTrayPort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.PortImplHelper">
+            <summary>
+            Helper class that contains the common implementation of the IPort interface.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortImplHelper.#ctor(Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            Constructs a PortImplHelper class for the wrapper.
+            </summary>
+            <param name="oWrapper">Business Object of the wrapper class that implements the IPort interface.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortImplHelper.Connectable">
+            <summary>
+            Gets the IConnectable of the port.
+            </summary>
+            <returns>Connectable object.</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortImplHelper.Connections">
+            <summary>
+            Gets the collection of connections to the port.
+            </summary>
+            <returns>Collection of Connections objects.</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortImplHelper.PortType">
+            <summary>
+            Gets the port type of the port.
+            </summary>
+            <returns>Port type of the given port.</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.Constraint">
+            <summary>
+            Class to create constraints between Equipment objects. Class supports constraint creation
+            of all Equipment module classes except for ports.
+            Equipment, EquipmentComponent, Shapes are the valid objects for which this class can be
+            used to create constraints between them.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Constraint.#ctor">
+            <summary>
+            Hidden constructor
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Constraint.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Generic constructor that is needed for .NET to construct the Constraint object.
+            </summary>
+            <param name="oPrivateBusinessObject">Private Business Object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Constraint.#ctor(Ingr.SP3D.Equipment.Middle.Equipment,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Equipment.Middle.ConstraintType,System.Double)">
+            <summary>
+            Creates a new constraint between the given equipment and the secondary surface.
+            </summary>
+            <param name="oEquipment">Equipment object that needs to be constrained.</param>
+            <param name="objPrimarySurf">Reference surface on equipment that will be constrained.</param>
+            <param name="objSecondarySurf">External reference surface, this reference surface can be another equipment
+            or a surface of a structural member.</param>
+            <param name="Type">Type of the constraint to be created.</param>
+            <param name="dblOffset">Distance that needs to be maintained beween primary and secondary surfaces.</param>
+            <exception cref="T:System.ArgumentNullException">Argument null exception in case of null arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidSurfaceException">Passed in primary or secondary surface is suitable to create the constraint.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">Passed in primary and secondary surface belongs to the same equipment.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Constraint.#ctor(Ingr.SP3D.Equipment.Middle.EquipmentComponent,Ingr.SP3D.Equipment.Middle.EquipmentComponent,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Equipment.Middle.ConstraintType,System.Double)">
+            <summary>
+            Creates a new constraint between two Equipment components of an equipment.
+            </summary>
+            <param name="ObjEC1">Equipment component object that needs to be constrained.</param>
+            <param name="ObjEC2">Reference equipment component that acts as a fixed object.</param>
+            <param name="objPrimarySurf">Reference surface on equipment component ObjEc1.</param>
+            <param name="objSecondarySurf">Reference fixed surface on equipment component ObjEc2.</param>
+            <param name="Type">Type of the constraint to be created.</param>
+            <param name="dblOffset">Distance that needs to be maintained between constraining objects.</param>
+            <exception cref="T:System.ArgumentNullException">Argument null exception in case of null arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidSurfaceException">Passed in primary or secondary surface is suitable to create the constraint.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">Parents of both Equipment Components are not same.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Constraint.#ctor(Ingr.SP3D.Equipment.Middle.GenericShape,Ingr.SP3D.Equipment.Middle.GenericShape,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Equipment.Middle.ConstraintType,System.Double)">
+            <summary>
+            Creates a new constraint between two shapes of an equipment.
+            </summary>
+            <param name="ObjShp1">Generic shape object that needs to be constrained.</param>
+            <param name="ObjShp2">Reference shape object that acts as a fixed object.</param>
+            <param name="objPrimarySurf">Reference surface on the shape ObjShp1.</param>
+            <param name="objSecondarySurf">Reference surface on the shape ObjShp2.</param>
+            <param name="eType">Type of the constraint to be created. Only Mate and Align are possible types.</param>
+            <param name="dblOffset">Distance that needs to be maintained between constraining objects.</param>
+            <exception cref="T:System.ArgumentNullException">Argument null exception in case of null arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidSurfaceException">Passed in primary or secondary surface is suitable to create the constraint.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">Parents of both shapes are not same.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.Constraint.#ctor(Ingr.SP3D.Common.Middle.IPort,Ingr.SP3D.Common.Middle.IPort)">
+            <summary>
+            Creates a connect constraint between two ports of different equipments or components. Please check the
+            validity of combinations that can be used with this constructor. The following shows various valid 
+            combinations possible. Rest of the combinations other than those below are considered to be invalid and an
+            InvalidHierarchyException is thrown.
+            <para>Port1 --&gt; Equipment1 --- Port2 --&gt; Equipment2 = Valid</para> 
+            <para>Port1 --&gt; Equipment1 --- Port2 --&gt; Equipment Component of another Equipment = Valid</para>
+            <para>Port1 --&gt; Equipment Component1 --- Port2 --&gt; Equipment Component2 of same Equipment hierarchy = Valid</para>
+            </summary>
+            <param name="ObjPort1">Port object that needs to be constrained.</param>
+            <param name="ObjPort2">Reference port object.</param>
+            <exception cref="T:System.ArgumentNullException">Argument null exception in case of null arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">Parents of both ports are the same.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Constraint.Status">
+            <summary>
+            Gets the constraint status associated with the objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Constraint.ConstraintType">
+            <summary>
+            Gets the constraint type associated with the objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Constraint.ConstrainedObjects">
+            <summary>
+            Gets the list of constrained objects.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.Constraint.Offset">
+            <summary>
+            Gets or sets the offset value of the constraint object.
+            <para>All types of constraints other than connect support offset values.</para>
+            </summary>
+            <exception cref="T:System.MemberAccessException">Offset value is not supported for connect type of constraint.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException">
+            <summary>
+            Raised when calling routines do not have a proper parent system object passed as an argument.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidParentException.#ctor(System.String)">
+            <summary>
+             Instantiates when calling routines do not have a proper parent system object passed as an argument.
+            </summary>
+            <param name="strMessage"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.SymbolMissingOrNotRegisteredException">
+            <summary>
+            Raised when the part associated to the equipment does not have a symbol defined or registered.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.SymbolMissingOrNotRegisteredException.#ctor(System.String)">
+            <summary>
+            Instantiates when the part associated to the equipment does not have a symbol defined or registered.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidPartClassException">
+            <summary>
+            Raised when the part class argument passed does not satisfy the current argument.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidPartClassException.#ctor(System.String)">
+            <summary>
+            Instantiates when the part class argument passed does not satisfy the current argument.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidPartNumberException">
+            <summary>
+            Raised when the part number passed does not exist in the catalog database.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidPartNumberException.#ctor(System.String)">
+             <summary>
+            Instantiates when the part number passed does not exist in the catalog database.
+             </summary>
+             <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.LocalCoordinateSystemMissingException">
+            <summary>
+            Raised when the equipment or equipment component does not have the local coordinate system in the relation.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.LocalCoordinateSystemMissingException.#ctor(System.String)">
+            <summary>
+            Instantiates when equipment or equipment component does not have the local coordinate system in the relation.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidRepresentationException">
+            <summary>
+            Raised when an improper representation value is set on the generic or prismatic shape.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidRepresentationException.#ctor(System.String)">
+            <summary>
+            Instantiates when an improper representation value is set on the generic or prismatic shape.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidCrossSectionException">
+            <summary>
+            Raised when a prismatic shape cannot interpret the passed in cross section.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidCrossSectionException.#ctor(System.String)">
+            <summary>
+            Instantiates when a prismatic shape cannot interpret the passed in cross section.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidPathException">
+            <summary>
+            Raised when a prismatic shape has either an invalid or degenerate path.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidPathException.#ctor(System.String)">
+            <summary>
+            Instantiates when the prismatic shape has either an invalid or degenerate path.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidPortIndexException">
+            <summary>
+            Raised when the ports of the same equipment or component is passed for connect constraint between the ports.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidPortIndexException.#ctor(System.String)">
+            <summary>
+            Instantiates when the ports of the same equipment or component is passed for connect constraint between the ports.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidSurfaceException">
+            <summary>
+            Raised when the surface passed for the equipment or component constraint does not satisfy the rules of constraint.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidSurfaceException.#ctor(System.String)">
+            <summary>
+            Instantiates when the surface passed for the equipment or component constraint does not satisfy the rules of constraint.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">
+            <summary>
+            Raised when the equipment or component constraint does not satisfy the rules of constraint.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException.#ctor(System.String)">
+            <summary>
+            Instantiates when the equipment or component constraint does not satisfy the rules of constraint.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidArgumentException">
+            <summary>
+            Raised when the equipment or component constraint does not satisfy the rules of constraint.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidArgumentException.#ctor(System.String)">
+             <summary>
+            Instantiates when the equipment or component constraint does not satisfy the rules of constraint. 
+             </summary>
+             <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.InvalidReferenceGeometryException">
+            <summary>
+            Raised when passed in reference geometry is neither equipment, component, or shape.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.InvalidReferenceGeometryException.#ctor(System.String)">
+            <summary>
+            Instantiates when passed in reference geometry is neither an equipment nor component or shape.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.OutOfModelRangeException">
+            <summary>
+            Raised when passed in coordinates or positions cross the limits of the defined model range.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.OutOfModelRangeException.#ctor(System.String)">
+            <summary>
+            Instantiates when passed in coordinates or positions cross the limits of the defined model range.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Exceptions.FailedToExecuteTheSymbol">
+            <summary>
+            Raised when it failed to execute the symbol.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Exceptions.FailedToExecuteTheSymbol.#ctor(System.String)">
+            <summary>
+            Instantiates when it failed to execute the symbol.
+            </summary>
+            <param name="strMessage">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.FoundationPort">
+            <summary>
+            FoundationPort class represents the SmartPlant 3D FoundationPort object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor(System.String,System.Int64,Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Constructs a foundation port based on the equipment part provided and the index of the nozzle in a given SP3D connection.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="lNozzleIndex">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle has to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor(System.String,System.Int64,Ingr.SP3D.Equipment.Middle.EquipmentComponent)">
+            <summary>
+            Constructs a foundation port based on the equipment part provided and the index of the nozzle in a given SP3D connection.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="lNozzleIndex">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle has to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Int64,Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Constructs a foundation port based on the equipment part provided and the index of the nozzle in a given SP3D connection.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="lNozzleIndex">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle has to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Int64,Ingr.SP3D.Equipment.Middle.EquipmentComponent)">
+            <summary>
+            Constructs a foundation port based on the equipment part provided and the index of the nozzle in a given SP3D connection.
+            </summary>
+            <param name="oPart">Part number of the nozzle to be created.</param>
+            <param name="lNozzleIndex">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle has to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor(Ingr.SP3D.Equipment.Middle.FoundationPort)">
+            <summary>
+            Copy constructor for foundation port.
+            </summary>
+            <param name="oNozzleToCopy">Nozzle object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Nozzle passed is null.</exception>
+            <example>This example explains how to use copy constructor.
+            <code>
+            'Create foundation port.
+            Dim oNozzle As FoundationPort = Nothing        
+            'Call copy constructor.
+            Dim oNozzle1 As FoundationPort = Nothing
+            oNozzle1 = New FoundationPort(oNozzle)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the orientation of the foundation port.
+            </summary>
+            <param name="xAxisNew">X-axis of the foundation port that needs to be set.</param>
+            <param name="yAxisNew">Y-axis of the foundation port that needs to be set.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.FoundationPort.GetHoles">
+            <summary>
+            Returns the readonlycollection of position of holes on foundation port.
+            </summary>
+            <returns>ReadOnlyCollection of Position</returns>
+            <example>This example explains how to get the holes on a foundation port.
+            <code>
+            'Create foundation port.
+            Dim oNozzle As FoundationPort = Nothing        
+            'Call GetHoles() method to get the holes information
+            Dim oHolesColl As ReadOnlyCollection(Of Position) = Nothing
+            oHolesColl = oNozzle.GetHoles()       
+            </code>
+            </example>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.FoundationPort.XAxis">
+            <summary>
+            Gets the X-axis on the local coordinate system. 
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.FoundationPort.YAxis">
+            <summary>
+            Gets the Y-axis on the local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.FoundationPort.ZAxis">
+            <summary>
+            Gets the Z-axis on the local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.FoundationPort.Origin">
+            <summary>
+            Gets or sets the origin on the local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.FoundationPort.Matrix">
+            <summary>
+            Gets or sets the equipment foundation port coordinate system.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EquipResIdfs">
+            <summary>
+            Summary description for CmnResourceIDs
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.GenericShape">
+            <summary>
+            GenericShape class represents the SmartPlant 3D Shape object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.#ctor">
+            <summary>
+            Is not accessible to outside world, only for internal use.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates the shape given the part under the parent.
+            </summary>
+            <param name="oPart">Catalog Part object from which shape is created.</param> 
+            <param name="oParent">Parent system under which the shape is created.</param> 
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Parent system passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.#ctor(System.String,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates the Shape object for a given part number and system.
+            </summary>
+            <param name="strPartNumber">Catalog part number from which shape is created.</param> 
+            <param name="oParent">Parent system under which the shape is created.</param> 
+            <exception cref="T:System.ArgumentNullException">Part number passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Parent system passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.#ctor(Ingr.SP3D.Equipment.Middle.GenericShape)">
+            <summary>
+            Copy constructor for the generic shape.
+            </summary>
+            <param name="oShapeToCopy">Generic shape object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Shape passed is null.</exception>
+            <example>This example explains how to use copy constructor.
+            <code>
+            'Create Shape.
+            Dim oShape As GenericShape = Nothing
+            Dim oShape1 As GenericShape = Nothing
+            'Call copy constructor
+            oShape1 = New GenericShape(oShape)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the orientation of the shape.
+            </summary>
+            <param name="xAxisNew">X-axis of the shape that needs to be set.</param>
+            <param name="yAxisNew">Y-axis of the shape that needs to be set.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the shape with the given matrix.
+            </summary>
+            <param name="oT4X4">Transformation matrix object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.IsAssemblyMember">
+            <summary>
+            Checks whether the shape is an assembly member.
+            </summary>
+            <returns>Boolean value</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.GenericShape.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the user-defined name of an object.
+            </summary>
+            <param name="Name">The new name.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.SystemParent">
+            <summary>
+            Gets the system parent of the shape.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException"> "Parent is not found for this shape, or it has more than one parent associated."</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.XAxis">
+            <summary>
+            Gets the X-axis of shape local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.YAxis">
+            <summary>
+            Gets the Y-axis of shape local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.ZAxis">
+            <summary>
+            Gets the Z-axis of shape local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Origin">
+            <summary>
+            Gets or sets the position of the shape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Matrix">
+            <summary>
+            Gets or sets the shape matrix.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Range">
+            <summary>
+            Gets the range box of the shape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Representation">
+            <summary>
+            Gets or sets the representation of the shape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Part">
+            <summary>
+            Gets or sets the part associated to the shape.
+            </summary>
+            <example>This example explains how to get or set the part.
+            <code>
+            'Define Shape.
+            Dim oShape As Shape = Nothing
+            Dim oPart As Part = Nothing
+            'Get part from Shape
+            oPart = oShape.Part
+            'Define part
+            Dim oPart1 As Part = Nothing
+            'Set part on shape
+            oShape.Part = oPart1
+            </code>
+            </example>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Constraints">
+            <summary>
+            Gets the list of constraints associated with the shape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule associated to the Shape.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.NamedItemHelperObj">
+            <summary>
+            Private utility method for managing the existance of the NamedItemHelper object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.GenericShape.Name">
+            <summary>
+            Gets the name of the object.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.PrismaticShape">
+            <summary>
+            PrismaticShape class represents the SmartPlant 3D PrismaticShape object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PrismaticShape.#ctor">
+            <summary>
+            Internal constructor, cannot be accessible from outside.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PrismaticShape.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PrismaticShape.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.SketchCrossSection,Ingr.SP3D.Common.Middle.Sketch3D,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates the prismatic shape given the part, cross section, and path under the parent.
+            </summary>
+            <param name="oPart">Catalog part object from which prismatic shape is created.</param> 
+            <param name="oCrossSection">Cross section of the prismatic shape to be created.</param> 
+            <param name="oPath">Path along which prismatic shape to be created.</param> 
+            <param name="oParentSystem">Parent system under which the equipment is created.</param> 
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Parent system passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Cross section passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Path passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PrismaticShape.#ctor(System.String,Ingr.SP3D.Common.Middle.SketchCrossSection,Ingr.SP3D.Common.Middle.Sketch3D,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates the prismatic shape given the part number, cross section, and path under the parent.
+            </summary>
+            <param name="strPartNumber"> Catalog part number from which prismatic shape is created.</param> 
+            <param name="oCrossSection">Cross section of the prismatic shape to be created.</param> 
+            <param name="oPath">Path along which the prismatic shape is to be created.</param> 
+            <param name="oParentSystem">Parent system under which the equipment is created.</param> 
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Parent system passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Cross section passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Path passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PrismaticShape.#ctor(Ingr.SP3D.Equipment.Middle.PrismaticShape)">
+            <summary>
+            Copy constructor for prismatic shape.
+            </summary>
+            <param name="oShapeToCopy">Prismatic shape object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Shape passed is null.</exception>
+            <example>This example explains how to use Copy constructor.
+            <code>
+            'Create Prismatic Shape.
+            Dim oShape As PrismaticShape = Nothing        
+            'Call copy constructor
+            Dim oShape1 As PrismaticShape = Nothing
+            oShape1 = New PrismaticShape(oShape)        
+            </code>
+            </example>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PrismaticShape.CrossSection">
+            <summary>
+            Gets or sets the cross section associated to the prismatic shape.        
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PrismaticShape.Path">
+            <summary>
+            Gets or sets the path associated to the prismatic shape.        
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.DistributionPortImplHelper">
+            <summary>
+            Helper Class that has the common implementation of the IDistributionPort interface.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.DistributionPortImplHelper.#ctor(Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            Constructs a DistributionPortImplHelper class for the wrapper.
+            </summary>
+            <param name="oWrapper">Business Object of the wrapper class that implements IDistributionPort interface.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPortImplHelper.IsConnected">
+            <summary>
+            Checks whether the distribution port is connected.
+            </summary>
+            <returns>True if it is connected; False if it is not.</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPortImplHelper.Location">
+            <summary>
+            Gets or sets the location of the distribution port.
+            </summary> 
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPortImplHelper.NormalVector">
+            <summary>
+            Gets or sets the normal vector of the distribution port.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.DistributionPortImplHelper.RadialVector">
+            <summary>
+            Gets or sets the radial vector of the distribution port.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.PipeNozzle">
+            <summary>
+            PipeNozzle class represents the SmartPlant 3D PipeNozzle object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(System.String,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a pipe nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a pipe nozzle for a given part and port index.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32)">
+            <summary>
+            Creates a pipe nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32)">
+            <summary>
+            Creates a pipe nozzle for a given part and port index.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector,System.Double,System.Boolean)">
+            <summary>
+            Creates a pipe nozzle for a given part number at the specified location and orientation
+            and with the predefined length. Length of the nozzle is ignored if the constructed nozzle is a 
+            light weight graphic of the nozzle.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics or no added graphics nozzles.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the nozzle.</param>
+            <param name="dLength">Length of the nozzle; valid only if bLightWeightGraphics = False.</param>
+            <param name="bIsFacePosition">Nozzle location is placed such that the face of the nozzle matches with passed position oPos if bIsFacePosition = True.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector,System.Double,System.Boolean)">
+            <summary>
+            Creates a pipe nozzle for a given part at the specified location and orientation
+            and with the predefined length. Length of the nozzle is ignored if the constructed nozzle is a 
+            light weight graphic of the nozzle.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics or no added graphics nozzles.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the nozzle.</param>
+            <param name="dLength">Length of the nozzle; valid only if bLightWeightGraphics = False.</param>
+            <param name="bIsFacePosition">Nozzle location is placed such that the face of the nozzle matches with passed position oPos if bIsFacePosition = True.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(Ingr.SP3D.ReferenceData.Middle.PipePortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean)">
+            <summary>
+            Creates a pipe nozzle for a given port definition.
+            </summary>
+            <param name="oPipePortDef">Pipe port definition of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics or for no added graphics nozzles.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(Ingr.SP3D.Equipment.Middle.PipeNozzle)">
+            <summary>
+            Copy constructor for pipe nozzle.
+            </summary>
+            <param name="oNozzleToCopy">Nozzle object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Nozzle passed is null.</exception>
+            <example>This example explains how to use Copy constructor.
+            <code>
+            'Create pipe nozzle.
+            Dim oNozzle As PipeNozzle = Nothing        
+            'Call copy constructor
+            Dim oNozzle1 As PipeNozzle = Nothing
+            oNozzle1 = New PipeNozzle(oNozzle)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PipeNozzle.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PipeNozzle.Length">
+            <summary>
+            Gets or sets the length of the pipe nozzle.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.ConduitPort">
+            <summary>
+            ConduitPort class represents a SmartPlant 3D ConduitPort object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(System.String,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a conduit nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>        
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32)">
+            <summary>
+            Creates a conduit nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Creates a conduit port for a given part number at the specified location and orientation.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the Nozzle.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a conduit nozzle for a given part.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>        
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32)">
+            <summary>
+            Creates a conduit nozzle for a given part.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Creates a conduit port for a given part at the specified location and orientation.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the Nozzle.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(Ingr.SP3D.ReferenceData.Middle.PipePortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Creates a conduit nozzle for a given port definition.
+            </summary>
+            <param name="oConduitPortDef">Conduit port definition of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(Ingr.SP3D.Equipment.Middle.ConduitPort)">
+            <summary>
+            Copy constructor for conduit port.
+            </summary>
+            <param name="oNozzleToCopy">Nozzle object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Nozzle passed is null.</exception>
+            <example>This example explains how to use Copy constructor.
+            <code>
+            'Create conduit nozzle.
+            Dim oNozzle As ConduitPort = Nothing        
+            'Call copy constructor
+            Dim oNozzle1 As ConduitPort = Nothing
+            oNozzle1 = New ConduitPort(oNozzle)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConduitPort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.ConstraintStatus">
+            <summary>
+            ContraintStaus Enum values
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintStatus.Unknown">
+            <summary>
+            Status is Unknown
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintStatus.overDefined">
+            <summary>
+            Status of the constraint is overdefined, remove some of the constraints
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintStatus.NotConsistent">
+            <summary>
+            Given constraints are not consistent with each other
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintStatus.Solved">
+            <summary>
+            Constraint status is solved correctly
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.ConstraintType">
+            <summary>
+            Contraint Type Enums
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.Mate">
+            <summary>
+            Mate Constraint Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.Align">
+            <summary>
+            Align Constraint Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.Connect">
+            <summary>
+            Connect Constraint Type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.Parallel">
+            <summary>
+            Parallel Constraint type
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.East_West_Distance">
+            <summary>
+            Distance Constraint in East-west directions
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.North_South_Distance">
+            <summary>
+            Distance Constraint in North-South directions
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.VerticalDistance">
+            <summary>
+            Distance constraint in Elevation direction
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Equipment.Middle.ConstraintType.Tangent">
+            <summary>
+            Tangent Constraint Type
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.ConstraintPrivate">
+            <summary>
+            Constraint Private class to be used for creating public constraint objects
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConstraintPrivate.#ctor">
+            <summary>
+            Default constructor with no arguments
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConstraintPrivate.#ctor(System.Object,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Constructor for the SOM to construct the private object of the component 
+            </summary>
+            <param name="oMoniker">Object Moniker to wrap</param> 
+            <param name="oConnection">SP3DConnection to wrap the BO with respective Private BO</param>  
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.ConstraintPrivate.ConnectPorts(Ingr.SP3D.Common.Middle.IPort,Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.IPort,Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            Connects 2 nozzles of the Equipments. No checks are made here other than argument exceptions
+            </summary>
+            <param name="ObjPort1"></param>
+            <param name="oParent1"></param>
+            <param name="ObjPort2"></param>
+            <param name="oParent2"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ConstraintPrivate.ConstraintStatus">
+            <summary>
+            To get the ContraintStatus
+            </summary>
+            <returns>Returns the ContraintStatus</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ConstraintPrivate.ConstraintType">
+            <summary>
+            To get the ContraintType
+            </summary>
+            <returns>ContraintType of the Object</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.ConstraintPrivate.ConstrainedObjects">
+            <summary>
+            To get the List of ContrainedObjects associated with the given Object
+            </summary>
+            <returns>Returns the List of ContrainedObjects associated with the given Object</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.PortConstraintPrivate">
+            <summary>
+            Class to Construct port Constraint object, Clients should not access this class
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraintPrivate.#ctor">
+            <summary>
+            Default constructor with no arguments
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraintPrivate.#ctor(System.Object,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Constructor is a public one this will be constructed by SOM        
+            </summary>
+            <param name="oMoniker">Object Moniker to wrap</param> 
+            <param name="oConnection">SP3DConnection to wrap the BO with respective Private BO</param>  
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraintPrivate.CreateNozzleOrientation(Ingr.SP3D.Common.Middle.IPort,Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            public method for creating the Orientation object
+            </summary>
+            <param name="oPort">Port Object</param>
+            <param name="oReferenceGeometry">Reference geometry with respect to which the Orientation has to be created</param>        
+            <returns>Created Nozzle Orientation Object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.PortConstraintPrivate.SetReferenceGeometry(Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            To set the Reference geometry
+            </summary>
+            <param name="oRefGeomUnKnw">Reference Geometry</param>
+            <param name="oPort">Port Object to which we need to set reference geometry</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.PortConstraintPrivate.PortPlacementType">
+            <summary>
+            To get the PortPlacementType of the given object.
+            </summary>
+            <returns>Returns the PortPlacementType of the given object</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.HvacPort">
+            <summary>
+            HvacPort class represents the SmartPlant 3D HvacPort object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(System.String,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates an HVAC nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>        
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32)">
+            <summary>
+            Creates an HVAC nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates an HVAC nozzle for a given part and port index.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>        
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32)">
+            <summary>
+            Creates an HVAC nozzle for a given part and port index.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector,System.Double)">
+            <summary>
+            Creates an HVAC port for a given part number at the specified location and orientation
+            with the predefined length. Length of the port is ignored if the constructed port is a 
+            light weight graphic of the port.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the nozzle.</param>
+            <param name="dLength">Length of the nozzle; valid only if bLightWeightGraphics = False.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector,System.Double)">
+            <summary>
+            Creates an HVAC port for a given part at the specified location and orientation
+            with the predefined length. Length of the port is ignored if the constructed port is a 
+            light weight graphic of the port.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the nozzle.</param>
+            <param name="dLength">Length of the nozzle; valid only if bLightWeightGraphics = False.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(Ingr.SP3D.ReferenceData.Middle.HvacPortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean)">
+            <summary>
+            Creates an HVAC nozzle for a given port definition.
+            </summary>
+            <param name="oHvacPortDef">HVAC port definition of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(Ingr.SP3D.Equipment.Middle.HvacPort)">
+            <summary>
+            Copy constructor for Hvac port.
+            </summary>
+            <param name="oNozzleToCopy">Nozzle object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Nozzle passed is null.</exception>
+            <example>This example explains how to use copy constructor.
+            <code>
+            'Create Hvac nozzle.
+            Dim oNozzle As HvacPort = Nothing        
+            'Call copy constructor.
+            Dim oNozzle1 As HvacPort = Nothing
+            oNozzle1 = New HvacPort(oNozzle)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.HvacPort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.HvacPort.Length">
+            <summary>
+            Gets or sets the length of the HVAC nozzle.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.CablePort">
+            <summary>
+            CablePort class represents the SmartPlant 3D CablePort object.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor">
+            <summary>
+            Internal use only --> Hidden default construtor
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(System.String,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a cable nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>        
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32)">
+            <summary>
+            Creates a cable nozzle for a given part number.
+            </summary>        
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(System.String,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Creates a cable port for a given part number at the specified location and orientation.
+            </summary>
+            <param name="strPartNumber">Part number of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the nozzle.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,System.Int32,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a cable nozzle for a given part.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>        
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oParent">Parent system under which the nozzle must be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32)">
+            <summary>
+            Creates a cable nozzle for a given part.
+            </summary>        
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Int32,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Creates a cable port for a given part at the specified location and orientation.
+            </summary>
+            <param name="oPart">Part of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+            <param name="m_Index">Port index of the nozzle to be created.</param>
+            <param name="oPos">Position of the nozzle.</param>
+            <param name="oNormal">Normal of the nozzle.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(Ingr.SP3D.ReferenceData.Middle.ElectricalPortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Creates a cable nozzle for a given port definition.
+            </summary>
+            <param name="oCablePortDef">Electrical port definition of the nozzle to be created.</param>
+            <param name="oConnection">Connection object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(Ingr.SP3D.Equipment.Middle.CablePort)">
+            <summary>
+            Copy constructor for cable port.
+            </summary>
+            <param name="oNozzleToCopy">Nozzle object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Nozzle passed is null.</exception>
+            <example>This example explains how to use the Copy constructor.
+            <code>
+            'Create cable nozzle.
+            Dim oNozzle As CablePort = Nothing        
+            'Call copy constructor
+            Dim oNozzle1 As CablePort = Nothing
+            oNozzle1 = New CablePort(oNozzle)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.CablePort.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">PrivateBusinessObject</param>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EquipmentChildrenCategory">
+            <summary>
+            Enum representing the Category of the EquipmentChildren
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EquipChildrenType">
+            <summary>
+            Enum representing the Type of the EquipmentChildren
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EquipErrorResults">
+            <summary>
+            Enum representing different errors returned from Equipment COM business object
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EqpPrivateBO">
+            <summary>
+            EqpPrivateBO is a wrapper on Equipment/EquipmentComponent COM business object
+            </summary> 
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.#ctor">
+            <summary>
+            Default constructor with no arguments
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.#ctor(System.Object,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Constructor for the SOM to construct the private object of the component
+            </summary>
+            <param name="oMoniker">Object Moniker to wrap</param> 
+            <param name="oConnection">SP3DConnection to wrap the business object with respective Private business object</param>  
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.CreateSmartEquipment(Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.ISystem,System.Boolean)">
+            <summary>
+            Creates the SmartEquipment from the Part, adds it under the given ParentSystem and returns the created object.
+            </summary>
+            <param name="oPart">Catalog part object from which Equipment is created</param>         
+            <param name="oParentSystem">Parent system under which the Equipment is created</param>
+            <param name="bCreateMembers">boolean Value to create the members when Equipment is created</param>
+            <returns>Created Equipment Object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.CreateEquipmentComponent(Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.ISystem,System.Boolean)">
+            <summary>
+            Creates the EquipmentComponent from the Part, adds it under the given Equipment and returns the created object.
+            </summary>
+            <param name="oPart">Catalog part number from which Equipment Component is created</param>
+            <param name="oParentSystem">Parent system under which the Equipment Component is created</param>
+            <param name="bCreateMembers">Allow the Creation of members when parent gets created</param>
+            <returns>Created Equipment Component</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.CreateEquipmentComponent(System.String,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates an Equipment Component as a child of given Equipment and given a part number.
+            </summary>
+            <param name="strPartNumber">Part number of the Equipment Component</param>
+            <param name="oParentSys">Parent system under which the Equipment Component has to be Created</param>
+            <returns>Created Equipment Component</returns>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_NOPARTFOUND">Part not found in the Catalog Databse</exception>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_INVALIDPARENT">Could not interpret the System Parent Passed</exception>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_ACCESSDENIED">Don't have permissions to create Equipment Component</exception>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_EQUIPFACTORY_SOC_SYMBOL_UNAVAILABLE">Symbol dll is not available or not registered properly</exception>
+            <exception cref="F:Ingr.SP3D.Equipment.Middle.EquipErrorResults.E_EQUIPFACTORY_SOC_SYMCADNOTFOUND">Symbol / Custom Assembly Definition not registered properly</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.CreateDesignEquipmentOrComponent(Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Common.Middle.ISystem,System.Boolean)">
+            <summary>
+            Creates either a Design Equipment or Design Equipment Component
+            </summary>
+            <param name="oPartClass"></param>
+            <param name="oParentSys"></param>
+            <param name="bEquipComponent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.GetDefaultNameRule(System.String)">
+            <summary>
+            Gets the default name rule
+            </summary>
+            <param name="strEntityName">Entity name</param>
+            <returns>IJDNameRuleHolder Object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.AssignMembersViaCAD(System.Object,Ingr.SP3D.Common.Middle.BusinessObject)">
+            <summary>
+            Assigns the defined CAD members in equipment to Equipment Object via updating the Smart occurrences.
+            This method is hidden and not exposed to the automation
+            </summary>
+            <param name="oEqpCOMObj">Com Object that is constructed without members of Equipment</param>
+            <param name="oEquipPart">Catalog part of Equipment</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.GetPosition(System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Returns the origin of the Equipment or EquipmentComponent.
+            </summary>
+            <param name="x">Equipment / Equipment Components X - Coordinate of the Position</param>
+            <param name="y">Equipment / Equipment Components Y - Coordinate of the Position</param>
+            <param name="z">Equipment / Equipment Components Z - Coordinate of the Position</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.SetPosition(System.Double,System.Double,System.Double)">
+            <summary>
+            Sets the position/origin of the Equipment/EquipmentComponent
+            </summary>
+            <param name="x">Equipment / Equipment Components X - Coordinate of the Position</param>
+            <param name="y">Equipment / Equipment Components Y - Coordinate of the Position</param>
+            <param name="z">Equipment / Equipment Components Z - Coordinate of the Position</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.IsCatalogEquipment">
+            <summary>
+            Checks if Equipment is CatalogEquipment
+            </summary>
+            <returns>If Equipment is CatalogEquipment Returns True otherwise returns False</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.AddChildMember(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds the ChildMember to the Equipment/EquipmentComponent
+            </summary>
+            <param name="oChild">Child member which is to be added as a child to Equipment / Equipment Component</param>
+            <exception cref="T:System.ArgumentNullException">Null parameter passed</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.GetConnectablePorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Returns the collection of ConnectablePorts of the given PortType on Equipment or EquipmentComponent.
+            </summary>
+            <param name="eType">Type of port</param>
+            <returns>Collection of ConnectablePorts</returns>
+            <exception cref="T:Ingr.SP3D.Common.Middle.CmnException">"Invalid Port type passed as an argument</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.GetConnectedPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Returns the Collection of ConnectedPorts of the given PortType on Equipment or EquipmentComponent.
+            </summary>
+            <param name="eType">Type of Port</param>
+            <returns>Collection of ConnectedPorts</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.GetPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Returns the Collection of Ports of the given PortType on Equipment or EquipmentComponent.
+            </summary>
+            <param name="eType">Type of port</param>
+            <returns>Collection of Ports</returns>
+            <exception cref="T:Ingr.SP3D.Common.Middle.CmnException">"Invalid Port type passed as an argument</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.IsConnectedTo(Ingr.SP3D.Common.Middle.IConnectable,System.Collections.ObjectModel.ReadOnlyCollection{Ingr.SP3D.Common.Middle.IConnection}@)">
+            <summary>
+            Checks if the Equipment/EquipmentComponent is Connected through any of its ports 
+            </summary>
+            <param name="oConnectable">Connectable Object</param>
+            <param name="oConnectionEnum">List Of Objects connected to the given Equipment through any of its port</param>
+            <returns>Boolean to represent if Equipment is connected</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.CanPortbeDeleted(Ingr.SP3D.Common.Middle.IDistributionPort)">
+            <summary>
+            Checks if the Port passed can be deleted
+            </summary>
+            <param name="oPort">The port object on which the check for CanBeDeleted has to be done</param>
+            <returns>Can the Port be Deleted</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the Equipment/EquipmentComponent with the given T4X4
+            </summary>
+            <param name="oT4X4">Transformation matrix by which the Equipment / Equipment component has to be transformed</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.GetRange">
+            <summary>
+            Returns the rangeBox of the Equipment or EquipmentComponent.
+            </summary>
+            <returns>RangeBox of the Equipment/EquipmentComponent</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.IsAssemblyMember">
+            <summary>
+            Checks if the EquipmentComponent is an Assembly Member
+            </summary>        
+            <returns>True if the Equipment Component is an Assembly Member otherwise returns False</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.Matrix">
+            <summary>
+            Returns or sets the matrix of the Equipment or EquipmentComponent.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.Origin">
+            <summary>
+            Returns or sets the origin of the Equipment or EquipmentComponent.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.XAxis">
+            <summary>
+            Returns or sets the X-Axis of the Equipment or EquipmentComponent coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.YAxis">
+            <summary>
+            Returns or sets the Y-Axis of the Equipment or EquipmentComponent coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.ZAxis">
+            <summary>
+            Returns or sets the Z-Axis of the Equipment or EquipmentComponent coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpPrivateBO.ModelPOM">
+            <summary>
+            To get the pom of Model database
+            </summary>
+            <returns>SP3DConnection object which is a connection to Model database</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EquipmentComponent">
+            <summary>
+            Class to create the equipment component in the .NET environment. This class supports all the methods and
+            properties that clients can use to create or modify the equipment component.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor">
+            <summary>
+            Internal use only --> Hidden default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor(Ingr.SP3D.Common.Middle.BusinessObject,Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Constructs an Equipment Component based on the EquipmentComponent part provided under a given Equipment in a given SP3D connection.
+            </summary>
+            <param name="oPart">Catalog part object from which Equipment Component is created.</param>
+            <param name="oEquipment">Equipment under which the component has to be created.</param>
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Equipment passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor(System.String,Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Constructs an equipment component of the specified part under a given equipment.
+            </summary>
+            <param name="strPartNumber">Catalog part number from which the equipment is created.</param>
+            <param name="oEquipment">Equipment under which the equipment is created.</param>
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Equipment passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor(Ingr.SP3D.ReferenceData.Middle.EquipmentComponentPart,Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Constructs an equipment component based on the provided equipment component part.
+            </summary>
+            <param name="oEqpCompPart">Catalog part object from which the equipment component is created.</param>
+            <param name="oEquipment">Equipment under which the component has to be created.</param>
+            <exception cref="T:System.ArgumentNullException">Catalog part passed is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Equipment passed is null.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor(Ingr.SP3D.ReferenceData.Middle.PartClass,Ingr.SP3D.Equipment.Middle.Equipment)">
+            <summary>
+            Constructs an equipment component under an equipment given a part class.
+            </summary>
+            <param name="oPartClass">Catalog part class object from which a design equipment component is created.</param>
+            <param name="oEquipment">Parent equipment under which the component is created.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor(Ingr.SP3D.Equipment.Middle.EquipmentComponent)">
+            <summary>
+            Copy constructor for equipment component.
+            </summary>
+            <param name="oEquipmentCompToCopy">Equipment component object to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">Equipment passed is null.</exception>
+            <example>This example explains about how to use copy constructor.
+            <code>
+            'Create Equipment component
+            Dim oEquipComp As EquipmentComponent = Nothing
+            Dim oEquipComp1 As EquipmentComponent = Nothing
+            'Call copy constructor
+            oEquipComp1 = New EquipmentComponent(oEquipComp)        
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPb">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Adds the given object as a child to the equipment component.
+            </summary>
+            <param name="oChild">Objects implementing ISystemChild interface.</param>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidHierarchyException">Passed in child object is not valid to be added under equipment component.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.GetConnectablePorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of ports given a port type that are free to be connected.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>Connectable ports collection.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.GetConnectedPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of ports given a port type that are already connected to other
+            objects.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>The collection of ports given a port type that are already connected.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.GetPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of ports given a port type, that are associated to the equipment component.
+            All including connectable and connected ports are returned.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>The collection of ports given a port type.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.IsConnectedTo(Ingr.SP3D.Common.Middle.IConnectable,System.Collections.ObjectModel.ReadOnlyCollection{Ingr.SP3D.Common.Middle.IConnection}@)">
+            <summary>
+            Gets the collection of connection objects given the other side of the connectable object.
+            </summary>
+            <param name="oConnectable">Connectable object</param>
+            <param name="oConnectionEnum">List Of objects connected to the given equipment component through any of its ports.</param>
+            <returns>Boolean to represent whether the equipment component is connected.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the orientation of the equipment component.
+            </summary>
+            <param name="xAxisNew">X-axis of the equipment component that needs to be set.</param>
+            <param name="yAxisNew">Y-axis of the equipment component that needs to be set.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.CanPortbeDeleted(Ingr.SP3D.Common.Middle.IDistributionPort)">
+            <summary>
+            Checks whether the port passed can be deleted.
+            </summary>
+            <param name="oPort">The port object on which the check for CanBeDeleted has to be performed.</param>
+            <returns>Whether the port be deleted.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the equipment component with the given matrix.
+            </summary>
+            <param name="oT4X4">Transformation matrix by which the equipment component has to be transformed.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Children(Ingr.SP3D.Equipment.Middle.EquipmentChildrenCategory)">
+            <summary>
+            Returns the children associated to the Equipment.
+            </summary>
+            <param name="eCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EquipmentComponent.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the user-defined name of an object.
+            </summary>
+            <param name="Name">The new name.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.SystemChildren">
+            <summary>
+            Gets the children under equipment.
+            </summary>
+            <returns>List of objects that implement the ISystemChild interface.</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.SystemParent">
+            <summary>
+            Gets or sets the system parent associated to the equipment component.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException"> "Parent is not found for this equipment component, or it has more than one parent associated."</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.WBSItemParents">
+            <summary>
+            Gets the WBSItem parents for this item.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.AssemblyParent">
+            <summary>
+            Gets or sets the assembly parent of the equipment component.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Equipment.Exceptions.InvalidParentException"> "Parent is not found for this equipment component, or it has more than one parent associated."</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.XAxis">
+            <summary>
+            Gets the X-axis of the equipment component local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.YAxis">
+            <summary>
+            Gets the Y-axis of the equipment component local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.ZAxis">
+            <summary>
+            Gets the Z-axis of the equipment component local coordinate system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Origin">
+            <summary>
+            Gets or sets the position of the equipment component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Matrix">
+            <summary>
+            Gets or sets the equipment component matrix.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Range">
+            <summary>
+            gets the range of the equipment component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.CoordinateSystem">
+            <summary>
+            Gets the local coordinate system associated with the equipment component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Constraints">
+            <summary>
+            Gets the list of constraints associated with the equipment component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Part">
+            <summary>
+            Gets the part.
+            </summary>
+            <example>This example explains about how to get part.
+            <code>
+            'Define Equipment Component.
+            Dim oEquipComp As EquipmentComponent = Nothing
+            Dim oEquipCompPart As EquipmentComponentPart = Nothing
+            'Get part from EquipmentComponent
+            oEquipComp = oEquipComp.Part
+            </code>
+            </example>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule associated to the equipment component.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.NamedItemHelperObj">
+            <summary>
+            Private utility method for managing the existance of the NamedItemHelper object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EquipmentComponent.Name">
+            <summary>
+            Gets the name of the object.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO">
+            <summary>
+            EqpNozzlePBO is a wrapper on Nozzles COM business object
+            </summary> 
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.#ctor">
+            <summary>
+            Default constructor with no arguments
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.#ctor(System.Object,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Constructor for the SOM to construct the private object of the nozzle
+            </summary>       
+            <param name="oMoniker">Object Moniker to wrap</param> 
+            <param name="oConnection">SP3DConnection to wrap the business object with respective Private business object</param>  
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateNozzleGivenPartAndIndex(System.String,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.ISystem,Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Creates a nozzle for a given Part number and Index under a given Parent System
+            </summary>
+            <param name="strPartNumber">Part Number of the nozzle to be created</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics</param>
+            <param name="m_Index">Port Index of the nozzle to be created</param>
+            <param name="oParentSystem">Parent system under which the nozzle has to be created</param>
+            <param name="ePortType">Type of nozzle to be created</param>
+            <returns>Created Nozzle object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateNozzleGivenPartAndIndex(System.String,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Creates a nozzle for a given Part number, Index
+            </summary>
+            <param name="strPartNumber">Part Number of the nozzle to be created</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics</param>
+            <param name="m_Index">Port Index of the nozzle to be created</param>
+            <param name="oConnection">Connection to the Database</param>
+            <param name="ePortType">Type of nozzle to be created</param>
+            <returns>Created Nozzle object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateFndPortGivenPartAndIndex(Ingr.SP3D.ReferenceData.Middle.Part,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a nozzle for a given Part and Index under a given Parent System
+            </summary>
+            <param name="oPart">Part of the nozzle to be created</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics</param>
+            <param name="m_Index">Port Index of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <param name="oParentSystem">Parent system under which the nozzle has to be created</param>        
+            <returns>Created Nozzle object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateFndPortGivenPartAndIndex(System.String,System.Boolean,System.Int32,Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Creates a nozzle for a given Part number and Index under a given Parent System
+            </summary>
+            <param name="strPartNumber">Part Number of the nozzle to be created</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics</param>
+            <param name="m_Index">Port Index of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <param name="oParentSystem">Parent system under which the nozzle has to be created</param>        
+            <returns>Created Nozzle object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreatePipeNozzle(Ingr.SP3D.ReferenceData.Middle.PipePortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean)">
+            <summary>
+            Creates a Pipe nozzle for a given PortDef
+            </summary>
+            <param name="oPipePortDef">PortDefinition of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateHvacNozzle(Ingr.SP3D.ReferenceData.Middle.HvacPortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection,System.Boolean)">
+            <summary>
+            Creates a Hvac nozzle for a given PortDef
+            </summary>
+            <param name="oHvacPortDef">PortDefinition of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <param name="bLightWeighGraphics">Boolean for light weight graphics</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateCableNozzle(Ingr.SP3D.ReferenceData.Middle.ElectricalPortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Creates a Cable nozzle for a given PortDef
+            </summary>
+            <param name="oElectricPortDef">PortDefinition of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateCableTrayNozzle(Ingr.SP3D.ReferenceData.Middle.CableTrayPortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Creates a CableTray nozzle for a given PortDef
+            </summary>
+            <param name="oCableTrayPortDef">PortDefinition of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.CreateConduiltNozzle(Ingr.SP3D.ReferenceData.Middle.PipePortDef,Ingr.SP3D.Common.Middle.Services.SP3DConnection)">
+            <summary>
+            Creates a Conduit nozzle for a given PortDef
+            </summary>
+            <param name="oConduitPortDef">PortDefinition of the nozzle to be created</param>
+            <param name="oConnection">SP3DConnection required for getiing the resource Manager</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.GetConnections">
+            <summary>
+            Returns the collection of connections to the Port.
+            </summary>
+            <returns>Collection of Connections</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.IsAssemblyMember">
+            <summary>
+            Checks if the Nozzle is an Assembly Member
+            </summary>
+            <returns>True if the nozzle is an Assembly Member else returns False</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.GetDepthAndOffset(System.Double@,System.Double@)">
+            <summary>
+            Gets the Depth and Offset used for this Nozzle
+            </summary>
+            <param name="dDepth"></param>
+            <param name="dOffset"></param>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.IsConnected">
+            <summary>
+            Checks if the DistribPort is connected.
+            </summary>
+            <returns>True if it is connected or False if is not</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.Location">
+            <summary>
+            Returns or sets the location of the DistribPort.
+            </summary>        
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.NormalVector">
+            <summary>
+            Returns or sets the normalvector of the DistribPort.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.RadialVector">
+            <summary>
+            Returns or sets the radialvector of the DistribPort.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.Origin">
+            <summary>
+            Returns or sets the origin of the Port Object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.XAxis">
+            <summary>
+            Returns or sets the X-Axis of the Port Object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.YAxis">
+            <summary>
+            Returns or sets the Y-Axis of the Port Object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.ZAxis">
+            <summary>
+            Returns or sets the Z-Axis of the Port Object.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.GetConnectable">
+            <summary>
+            Returns the IConnectable of the Port
+            </summary>
+            <returns>connectable Object</returns>
+        </member>
+        <member name="P:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.PortType">
+            <summary>
+            Returns the PortType of the Port.
+            </summary>
+            <returns>Port Type of the given Nozzle</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Equipment.Middle.EqpNozzlePBO.NozzleErrorResults">
+            <summary>
+            Enum representing different errors returned from Nozzle COM business object
+            </summary>
+        </member>
+    </members>
+</doc>

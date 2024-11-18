@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Delimiter" Description="Separator for multiple properties for different standards">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS/>
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True"/>
+			<TOKENS>
+			   <DATA Column="IndustryPractice" Visible="No">
+			      <CONDITION ConditionOperator="Equal" ConditionOperand1="5" StateOfValue="Raw"/>
+			   </DATA>
+			   
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}}\viewkind4\uc1\pard\f0\fs17 " ToParse="no" Visible="yes" />
+
+               <TEXT Value=" - " ToParse="NO" Visible="yes" />
+
+               <TEXT Value=" \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

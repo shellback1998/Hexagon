@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Structure ToolTip Grid Line" Description="Example of a Label for Grid Line"><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="" Action="" Arg=""/><UOMS><UOM Name="Position" CanInherit="Yes" Type="DISTANCE" Primary="ft" Secondary="in" Tertiary="" UnitsDisplayed="yes" PrecisionType="Fractional" DecimalPrecision="" FractionalPrecision="2" LeadingZero="" TrailingZeros="" ReduceFraction="yes"/></UOMS></FORMATTING_PARAMETERS>

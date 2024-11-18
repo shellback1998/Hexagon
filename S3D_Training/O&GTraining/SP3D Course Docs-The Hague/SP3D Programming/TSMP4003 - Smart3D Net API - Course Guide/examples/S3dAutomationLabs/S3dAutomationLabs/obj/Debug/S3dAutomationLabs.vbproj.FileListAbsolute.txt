@@ -1,0 +1,15 @@
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\bin\Debug\S3dAutomationLabs.dll
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\bin\Debug\S3dAutomationLabs.pdb
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\bin\Debug\S3dAutomationLabs.xml
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\ResolveAssemblyReference.cache
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.Resources.resources
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.vbproj.GenerateResource.Cache
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.dll
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.xml
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.pdb
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.SelectSetLabFrm.resources
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.GraphicCmdLabFrm.resources
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.EqpModCmdFrm.resources
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\obj\Debug\S3dAutomationLabs.TempAndPressuerModFrm.resources
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\bin\Debug\ReferenceDataMiddle.dll
+C:\DotNet_NL\S3dAutomationLabs\S3dAutomationLabs\bin\Debug\ReferenceDataMiddle.xml

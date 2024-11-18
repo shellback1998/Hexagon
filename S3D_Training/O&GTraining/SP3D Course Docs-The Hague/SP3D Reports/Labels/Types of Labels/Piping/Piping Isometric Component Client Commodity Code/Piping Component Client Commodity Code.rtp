@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Component Client Commodity Code" Description="Piping Component Procurement Client Commodity Code"><QUERIES><QUERY Name="Piping Component Client Commodity Code" Site="User" Path="Piping Component Client Commodity Code.rqe"/></QUERIES><FORMATTING Name="Piping Component Client Commodity Code" Site="User" Path="Piping Component Client Commodity Code.rfm"/></REPORT_TEMPLATE>

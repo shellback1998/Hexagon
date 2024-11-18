@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Isometric Extraction Date" Description="Test for Dates">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Value="Today's Date (Locale Sensitive format) : " Visible="Yes"/>
+					<DATA Column="TodayDate" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Visible="Yes" Value="Today's Date (Your format) : "/>
+					<DATA Visible="Yes" Column="TodayDate">
+						<FORMAT_EXPRESSION Expression="dd/mm/yy"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Value="Today's Date (ISO8601 Small) : " Visible="Yes"/>
+					<DATA Column="TodayDate" Visible="Yes">
+						<FORMAT_EXPRESSION Expression="yyyy-mm-dd hh:mm:ss"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

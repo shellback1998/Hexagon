@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Structure Icarus Slab Thickness" Description=" " RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0">
+		<![CDATA[SELECT '' as Dummy ]]>
+	</SQL>
+	<QUERY_PARAMETERS Name="Structure Icarus Slab Thickness" Site="User" Path="Structure Icarus Slab Thickness.rqp"/>
+</REPORT_QUERY>

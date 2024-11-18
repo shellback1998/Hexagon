@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Component Tag" Description="Example of Iso Component Tag"><QUERIES><QUERY Name="Piping Isometric Component Tag" Site="User" Path="Piping Isometric Component Tag.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Component Tag" Site="User" Path="Piping Isometric Component Tag.rfm"/></REPORT_TEMPLATE>

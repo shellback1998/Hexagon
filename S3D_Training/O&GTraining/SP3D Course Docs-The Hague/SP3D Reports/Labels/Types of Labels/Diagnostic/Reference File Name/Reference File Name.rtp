@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="Reference File Name"
+ Description="Use the GetReferenceFile function to retrieve the file name">
+   <QUERIES>
+      <QUERY
+       Name="Reference File Name"
+       Site="User"
+       Path="Reference File Name.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Reference File Name"
+    Site="User"
+    Path="Reference File Name.rfm" />
+</REPORT_TEMPLATE>
+

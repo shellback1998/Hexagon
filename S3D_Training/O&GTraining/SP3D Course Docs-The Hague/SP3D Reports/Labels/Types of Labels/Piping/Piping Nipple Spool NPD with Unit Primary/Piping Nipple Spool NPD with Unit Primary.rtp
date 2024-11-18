@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Nipple Spool NPD with Unit Primary" Description="NPD with units for primary size"><QUERIES><QUERY Name="Piping Nipple Spool NPD with Unit Primary" Site="User" Path="Piping Nipple Spool NPD with Unit Primary.rqe"/></QUERIES><FORMATTING Name="Piping Nipple Spool NPD with Unit Primary" Site="User" Path="Piping Nipple Spool NPD with Unit Primary.rfm"/></REPORT_TEMPLATE>

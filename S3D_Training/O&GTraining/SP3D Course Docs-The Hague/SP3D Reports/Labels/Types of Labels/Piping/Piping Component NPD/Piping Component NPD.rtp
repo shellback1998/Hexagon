@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Component NPD" Description="Comp NPD1 X NPD2"><QUERIES><QUERY Name="Piping Component NPD" Site="User" Path="Piping Component NPD.rqe"/></QUERIES><FORMATTING Name="Piping Component NPD" Site="User" Path="Piping Component NPD.rfm"/></REPORT_TEMPLATE>

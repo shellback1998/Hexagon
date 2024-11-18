@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Full Permission Group Folder Path" Description="Diagnostic Label for full parent folders path of permission group ">
+<QUERIES>
+    <QUERY Name="Full Permission Group Folder Path" Site="User" Path="Full Permission Group Folder Path.rqe"/>
+</QUERIES>
+<FORMATTING Name="Full Permission Group Folder Path" Site="User" Path="Full Permission Group Folder Path.rfm"/>
+</REPORT_TEMPLATE>

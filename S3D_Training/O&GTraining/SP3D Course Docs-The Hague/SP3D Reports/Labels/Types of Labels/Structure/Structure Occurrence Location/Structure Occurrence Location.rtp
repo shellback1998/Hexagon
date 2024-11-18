@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="Structure Occurrence Location"
+ Description=" ">
+   <QUERIES>
+      <QUERY
+       Name="Structure Occurrence Location"
+       Site="User"
+       Path="Structure Occurrence Location.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Structure Occurrence Location"
+    Site="User"
+    Path="Structure Occurrence Location.rfm" />
+</REPORT_TEMPLATE>
+

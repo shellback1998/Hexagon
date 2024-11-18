@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Instrumentation Control Valves NPD with Unit Secondary" Description="NPD with units for secondary size" RequiresFilter="No">
+   <DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="SecondarySize"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJPartOcc"
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="SecondarySize">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="SecSizeNPDUnits"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJPartOcc"
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="SecSizeNPDUnits">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

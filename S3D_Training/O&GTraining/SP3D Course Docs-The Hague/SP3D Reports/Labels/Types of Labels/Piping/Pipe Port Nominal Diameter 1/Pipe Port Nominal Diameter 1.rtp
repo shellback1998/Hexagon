@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Pipe Port Nominal Diameter 1" Description="NPD on pipe port index 1">
+   <QUERIES>
+      <QUERY Name="Pipe Port Nominal Diameter 1" Site="User" Path="Pipe Port Nominal Diameter 1.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="Pipe Port Nominal Diameter 1" Site="User" Path="Pipe Port Nominal Diameter 1.rfm" />
+</REPORT_TEMPLATE>
+

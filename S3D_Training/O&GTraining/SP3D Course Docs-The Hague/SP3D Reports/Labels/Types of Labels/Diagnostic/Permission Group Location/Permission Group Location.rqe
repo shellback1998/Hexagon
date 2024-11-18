@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Permission Group Location"
+ Description="Diagnostic Label for Permission Group Location Name"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CPermGroupLocation"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="LocationName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJPermissionGroupLocation"
+             DestinationProperty="LocationName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+
+   <QUERY_PARAMETERS
+    Name="Permission Group Location"
+    Site="User"
+    Path="Permission Group Location.rqp" />
+</REPORT_QUERY>
+

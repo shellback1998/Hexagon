@@ -1,0 +1,5 @@
+CSP3DTankSym = 22, 29, 1074, 738, 
+CSimplePhysical = 66, 87, 1045, 796, Z
+CSP3DTankDef = 44, 58, 1023, 767, 
+Geometry3d = 0, 0, 0, 0, C
+Geometry3DPH = 0, 0, 0, 0, C

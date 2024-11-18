@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Component NPD" Description="Comp NPD1 X NPD2" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0"><![CDATA[ 
+	    SELECT dbo.REPORTConvertNPD('in',pco.PriSizeNPDUnits, pco.PrimarySize) AS 'NPD1', 
+		   'in' AS 'NPDUnitType1',
+		   'Piping' AS 'Category',
+		   NULL AS 'BoltDiameter', 
+		   dbo.REPORTConvertNPD('in',pco.SecSizeNPDUnits, pco.SecondarySize) AS 'NPD2', 
+		   'in' AS 'NPDUnitType2'
+            FROM xmadefrom rmf 
+            JOIN JDPipeComponent pco on (pco.oid = rmf.oiddestination)
+            WHERE rmf.oidorigin = ?
+    	]]></SQL>
+	<ORASQL Timeout="0">
+		<![CDATA[ 
+	    SELECT RPTConvertNPD('in',pco.PriSizeNPDUnits, pco.PrimarySize) AS NPD1, 
+		   'in' AS NPDUnitType1,
+		   'Piping' AS Category,
+		   NULL AS BoltDiameter, 
+		   RPTConvertNPD('in',pco.SecSizeNPDUnits, pco.SecondarySize) AS NPD2, 
+		   'in' AS NPDUnitType2
+            FROM xmadefrom rmf 
+            JOIN JDPipeComponent pco on (pco.oid = rmf.oiddestination)
+            WHERE rmf.oidorigin = ?
+    	]]></ORASQL>
+	<QUERY_PARAMETERS Name="Piping Component NPD" Site="User" Path="Piping Component NPD.rqp"/>
+</REPORT_QUERY>

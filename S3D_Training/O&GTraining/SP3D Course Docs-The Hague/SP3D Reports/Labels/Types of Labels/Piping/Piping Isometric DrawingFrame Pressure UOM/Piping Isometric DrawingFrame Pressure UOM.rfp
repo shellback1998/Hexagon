@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Piping Isometric DrawingFrame Pressure UOM" Description="Sample Default Pressure UOM">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="" Action="" Arg=""/>
+	<UOMS>
+		<UOM Name="PSI" CanInherit="No" Type="FORCE PER AREA" Primary="Psi" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="3" FractionalPrecision="" LeadingZero="yes" TrailingZeros="yes" ReduceFraction=""/>
+	</UOMS>
+</FORMATTING_PARAMETERS>

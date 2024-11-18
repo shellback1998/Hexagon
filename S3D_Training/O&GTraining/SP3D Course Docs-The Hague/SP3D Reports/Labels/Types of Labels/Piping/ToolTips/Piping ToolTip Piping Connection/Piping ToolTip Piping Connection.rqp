@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Jan. 9, 2007 	New query parameter require to support thru-bolt connection query change
+-->	
+
+<QUERY_PARAMETERS
+ Name="Piping ToolTip Piping Connection"
+ Description="Bolt Data label">
+   <DESIGN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <FIELDS>
+      <FIELD
+       Name="OID"
+       Index="1"
+       DataType="OID"
+       AllowMultiSelect="No"
+       IsHidden="Yes"
+       IsRequired="No"
+       IsSelectableObject="No"
+       Caption="OID"
+       LookUp=""
+       SQLType="GUID"
+       DefaultValue=""
+       DisplayedValue="" />
+   </FIELDS>
+</QUERY_PARAMETERS>
+

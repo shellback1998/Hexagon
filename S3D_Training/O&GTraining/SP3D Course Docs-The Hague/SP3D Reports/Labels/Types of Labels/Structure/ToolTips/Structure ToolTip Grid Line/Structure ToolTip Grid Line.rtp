@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure ToolTip Grid Line" Description="Example of a Label for Grid Line"><QUERIES><QUERY Name="Structure ToolTip Grid Line" Site="User" Path="Structure ToolTip Grid Line.rqe"/></QUERIES><FORMATTING Name="Structure ToolTip Grid Line" Site="User" Path="Structure ToolTip Grid Line.rfm"/></REPORT_TEMPLATE>

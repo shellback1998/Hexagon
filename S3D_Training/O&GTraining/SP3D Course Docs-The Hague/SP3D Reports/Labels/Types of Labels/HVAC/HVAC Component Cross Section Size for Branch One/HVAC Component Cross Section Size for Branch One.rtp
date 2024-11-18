@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Component Cross Section Size for Branch One" Description="Duct Component Branch 1 Section Size"><QUERIES><QUERY Name="HVAC Component Cross Section Size for Branch One" Site="User" Path="HVAC Component Cross Section Size for Branch One.rqe"/></QUERIES><FORMATTING Name="HVAC Component Cross Section Size for Branch One" Site="User" Path="HVAC Component Cross Section Size for Branch One.rfm"/></REPORT_TEMPLATE>

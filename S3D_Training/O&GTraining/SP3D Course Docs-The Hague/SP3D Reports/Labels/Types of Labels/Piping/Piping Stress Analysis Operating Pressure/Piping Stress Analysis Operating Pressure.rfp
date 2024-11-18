@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Piping Stress Analysis Operating Pressure" Description="Operating Pressure per part, for export to stress analysis">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+	<FIELDS/>
+	<UOMS>
+		<UOM Name="Operating Maximum Pressure" CanInherit="No" Type="force per area" Primary="psi" Secondary="" Tertiary="" UnitsDisplayed="Yes" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="2" LeadingZero="No" TrailingZeros="No" ReduceFraction="No"/>
+	</UOMS>
+</FORMATTING_PARAMETERS>

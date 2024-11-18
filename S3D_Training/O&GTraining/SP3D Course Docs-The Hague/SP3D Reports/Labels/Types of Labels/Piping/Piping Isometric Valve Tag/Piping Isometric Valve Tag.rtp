@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Valve Tag" Description="Tag of a valve"><QUERIES><QUERY Name="Piping Isometric Valve Tag" Site="User" Path="Piping Isometric Valve Tag.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Valve Tag" Site="User" Path="Piping Isometric Valve Tag.rfm"/></REPORT_TEMPLATE>

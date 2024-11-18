@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.2802" name=GENERATOR></HEAD>
+<BODY><BR><PRE>Cheat Sheet
+Author: Ramon Him
+Date 01/2006
+SP3D version 6.0
+Use Query Analyzer Tool or any tool that have access to SQL server Databases
+A Report database must be identified prior to using any of the following sql statement:
+
+Piping
+=============================
+Piping Commodity Filter
+=============================
+Would list all of the commodities defined in the piping commodity filter per spec name.
+
+<B>
+Select
+x3.SpecName,
+x1.ShortCode,
+x1.FirstSizeFrom,
+x1.FirstSizeTo,
+x1.FirstSizeUnits,
+x1.SecondSizeFrom,
+x1.SecondSizeTo,
+x1.SecondSizeUnits,
+x1.OptionCode,
+x1.SelectionBasis,
+x1.MultiSizeOption,
+x1.MaximumTemperature,
+x1.MinimumTemperature,
+x1.CommodityCode,
+x1.EngineeringTag,
+x6.ShortStringValue as Sch1,
+x7.ShortStringValue as Sch2,
+x1.ReportableCommodityCode,
+x1.QuantityOfReportableParts,
+x1.BendRadius,
+x1.BendRadiusMultiplier
+from JDPipePartSpec x1
+JOIN JFirstSizeSchedule x4 on x4.oid = x1.oid
+JOIN CL_ScheduleThickness x6 on x6.ValueID = x4.FirstSizeSchedule
+JOIN JSecondSizeSchedule x5 on x5.oid = x1.oid
+JOIN CL_ScheduleThickness x7 on x7.ValueID = x5.SecondSizeSchedule
+JOIN XPipeSpecContainsPartSpecs x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+order by x1.ShortCode
+</B>
+
+Gasket Selection Filter
+=======================
+Would list all of the gaskets defined in the Gasket selection filter per spec name.
+
+<B>
+select
+x1.NominalDiameterFrom,
+x1.NominalDiameterTo,
+x1.NpdUnitType,
+x4.EndPreparation,
+x6.ShortStringValue as PreRating1,
+x4.EndStandard,
+x5.AlternateEndPreparation,
+x7.ShortStringValue as PreRating2,
+x5.AlternateEndStandard,
+x1.Priority,
+x1.GasketOption,
+x1.RingNumber,
+x1.FluidCode,
+x1.ScheduleThickness,
+x1.ContractorCommodityCode,
+x1.MaximumTemperature
+from JGasketSelectionFilter x1
+JOIN JEndConditions x4 on x4.oid = x1.oid
+JOIN CL_PressureRating x6 on x6.ValueID = x4.PressureRating
+JOIN JAlternateEndConditions x5 on x5.oid = x1.oid
+JOIN CL_PressureRating x7 on x7.ValueID = x5.AlternatePressureRating
+JOIN XSpecDefinesGasket x2 on x2.oiddestination = x1.oid
+JOIN JDPipeSpec x3 on x3.oid = x2.oidorigin
+where x3.specname = '1c0031'
+</B>
+
+Bolt Selection Filter
+=====================
+Would list all of the bolts defined in the Bolt Selection Filter per spec name.
+
+<B>
+select
+x1.NominalDiameterFrom,
+x1.NominalDiameterTo,
+x1.NpdUnitType,
+x4.EndPreparation,
+x6.ShortStringValue as PreRating1,
+x4.EndStandard,
+x5.AlternateEndPreparation,
+x7.ShortStringValue as PreRating2,
+x5.AlternateEndStandard,
+x1.Priority,
+x1.BoltOption,
+x1.BoltExtensionOption,
+x1.ContractorCommodityCode,
+x1.MaximumTemperature
+from JBoltSelectionFilter x1
+JOIN JEndConditions x4 on x4.oid = x1.oid
+JOIN CL_PressureRating x6 on x6.ValueID = x4.PressureRating
+JOIN JAlternateEndConditions x5 on x5.oid = x1.oid
+JOIN CL_PressureRating x7 on x7.ValueID = x5.AlternatePressureRating
+JOIN XSpecDefinesBolt x2 on x2.oiddestination = x1.oid
+JOIN JDPipeSpec x3 on x3.oid = x2.oidorigin
+where x3.specname = '1c0031'
+</B>
+
+PipeNominalDiameters Rule
+=========================
+Would list all of NPD entries defined in the PipeNominalDiameters Rule per spec name.
+
+<B>
+select 
+x1.Npd,
+x1.NpdUnitType
+from JDPipeNominalDiameters x1
+JOIN XSpecDefinesAllowableNpd x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+
+ServiceLimits Rule
+==================
+Would list all of Temperature/Pressure entries defined in the ServiceLimits Rule per spec name.
+
+<B>
+select 
+x1.Temperature,
+x1.Pressure
+from JServiceLimitsRule x1
+JOIN XSpecDefinesServiceLimits x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+BendAngles Rule
+===============
+Would list all of Angle entries defined in the BendAngles Rule per spec name.
+
+<B>
+select 
+x1.Npd,
+x1.NpdUnitType,
+BendAngle * 180/ (4 * Atan(1)) as BendAngle
+from JPipeBendAngles x1
+JOIN XSpecDefinesBendAngles x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+Pipe Branch Rule
+================
+Would list all of branch component entries defined in the PipeBranch Rule per spec name.
+
+<B>
+select 
+x1.HeaderSize,
+x1.HdrSizeNPDUnitType,
+x1.BranchSize,
+x1.BrSizeNPDUnitType,
+x1.AngleLow * 180/ (4 * Atan(1)) As Low,
+x1.AngleHigh * 180/ (4 * Atan(1)) As High,
+x1.ShortCode,
+x1.SecondaryShortCode,
+x1.TertiaryShortCode
+from JDPipeBranch x1
+JOIN XSpecDefinesBranch x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+Pipetakedownparts Rule
+======================
+Would list all of entries defined in the Pipetakedownparts Rule per spec name.
+
+<B>
+select 
+x1.WeldShortCode,
+x1.TakeDownShortCode,
+x1.NPD,
+x1.NPDUnitType,
+x1.IsPairRequired,
+x1.IsWeld
+from JDPipeTakedownParts x1
+JOIN XPipeSpecDefinesTakedownParts x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+Weld Clearance Rule
+===================
+Would list all of entries defined in the Weld Clearance Rule per spec name.
+
+<B>
+select 
+x1.NominalPipingDiameterFrom,
+x1.NominalPipingDiameterTo,
+x1.NominalPipingDiameterUnits,
+x1.WeldClass,
+x1.WeldClearanceRadiusIncrease,
+x1.WeldClearanceLength
+from JWeldClearance x1
+JOIN XPipeSpecDefinedWeldClearance x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+Permissible Taps Rule
+=====================
+Would list all of entries defined in the Permissible Taps Rule per spec name.
+
+<B>
+select 
+x1.PermissibleTapNumber,
+x1.IsPreferredTap
+from JPermissibleTaps x1
+JOIN XSpecDefinesTaps x2 on (x2.oidDestination = x1.oid)
+JOIN JDPipeSpec x3 on (x3.oid = x2.oidOrigin)
+Where x3.SpecName = '1C0031'
+</B>
+
+
+Piping Component Class
+=============================
+Would list all of entries defined by the Where clause.
+
+</B>
+select 
+x1.IndustryCommodityCode,
+x1.FirstSizeSchedule,
+x1.PrimarySize,
+x1.PriSizeNPDUnits,
+x1.SecondarySize,
+x1.SecSizeNPDUnits,
+x1.CommodityType,
+x1.MaterialsGrade,
+x3.PortIndex,
+x3.Npd,
+x3.NpdUnitType,
+x3.EndPrep,
+x3.PressureRating,
+x3.EndStandard,
+x3.ScheduleThickness
+from JDPipeComponent x1
+JOIN XPartClassContainsParts x4 on ( x4.oiddestination = x1.oid)
+JOIN JDPartClass x5 on (x5.oid = x4.oidorigin)
+JOIN JDPart x6 on (x6.oid = x1.oid)
+JOIN XPartContainsNozzles x2 on (x2.oidOrigin = x1.oid)
+JOIN JCatalogPipePort x3 on (x3.oid = x2.oidDestination)
+where x5.partclasstype like 'PipeComponentClass' and x5.Name like 'BallValve' and x1.IndustryCommodityCode like  '%VBT606%'
+order by x1.IndustryCommodityCode
+</B>
+
+
+Piping Component Class query with codelist
+--------------------------
+Select
+x1.IndustryCommodityCode,
+--x1.FirstSizeSchedule,
+x10.shortstringvalue as FirstSizeSchedule,
+x13.shortstringvalue as SecondSizeSchedule,
+x1.PrimarySize,
+x1.PriSizeNPDUnits,
+x1.SecondarySize,
+x1.SecSizeNPDUnits,
+x1.CommodityType,
+x1.MaterialsGrade,
+x3.PortIndex,
+x3.Npd,
+x3.NpdUnitType,
+x3.EndPrep,
+--x3.PressureRating,
+x11.shortstringvalue as PressureRating,
+x3.EndStandard,
+--x3.ScheduleThickness,
+x12.shortstringvalue as Schedule
+from JDPipeComponent x1
+JOIN XPartClassContainsParts x4 on ( x4.oiddestination = x1.oid)
+JOIN JDPartClass x5 on (x5.oid = x4.oidorigin)
+JOIN JDPart x6 on (x6.oid = x1.oid)
+JOIN XPartContainsNozzles x2 on (x2.oidOrigin = x1.oid)
+JOIN JCatalogPipePort x3 on (x3.oid = x2.oidDestination)
+JOIN CL_ScheduleThickness x10 on x10.valueid = x1.firstsizeschedule
+JOIN CL_ScheduleThickness x13 on x13.valueid = x1.Secondsizeschedule
+JOIN CL_PressureRating x11 on x11.valueid = x3.Pressurerating
+JOIN CL_ScheduleThickness x12 on x12.valueid = x3.ScheduleThickness
+where x5.partclasstype like 'PipeComponentClass' and x5.Name like 'BallValve' and x1.IndustryCommodityCode like  '%VBT606%'
+order by x1.IndustryCommodityCode
+
+
+--------------
+Pipe stock
+---------------
+select 
+x1.IndustryCommodityCode,
+x1.FirstSizeSchedule,
+x10.shortstringvalue as FirstSizeSchedule,
+x13.shortstringvalue as SecondSizeSchedule,
+x1.PrimarySize,
+x1.PriSizeNPDUnits,
+x1.SecondarySize,
+x1.SecSizeNPDUnits,
+x1.CommodityType,
+x1.MaterialsGrade,
+x3.PortIndex,
+x3.Npd,
+x3.NpdUnitType,
+x3.EndPrep,
+x3.PressureRating,
+x11.shortstringvalue as PressureRating,
+x3.EndStandard,
+x3.ScheduleThickness,
+x12.shortstringvalue as Schedule
+from JDPipeComponent x1
+JOIN XPartClassContainsParts x4 on ( x4.oiddestination = x1.oid)
+JOIN JDPartClass x5 on (x5.oid = x4.oidorigin)
+JOIN JDPart x6 on (x6.oid = x1.oid)
+JOIN XPartContainsNozzles x2 on (x2.oidOrigin = x1.oid)
+JOIN JCatalogPipePort x3 on (x3.oid = x2.oidDestination)
+JOIN CL_ScheduleThickness x10 on x10.valueid = x1.firstsizeschedule
+JOIN CL_ScheduleThickness x13 on x13.valueid = x1.Secondsizeschedule
+JOIN CL_PressureRating x11 on x11.valueid = x3.Pressurerating
+JOIN CL_ScheduleThickness x12 on x12.valueid = x3.ScheduleThickness
+where x5.partclasstype like 'PipeStockClass' and x5.Name like 'PipeStock' and x1.IndustryCommodityCode like  '%26%'
+order by x1.IndustryCommodityCode
+
+
+========================================
+Query Valves and operators
+========================================
+Select
+x1.IndustryCommodityCode,
+x22.ValveOperatorType,
+x22.ValveOperatorGeoIndStd,
+x22.ValveOperatorCatalogPartNumber,
+x1.FirstSizeSchedule,
+x10.shortstringvalue as FirstSizeSchedule,
+x13.shortstringvalue as SecondSizeSchedule,
+x1.PrimarySize,
+x1.PriSizeNPDUnits,
+x1.SecondarySize,
+x1.SecSizeNPDUnits,
+x1.CommodityType,
+x1.MaterialsGrade,
+x3.PortIndex,
+x3.Npd,
+x3.NpdUnitType,
+x3.EndPrep,
+x3.PressureRating,
+x11.shortstringvalue as PressureRating,
+x3.EndStandard,
+x3.ScheduleThickness,
+x12.shortstringvalue as Schedule
+from JDPipeComponent x1
+JOIN XPartClassContainsParts x4 on ( x4.oiddestination = x1.oid)
+JOIN JDPartClass x5 on (x5.oid = x4.oidorigin)
+JOIN JDPart x6 on (x6.oid = x1.oid)
+JOIN XPartContainsNozzles x2 on (x2.oidOrigin = x1.oid)
+JOIN JCatalogPipePort x3 on (x3.oid = x2.oidDestination)
+JOIN CL_ScheduleThickness x10 on x10.valueid = x1.firstsizeschedule
+JOIN CL_ScheduleThickness x13 on x13.valueid = x1.Secondsizeschedule
+JOIN CL_PressureRating x11 on x11.valueid = x3.Pressurerating
+JOIN CL_ScheduleThickness x12 on x12.valueid = x3.ScheduleThickness
+JOIN XDfnsMatlCntrlDataForComponent x20 on x20.oidorigin = x1.oid
+JOIN JGenericMaterialControlData x21 on x21.oid = x20.oiddestination
+JOIN JValveOperatorInfo x22 on x22.oid = x20.oiddestination
+where x5.partclasstype like 'PipeComponentClass' and 
+	x5.Name like 'GateValve' and 
+	x1.IndustryCommodityCode like  '%VG%'
+order by x1.IndustryCommodityCode
+
+</B>
+</PRE></BODY></HTML>

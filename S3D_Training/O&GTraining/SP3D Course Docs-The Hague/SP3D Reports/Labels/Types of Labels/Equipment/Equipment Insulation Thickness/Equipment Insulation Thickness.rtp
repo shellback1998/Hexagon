@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Insulation Thickness" Description="Get UOM Formatted Thickness of Equipment Insulation"><QUERIES><QUERY Name="Equipment Insulation Thickness" Site="User" Path="Equipment Insulation Thickness.rqe"/></QUERIES><FORMATTING Name="Equipment Insulation Thickness" Site="User" Path="Equipment Insulation Thickness.rfm"/></REPORT_TEMPLATE>

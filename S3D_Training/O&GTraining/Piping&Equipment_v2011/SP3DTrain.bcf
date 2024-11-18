@@ -1,0 +1,5 @@
+ServerBackupFolder=D:\SP3Dbackups\TrainingPlant_2011_SP1\New_Backup\
+DatabaseVersionNumber=09.00.71.00
+DbType=Project   BackupFile=SP3DTRAIN_SDB_SiteBackup.dat      DateOfBackup=10/7/2011 3:13:15 PM   DatabaseName=SP3DTRAIN_SDB   SchemaName=SP3DTRAIN_SDB_SCHEMA   Server=102DIN\SQLEXPRESS   BackupFolder=D:\SP3Dbackups\TrainingPlant_2011_SP1\New_Backup\
+DbType=Catalog   ProjectRootName=SP3DTrain   Size=1015.5   BackupFile=SP3DTrain_CatalogBackup.dat   DateOfBackup=10/7/2011 3:13:54 PM   DatabaseName=SP3DTrain_CDB   SchemaName=SP3DTrain_CDB_SCHEMA   Server=102DIN\SQLEXPRESS   BackupFolder=D:\SP3Dbackups\TrainingPlant_2011_SP1\New_Backup\
+DbType=Model   ProjectRootName=SP3DTrain   Size=1015.5   BackupFile=SP3DTrain_Model_Backup.dat   DateOfBackup=10/7/2011 3:14:08 PM   DatabaseName=SP3DTrain_MDB   SchemaName=SP3DTrain_CDB_SCHEMA   Server=102DIN\SQLEXPRESS   BackupFolder=D:\SP3Dbackups\TrainingPlant_2011_SP1\New_Backup\

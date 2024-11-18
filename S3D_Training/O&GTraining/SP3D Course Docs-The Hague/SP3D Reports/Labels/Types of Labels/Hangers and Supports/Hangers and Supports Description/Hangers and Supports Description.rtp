@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Hangers and Supports Description"
+ Description="Description for Hangers and Supports and related structure members">
+   <QUERIES>
+      <QUERY
+       Name="Support"
+       Site="User"
+       Path="Hangers and Supports Description.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Support"
+    Site="User"
+    Path="Hangers and Supports Description.rfm" />
+</REPORT_TEMPLATE>
+

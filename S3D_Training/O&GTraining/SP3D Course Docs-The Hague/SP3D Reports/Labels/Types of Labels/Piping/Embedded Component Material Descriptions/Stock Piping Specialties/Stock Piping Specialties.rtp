@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Stock Piping Specialties" Description="Material Description Label for Stock Piping Specialties">
+<QUERIES>
+<QUERY Name="Stock Piping Specialties" Site="User" Path="Stock Piping Specialties.rqe"/>
+</QUERIES>
+<FORMATTING Name="Stock Piping Specialties" Site="User" Path="Stock Piping Specialties.rfm"/>
+</REPORT_TEMPLATE>
+

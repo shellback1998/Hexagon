@@ -1,0 +1,12 @@
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\bin\Debug\Sp3DnetStandalone.exe
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\bin\Debug\Sp3DnetStandalone.pdb
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\bin\Debug\Sp3DnetStandalone.xml
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\ResolveAssemblyReference.cache
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.frmPipeRunData.resources
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.Resources.resources
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.vbproj.GenerateResource.Cache
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.exe
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.xml
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.pdb
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\bin\Debug\Sp3DnetStandalone.exe.config
+C:\AmoSample\Sp3DnetStandalone\Sp3DnetStandalone\obj\Debug\Sp3DnetStandalone.splash.resources

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Isometric Continuation Label Type A" Description="Example of Iso Continaution label">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<FORMATTING_PARAMETERS Name="Piping Isometric Continuation Label Type A" Site="User" Path="Piping Isometric Continuation Label Type A.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="EquipmentNamewithComponent" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="All" RuleOperand="False"/>
+				<TOKENS>
+					<DATA Column="EquipmentNamewithComponent" Visible="No">
+						<CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+					<DATA Column="EquipmentName" Visible="Yes">
+						<CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Visible="Yes" Value="/"/>
+					<DATA Visible="Yes" Column="NozzleTag"/>
+					<TEXT Visible="Yes" Value="$"/>
+					<DATA Visible="Yes" Column="PrimarySize"/>
+					<TEXT Visible="Yes" Value=" "/>
+					<DATA Visible="Yes" Column="PriSizeNPDUnit"/>
+					<TEXT Visible="Yes" Value=" "/>
+					<DATA Visible="Yes" Column="EndPrep"/>
+					<TEXT Visible="Yes" Value=" "/>
+					<DATA Visible="Yes" Column="PressureRating"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

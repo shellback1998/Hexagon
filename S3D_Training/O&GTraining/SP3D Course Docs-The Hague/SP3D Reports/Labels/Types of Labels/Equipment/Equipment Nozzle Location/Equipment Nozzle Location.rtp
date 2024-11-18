@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Nozzle Location" Description=" "><QUERIES><QUERY Name="Equipment Nozzle Location" Site="User" Path="Equipment Nozzle Location.rqe"/></QUERIES><FORMATTING Name="Equipment Nozzle Location" Site="User" Path="Equipment Nozzle Location.rfm"/></REPORT_TEMPLATE>

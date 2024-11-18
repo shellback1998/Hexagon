@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING
+ Name="SmartPlant To Do List SP3D Values"
+ Description="Special label for SmartPlant Todo List">
+   <DESIGN_TIME
+    Progid="SP3DLabelFormatDesigner.RTFLabel"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DLabelsFormat.FormatLabel"
+    Action="EFWLabel"
+    Arg="SP3DValue" />
+
+   <LAYOUT_TEMPLATE
+    Type="Internal" />
+</REPORT_FORMATTING>
+

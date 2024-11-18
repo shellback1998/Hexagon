@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_FORMATTING Name="Gaskets" Description="Material Description Label for Gaskets">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="Gaskets" Site="User" Path="Gaskets.rfp" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="GasketType_ShortValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="PressureRating_LongValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", " />
+
+               <DATA Visible="Yes" Column="ThicknessFor3DModel" />
+
+               <TEXT Visible="Yes" Value=" m" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="Manufacturer_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="StyleNumber_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="GsktIndStandard_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Column="MaterialsGrade_ShortValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="FlangeFacing_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="NULL" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="Yes" Column="FlangeFacing_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

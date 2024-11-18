@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="FBQ"
+ Description="Example of query based on a filter"
+ RequiresFilter="Yes">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SFBQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="S3DQueryInterpreter,S3DQueryInterpreter.SampleDotNetReport"
+    Action=""
+    Arg="" />
+
+   <FILTER
+    FilterName="Catalog Filters\Default Filters\SP3D Object Filters\Object Types\Equipment and Furnishing\Equipment"
+    RequiresBinding="Yes"
+    AllowRuntimeSelection="No" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Connected Run"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJDistribPort"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJLogicalDistPort"
+                   RelationCollection="LogDistConn"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDesignParent"
+                   RelationCollection="DistribConnection"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDistribConnection"
+                   RelationCollection="Parts"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

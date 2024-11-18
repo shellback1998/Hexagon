@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Linear Member Cut Length" Description="CutLength"><QUERIES><QUERY Name="Structure Linear Member Cut Length" Site="User" Path="Structure Linear Member Cut Length.rqe"/></QUERIES><FORMATTING Name="Structure Linear Member Cut Length" Site="User" Path="Structure Linear Member Cut Length.rfm"/></REPORT_TEMPLATE>

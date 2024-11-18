@@ -1,0 +1,1508 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: Transformation Matrix
+Date: Thu, 28 May 2009 12:38:28 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C9DF91.33940380"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3350
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.kwon3d.com/theory/transform/transform.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Transformation Matrix</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<META http-equiv=3DContent-Language content=3Den-us>
+<META content=3D"MSHTML 6.00.6000.16825" name=3DGENERATOR>
+<META content=3DFrontPage.Editor.Document name=3DProgId>
+<META content=3D"expeditn 111" name=3D"Microsoft Theme">
+<META content=3Dtb name=3D"Microsoft Border"></HEAD>
+<BODY text=3D#000000 vLink=3D#993300 aLink=3D#cc3300 link=3D#666600 =
+bgColor=3D#ffffcc=20
+background=3Dhttp://www.kwon3d.com/_themes/expeditn/exptextb.jpg><!--msna=
+vigation-->
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD><!--mstheme-->
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+      size=3D6><STRONG><A name=3Dtop></A><IMG height=3D60 =
+alt=3D"Transformation Matrix"=20
+      =
+src=3D"http://www.kwon3d.com/theory/transform/_derived/transform.html_cmp=
+_expeditn110_bnr.gif"=20
+      width=3D600 border=3D0></STRONG></FONT><BR><FONT =
+face=3DArial><NOBR>[&nbsp;<A=20
+      =
+href=3D"http://www.kwon3d.com/theory/transform.html">Up</A>&nbsp;]</NOBR>=
+=20
+      <NOBR>[&nbsp;<A=20
+      =
+href=3D"http://www.kwon3d.com/theory/transform/refrm.html">Reference&nbsp=
+;Frames</A>&nbsp;]</NOBR>=20
+      <NOBR>[&nbsp;Transformation&nbsp;Matrix&nbsp;]</NOBR> =
+<NOBR>[&nbsp;<A=20
+      =
+href=3D"http://www.kwon3d.com/theory/transform/rot.html">Rotation&nbsp;Ma=
+trix</A>&nbsp;]</NOBR></FONT><BR>&nbsp;</FONT></P><FONT=20
+      face=3D"Book Antiqua, Times New Roman, =
+Times"><!--mstheme--></FONT></TD></TR><!--msnavigation--></TBODY></TABLE>=
+<!--msnavigation-->
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR><!--msnavigation-->
+    <TD vAlign=3Dtop><!--mstheme-->
+      <DIV align=3Dcenter>
+      <CENTER><FONT=20
+      face=3D"Book Antiqua, Times New Roman, =
+Times"><!--mstheme--></FONT>
+      <TABLE border=3D0>
+        <TBODY>
+        <TR>
+          <TD><!--mstheme--><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><!--mstheme--></FONT><!--msthemelist-->
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+border=3D0><!--msthemelist-->
+              <TBODY>
+              <TR>
+                <TD vAlign=3Dbaseline width=3D42><IMG height=3D15 =
+hspace=3D13=20
+                  =
+src=3D"http://www.kwon3d.com/_themes/expeditn/expbul1a.gif"=20
+                  width=3D15></TD>
+                <TD vAlign=3Dtop width=3D"100%"><!--mstheme--><FONT=20
+                  face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+                  face=3DArial><A=20
+                  =
+href=3D"http://www.kwon3d.com/theory/transform/transform.html#tm">Transfo=
+rmation=20
+                  =
+Matrix</A></FONT><!--mstheme--></FONT><!--msthemelist--></TD></TR><!--mst=
+hemelist-->
+              <TR>
+                <TD vAlign=3Dbaseline width=3D42><IMG height=3D15 =
+hspace=3D13=20
+                  =
+src=3D"http://www.kwon3d.com/_themes/expeditn/expbul1a.gif"=20
+                  width=3D15></TD>
+                <TD vAlign=3Dtop width=3D"100%"><!--mstheme--><FONT=20
+                  face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+                  face=3DArial><A=20
+                  =
+href=3D"http://www.kwon3d.com/theory/transform/transform.html#tr">Transla=
+tion=20
+                  of the =
+Origin</A></FONT><!--mstheme--></FONT><!--msthemelist--></TD></TR><!--mst=
+hemelist--></TBODY></TABLE><!--mstheme--><FONT=20
+            face=3D"Book Antiqua, Times New Roman, =
+Times"><!--msthemeseparator--></FONT>
+            <P align=3Dcenter><FONT=20
+            face=3D"Book Antiqua, Times New Roman, Times"><IMG =
+height=3D10=20
+            src=3D"http://www.kwon3d.com/_themes/expeditn/exphorsa.gif"=20
+            width=3D600></FONT></P><FONT=20
+            face=3D"Book Antiqua, Times New Roman, =
+Times"><!--mstheme--></FONT></TD></TR></TBODY></TABLE><!--mstheme--></CEN=
+TER></DIV>
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+      face=3DArial><U><A name=3Dtm></A><STRONG>Transformation=20
+      Matrix</STRONG></U></FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D196 alt=3D"wpe16.jpg (3803 bytes)"=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_f01.gif"=20
+        width=3D188><STRONG><FONT color=3D#ff00ff>Figure=20
+        1</FONT></STRONG></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>To=20
+      transform a vector from one reference frame to another is =
+equivalent to=20
+      changing the perspective of describing the vector from one to =
+another=20
+      (<FONT color=3D#ff0000>Figure 1</FONT>). A transformation alters =
+not the=20
+      vector, but the components:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D162=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e01.gif" =
+width=3D305>=20
+        &nbsp; <FONT=20
+      =
+color=3D#ff00ff><STRONG>[1]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE=
+>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>where <STRONG>i</STRONG>, <STRONG>j</STRONG> &amp;=20
+      <STRONG>k</STRONG> =3D the unit vectors of the <EM>XYZ</EM> =
+system, and=20
+      <STRONG>i</STRONG>', <STRONG>j</STRONG>' &amp; <STRONG>k</STRONG>' =
+=3D the=20
+      unit vectors of the <EM>X'Y'Z'</EM> system. Therefore, the=20
+      <STRONG>transformation matrix</STRONG> from the global reference =
+frame=20
+      (frame <EM>G</EM>) to a particular local reference frame (frame=20
+      <EM>L</EM>) can be written as</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D152=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e02.gif"=20
+        width=3D144>&nbsp; <FONT color=3D#ff00ff>&nbsp;=20
+        <STRONG>[2]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>The=20
+      <FONT color=3D#000000>local reference frame</FONT> is typically =
+fixed to a=20
+      segment or a body part.</FONT></FONT></P>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>Similarly, <STRONG>T</STRONG><EM><SUB>G/L</SUB></EM>, =
+the=20
+      <STRONG>inverse transformation matrix</STRONG> of=20
+      <STRONG>T</STRONG><EM><SUB>L/G</SUB></EM>, can also be derived=20
+      as</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D62=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e03.gif" =
+width=3D144>=20
+        &nbsp; <FONT=20
+      =
+color=3D#ff00ff><STRONG>[3]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE=
+>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>As=20
+      shown in <FONT color=3D#ff0000>[2]</FONT> and <FONT=20
+      color=3D#ff0000>[3]</FONT>, =
+<STRONG>T</STRONG><EM><SUB>G/L</SUB></EM> is in=20
+      fact the same to the transpose of=20
+      <STRONG>T</STRONG><EM><SUB>L/G</SUB></EM>:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D26=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e04.gif" =
+width=3D132>=20
+        &nbsp; <FONT=20
+      =
+color=3D#ff00ff><STRONG>[4]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE=
+>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>In=20
+      <FONT color=3D#ff0000>[2]</FONT>, the dot products of the unit =
+vectors of=20
+      the two reference frames are in fact the same to the components of =
+
+      <STRONG>i</STRONG>', <STRONG>j</STRONG>' and <STRONG>k</STRONG>' =
+described=20
+      in frame <EM>G</EM>. Therefore, the first row of the =
+transformation matrix=20
+      becomes the same to <STRONG>i</STRONG>' described in frame =
+<EM>G</EM>,=20
+      while the second and third rows are the same to unit vectors=20
+      <STRONG>j</STRONG>' and <STRONG>k</STRONG>' described in frame =
+<EM>G</EM>,=20
+      respectively. Let the unit vectors of frame <EM>L</EM> described =
+in frame=20
+      <EM>G</EM> be:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D150=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e05.gif" =
+width=3D108>=20
+        &nbsp;&nbsp; <FONT=20
+        =
+color=3D#ff00ff><STRONG>[5]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE=
+>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>From=20
+      <FONT color=3D#ff0000>[2]</FONT> and <FONT=20
+      color=3D#ff0000>[5]</FONT>:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D129=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e06.gif"=20
+        width=3D388>&nbsp; <FONT color=3D#ff00ff>&nbsp;=20
+        <STRONG>[6]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>This=20
+      exercise is quite useful since the immediate products of motion =
+analysis=20
+      is the global coordinates of the markers attached to the subject's =
+body=20
+      and computation of the unit vectors of the local reference frames =
+from the=20
+      global coordinates of the markers is a relatively simple task if =
+the local=20
+      reference frames are well-defined. Using <FONT =
+color=3D#ff0000>[6]</FONT>,=20
+      one can easily form the transformation matrices from the global =
+frame to=20
+      the local frames.</FONT></FONT></P>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>Since the rows in <FONT color=3D#ff0000>[6]</FONT> =
+are the three=20
+      unit vectors of frame <EM>L</EM> described in frame <EM>G</EM> and =
+the=20
+      columns are the three unit vectors of frame <EM>G</EM> described =
+in frame=20
+      <EM>L</EM> (<FONT color=3D#ff0000>[2]</FONT>), the following =
+<STRONG><FONT=20
+      color=3D#000000>orthogonality conditions</FONT></STRONG>=20
+      hold:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D132=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e07.gif"=20
+        width=3D89>&nbsp; <FONT color=3D#ff00ff>&nbsp;=20
+        <STRONG>[7]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>where </FONT><EM><FONT face=3DSymbol>d</FONT><FONT=20
+      face=3DArial><SUB>ij</SUB></FONT></EM><FONT face=3DArial> =3D the =
+Kronecker=20
+      delta. Since <FONT color=3D#ff0000>[2]</FONT>, <FONT=20
+      color=3D#ff0000>[3]</FONT> &amp; <FONT color=3D#ff0000>[4]</FONT> =
+of <A=20
+      href=3D"http://www.kwon3d.com/theory/transform/rot.html">Rotation =
+Matrix</A>=20
+      suffice <FONT color=3D#ff0000>[4]</FONT> &amp; <FONT=20
+      color=3D#ff0000>[7]</FONT>, the rotation matrices are also =
+transformation=20
+      matrix. See <A=20
+      href=3D"http://www.kwon3d.com/theory/transform/rot.html">Rotation =
+Matrix</A>=20
+      for the details.</FONT></FONT></P>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>A=20
+      series of transformations can be performed through successive=20
+      multiplication of the transformation matrices from the right to =
+the=20
+      left:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D229=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e08.gif" =
+width=3D226>=20
+        &nbsp; <FONT=20
+      =
+color=3D#ff00ff><STRONG>[8]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE=
+>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>In=20
+      other words, a series of transformation is equivalent to a single=20
+      transformation directly from the originating frame to the =
+destination=20
+      frame (<EM>A</EM> to <EM>Z</EM> in <FONT =
+color=3D#ff0000>[8]</FONT>). In a=20
+      sense, it is similar to the arithmetic multiplication of the frame =
+
+      subscripts:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D18=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e09.gif" =
+width=3D229>=20
+        &nbsp; <FONT=20
+      =
+color=3D#ff00ff><STRONG>[9]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE=
+>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>Similarly, the transformation matrix from one local =
+reference=20
+      frame (<EM>A</EM>) to another (<EM>B</EM>) can be easily obtained =
+through=20
+      cascading of the transformation matrices:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D24=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e10.gif"=20
+        width=3D265>&nbsp; <FONT color=3D#ff00ff>&nbsp;=20
+        <STRONG>[10]</STRONG></FONT></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>Once=20
+      the transformation matrices from the global reference frame to the =
+local=20
+      reference frames are known, computation of the transformation =
+matrices=20
+      among the local reference frames is simply a matter of =
+transposition and=20
+      multiplication of the transformation matrices.</FONT></FONT></P>
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+      face=3DArial><A=20
+      =
+href=3D"http://www.kwon3d.com/theory/transform/transform.html#top">Top</A=
+></FONT></FONT></P><FONT=20
+      face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial><!--msthemeseparator--></FONT></FONT>
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+      face=3DArial><IMG height=3D10=20
+      src=3D"http://www.kwon3d.com/_themes/expeditn/exphorsa.gif"=20
+      width=3D600></FONT></FONT></P>
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+      face=3DArial><A name=3Dtr></A><U><STRONG>Translation of the=20
+      Origin</STRONG></U></FONT></FONT></P>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>So=20
+      far we only have dealt with the rotation of the reference frame. =
+This is=20
+      normally sufficient in working with free vectors such as velocity, =
+force,=20
+      etc. But it matters when one deals with the position vectors =
+because=20
+      positions are described by the arrow drawn from the origin of the=20
+      reference frame and different frames may have different origins. =
+In other=20
+      words, when one transforms a position vector from one reference =
+frame to=20
+      another, the translation of the frame origin must be taken into =
+accounts=20
+      as well:</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D70=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e11.gif"=20
+        width=3D172>&nbsp;&nbsp;&nbsp; <STRONG><FONT=20
+        =
+color=3D#ff00ff>[11]</FONT></STRONG></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>or</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D70=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e12.gif"=20
+        width=3D160>&nbsp;&nbsp;&nbsp; <STRONG><FONT=20
+        =
+color=3D#ff00ff>[12]</FONT></STRONG></FONT></FONT></P></BLOCKQUOTE>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>where (<EM>t<SUB>x</SUB>, t<SUB>y</SUB>,=20
+      t<SUB>z</SUB></EM>)<EM><SUP>t</SUP></EM> =3D &nbsp; the =
+translation matrix.=20
+      <FONT color=3D#ff0000>[11]</FONT> can be used when the translation =
+vector is=20
+      described in the destination frame coordinates. <FONT=20
+      color=3D#ff0000>[12]</FONT> is for the case where the translation =
+vector is=20
+      described in the originating frame coordinates.</FONT></FONT></P>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial>An=20
+      alternative from to <FONT color=3D#ff0000>[11]</FONT> =
+is</FONT></FONT></P>
+      <BLOCKQUOTE>
+        <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><FONT=20
+        face=3DArial><IMG height=3D86=20
+        src=3D"http://www.kwon3d.com/theory/transform/trans_e13.gif"=20
+        width=3D196>&nbsp;&nbsp; <FONT=20
+        =
+color=3D#ff00ff><STRONG>[13]</STRONG></FONT></FONT></FONT></P></BLOCKQUOT=
+E>
+      <P><FONT face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial>where <STRONG>T</STRONG><EM><SUB>B/A</SUB></EM> =3D =
+the 3x3=20
+      transformation matrix from frame <EM>A</EM> to frame <EM>B</EM>. =
+The=20
+      advantage of <FONT color=3D#ff0000>[13]</FONT> is that one can =
+eliminate=20
+      matrix addition in <FONT color=3D#ff0000>[11]</FONT> so that put =
+both the=20
+      rotation and the translation in a single 4x4 transformation =
+matrix. But it=20
+      theoretically takes longer computer time due to additional=20
+      computations.</FONT></FONT></P>
+      <P style=3D"PADDING-LEFT: 15px" align=3Dcenter><FONT=20
+      face=3D"Book Antiqua, Times New Roman, Times"><FONT =
+face=3DArial><A=20
+      =
+href=3D"http://www.kwon3d.com/theory/transform/transform.html#top">Top</A=
+></FONT></FONT></P>
+      <P style=3D"PADDING-LEFT: 15px"><FONT=20
+      face=3D"Book Antiqua, Times New Roman, Times"><FONT=20
+      face=3DArial></FONT></FONT>&nbsp;</P><FONT=20
+      face=3D"Book Antiqua, Times New Roman, =
+Times"><!--mstheme--></FONT><!--msnavigation--></TD></TR><!--msnavigation=
+--></TBODY></TABLE><!--msnavigation-->
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD><!--mstheme--><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><!--msthemeseparator--></FONT>
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><IMG=20
+      height=3D10 =
+src=3D"http://www.kwon3d.com/_themes/expeditn/exphorsa.gif"=20
+      width=3D600></FONT></P>
+      <P align=3Dcenter><FONT face=3D"Book Antiqua, Times New Roman, =
+Times"><B><FONT=20
+      face=3DArial>=EF=BF=BD Young-Hoo Kwon, =
+1998-</FONT></B></FONT></P><FONT=20
+      face=3D"Book Antiqua, Times New Roman, =
+Times"><!--mstheme--></FONT></TD></TR><!--msnavigation--></TBODY></TABLE>=
+</BODY></HTML>
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/_derived/transform.html_cmp_expeditn110_bnr.gif
+
+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
+BAA7
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/_themes/expeditn/expbul1a.gif
+
+R0lGODlhDwAPAHcAACH/C01TT0ZGSUNFOS4wDQAAAAFzUkdCAK7OHOkAIf8LTVNPRkZJQ0U5LjAY
+AAAADG1zT1BNU09GRklDRTkuMEKHRfUGACH/C01TT0ZGSUNFOS4wGAAAAAxjbVBQSkNtcDA3MTIC
+AAIBPjG4mQAh+QQBAAAAACwAAAAADwAPAIbAwMCcnJxSUlK1tbWcYwCcUgCcQgClY0IAAABra2uM
+MQCUMQCcOQiUlJTv563n1py9pUrWrXPezoRCQkLW1tbGnITOzs57e3t7OSGcMQClUhjnxrWlQhDG
+jGvOrVqlShicWgDetaWcOQC1ezm1cznWtYzn1r3n3sacSgC1jDHezq21lEqtcynOrWvezozv3qX3
+797GjGO1lDm9hFLv587nzpRaWlrn5+fetZylShDnzr29hFq1jELexpSccwjWxpTv57X39+cBAgMB
+AgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMB
+AgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMB
+AgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMBAgMB
+AgMBAgMBAgMBAgMHi4AAgoMAJ4SHhz+IggGEGzyCFIcWFwMAOh8gIQAXE5KDNwkKCzkECwwNizoZ
+GRoEIhkViBscCyIjBAUGDDiDNDUtLi8ODxAREg7EDgAqKywoINE+uSgkJSYnQQAwMQsGKCkoCzuL
+ABisKQYHCAmINhQVCzIzAAECloMNqQAdHoMBNsoB6CHwEJBFgQAAOw==
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/_themes/expeditn/exphorsa.gif
+
+R0lGODlhWAIKAHcAACH/C01TT0ZGSUNFOS4wDQAAAAFzUkdCAK7OHOkAIf8LTVNPRkZJQ0U5LjAY
+AAAADG1zT1BNU09GRklDRTkuMALxmbSWACH/C01TT0ZGSUNFOS4wGAAAAAxjbVBQSkNtcDA3MTIC
+AAAIddtivwAh+QQBAAAAACwAAAAAWAIKAIHAwMAAAAABAgMBAgMC/4SPqcvtD6OctNqLs968+w+G
+4kiWJhicU6pCbPu8cCPPSm0jeH7svP/jMYA2ovCITCqXzKbzCY0yA1Rqsmo9Yo2n7RWL9GrBYbJQ
+PK5+1elsC302/+Rzdptbguf0e3rR/2cXJ9hHGLGF2OO1iIYI52iWyBgJ6VZpOWmVaHAp06kIlolZ
+qXMJqib68slpyhr6SknqCnmqCWu3OutYm5LK29gKIHk7Svsbi0qsGiwcPJyMvKu72UxcjSt9wRfo
+VtftjZcHCLNNPm5uOFOO/l3Yrn4usv4W31Vvnw6fT7+vMu9/T1w/gAPxvWMXTorChQwbOnwIMaJE
+Egm7TGlS0URGigsXOyrZyNHjFQwFAAA7
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_f01.gif
+
+R0lGODlhvADEAPcAAAAAAAgICCEhISkpKTExMc7OztbW1t7e3ufn5+/v7/f39////wAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAsALAAAAAC8AMQA
+AAj+ABcIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEkTYQIAOHPW3MnTooIFAHoKHfowKNGjSA0aTcqU6NKmUHk+jUo15tSqWFtezcrV5M2uYFEi
+yEk2rNmFB86q1UgWp8Cta+NOXApXrt2GT+ve3Uvw59u+fAMrLABUsGGHeg8fTqzYMIAEHtM2ZvoU
+MtvJSdu6vYy5c2HPTS1nZAxaLunSa0+jPqt6ddjWrmHCVhqb8sXZtbVaxJ17Je+/vYdC/v05uNOK
+xI2b/J1cOUnmzodCjy6Ud3PqIa1j76l9e82fuK/+e/cYXuuAgTgley/PEqeBBWPFK/4aUb5EAgAC
+AAWAYDx6ifYBGJRbfo03W4ARGZBffv6hVyBiL+nU4H8QIRhRAJs1CF59E9YEm4Ud7lZhiDQt9SBC
+IJI414gpZagiQaqleFBZLxYU43Jt1UjQATeOpFlQJ77YI0g/uqgjcAzJuJ9mR9oIoY9MNvlfkLQ9
+l6OUFC5koWif0YhlcQohyGVeSpZGmpJAZonlhlqKVGZvjKU41XlfOtnmR0ZRWSeSCVn42J4LKZAY
+gm86NyhHggK6kGWHbvSnQP0petBwYXJUKHV6XUeppAk9mOlFkV663aNV3sYphyhiJOp6C1CZ3Kr+
+BqaK3KkUwUUcrLHOCFGkC9BHK4CyAluQnkRxGddW7A1E7ExLvWcUrighG5GvUNGl5rG6skiVtXya
+Bh+M2rIUKa8PbQhAgerZddWQPS0LHrV7sQnukzHpmV6ljU2lV4HQ4iXhnYrpy5AA/fb5b6tJTiYw
+wMuW5KWwAduJEI8v3XTwrArPG2xK8RnZYV59kuQpWe8dmSaYErt5MZbclqpRug8bK2XLGlu6MqB+
+0fxWw4HCmBPPij6bMnI3/2rnUvDu+rDRd+rsb9FM4yv0QqFCHXVDXwXlK7no/Zvu1cAOiOLKfgEN
+Nm1GLi2Q2Wdr+azVyra9G9ydyl0fXQVL6pb+vnnXeS7KXdvt6LU2TpWAzILjC/iMffvnqbKJ8Ytw
+4gODuZXMVVOe5MJ3Q6r5juvO/XnNhEcU3+hP5eyoUSW3nefQqgpuK56NK8arxSETiTStn0L5a6NW
+It5k0k5yrbKKy8b5NUmns5ywSScmanKcAkRYe1eMbcq27iSedv1b3zd12lhSBdWf8LWxu5PHwV2+
+MU/SG8d+7kfNb6ZA6CtlfE+4x2ZU/rBDipEAaJYTJSsporGfYA5Ylc3s7y7dwV74fLeiXr1mgSJS
+C04e+JrlFUVdE7QIr14ll8yxpnrIISBYFAgY6cQtImkJ4UfAA4DW1UxQHnRJ8zK4GqdZhTOvezkc
+XkoXISC6RmweMuIRF+cSUpkKTklUov+YZR8Z/vCKg5MfFrPYPmwpR4UjAWO4Rkce52yPMmLUm41s
+OJrP+TB2mnsjD+PIxCdqTl6WImO3pJg4JA7ujKeSYwVRR0SKpPF3NsqhHhfJyEZq6IUfFIizCpk4
+DgIMZI4cJCYzGTZyEYaTFQQkKAM4Sg5Z0XmtOmWTBFlK+u2xlbCMpSxnScta2vKWuMylLnfJy4UE
+BAA7
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e01.gif
+
+R0lGODlhMQGiAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAAAxAaIA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGCECyOhw40KPHENaBACyYMmDJ0WiVIkwJcsA
+Ll+SfKmx4cyMG0verBjTJE2BO2XCJBiUo86eP5MqXcq0qdOnUKNiRCpVaNWrWCfm1Eiyq8GZRU2e
+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
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e02.gif
+
+R0lGODlhkACYAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAACQAJgA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHEBcCiGhwIsWLCS1iDKBxo0eOBQF0BEky5MeTIzmOtJgy5cmI
+LiHGfOlwZk2aGztqtEmQZ0WfMk0KBAoU50GiGT+KFFlyKcOiMYsaFZpzKkWpCLFaLTkUq1arLVcy
+rbhV5lKpZ7+WXcu2rdu3cOPKnUu3rt27a9VyNap17E2qdfVi9IsXMF3BhflmXCnUKcyfA8UO3hny
+61myPaPiRZyYJmelNVu+JLw3q0/SXD97VN0QdefSKh23vvy69uPIuFsXZjxU92aJuQ0ffhq8eGDQ
+s9Oq5sy6aubGR2Hy7o0Wcs/ewucy3438rk7jSX/+X8cOXHz483ZPu4Ztu7379/Djy59P/yjt+qPv
+H7eeWrBfnWrpR9567MHVHH7RmdaWf2WhZVl2WZlE2W0PESjRTBaipJl3COZlnkrjxabXf5ll+BNq
+O8mGWXoCdnhRWi7GOBhx6AXW4mIq7ucch6txd111H1L3F4/lJUhkkRDGtV2QV/mokE0HvthdelPO
+pliPQU4EZIXTYZfjgGRB5WRSG+4oJHkREudSlE0+CeWYCqZ5pJxGUonlnG3iSaGduG3JZ59D/llj
+iILSmaSBVR52o2lfyujoo5BGKumklFZq6aWYZqrpfGtGpeWLnhYYp5tolqqdfaNeFaqqIKZ6qFv+
+nbpqlqxWEmgrkw2aqOOumyLZlXIN8mddXxiyxGVopRa7oLCVTbYYqxmupyyhn5rZ1bOgYjtrtGU+
+5VSKAXIZoLS6ToYhrr3WOVxkqxJ6oatEqbeiqLA+h2q5zd7rlZbKSvshua1KpyC+INrKr6GnLkhw
+wuk27PDDENP45MQRg5UowzOiWyGcef75ncSCfkzxkROCzGvJI4dMr7vr/hjoyaiq2zJ4AbOMcYTd
+8oqzzDd3rPOePwel8cszI2yzXEvqKbTSGw/t27E4Je3x0a8yW6XIg2KM8sjAxuwZVUhluXJwXTPL
+2NbCVWty0aLl7K271UY775lVL/uu0UuThHb+3f46LSqbQOM9NltSB9000zQnruTFSDO++J2FBt6z
+5I0XF/acWAuOKNlE37z33GwPLnqwEnZeOXiNjr6VaKCbOvmhgOeteeyHM5r16Rkj/nTFvPfu++/A
+By/88MQXb/zxyCev/PLMN+/8877TjqD0a9f83LgDC3w365ED7KzXs1rP7u2b52s11Od7a+Gtenqf
+LfjHGkz+W7HCH37627fb+uMGUi+l7g7zX8qi57eGCXB+D5uWh8w3LO3FzEHI2osCSWcv+0XQgvkj
+Fc+upRQYsUx+78Ogm0zUN/idDXUeRKG2HIi/Z3FLcIQ5ofjWBkJW0SqDK6TavIzlOl+9LYRdLdSQ
+5uoVvAMOMYAFTJcRNxixJe5Qfz3EIGni9UNq/WtVC5thq/A1Fu+5xomAIVcWOXgiYq0vdaqbCoAG
+hj19batfbsOdFy2DRQhqsYtrSqIQ3wNGHSYQeoCMVEAAADs=
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e03.gif
+
+R0lGODlhkAA+APcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAACQAD4A
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKfAjgIICKFjFGvKiQo0SPBj2CLKhxokmSJ1NmVHmypMCL
+MGGyROjyZU2bLzfexBlgZ8KRBIH2REmzpMajA33+XMn0o0+hDqH2rCh16EyTSq9q3UqUK8WgVJVW
+DRl24ViSZYtObeq1Yda2Rd96lQs3Z927WunWvSn1rNqfesGqrRq4bWG8iGkCxst3p9+/bCH2TWsx
+alK7mCWjPWx2MmeZKTnnFcyQo9zHa0+/FWo08dKklCN3jC17MWHaPF3r3s27t+/fwBsP1jnbKkXH
+NV2KHk0WsmSxn5GPXX5VeO3S0CdOzt31N3XgXL/+qxQPvvriu8vJV66evDtaxmyPigapfD5S2NMt
+r8X8+Xrop/aFBp565Y03YIEFEqgdafp1tpFbq7XHXW9GgRYUg9ix9l5UFl5m03bBIQgbbwpq16GI
+jJ2I4ooszqVii+G9uJt1zRU2HVXEyaZcefPBRaCGFx7YnH/FnZdjjU/x2FSFJgY5olNOxtSRkkNW
++VyRR75HGJUJltigd116+VWIMM4oZJmuiTkmmokBCJ+VpNnopnEcOpcZnRvudR1qcGJ4JVN9GdlS
+TDv2OeFxgv5JVn52dnjfZifSmGeWkyqqZZKQ8eXkmn4+CaWdiALqWIOP9mfoeHN+itVxj07FJ55c
+bOpJZqxvgklrrb6peauHth66kmp1Autgd7q6FWeq2PnqabL7DclasaWBdRafUg4L4Y0g9ppadsFm
+RS1uI0L16lzHJlrkjaGC+OyZCI7LErTR7uqjvPTWay9eAQEAOw==
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e04.gif
+
+R0lGODlhhAAaAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAACEABoA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHDgFInCgRIkSKFC0eBGCRo0CMEzV6DDByY8mRKAeW7HiyoMeU
+GjeaJLjypUqXMXPq3Mmzp8+fQIMK/Ziw4tCZRxmu/Li0o1OiJGkCbQk16tSFVK1q3Zq0q9evYMNK
+FavUqEGzX9HybFoUac6XbEnGFaqWbNO6Tx/CvVm1Z02oeN8qxWlV7VyyiBMrXsy4sePHkJMGZnw4
+ssjLP/8inEy38uaMXAe79Nw2NE3SflFj5Ux49NqyqUGfVS0S41jXOysbRgtztGzcfbWGvGibL3Cu
+KOvq7n3bdMSshY/ehW6ztF7jzF+Pza7dOmDjwZ8VM//9NuRJ1jHnZjwP3bL79/DjKwwIADs=
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e05.gif
+
+R0lGODlhbACWAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAABsAJYA
+QAj+AAMIHEiwoMGDCBMqXMiwocOCAAA8FChRYUSDFTE2vAgRYUaPET9OfBgyQMmRBEOqRIlRpciR
+HF+yNClz5kCONlPWbAnRZcefFXHePPgy40ehFIlqNElRItKcUKNKRXnxqcuiDK163Ciz5s6mNKe2
+DPqUZNWTJ2Ge/Sq2rdu3cOPKnUu3LsyNKanexWs3a0KjeZUmDfxz8NC+iBNHLfv3JmOijyGzPew2
+8lKNQQnndcqU8mbPnRWLHv3X6eTCoUnqdXiabteYkUuuXChbq9SYrGm3Tl1atcXdlntSNoqVp+HU
+toUbJg6WtHO4SK9eBjld8+/qoHk+Tku19u6xPmn+fnccnnXx2+Ozpr9O3Wr546GZo/Z8VKdg1IDB
+Bn/Ov7///wA6x11/A4q1H32ONXcZbFvpl1yAEAa4Xl8T6tbTbMMdltmCzXWlIWgVRigiZNjdJ2KI
+9h2YIWFeadYiiyWOKOOMNCpn3lcPkqdeiQXaFxZ7uXUon3XLkWVjdvGZxpyKM+WXk5MKTlRfjVRW
+KWNrKM43FVsHRvceckb+KB6GYEYp5lVTOkhWcExyCBWUYu4Fn5V01jlXjo21laWJJIJUlnQsMqgg
+moGhJZJQhGq4Fnl70jYnSxsm2CSSdlZq6aWYZqrpppx2emWkFo3YqHFBPuqolKVW9l2a8TV4nIf+
+KxJJmleL/vYleHh6quuuXJmKn5y+8aXqhQOyKmywfr3F5JCDTRkdgnEylatooyrL67U98pdtdzH+
+Cmyqpy62bZ5JhrmUoeR61y1iOML34nluUprYuLO2ea1duKE37JbrYamntUDuqBOZvprJm7w+ynqw
+cGwe+uVkOCVacMISL0xsrwMXC6PBsCYFaq6sGmmvnFmG3K/B+CIcJGfiTaryvTDHLPPMBoIaasDh
+WgguqTrfiPPC9HIsGXuxjcclvArzbOrRDaPabLNIL9dhwkjmB9hZPWP8YbRAH0pf1NGaJuTPqtms
+F2dHnQwnzWy37fbbQh9L3c590k21cstaBnL+0zwWbSbBdt9t8Wl/uurna1zn/HTc8+WLcsdSh+Ue
+yr0NKqmsgr4KuaSZZw7dxLmxTLmw1cJt+umop6766qy37vrrsMcu++wCihqX4zeDvi6f5O5batAD
+m0X47Q4TbKzcySbve1PGu0hpfWYjZ13plx8bMbRnOp8919S7fN/xT4NvbPeQjiwX8LSnrz615p/f
+PtHIA0j+y9I7bb/yNd9v9Grxi2t/2o/zEWMAWKDuLSs70TvP5joDNv8hqzDga5XCxqeq/YGnZaUB
+VAYBN7/1efCDIDRchBo1LW/dL3C7M8vovpe3VXWJX396WNJ6h0ItNUlsxHrWnKLHG9wRCU4hJDQX
+6YbktR8hCijyKSG7blZEzPQwXTZUTAcXE8IqNiQgADs=
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e06.gif
+
+R0lGODlhhAGBAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAACEAYEA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3MgRI4CHHwmG1DhyY8mDAE4KVElRJcuW
+HQO8HJgSJcSaCl2ajDlzJcuTPWPadDhzZNCGJZMeHYozZ8SmIp2uvJhU5FKmQa+ClCqTalSaWguG
+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
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e07.gif
+
+R0lGODlhWQCEAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAABZAIQA
+QAj+AAMIHEiwoMGDCBMqXMiwoUAAEA8CMDjRIcGKFhlWjJjxYcaJIDE6jMixI0WPH02qXMmypcuX
+LyHKnDkTps2bA0UixKhzIc+WP3EKHRoTJdGjSJMqXcq0qdOnLHWWTNgTqE+ZRU1WTZmTKtauW31C
+HVtQZNCdZSWKNUq2rdu3a9F63GqWYti4HDdepUlT6NSbfzUGCAy3sOGYd9lytUm44d2qJAdbjJx4
+suSOeg9r3sy5s+fPdkH7PalQqsq6O0Fq7EtadNrKco0mhj3SKe3WK8+6Vsq39+6olW9fHNq4Nt7L
+j18rFiz7cly1JzPXlm5V+G/iy69zta69u3fNX9P+itcK+CH38dAdD4fJ83x2qihpZ3YffXXv8ETp
+p7f8Pfdg/f0FKOCABBZo4IEIGugeapg5x1RPs6HH33vYSYjbeaaVxph/pzGYXlBSsdbVd9RNSN6I
+mHFX3HO64ebgerEBaGKL6EHGYlMratghign26OOPnDUWGIZ+4TfZkGXlaJeMFmoV4YkjiZiTalbp
+yCN8Ll4kpXP6BbdRiaFNSaFXU1HJ3H5gmaleZEXJ59Vo+dl3n5JA/sjkdWDaqWadfPbp55+AApda
+lsaxZ+SRECapIp2FAvUklHsdymaVWDr4aIZT1gQjard5Gd+LYeplnaZgNdpkSKDClxd7Y16pJXST
+e+oYq39ezsnojozdWaeuu+Xp46SBBivssMQWa+yxyCar7LLMNuvWrQUm+lxWDxIKY6uxpRpnk9e+
+yFe2vFrpao1LHuotjoqKS2S34kGLpqmQekqtZ+25FG6F2i7W3axn4pnvtOZyexqk+tLYbVgIj7tt
+c5Wy5duH6KKY3JUPk1utlo+CGhy7Ry1or8Id3+tsswEBADs=
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e08.gif
+
+R0lGODlh4gDlAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAADiAOUA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEhxIgCCFwdmdLixosePIEOKhNgxQMeSB1GmfHhRpcmR
+MGPKnMmyYcuVDF1K1Emzp8+fEXnaHIrxZVCNAJImRbgU58uMQgU2lUq16tORU40a3Qg150mrXLU6
+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
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e09.gif
+
+R0lGODlh5QASAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAADlABIA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEix4kAACjEa1BiAo0AAIEMW9PgRIUmCJ09eHKmypMmX
+FDmSnHlQJsqEHm1u3PlR5EqLQIMKHUq0qNGjPJPebImzJsyfHaE+zfnUJVSmDjXSVFqSasalX29K
+TRnSp9izUhfKLAsSLdeoVeE6HUm37sS1Ze2mdclU61yrG83uRUq4sOHDiAn3nYv1rVy9K7f+ldtS
+pV/IEHXutfy4s1uMi92+bexZcke2kENPBpw6bF3OMdOaZq056ezSSkkn1h2xMe+7QH8/9F1YeOLj
+yJMrH8q2ctysPfPmpqsbtOPb1oOCRr0acHXRmKWJs34+vmtvx7itEldPvrZxntidem0amf7mwfjL
+X4aOeXD2/DSpxlJ3w13EXXhj2UdZXOv1B15zBYJX3njzpUdgVLB5h9Z/s5F1YIV4iXefXrdd5+Bk
+Ao6moGf+ifbeVSSayCJfKFZV4nIvqqWjYsEd1aCPy63YI0M57jgkcw0V6VqQTDbp5JMGBQQAOw==
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e10.gif
+
+R0lGODlhCQEYAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAAAJARgA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWIAABcfJhxI8KOHhmCDElwpMSMKAVqPLmS5ECT
+EFsehLmy5ssAMmPKtIlTJUufM2/m5LgTKE+dBTXyHOqSptGeGHMqfeqyqtWrWLMqhKm1K9CZTKOi
+DMs1ZFmxKcFiPUtybFm2F+G2TXs0LNqvOOUmTEsValy6JfV+FBrYblPAKgUH9blTsdfHkCNLnky5
+suXLkA1jnsg3qea5az+bFc2ZdMPODh1HpciWJt+WTN2SbTwStmKTqGGDHfuRtu7EpLkWBY72rdTX
+xE8PHZ7XdMmbUHlv/F33JHSjqFlDr14aJHet1P29Oi+89Prm8+jTq1/Pvr379/Djy59Pv7798+Pl
+L5edPzX/0bKFFqBH/PVnkHMFAuiWdb1lZqBID652lWoilRaadntFiNSEGhJ14WYUemhViKx1GFuH
+/k2nFogo7sdhUl/ZZCBuMdYI4XXDTWXhdjzilSGM4fk4nVQ1/raQU0H6pVOQKDbXY4g15ShkiUzO
+SFWUjyGHJWdXJsYlYzbGRViYHOFIZkW6GdlfmmZ2xaZ4X/ak5n101mnnnXjmiWdAADs=
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e11.gif
+
+R0lGODlhrABGAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAACsAEYA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKJAiAYUWKAi8G0JhxoseEHEEWrKgx5EaHJkVSBFByJEKT
+JD+elEmzo8GYH1MeDKlzIsudNV8GldmzZtGBR2mm5IkUo9CbEX8OnemUatGlUF1qBaqyqlepRpUi
+bWnz6dihSanuTNvVq9mMYLFO9dmQ40WyWxWyVTvzbta8ZXPO9SiXKMq/YrkO3jvY7VS2jKO+ZBl5
+MtjGDylXtgyZ8mPPigPjhHuZKWaIMDHixdu07sjLjlvH5vv4dGbbaa/Svo24LejAwEFq/m3YolO7
+vd8u5FkaMPDRglGb9ttRt8vNzlPPJhx6Lvbap3P+297dk7Xz4OO7by2vvD1x0b+1nw+b3jhmyHqL
+19/Pv7///wAGOB5+pEEnm4C7vUVdcu3l15qBCSaFXFmmIZhgXpodiJ56Ok3Y13ypVXjed+BdN2KD
+HKKl4HauWSgiieKtJCN3DAZFoo24tRieemZRV5iABFan4YbzrfjhifZZNWRksCW2nGweDpliaKsh
++aCTKN2opFY3ljSceVrGJp9+OUlFlnVFoqYjUN/96J2FF9L3ZFt01YihkDz6F+RJC6YppYMbZcij
+hFX1+Wd/MW5J3ppSemjoonlmCSd7ZTJKpJsbhmknojtaamaTh0VKJpCdJnkTqKHCqaqe7xHV6qr+
+sMYq66y07qepn7aWOidvgb7a4Zo+bsrfnjhhimJ3wc5G6EpRxjkssBQKeyhiZ4JoapUsPpskttku
+qWB81nI57ZikZmWemKmOO2iDXar666h03vrulfD+p127pqr1aLrT1qtnjvlKC2i3NCJ4q8CUOksn
+kVgGeDCuCte7112ezVsutJlaumuGxiZ6JG0PS+Qxn46NPPDHIvYb7coEz6jitcSR656RiqL3IoUx
+C+wyjndyC3JyzP0o6HPIamisVcNN9uZ6ys6c3cmNFh0xoF8qzWyfR93b8M8t8xscqmpKJy5yaO5c
+sLcu76uxzHVGR3KBUE+9a9xNtSmqv5lVDCWV3TzPfbffDOOt7X0aw7X11F6+Gnh9Ex+38N8S55ss
+xAMyOtrRlIuGp5W+0Zu5rr6BizCvpKGdHcdXR+3iWnqzjDm61Hquem9Hgz047XnaPnuRHUPON6e+
+Pz6lnIAlffbFYyleONAv6yzZpKALr7LwIcsNcGN7fp474dBzH3CJr+mepfiMKx+V+V2LXOv67Lfv
+/vsEBQQAOw==
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e12.gif
+
+R0lGODlhnwBGAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAACfAEYA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECMmBMCQIkGLFgNkFLhRoseDHRF2pJgxpMeNGAeOBGmQ5EeO
+L2MWNOkyJk2ZF0OaxKmRp02fQCPqnKny4kSWEAHs/LgSZlGRUJFKbTnVKcelQn/CLPk06tWgFbFW
+pLpwpNKuRsFmHWuUq8yVbonKTatVbVKvL2/61AtWrF2yfwNbzXkWp9LCgsMiTszzMN/BNa8ubspY
+4dCicePSJYx3LtrPQP0mFh04ssTLZTmDJu3YceOGKK2STv1U8+DbppkKjd1Tdu/OuXUDfu056Oy/
+xyuv3Tx36c7kamm6zgz6t2q61Iff3qvccveqy7/+ix9Pvrz583kdljxsvbr42byhe8e8/THe7O6/
+i0bJfvt8wPj5NxRlxfn3HksE5vccd8PxJpx5BMpX3WQStmchgxCi95Z2RzmVEocHwtaWgSeNeCFq
+/wVIokgVgieVirQB2BWKuK0oYlItWtdUha1NZhyHOdqo2Iwr0ihYcA8ZiWF5Qdb1YH6bpbTgefCl
+1SRaH4Lnl4NZMjfefoTZFmOU/Z0I4oVJXpkecC4a6Fyb9i3JZEuurTnTehLGSRyVEC4WnoaM1Qmo
+YmoOauihiCaqXKFQLopofC6CWVt9GrJm4pVwfaZncWW2x2iJbHnYqHphatpmlER6+eWNv4n5X3P+
+qU5IlqurVYoUrWhO2ZmAkW6Inq6n9ajqk6aimeSvs/rqWZd3FSjnqnzaOSqx0JKH65hCUhuioqxO
+6yF7wFp77KQ/kgtkt1kqqV+3PV07Ln2UOiujb/JOVKikkrkrL3+IGRmhbJ2qa2+5WNLbaqR+Giwm
+jbZtimenORFsMK+7FgmndsyeplJrLJYKGbYZa3wmtToFmZyPvcWGVcl7RiwqqF422aJbD7+aLXc8
+jqzsSf3BOGx3M+vspLhM5ihwc4IKHSi3pNZbbMif/tnhVjeH2q6bSnNJcYZWp2uYlbIWyDG/rkbd
+bIw+T41drDGzeWbC276o9rDh0g2i0bZWDJsxsN6yi1vSUlf789mDBx612YQTDXPh2sbtuMhOSzsn
+09jm2xjEilOut+acd+755wkFBAA7
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/theory/transform/trans_e13.gif
+
+R0lGODlhxABWAPcAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAADEAFYA
+QAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnJgQAEOLBAFozGgQY0OPFEOKPAiyY0GNHksGsKiSJMeV
+A1W2LImxJUSbLkfq3CnzJc6TMIEGpThzZ86PRpMSVQrzp8iiL4dKFUr1Ik+nTE1qnRqVY0+BKSse
+7bqR50OsE1HWBBtTKVa0bWnCXQhVodywW61m3UvX7smyXFnqZSv1a1XCI+fO5WvUcFqukCPWZaqY
+seW8ZhffHOt3s0OQeEOGXor4sFiklc9yTpr6smvNVmF/JqlWp1rFtV3rFl37tu3cpteWxjy8827G
+dXEWhTraNGTZSGcfR24cruC9k0+DBRxYNe/b0BP+G9/evGl0wuWzX3/qPTFN9HHd5hUe22T44pFt
+t5+e9b5L/9p1RZVyCLXGH2VHEWhfZz9lh59Z0h2IYIGPAUghcY3tJ2GG8lm4Wn7OjddXWw+25195
+JYa4YITnbejiizDGKOOMNHo2InzPaVijjRfCtxyL1zkIYmmhOXbjjpLlBBqJPaFVJIkC4geggUjq
+eN96KrII5YQtVqnlh2J5iKGYWZbpJYbskRnlkFAKJ2SPZ3Y5H1s/thjkh062uWWKZn6kZpJaLYmj
+V+c96dx7bB6pKFF3GcoamrN9deVqFlLJYVA1oSSfX5W9yeOej34ZZ4AdaYblpn0KeiqopI7aalX+
+a9V55HpCvhUVfWvC6eqruOLV5GCjGfngiTruStykCpLW52OiGpsrq5zy5al4zTrLp0SrXvostXJa
+C61oiTKbqqn7oWgjscP6Gelni027LZhjmWsitzZZt261eEpbrLfhqvbntfwGLPDABBds8MGhAqtp
+vft6ayt53BEKZLqQ7kmfsK/y26BQuNLZJa1jDjZUeg1by9ytxWU7n6Ypc7YkaCy3jK+zMm0EM2C/
+wjqynoeuCC3DMxs72ZvZnko0pf3qKqLAGPv7H3tzftut0gHXnFGnOiv7LrhB7+qUyk9jBy+3Ig+s
+JthkSw311A4j+G+O0vVG9dxt3+hb2HZSnKr+T6BaWrWIbvoM+M49A8vz1mqz++LJPOc8a8wYIzoo
+cN11fdHbXy58Nc6CE0n456xKLnmufmOLebeChrhqsGCqB/DSGUuGqK9Jl107UJKuHWXE4tqe1l1M
+vp55WFiXmrbMx8e+9p3Cs73dZu6iri/EvJ9+3NdJvh29suBVTLPb0y+bEuXL3l7lwyuRH1/eem89
+u5Qlf09q4LiXjWXkItPuPeKuMo5Yx+Z5HHfw9xfNxQRyYytfnGp2PwTWr1TAYV3hMOOp0tUta6rL
+T+oyGLLk0c1k+4tWAn3XqElZblRWS1+7AqO+YmkvfkKDXV9eGMLeLepvBeLdDMPHP2zB0GuN4BNb
+DX0IJPAY8YhITKISl8jEJsbMY0JU4KdkeMEM0VB8gPqYDk1XqS2Gy14WzJfzRrgleUUIXZGxF2p+
+GLoTCi91aIzjB/mHNgVur3YGMmOh6DXHxEFxjBO0ixfJOJwnfucqyRJknqwzyECiyncaC2J/aGPI
+31WyIi1EGLsWlsmbdFKToAylKEcpkIAAADs=
+
+------=_NextPart_000_0000_01C9DF91.33940380
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.kwon3d.com/_themes/expeditn/exptextb.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QUiRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAbAAAAcgEyAAIAAAAUAAAAjYdp
+AAQAAAABAAAApAAAANAAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIENTIFdpbmRvd3MA
+MjAwNzowNDoxOCAxMzozMTo1NgAAAAAAA6ABAAMAAAAB//8AAKACAAQAAAABAAAA5KADAAQAAAAB
+AAAA6QAAAAAAAAAGAQMAAwAAAAEABgAAARoABQAAAAEAAAEeARsABQAAAAEAAAEmASgAAwAAAAEA
+AgAAAgEABAAAAAEAAAEuAgIABAAAAAEAAAPsAAAAAAAAAEgAAAABAAAASAAAAAH/2P/gABBKRklG
+AAECAQBIAEgAAP/tAAxBZG9iZV9DTQAC/+4ADkFkb2JlAGSAAAAAAf/bAIQADAgICAkIDAkJDBEL
+CgsRFQ8MDA8VGBMTFRMTGBEMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAENCwsN
+Dg0QDg4QFA4ODhQUDg4ODhQRDAwMDAwREQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwM/8AAEQgAoACdAwEiAAIRAQMRAf/dAAQACv/EAT8AAAEFAQEBAQEBAAAAAAAAAAMAAQIEBQYH
+CAkKCwEAAQUBAQEBAQEAAAAAAAAAAQACAwQFBgcICQoLEAABBAEDAgQCBQcGCAUDDDMBAAIRAwQh
+EjEFQVFhEyJxgTIGFJGhsUIjJBVSwWIzNHKC0UMHJZJT8OHxY3M1FqKygyZEk1RkRcKjdDYX0lXi
+ZfKzhMPTdePzRieUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9jdHV2d3h5ent8fX5/cRAAICAQIE
+BAMEBQYHBwYFNQEAAhEDITESBEFRYXEiEwUygZEUobFCI8FS0fAzJGLhcoKSQ1MVY3M08SUGFqKy
+gwcmNcLSRJNUoxdkRVU2dGXi8rOEw9N14/NGlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vYnN0dX
+Z3eHl6e3x//aAAwDAQACEQMRAD8A9VSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSk
+kkklKSSSSU//0PVUkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklP/9H1
+VJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJT//S9VSSSSUpJJJJSkkk
+klKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSU//0/VUkkklKSSSSUpJJJJSkkkklKSSSSUp
+JJJJSkkkklKSSSSUpJJJJSkkkklP/9T1VJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkk
+lKSSSSUpJJJJT//V9VSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSU//
+1vVUkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklP/9f1VJJJJSkkkklK
+SSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJT//Q9VSSSSUpJJJJSkkkklKSSSSUpJJJ
+JSkkkklKSSSSUpJJJJSkkkklKSSSSU//2f/tCchQaG90b3Nob3AgMy4wADhCSU0EJQAAAAAAEAAA
+AAAAAAAAAAAAAAAAAAA4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQmAAAAAAAOAAAA
+AAAAAAAAAD+AAAA4QklNBA0AAAAAAAQAAAAeOEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAA
+AAAAAAAAAQA4QklNBAoAAAAAAAEAADhCSU0nEAAAAAAACgABAAAAAAAAAAI4QklNA/UAAAAAAEgA
+L2ZmAAEAbGZmAAYAAAAAAAEAL2ZmAAEAoZmaAAYAAAAAAAEAMgAAAAEAWgAAAAYAAAAAAAEANQAA
+AAEALQAAAAYAAAAAAAE4QklNA/gAAAAAAHAAAP////////////////////////////8D6AAAAAD/
+////////////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP//
+//////////////////////////8D6AAAOEJJTQQIAAAAAAAQAAAAAQAAAkAAAAJAAAAAADhCSU0E
+HgAAAAAABAAAAAA4QklNBBoAAAAAA0UAAAAGAAAAAAAAAAAAAADpAAAA5AAAAAgAZQB4AHAAdABl
+AHgAdABiAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAADkAAAA6QAAAAAAAAAAAAAA
+AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAbnVsbAAAAAIAAAAGYm91bmRzT2Jq
+YwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0
+b21sb25nAAAA6QAAAABSZ2h0bG9uZwAAAOQAAAAGc2xpY2VzVmxMcwAAAAFPYmpjAAAAAQAAAAAA
+BXNsaWNlAAAAEgAAAAdzbGljZUlEbG9uZwAAAAAAAAAHZ3JvdXBJRGxvbmcAAAAAAAAABm9yaWdp
+bmVudW0AAAAMRVNsaWNlT3JpZ2luAAAADWF1dG9HZW5lcmF0ZWQAAAAAVHlwZWVudW0AAAAKRVNs
+aWNlVHlwZQAAAABJbWcgAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxv
+bmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAAAOkAAAAAUmdodGxvbmcAAADkAAAA
+A3VybFRFWFQAAAABAAAAAAAAbnVsbFRFWFQAAAABAAAAAAAATXNnZVRFWFQAAAABAAAAAAAGYWx0
+VGFnVEVYVAAAAAEAAAAAAA5jZWxsVGV4dElzSFRNTGJvb2wBAAAACGNlbGxUZXh0VEVYVAAAAAEA
+AAAAAAlob3J6QWxpZ25lbnVtAAAAD0VTbGljZUhvcnpBbGlnbgAAAAdkZWZhdWx0AAAACXZlcnRB
+bGlnbmVudW0AAAAPRVNsaWNlVmVydEFsaWduAAAAB2RlZmF1bHQAAAALYmdDb2xvclR5cGVlbnVt
+AAAAEUVTbGljZUJHQ29sb3JUeXBlAAAAAE5vbmUAAAAJdG9wT3V0c2V0bG9uZwAAAAAAAAAKbGVm
+dE91dHNldGxvbmcAAAAAAAAADGJvdHRvbU91dHNldGxvbmcAAAAAAAAAC3JpZ2h0T3V0c2V0bG9u
+ZwAAAAAAOEJJTQQoAAAAAAAMAAAAAT/wAAAAAAAAOEJJTQQRAAAAAAABAQA4QklNBBQAAAAAAAQA
+AAABOEJJTQQMAAAAAAQIAAAAAQAAAJ0AAACgAAAB2AABJwAAAAPsABgAAf/Y/+AAEEpGSUYAAQIB
+AEgASAAA/+0ADEFkb2JlX0NNAAL/7gAOQWRvYmUAZIAAAAAB/9sAhAAMCAgICQgMCQkMEQsKCxEV
+DwwMDxUYExMVExMYEQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQ0LCw0ODRAO
+DhAUDg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/
+wAARCACgAJ0DASIAAhEBAxEB/90ABAAK/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwABAgQFBgcICQoL
+AQABBQEBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEAAhEDBCESMQVB
+UWETInGBMgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0NhfSVeJl8rOE
+w9N14/NGJ5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEAAgIBAgQEAwQF
+BgcHBgU1AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTxJQYWorKDByY1
+wtJEk1SjF2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9ic3R1dnd4eX
+p7fH/9oADAMBAAIRAxEAPwD1VJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUp
+JJJJT//Q9VSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSU//0fVUkkkl
+KSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklP/9L1VJJJJSkkkklKSSSSUpJJ
+JJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJT//T9VSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklK
+SSSSUpJJJJSkkkklKSSSSU//1PVUkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJ
+JSkkkklP/9X1VJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJT//W9VSS
+SSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSU//1/VUkkklKSSSSUpJJJJS
+kkkklKSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklP/9D1VJJJJSkkkklKSSSSUpJJJJSkkkklKSSS
+SUpJJJJSkkkklKSSSSUpJJJJT//ZOEJJTQQhAAAAAABTAAAAAQEAAAAPAEEAZABvAGIAZQAgAFAA
+aABvAHQAbwBzAGgAbwBwAAAAEgBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBoAG8AcAAgAEMAUwAA
+AAEAOEJJTQQGAAAAAAAHAAQAAAABAQD/4RgDaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8
+P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pgo8eDp4
+bXBtZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJyB4OnhtcHRrPSdYTVAgdG9vbGtpdCAzLjAt
+MjgsIGZyYW1ld29yayAxLjYnPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3Jn
+LzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnIHhtbG5zOmlYPSdodHRwOi8vbnMuYWRvYmUuY29t
+L2lYLzEuMC8nPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSd1dWlkOmE5YTc4MzM0LWVk
+NjUtMTFkYi1iMTk3LWI0NDYxYmQ4ZGRiMicKICB4bWxuczpleGlmPSdodHRwOi8vbnMuYWRvYmUu
+Y29tL2V4aWYvMS4wLyc+CiAgPGV4aWY6Q29sb3JTcGFjZT40Mjk0OTY3Mjk1PC9leGlmOkNvbG9y
+U3BhY2U+CiAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjIyODwvZXhpZjpQaXhlbFhEaW1lbnNpb24+
+CiAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjIzMzwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiA8L3Jk
+ZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0ndXVpZDphOWE3ODMz
+NC1lZDY1LTExZGItYjE5Ny1iNDQ2MWJkOGRkYjInCiAgeG1sbnM6cGRmPSdodHRwOi8vbnMuYWRv
+YmUuY29tL3BkZi8xLjMvJz4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24g
+cmRmOmFib3V0PSd1dWlkOmE5YTc4MzM0LWVkNjUtMTFkYi1iMTk3LWI0NDYxYmQ4ZGRiMicKICB4
+bWxuczpwaG90b3Nob3A9J2h0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8nPgogIDxw
+aG90b3Nob3A6SGlzdG9yeT48L3Bob3Rvc2hvcDpIaXN0b3J5PgogPC9yZGY6RGVzY3JpcHRpb24+
+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9J3V1aWQ6YTlhNzgzMzQtZWQ2NS0xMWRiLWIx
+OTctYjQ0NjFiZDhkZGIyJwogIHhtbG5zOnRpZmY9J2h0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8x
+LjAvJz4KICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogIDx0aWZmOlhS
+ZXNvbHV0aW9uPjcyLzE8L3RpZmY6WFJlc29sdXRpb24+CiAgPHRpZmY6WVJlc29sdXRpb24+NzIv
+MTwvdGlmZjpZUmVzb2x1dGlvbj4KICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29s
+dXRpb25Vbml0PgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJv
+dXQ9J3V1aWQ6YTlhNzgzMzQtZWQ2NS0xMWRiLWIxOTctYjQ0NjFiZDhkZGIyJwogIHhtbG5zOnhh
+cD0naHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyc+CiAgPHhhcDpDcmVhdGVEYXRlPjIwMDct
+MDQtMThUMTM6Mjk6MzIrMDk6MDA8L3hhcDpDcmVhdGVEYXRlPgogIDx4YXA6TW9kaWZ5RGF0ZT4y
+MDA3LTA0LTE4VDEzOjMxOjU2KzA5OjAwPC94YXA6TW9kaWZ5RGF0ZT4KICA8eGFwOk1ldGFkYXRh
+RGF0ZT4yMDA3LTA0LTE4VDEzOjMxOjU2KzA5OjAwPC94YXA6TWV0YWRhdGFEYXRlPgogIDx4YXA6
+Q3JlYXRvclRvb2w+QWRvYmUgUGhvdG9zaG9wIENTIFdpbmRvd3M8L3hhcDpDcmVhdG9yVG9vbD4K
+IDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSd1dWlkOmE5
+YTc4MzM0LWVkNjUtMTFkYi1iMTk3LWI0NDYxYmQ4ZGRiMicKICB4bWxuczp4YXBNTT0naHR0cDov
+L25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyc+CiAgPHhhcE1NOkRvY3VtZW50SUQ+YWRvYmU6ZG9j
+aWQ6cGhvdG9zaG9wOmE5YTc4MzMzLWVkNjUtMTFkYi1iMTk3LWI0NDYxYmQ4ZGRiMjwveGFwTU06
+RG9jdW1lbnRJRD4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFi
+b3V0PSd1dWlkOmE5YTc4MzM0LWVkNjUtMTFkYi1iMTk3LWI0NDYxYmQ4ZGRiMicKICB4bWxuczpk
+Yz0naHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8nPgogIDxkYzpmb3JtYXQ+aW1hZ2Uv
+anBlZzwvZGM6Zm9ybWF0PgogPC9yZGY6RGVzY3JpcHRpb24+Cgo8L3JkZjpSREY+CjwveDp4bXBt
+ZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94
+cGFja2V0IGVuZD0ndyc/Pv/uAA5BZG9iZQBkAAAAAAH/2wCEAAYEBAQFBAYFBQYJBgUGCQsIBgYI
+CwwKCgsKCgwQDAwMDAwMEAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBBwcHDQwNGBAQGBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+AOkA5AMBEQACEQEDEQH/3QAEAB3/xAGiAAAABwEBAQEBAAAAAAAAAAAEBQMCBgEABwgJCgsBAAIC
+AwEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAgEDAwIEAgYHAwQCBgJzAQIDEQQABSESMUFRBhNh
+InGBFDKRoQcVsUIjwVLR4TMWYvAkcoLxJUM0U5KismNzwjVEJ5OjszYXVGR0w9LiCCaDCQoYGYSU
+RUaktFbTVSga8uPzxNTk9GV1hZWltcXV5fVmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9zhIWGh4iJio
+uMjY6PgpOUlZaXmJmam5ydnp+So6SlpqeoqaqrrK2ur6EQACAgECAwUFBAUGBAgDA20BAAIRAwQh
+EjFBBVETYSIGcYGRMqGx8BTB0eEjQhVSYnLxMyQ0Q4IWklMlomOywgdz0jXiRIMXVJMICQoYGSY2
+RRonZHRVN/Kjs8MoKdPj84SUpLTE1OT0ZXWFlaW1xdXl9UZWZnaGlqa2xtbm9kdXZ3eHl6e3x9fn
+9zhIWGh4iJiouMjY6Pg5SVlpeYmZqbnJ2en5KjpKWmp6ipqqusra6vr/2gAMAwEAAhEDEQA/APVO
+KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Kv/9D1
+TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdir//R
+9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq//
+0vVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Kv
+/9P1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdi
+r//U9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FX
+Yq//1fVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Kux
+V2Kv/9b1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdir
+sVdir//X9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXY
+q7FXYq//0PVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV
+2KuxV2Kv/9H1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirs
+VdirsVdir//S9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq
+7FXYq7FXYq//0/VOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2
+KuxV2KuxV2Kv/9T1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsV
+dirsVdirsVdir//V9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7
+FXYq7FXYq7FXYq//1vVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2K
+uxV2KuxV2KuxV2Kv/9f1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVd
+irsVdirsVdirsVdir//Q9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7F
+XYq7FXYq7FXYq7FXYq//0fVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Ku
+xV2KuxV2KuxV2KuxV2Kv/9L1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdi
+rsVdirsVdirsVdirsVdir//T9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FX
+Yq7FXYq7FXYq7FXYq7FXYq//1PVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Kux
+V2KuxV2KuxV2KuxV2KuxV2Kv/9X1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdir
+sVdirsVdirsVdirsVdirsVdir//W9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXY
+q7FXYq7FXYq7FXYq7FXYq7FXYq//1/VOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV
+2KuxV2KuxV2KuxV2KuxV2KuxV2Kv/9D1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirs
+VdirsVdirsVdirsVdirsVdirsVdir//R9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq
+7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq//0vVOKuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2
+KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Kv/9P1TirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsV
+dirsVdirsVdirsVdirsVdirsVdirsVdir//U9U4q7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7
+FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq//2Q==
+
+------=_NextPart_000_0000_01C9DF91.33940380--

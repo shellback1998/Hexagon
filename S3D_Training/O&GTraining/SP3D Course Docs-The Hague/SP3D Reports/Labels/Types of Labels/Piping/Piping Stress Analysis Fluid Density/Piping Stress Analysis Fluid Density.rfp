@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Piping Stress Analysis Fluid Density" Description="Fluid density per part, for export to stress analysis">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+	<FIELDS/>
+	<UOMS>
+		<UOM Name="Density" CanInherit="No" Type="DENSITY" Primary="lbm/in^3" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="6" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction="yes"/>
+	</UOMS>
+</FORMATTING_PARAMETERS>

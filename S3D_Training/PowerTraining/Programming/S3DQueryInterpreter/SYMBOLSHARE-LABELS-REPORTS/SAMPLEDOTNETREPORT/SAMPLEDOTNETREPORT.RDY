@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_DISPLAY Name="Report Template (No Query)" Description="Example of viewing with Excel">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DExcelFormat.Publisher" Action="DisplayLocal" Arg="True"/>
+	<PRINT Progid="SP3DExcelFormat.Publisher" Action="Print" Arg=""/>
+</REPORT_DISPLAY>

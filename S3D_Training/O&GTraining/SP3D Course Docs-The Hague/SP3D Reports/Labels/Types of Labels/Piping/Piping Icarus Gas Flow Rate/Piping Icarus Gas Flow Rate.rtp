@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Icarus Gas Flow Rate" Description=" "><QUERIES><QUERY Name="Piping Icarus Gas Flow Rate" Site="User" Path="Piping Icarus Gas Flow Rate.rqe"/></QUERIES><FORMATTING Name="Piping Icarus Gas Flow Rate" Site="User" Path="Piping Icarus Gas Flow Rate.rfm"/></REPORT_TEMPLATE>

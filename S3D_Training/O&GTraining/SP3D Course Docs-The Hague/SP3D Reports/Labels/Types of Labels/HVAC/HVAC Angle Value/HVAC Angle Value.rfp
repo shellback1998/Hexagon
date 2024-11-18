@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="HVAC Angle Value" Description=""><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="" Action="" Arg=""/><UOMS><UOM Name="Angle" CanInherit="No" Type="Angle" Primary="°" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="0" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction=""/></UOMS></FORMATTING_PARAMETERS>

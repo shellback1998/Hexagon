@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=Code\ShowElement.vbp
+Project=..\..\..\..\SP3DEUB_6131Prog\Debug\Container\Src\Host\SP3DTaskHost.vbp
+StartupProject=Code\prjUpdateCode.vbp

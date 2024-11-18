@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Pipe Line List Insulation Temperature" Description="Pipe Line List Insulation Temperature"><QUERIES><QUERY Name="Pipe Line List Insulation Temperature" Site="User" Path="Pipe Line List Insulation Temperature.rqe"/></QUERIES><FORMATTING Name="Pipe Line List Insulation Temperature" Site="User" Path="Pipe Line List Insulation Temperature.rfm"/></REPORT_TEMPLATE>

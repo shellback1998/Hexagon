@@ -1,0 +1,12 @@
+C:\WBS\WBSApp\bin\Debug\WBSApp.exe
+C:\WBS\WBSApp\bin\Debug\WBSApp.pdb
+C:\WBS\WBSApp\bin\Debug\WBSApp.xml
+C:\WBS\WBSApp\bin\Debug\CommonMiddle.dll
+C:\WBS\WBSApp\bin\Debug\CommonMiddle.xml
+C:\WBS\WBSApp\obj\Debug\ResolveAssemblyReference.cache
+C:\WBS\WBSApp\obj\Debug\WBSApp.WBSAppForm.resources
+C:\WBS\WBSApp\obj\Debug\WBSApp.Resources.resources
+C:\WBS\WBSApp\obj\Debug\WBSApp.vbproj.GenerateResource.Cache
+C:\WBS\WBSApp\obj\Debug\WBSApp.exe
+C:\WBS\WBSApp\obj\Debug\WBSApp.xml
+C:\WBS\WBSApp\obj\Debug\WBSApp.pdb

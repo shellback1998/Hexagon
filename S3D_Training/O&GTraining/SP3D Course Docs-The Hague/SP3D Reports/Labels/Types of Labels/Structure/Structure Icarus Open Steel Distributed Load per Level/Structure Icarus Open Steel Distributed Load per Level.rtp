@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Icarus Open Steel Distributed Load per Level" Description=" ">
+	<QUERIES>
+		<QUERY Name="Structure Icarus Open Steel Distributed Load per Level" Site="User" Path="Structure Icarus Open Steel Distributed Load per Level.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Structure Icarus Open Steel Distributed Load per Level" Site="User" Path="Structure Icarus Open Steel Distributed Load per Level.rfm"/>
+</REPORT_TEMPLATE>

@@ -1,0 +1,26 @@
+                         Programmer's File Editor
+                   Known Problems in the Current Release
+                   -------------------------------------
+
+This file details any known major problems that could not be addressed
+in time for publication of the 0.06.002 release. You should also consult
+the Frequently Asked Questions file FAQ.TXT
+
+Items are flagged thus:
+
+  [PFE32] : item is specific to the 32-bit edition on all platforms
+  [WIN95] : item is specific to the 32-bit edition under Windows 95
+  [NT]    : item is specific to the 32-bit edition under Windows NT
+  [PFE16] : item is specific to the 16-bit edition
+
+
+--
+
+If you have disk file checking active (the default) and activate PFE by
+clicking the left mouse button in the title bar area of an edit window,
+you may not be able to use the mouse to click the buttons in any dialog
+that appears alerting you to a change of the corresponding disk file.
+You can operate the dialog using the keyboard; use the Tab key to select
+the button you want to click, and press Return to click it
+
+

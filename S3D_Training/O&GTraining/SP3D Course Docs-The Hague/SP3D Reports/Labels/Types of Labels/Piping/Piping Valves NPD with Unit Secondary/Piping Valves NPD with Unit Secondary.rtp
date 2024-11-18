@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Valves NPD with Unit Secondary" Description="NPD with units for secondary size"><QUERIES><QUERY Name="Piping Valves NPD with Unit Secondary" Site="User" Path="Piping Valves NPD with Unit Secondary.rqe"/></QUERIES><FORMATTING Name="Piping Valves NPD with Unit Secondary" Site="User" Path="Piping Valves NPD with Unit Secondary.rfm"/></REPORT_TEMPLATE>

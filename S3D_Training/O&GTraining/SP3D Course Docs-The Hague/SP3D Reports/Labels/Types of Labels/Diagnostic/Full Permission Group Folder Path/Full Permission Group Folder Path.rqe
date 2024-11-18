@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Full Permission Group Folder Path"
+ Description="Diagnostic Label for full parent folders path of permission group "
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CFullPermGroupPath"
+    Action=""
+    Arg="/" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="PGFolderName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJFolder"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="Left"
+             PathSeparator="/">
+               <STROKES>
+                  <STROKE
+                   Filter="First"
+                   Interface="IJFolderChild"
+                   ExitCondition=""
+                   ExitValue=""
+                   RelationCollection="Folder"
+                   Recursive="Yes"
+                   IsVirtualRelationship="No" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+
+   <QUERY_PARAMETERS
+    Name="Full Permission Group Folder Path"
+    Site="User"
+    Path="Full Permission Group Folder Path.rqp" />
+</REPORT_QUERY>
+

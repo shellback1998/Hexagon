@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Pipe Line List Operating Pressure" Description="Pipe Line List Operating Maximum Pressure">
+<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+<FORMATTING_PARAMETERS Name="Pipe Line List Operating Pressure" Site="User" Path="Pipe Line List Operating Pressure.rfp"/>
+<LAYOUT_TEMPLATE Type="Internal"/>
+<RTF_LABEL>
+    <BLOCKS>
+	<BLOCK Action="Visible">
+	    <TOKENS>
+		<PHYSICAL Column="OperatingPressure" UOM="OperatingPressure" Visible="yes"/>
+	    </TOKENS>
+ 	</BLOCK>
+    </BLOCKS>
+</RTF_LABEL>
+</REPORT_FORMATTING>

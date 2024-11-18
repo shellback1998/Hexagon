@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Icarus Fluid Viscosity" Description=" " RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/><SQL Timeout="0"><![CDATA[SELECT '' as Dummy ]]></SQL><QUERY_PARAMETERS Name="Piping Icarus Fluid Viscosity" Site="User" Path="Piping Icarus Fluid Viscosity.rqp"/></REPORT_QUERY>

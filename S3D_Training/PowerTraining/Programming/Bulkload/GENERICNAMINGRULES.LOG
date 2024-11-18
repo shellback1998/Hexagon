@@ -1,0 +1,39 @@
+Successfully Opened Input Log File: C:\Smart3D\Bulkload\GenericNamingRules.log
+
+***********************************************************
+DATABASE SERVER NAME : TR2_B2\SQLExpress
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+MODE  : Plant
+***********************************************************
+
+
+Processing CatalogRoot sheet in C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook  - Started at : 4/20/2015 2:06:19 PM
+Finished Processing CatalogRoot sheet in C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook  - finished at : 4/20/2015 2:06:19 PM
+
+Processing NamingRules sheet in C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook  - Started at : 4/20/2015 2:06:19 PM
+    Successfully created the object  in row [29] in NamingRules WorkSheet of C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook 
+    Successfully created the object  in row [37] in NamingRules WorkSheet of C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook 
+    Successfully created the object  in row [64] in NamingRules WorkSheet of C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook 
+Finished Processing NamingRules sheet in C:\Smart3D\Bulkload\GenericNamingRules.xls Workbook  - finished at : 4/20/2015 2:06:22 PM
+
+
+
+
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

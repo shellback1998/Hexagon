@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Spool Continuation" Description="Spool Continuation Label for Isometrics"><QUERIES><QUERY Name="Piping Isometric Spool Continuation" Site="User" Path="Piping Isometric Spool Continuation.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Spool Continuation" Site="User" Path="Piping Isometric Spool Continuation.rfm"/></REPORT_TEMPLATE>

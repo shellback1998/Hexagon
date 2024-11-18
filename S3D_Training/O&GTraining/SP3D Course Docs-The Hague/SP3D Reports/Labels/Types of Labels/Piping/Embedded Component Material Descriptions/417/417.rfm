@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="417" Description="Comp sch/thk 1x3b">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<FORMATTING_PARAMETERS/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<DATA Column="SizeSchedule" ToParse="Yes" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

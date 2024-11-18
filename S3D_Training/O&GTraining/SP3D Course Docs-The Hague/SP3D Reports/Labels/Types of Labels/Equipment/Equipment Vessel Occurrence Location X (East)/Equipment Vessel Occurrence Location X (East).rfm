@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Equipment Vessel Occurrence Location X (East)" Description="">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<FORMATTING_PARAMETERS Name="Equipment Vessel Occurrence Location X (East)" Site="User" Path="Equipment Vessel Occurrence Location X (East).rfp"/>
+	<RTF_LABEL>
+		<POINTS>
+			<POINT Name="Occurrence Location" X="X" Y="Y" Z="Z" Matrix="MyTransformA" UOM="Location">
+				<READOUT>
+					<DIRECTION/>
+					<VALUE/>
+				</READOUT>
+			</POINT>
+		</POINTS>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Sans Serif;}}\viewkind4\uc1\pard\f0\fs17 " Visible="Yes"/>
+					<POSITION Axis="X" Point="Occurrence Location" Visible="Yes"/>
+					<TEXT Value="\par }" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Stress Analysis Test Pressure" Description="Test Pressure (max) per part, for export to stress analysis">
+	<QUERIES>
+		<QUERY Name="Piping Stress Analysis Test Pressure" Site="User" Path="Piping Stress Analysis Test Pressure.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Stress Analysis Test Pressure" Site="User" Path="Piping Stress Analysis Test Pressure.rfm"/>
+</REPORT_TEMPLATE>

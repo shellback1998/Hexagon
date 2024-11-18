@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Structure Slab Surface Area" Description="Surface area">
+   <DESIGN_TIME Progid="" Action="" Arg="" />
+
+   <RUN_TIME Progid="" Action="" Arg="" />
+
+   <UOMS>
+      <UOM Name="SurfaceArea" CanInherit="Yes" Type="Area" Primary="ft^2" Secondary="" Tertiary="" UnitsDisplayed="no" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction="" />
+   </UOMS>
+</FORMATTING_PARAMETERS>
+

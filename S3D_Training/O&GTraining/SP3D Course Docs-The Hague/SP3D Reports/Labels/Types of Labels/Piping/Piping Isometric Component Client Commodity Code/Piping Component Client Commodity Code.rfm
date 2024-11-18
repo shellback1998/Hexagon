@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Component Client Commodity Code" Description="Piping Component Procurement Client Commodity Code">
+<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+<FORMATTING_PARAMETERS Name="Piping Component Client Commodity Code" Site="User" Path="Piping Component Client Commodity Code.rfp"/>
+<LAYOUT_TEMPLATE Type="Internal"/>
+<RTF_LABEL>
+    <BLOCKS>
+	<BLOCK Action="Visible">
+	    <TOKENS>
+		<DATA Column="Procurement Client Commodity Code" ToParse="NO" Visible="yes"/>
+	    </TOKENS>
+	</BLOCK>
+    </BLOCKS>
+</RTF_LABEL>
+</REPORT_FORMATTING>

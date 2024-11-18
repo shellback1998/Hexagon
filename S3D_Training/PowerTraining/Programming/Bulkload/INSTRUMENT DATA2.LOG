@@ -1,0 +1,77 @@
+Successfully Opened Input Log File: C:\Smart3D\Bulkload\Instrument Data2.log
+
+***********************************************************
+DATABASE SERVER NAME : TR2_B2\SQLExpress
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+MODE  : Plant
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:40 PM
+Finished Processing sheet: CustomInterfaces in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:43 PM
+
+Processing sheet: PipingCommodityMatlControlData in WorkBook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:43 PM
+Finished processing sheet: PipingCommodityMatlControlData in workbook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:43 PM
+
+Processing sheet: InstrumentClassData in WorkBook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:43 PM
+Finished processing sheet: InstrumentClassData in workbook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:43 PM
+
+Processing sheet : BA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:43 PM
+Finished Processing sheet: BA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:44 PM
+
+Processing sheet : ANG in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:44 PM
+Finished Processing sheet: ANG in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:44 PM
+
+Processing sheet : CBallValveType1 in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:44 PM
+    WARNING : Failed to set the SymbolIcon property. The specified Symbol Icon file: C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\SymbolIcons\BallValveType1.gif is missing in CBallValveType1 WorkSheet of C:\Smart3D\Bulkload\Instrument Data.xls Workbook 
+    Successfully Created the PartClass Object : CBallValveType1
+    Successfully Created the object in row [11]
+    Successfully Created the object in row [12]
+    Successfully Created the object in row [13]
+    Successfully Created the object in row [14]
+Finished Processing sheet: CBallValveType1 in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:48 PM
+
+Processing sheet : ControlGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:48 PM
+Finished Processing sheet: ControlGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:48 PM
+
+Processing sheet : ControlGateValveOA in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:48 PM
+Finished Processing sheet: ControlGateValveOA in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:48 PM
+
+Processing sheet : ReducingGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:48 PM
+Finished Processing sheet: ReducingGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:48 PM
+
+Processing sheet : MSCBA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:48 PM
+Finished Processing sheet: MSCBA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:48 PM
+
+Processing sheet : InstIndicator in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/21/2015 2:57:48 PM
+Finished Processing sheet: InstIndicator in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/21/2015 2:57:48 PM
+
+
+
+Successfully appended all newly created GUIDs to their respective WorkBooks
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Adding User Types to the Object Type hierarchy...4/21/2015 2:57:49 PM
+
+Started Creating Views  at: 4/21/2015 2:58:06 PM
+
+Finished Loading Views at: 4/21/2015 2:58:08 PM
+
+Bulkload is successful with some errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+    WARNING : Failed to set the SymbolIcon property. The specified Symbol Icon file: C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\SymbolIcons\BallValveType1.gif is missing in CBallValveType1 WorkSheet of C:\Smart3D\Bulkload\Instrument Data.xls Workbook 
+

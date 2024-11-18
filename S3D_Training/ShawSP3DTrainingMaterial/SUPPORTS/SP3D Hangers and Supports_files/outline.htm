@@ -1,0 +1,754 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 12">
+<link id=Main-File rel=Main-File href="../SP3D%20Hangers%20and%20Supports.htm">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = GetObj("Main-File")
+	parent.location.href=obj.href
+}
+var gOtlHiliteClr="#ffffff",gOtlNormalClr="#000000",gOtlActiveClr="#ffff00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( g_supportsPPTHTML ) {
+		if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+		if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+	}
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+	if( parent.frames["PPTNts"] )
+		notesBtn.style.display = ""
+	if( parent.gHasNarration )
+		nb_voiceBorder.style.display = ""
+}
+function LoadOtl()
+{
+	var otl=GetObj("OtlObj")
+	otl.style.display="block"
+	otl.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr
+	InitArray()
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		}
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	var list=GetTags(document,"DIV");
+	for(ii=0; ii<list.length; ii++) {
+		obj=list.item(ii)
+		if( obj.id == null ) continue
+		if( obj.id.indexOf("PPTC") >= 0 )
+			gChildEntryTable[count++]=obj
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=GetObj("PPTL"+idx)
+	obj.style.color=fgColor
+	obj=GetObj("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( src ){ ChgClr(GetLink(src),gOtlActiveClr) }
+function Out( src ){ ChgClr(GetLink(src),gOtlHiliteClr) }
+function Follow(src){ window.location.href = GetLink(src).href; }
+function ObjExists( ii ) { obj=GetObj("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+function GetLink(src)
+{
+   if(src.tagName=="A") return src
+   else return GetTags(src,"A").item(0)
+}
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Slide " + parent.GetCurSldNum() + " of " + parent.GetNumSlds()
+	else
+		txt += "Hidden Slide"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].Enabled(1)
+	gBtnArr["nb_ntsBorder"].SetFlag( parent.gHasNts )
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+function ExecBtn()
+{
+	if (event.keyCode == 13)
+	{
+		BtnOnDown();
+		BtnOnUp();
+	}
+}
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+//--></script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:2px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+ul
+	{color:white;
+	margin-bottom:0px;
+	margin-left:20px;}
+.sldNum
+	{margin-top:5px;
+	color:white;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()" style='margin:2px'>
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="ExecBtn()" style='display:none;visibility:hidden'>
+<table id="notesBtn" style='display:none;position:relative;width:55px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" title="Show/Hide
+Notes" align=center style='position:relative;margin-left:5px;margin-right:5px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt; cursor:default'>
+ <img src="notes_flag.gif" id="nb_nts" style='display:none'> &nbsp;Notes</div>
+ <div id="nb_ntsBorder" title ="Show/Hide
+Notes" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=1 style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+
+ </div>
+ </td>
+</table>
+
+
+<table style='position:relative;width:70px' align=right cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_sldshwText" title="Full Screen Slide Show" align=center style='position:relative;margin-left:20px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt;cursor:default'>Slide
+Show</div>
+ <div id="nb_sldshwBorder" title="Full Screen Slide Show" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=5 style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_sldshw" style='position:relative;left:-254px'></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;top:0;left:-40px;
+ width:20px;height:20px' onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=4 class=button>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_voice" title="Pause/Play Narration" style='position:
+ relative;left:-290px'></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=2 class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_prev" title="Previous Slide" style='position:relative;
+ left:0px'></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=3 class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_next" title="Next Slide" style='position:relative;
+ left:-90px'></div>
+ </div>
+ </td>
+</table>
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="ExecBtn()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0 cellspacing=0>
+ <td nowrap><div title="Show/Hide
+Outline" id="nb_otl" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=11
+ style='position:absolute;top:0%;left:0%;width:100%;height:100%;cursor:default'>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;font-family:Arial;
+ color:buttontext;font-size:9pt'>Outline</div></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=12 id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Expand/Collapse Outline"
+ style='position:relative;left:-157px'></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden;'>
+
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>1</font></div>
+  </td>
+  <td width="100%">
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0001.htm');" id=PPTL1><span
+  style='mso-spacerun:yes'> </span></a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>2</font></div>
+  </td>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0002.htm');" id=PPTL2>SP3D Hangers and
+  Supports Task</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>3</font></div>
+  </td>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0003.htm');" id=PPTL3>Overview</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>The Hangers and Supports Task Module is used to model supports/hangers
+       for piping, ducts and trays</li>
+   <li>A support is an assembly of parts, also called components, which connect
+       together to the supported features, and to the supporting structure</li>
+   <li>Can place two types of supports, Standard Supports and Designed Supports</li>
+   <li>Hangers and supports are dependent on both the supporting object and the
+       supported object</li>
+   <li>Place the supporting and supported objects before placing any hangers or
+       supports</li>
+   <li>Tools are provided for automatic support drawing creation</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>4</font></div>
+  </td>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0004.htm');" id=PPTL4>Hangers/Supports Task
+  Commands</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>5</font></div>
+  </td>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0008.htm');" id=PPTL5>Place Support by
+  Structure (Standard)</a></font></div>
+  <div id=PPTC5 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>places a support at the intersection of the selected supported feature
+       (or features) and a vertical plane passing through the selected
+       supporting structure</li>
+   <br>
+   <br>
+   <li>Lab 1</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>6</font></div>
+  </td>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0010.htm');" id=PPTL6>Place Support by Point
+  (Standard)</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Places a support for a feature at a specific point along the feature</li>
+   <li>A support on a feature running under/above a slab or a plate can connect
+       to the structure/slab at any point along the feature</li>
+   <li>The plane selected on the supporting structure can be at any angle</li>
+   <br>
+   <br>
+   <li>Lab 2</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>7</font></div>
+  </td>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0011.htm');" id=PPTL7>Place Support by Parts
+  (Designed)</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>A designed support is a custom configuration of parts</li>
+   <li>First creates reference graphics at the identified logical support
+       location instead of placing physical parts</li>
+   <li>Manually add support parts by using the Place Part command</li>
+   <li>Edit the position and the orientation of these parts using the Move and Rotate
+       common commands</li>
+   <li>Labs 3-4</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>8</font></div>
+  </td>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0014.htm');" id=PPTL8>Drop Standard Support</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Used to modify the individual parts of a standard support after
+       placement</li>
+   <li>Users may convert a standard support to a designed support by using the
+       Drop Standard command</li>
+   <li>This removes the control of the standard support over the parts so that
+       they can be edited individually</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>9</font></div>
+  </td>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0038.htm');" id=PPTL9>Add Supported Features
+  to Support</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>More supported features can be added to existing supports</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Lab 5</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>10</font></div>
+  </td>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0039.htm');" id=PPTL10>Delete Support and
+  Parts</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Use correct locate tool filter to select a component or a support for
+       deletion</li>
+   <li>Remember that components from standard support assemblies cannot be
+       deleted individually</li>
+   <li>Support components from designed supports can be deleted individually</li>
+   <br>
+   <br>
+   <br>
+   <li>Lab 6</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>11</font></div>
+  </td>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0015.htm');" id=PPTL11>Place Linear Member</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>To place supporting steel modeled from structural steel shapes from the
+       Supports Catalog</li>
+   <li>Can design fully detailed custom structural frames using structural
+       members</li>
+   <li>Steel members placed this way are reportable as structural steel, NOT
+       support components</li>
+   <li>Use Place Part command to add light steel<br>
+              members to a support assembly, this will<br>
+              cause the steel member to be reported as<br>
+              support components in the<span style='mso-spacerun:yes'> 
+       </span>BOM</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>12</font></div>
+  </td>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0016.htm');" id=PPTL12>Place Assembly
+  Connection</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Details the connections between linear members by trimming the members
+       and adding connection parts as needed</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Labs 7-8</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>13</font></div>
+  </td>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0013.htm');" id=PPTL13>Editing Support Data
+  Tips</a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Modify properties: Edit the reporting and other management properties of
+       both the standard and designed supports. Can edit the dimensions of
+       standard supports. Can edit the individual properties of parts within
+       designed supports</li>
+   <li>Select different inputs: Can modify supports by selecting a different
+       supported route feature, or a different supporting structure</li>
+   <li>Move: Can move a support positioned by point</li>
+   <li>Copy: Can copy a standard and designed support, and support parts to a
+       different location</li>
+   <li>Delete: Can delete standard and designed supports. Cannot delete a
+       component from a standard support because the parts are controlled by
+       the standard support assembly. Use the Drop Standard Support command to
+       break a standard assembly into editable parts</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>14</font></div>
+  </td>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0033.htm');" id=PPTL14>Copy/Paste w/Clipboard</a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Demo</li>
+   <ul>
+    <li>Copy to clipboard</li>
+    <li>Paste from clipboard</li>
+    <li>Assembly is temporarily available for pasting until something else is
+        stored in the clipboard</li>
+   </ul>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>15</font></div>
+  </td>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0034.htm');" id=PPTL15>Copy/Paste w/Catalog</a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Demo</li>
+   <ul>
+    <li>Copy to Catalog for future re-use by anyone in the project</li>
+    <li>Paste from Catalog support assemblies saved by you or other users in
+        the project</li>
+   </ul>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>16</font></div>
+  </td>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0035.htm');" id=PPTL16>Basic Supports Ortho
+  Creation I</a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <ul>
+    <li>Taken from procedure for Cliffside project using SP3D Version 7 Service
+        Pack 3</li>
+    <li>Projects using V7 SP5 and above have access to Tools&gt;Drawing Console
+        to simplify process</li>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <li>Lab</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>17</font></div>
+  </td>
+  <td>
+  <div id=PPTP17 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0036.htm');" id=PPTL17>Basic Supports Ortho
+  Creation II</a></font></div>
+  <div id=PPTC17 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <ul>
+    <li>Touching up/post processing support ortho</li>
+   </ul>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Lab</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>18</font></div>
+  </td>
+  <td>
+  <div id=PPTP18 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0037.htm');" id=PPTL18>Basic Supports Ortho
+  Creation III</a></font></div>
+  <div id=PPTC18 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <ul>
+    <li>Support orthos by volume</li>
+    <li>Procedure is used when further manipulation of the drawing volume is
+        needed to incorporate graphics the drawing by query manager ignores</li>
+   </ul>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Lab</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+</table>
+
+
+
+</div>
+
+<div style='display:none'><a href=master04.htm></a><a href=master04.xml></a><a
+href=preview.wmf></a><a href="master04_image001.jpg"></a><a
+href="master04_image002.png"></a><a href="master04_image003.png"></a><a
+href=master05.htm></a><a href=master05.xml></a><a href="master05_image004.jpg"></a><a
+href="master05_image005.png"></a><a href="master05_image006.png"></a><a
+href="master05_image007.png"></a><a href=master130.htm></a><a
+href=master130.xml></a><a href="master130_image008.jpg"></a><a
+href=master02.htm></a><a href=pres.xml></a><a href=slide0001.htm></a><a
+href="master04_background.gif"></a><a href="master04_image009.gif"></a><a
+href="master04_image010.gif"></a><a href=slide0002.htm></a><a
+href="master130_background.gif"></a><a href="master130_image011.gif"></a><a
+href="master130_image012.gif"></a><a href="master130_image013.gif"></a><a
+href=slide0003.htm></a><a href="master05_background.gif"></a><a
+href="master05_image014.gif"></a><a href="master05_image015.gif"></a><a
+href="master05_image016.gif"></a><a href=slide0004.htm></a><a
+href="slide0004_image017.png"></a><a href="slide0004_image018.gif"></a><a
+href=slide0008.htm></a><a href="slide0008_image019.png"></a><a
+href="slide0008_image020.gif"></a><a href="slide0008_image021.png"></a><a
+href="slide0008_image022.gif"></a><a href="slide0008_image023.jpg"></a><a
+href="slide0008_image024.gif"></a><a href="slide0008_image025.wmz"></a><a
+href="slide0008_image026.gif"></a><a href=slide0010.htm></a><a
+href="slide0010_image027.png"></a><a href="slide0010_image028.gif"></a><a
+href="slide0010_image029.png"></a><a href="slide0010_image030.gif"></a><a
+href="slide0010_image031.png"></a><a href="slide0010_image032.gif"></a><a
+href="slide0010_image033.gif"></a><a href="slide0010_image034.gif"></a><a
+href=slide0011.htm></a><a href="slide0011_image035.png"></a><a
+href="slide0011_image036.gif"></a><a href="slide0011_image037.png"></a><a
+href="slide0011_image038.gif"></a><a href="slide0011_image039.png"></a><a
+href="slide0011_image040.gif"></a><a href="slide0011_image041.png"></a><a
+href="slide0011_image042.gif"></a><a href="slide0011_image043.gif"></a><a
+href="slide0011_image044.gif"></a><a href="slide0011_image045.gif"></a><a
+href="slide0011_image046.gif"></a><a href=slide0014.htm></a><a
+href="slide0014_image047.png"></a><a href="slide0014_image048.gif"></a><a
+href="slide0014_image049.png"></a><a href="slide0014_image050.gif"></a><a
+href=slide0038.htm></a><a href="slide0038_image051.png"></a><a
+href="slide0038_image052.gif"></a><a href="slide0038_image053.png"></a><a
+href="slide0038_image054.gif"></a><a href="slide0038_image055.png"></a><a
+href="slide0038_image056.gif"></a><a href="slide0038_image057.gif"></a><a
+href="slide0038_image058.gif"></a><a href=slide0039.htm></a><a
+href="slide0039_image059.gif"></a><a href="slide0039_image060.png"></a><a
+href="slide0039_image061.gif"></a><a href=slide0015.htm></a><a
+href="slide0015_image062.png"></a><a href="slide0015_image063.gif"></a><a
+href="slide0015_image064.jpg"></a><a href="slide0015_image065.gif"></a><a
+href="slide0015_image066.gif"></a><a href=slide0016.htm></a><a
+href="slide0016_image067.png"></a><a href="slide0016_image068.gif"></a><a
+href="slide0016_image069.png"></a><a href="slide0016_image070.gif"></a><a
+href="slide0016_image071.gif"></a><a href=slide0013.htm></a><a
+href=slide0033.htm></a><a href="slide0033_image072.gif"></a><a
+href="slide0033_image073.png"></a><a href="slide0033_image074.gif"></a><a
+href="slide0033_image075.gif"></a><a href=slide0034.htm></a><a
+href="slide0034_image076.png"></a><a href="slide0034_image077.gif"></a><a
+href="slide0034_image078.gif"></a><a href=slide0035.htm></a><a
+href="slide0035_image079.wmz"></a><a href="slide0035_image080.gif"></a><a
+href="slide0035_image081.gif"></a><a href="slide0035_image082.gif"></a><a
+href=slide0036.htm></a><a href="slide0036_image083.wmz"></a><a
+href="slide0036_image084.gif"></a><a href="slide0036_image085.gif"></a><a
+href="slide0036_image086.gif"></a><a href=slide0037.htm></a><a
+href="slide0037_image087.wmz"></a><a href="slide0037_image088.gif"></a><a
+href="slide0037_image089.gif"></a><a href="slide0037_image090.gif"></a><a
+href=master01.htm></a><a href="master04_stylesheet.css"></a><a
+href="master05_stylesheet.css"></a><a href="master130_stylesheet.css"></a><a
+href=script.js></a><a href="../SP3D%20Hangers%20and%20Supports.htm"></a><a
+href=fullscreen.htm></a><a href=buttons.gif></a><a href=frame.htm></a><a
+href=outline.htm></a></div>
+
+</body>
+
+</html>

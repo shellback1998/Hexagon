@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Neutral File Information"
+ Description="Master label to provide the piping isometric data for neutral file"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="Fabrication Type"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteBoltSet"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="IJRteWeld"
+             DestinationProperty="Class"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="IJFabricationInfo"
+             DestinationProperty="FabricationType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Quantity"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJRteStockPartOccur"
+             DestinationProperty="Length"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="QuantityEach"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="PipelineName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Category"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Piping"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJCURTE45DegElbowO|IJCURTE45DegLRElbowO|IJCURTE90DegElbowO|IJCURTE90DegLRElbowO|IJCURTE90DegSRElbowO|IJCURTECapO|IJCURTEConcentricReducer_mO|IJCURTEConcentricReducerO|IJCURTEConcentricSwageO|IJCURTECoupling_mO|IJCURTECouplingO|IJCURTEDripRingTeeO|IJCURTEE45O|IJCURTEE90O|IJCURTEEccentricReducer_mO|IJCURTEEccentricReducerO|IJCURTEEccentricSwageO|IJCURTEElbolet_mO|IJCURTEElboletO|IJCURTEElbow45DegO|IJCURTEElbow90DegO|IJCURTEEndolet_mO|IJCURTEEndoletO|IJCURTEFireHydrantO|IJCURTELATO|IJCURTELatroletO|IJCURTEMonitorO|IJCURTENippleO|IJCURTEPaddleO|IJCURTEPlugO|IJCURTEREDCO|IJCURTEREDEO|IJCURTEReducingTee_mO|IJCURTEReducingTeeO|IJCURTEReinforcingPad_mO|IJCURTEReinforcingPadO|IJCURTESockolet_mO|IJCURTESockoletO|IJCURTESPACERO|IJCURTETee_mO|IJCURTETeeO|IJCURTETFIO|IJCURTEThredolet_mO|IJCURTEThredoletO|IJCURTETO|IJCURTETRBO|IJCURTETRIO|IJCURTEUnionO|IJCURTEWeldolet_mO|IJCURTEWeldoletO|IJCURTEYO"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Fittings"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJCURTEBlindFlange_mO|IJCURTEBlindFlangeO|IJCURTEFBLDO|IJCURTEFRFILRO|IJCURTELapJointFlangeO|IJCURTEOrificeFlangeO|IJCURTEPaddleO|IJCURTEPlateFlangeO|IJCURTEReducingFlangeO|IJCURTESlipOnFlange_mO|IJCURTESocketweldFlangeO|IJCURTESpectacleBlindO|IJCURTEStubEndO|IJCURTEThreadedFlangeO|IJCURTEWeldNeckFlange_mO|IJCURTEWeldNeckFlangeO"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Flanges"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJCURTE3WayBallO|IJCURTE3WayBallValveO|IJCURTEAngleValveO|IJCURTEAutomaticRecirculationValveO|IJCURTEANGO|IJCURTEBA3WO|IJCURTEBallValve_mO|IJCURTEBallValveO|IJCURTEButterflyValve_mO|IJCURTEButterflyValveO|IJCURTEButterflyValveVarOpHeightO|IJCURTEButterflyValveVarArmLengthO|IJCURTECheckValve_FemO|IJCURTECheckValveO|IJCURTECheckValveSwingO|IJCURTECKLO|IJCURTEConduitGateValveO|IJCURTEDIAO|IJCURTEDiaphragmValveO|IJCURTEGateValve_AsymO|IJCURTEGateValve_mO|IJCURTEGateValveAngleOpO|IJCURTEGateValveO|IJCURTEGlobeValve_mO|IJCURTEGlobeValveO|IJCURTEGlobeValve_AsymO|IJCURTEKnifeGateValveO|IJCURTEPlugValveO|IJCURTEStopCheckValveO|IJCURTETankDrainValveO|IJCURTEWaferCheckValveO"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Valves"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Instruments"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Specialties"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Gaskets"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteBoltSet"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Bolts"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Supports"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Welds"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="FeatureSpecName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJDPipeSpec"
+             DestinationProperty="SpecName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="DefiningFeature"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="Spec"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Spec Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJDPipeSpec"
+             DestinationProperty="SpecName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJAppConnection"
+                   RelationCollection="ConnHasPorts_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="PathDefinedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="RunSpecification"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="Yes"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeSpec"
+             DestinationProperty="SpecName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="RunSpecification"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="Yes"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJDPipeSpec"
+             DestinationProperty="SpecName"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="RunSpecification"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="Yes"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="NPD1"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJAppConnection"
+                   RelationCollection="ConnHasPorts_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="PathDefinedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionItem"
+                   RelationCollection="Connection"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDistribConnection"
+                   RelationCollection="DistribConnectionPorts"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionItem"
+                   RelationCollection="Connection"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDistribConnection"
+                   RelationCollection="DistribConnectionPorts"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="NPD1Component"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="[Pipe Port Nominal Diameter By Port Index 1]"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="NPD2"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJAppConnection"
+                   RelationCollection="ConnHasPorts_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="PathDefinedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="NPD2Component"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="[Pipe Port Nominal Diameter By Port Index 2]"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Description"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJGenericMaterialControlData"
+             DestinationProperty="ShortMaterialDescription"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="MaterialControlData"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJGenericMaterialControlData"
+             DestinationProperty="ShortMaterialDescription"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="MaterialControlData"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJGenericMaterialControlData"
+             DestinationProperty="ShortMaterialDescription"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="MaterialControlData"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+                </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="IJRteWeld"
+             DestinationProperty="Type"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="IJGasket"
+             DestinationProperty="GasketType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionPart"
+                   RelationCollection="UsedImpliedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="GeometricIndustryStandard"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty=""
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="GeometricIndustryStandard"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="Part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="GeometricIndustryStandard"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="Part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="NULLCONSTANT"
+             DestinationProperty="NULL"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="NULLCONSTANT"
+             DestinationProperty="NULL"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Schedule1"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty=""
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Schedule2"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty=""
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="ScheduleThickness"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Commodity Type"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="Pipe Support"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="CommodityType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="PressureRating"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty=""
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="PressureRating"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="PressureRating"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteInstrumentOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="PressureRating"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteSpecialtyOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipePort"
+             DestinationProperty="PressureRating"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJDistribPartOccur"
+                   RelationCollection="DistribPort"
+                   Recursive="No"
+                   Filter="Last"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="IJGasket"
+             DestinationProperty="MaximumPressure"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionPart"
+                   RelationCollection="UsedImpliedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Materials Grade"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty=""
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="MaterialGrade"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Tag"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJRtePipePathFeat"
+             DestinationProperty="Tag"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="DefiningFeature"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="IsBasePart"
+       SQLType="Boolean">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJRtePathGenPart"
+             DestinationProperty="IsBase"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="True"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="CommodityCode"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="IndustryCommodityCode"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="Part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteCompOccur"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="IndustryCommodityCode"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="Part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRteGasket"
+             SourceBOC=""
+             DestinationInterface="IJGasket"
+             DestinationProperty="IndustryCommodityCode"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionPart"
+                   RelationCollection="UsedImpliedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="WBSAlt"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJAppConnection"
+                   RelationCollection="ConnHasPorts_ORIG"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="PathDefinedPart"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePipeOccur"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="WBS"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJWBSItemChild"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

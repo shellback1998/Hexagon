@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="IFC NameB" Description=" ">
+	<QUERIES>
+		<QUERY Name="IFC NameB" Site="User" Path="IFC NameB.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="IFC NameB" Site="User" Path="IFC NameB.rfm"/>
+</REPORT_TEMPLATE>

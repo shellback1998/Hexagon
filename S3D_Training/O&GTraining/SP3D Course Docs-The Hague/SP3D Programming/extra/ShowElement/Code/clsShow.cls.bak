@@ -1,0 +1,4490 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "clsShow"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+ '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'
+'   Copyright 2006 Intergraph
+'   All Rights Reserved
+'
+'   clsShow.cls
+'   ProgID:         ShowElement.ShowObject
+'   Author:         G. Werner
+'   Creation Date:  Wednesday, Nov 6, 2006
+'   Description:
+'       class to show interface specific information of objects
+'
+'   Change History:
+'   dd.mmm.yyyy     who     change description
+'   -----------     ---     ------------------
+'    7.Nov.2006     GWE     created
+'
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Option Explicit
+
+
+
+
+'   clsShow.cls - class to show interface specific information of objects
+
+ 
+
+'   clsShow.cls - class to show objects
+
+'Public mcolPrinted As Collection
+
+' Global variables (used in various subroutines)
+Private d1 As Double
+Private d2 As Double
+Private d3 As Double
+Private d4 As Double
+Private d5 As Double
+Private d6 As Double
+Private d7 As Double
+Private d8 As Double
+Private d9 As Double
+Private d10 As Double
+Private d11 As Double
+Private d12 As Double
+Private d13 As Double
+Private d14 As Double
+Private d15 As Double
+Private d16 As Double
+Private d17 As Double
+Private d18 As Double
+
+Private s1 As String
+Private s2 As String
+
+Private l1 As Long
+Private l2 As Long
+Private l3 As Long
+Private l4 As Long
+Private l5 As Long
+Private l6 As Long
+Private l7 As Long
+Private l8 As Long
+Private l9 As Long
+Private l11 As Long
+
+Private b1 As Boolean
+Private b2 As Boolean
+Private b3 As Boolean
+Private b4 As Boolean
+Private b5 As Boolean
+
+Private M1 As IJDT4x4
+
+Private o1 As Object
+Private o2 As Object
+Private o3 As Object
+Private o4 As Object
+Private o6 As Object
+
+' Generated Code:
+
+'#function,IJRteCableway
+Public Function outputIJRteCableway(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCableway
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCableway = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,DefaultTransitionLength
+   sMsg = "DefaultTransitionLength= "
+   sMsg = sMsg & obj.DefaultTransitionLength
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetUsedSpec,ref,IJDCablewaySpec
+   sMsg = "*GetUsedSpec"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetUsedSpec
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJRteCableway = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+     
+ 
+
+
+'#function,IJRteCableRun
+Public Function outputIJRteCableRun(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCableRun
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCableRun = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,EMICode
+   sMsg = "EMICode= "
+   sMsg = sMsg & obj.EMICode
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetConnectedEquipments,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetConnectedEquipments=... [ ]")
+'#Property,GetSpecificCablePart,ref,IJCablePart
+   sMsg = "*GetSpecificCablePart"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSpecificCablePart
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,OperatingVoltage
+   sMsg = "OperatingVoltage= "
+   sMsg = sMsg & obj.OperatingVoltage
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,RouteStatus
+   sMsg = "RouteStatus= "
+   sMsg = sMsg & obj.RouteStatus
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SetSpecificCablePart,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "SetSpecificCablePart=... [ ]")
+'#Property,SignalType
+   sMsg = "SignalType= "
+   sMsg = sMsg & obj.SignalType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Stackable
+   sMsg = "Stackable= "
+   sMsg = sMsg & obj.Stackable
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+' show the IJRteCableRouter interface
+    If TypeOf o Is IJRteCableRouter Then
+        Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "IJRteCableRouter interface:")
+'        Call outputIJRteCableRouter(Form, Node2, o)
+    Else
+        Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "IJRteCableRouter interface missing.")
+    End If
+'#endspecial
+     
+  outputIJRteCableRun = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+      
+
+
+
+'#function,IJDSpec
+Public Function outputIJDSpec(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDSpec
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDSpec = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,SpecName
+   sMsg = "SpecName= "
+   sMsg = sMsg & obj.SpecName
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJDSpec = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+      
+
+
+'#function,IJRtePathFeat
+Public Function outputIJRtePathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRtePathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRtePathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetAddedPort,ref,IJDistribPort
+   sMsg = "*GetAddedPort"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetAddedPort
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetAllMatingParts,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAllMatingParts=... [ ]")
+'#Property,GetBaseParts(l1),ref,IJElements
+   sMsg = "*GetBaseParts(l1)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetBaseParts(l1)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetEndLocation,fun,ddd
+   sMsg = ""
+   Call obj.GetEndLocation(d1, d2, d3)
+   sMsg = "GetEndLocation= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetEnumOfflineByType,ref,IJDTargetObjectCol
+   sMsg = "*GetEnumOfflineByType"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetEnumOfflineByType
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetFunction
+   sMsg = "GetFunction= "
+   sMsg = sMsg & obj.GetFunction
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetGenPartOccurs,ref,IJDTargetObjectCol
+   sMsg = "*GetGenPartOccurs"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetGenPartOccurs
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetLegs,comment,(ppLeg1 As IJRtePathLeg, ppLeg2 As IJRtePathLeg) As Long
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetLegs=... [ (ppLeg1 As IJRtePathLeg, ppLeg2 As IJRtePathLeg) As Long]")
+'#special
+' does not work with "Object"
+' Property,GetLegs,fun,oo
+   sMsg = ""
+   Dim oo1 As IJRtePathLeg
+   Dim oo2 As IJRtePathLeg
+   l1 = obj.GetLegs(oo1, oo2)
+   sMsg = "GetLegs= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = oo1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = oo2
+'#endspecial
+'#Property,GetLength
+   sMsg = "GetLength= "
+   sMsg = sMsg & obj.GetLength
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetLocation,fun,ddd
+   sMsg = ""
+   Call obj.GetLocation(d1, d2, d3)
+   sMsg = "GetLocation= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetMatingParts,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetMatingParts=... [ ]")
+'#Property,GetMFParts,ref,IJDTargetObjectCol
+   sMsg = "*GetMFParts"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetMFParts
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetNamedOfflineFeature,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetNamedOfflineFeature=... [ ]")
+'#Property,GetOfflineByType,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetOfflineByType=... [ ]")
+'#Property,GetOfflineFeats(),ref,IJDTargetObjectCol
+   sMsg = "*GetOfflineFeats()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetOfflineFeats()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetOffsetVector,fun,ddd
+   sMsg = ""
+   Call obj.GetOffsetVector(d1, d2, d3)
+   sMsg = "GetOffsetVector= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOverride,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetOverride=... [ ]")
+'#Property,GetParts,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetParts=... [ ]")
+'#Property,GetPathFeatFlags,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetPathFeatFlags=... [ ]")
+'#Property,GetPathFeatTransientFlags
+   sMsg = "GetPathFeatTransientFlags= "
+   sMsg = sMsg & obj.GetPathFeatTransientFlags
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPathFeatureObjectType
+   sMsg = "GetPathFeatureObjectType= "
+   sMsg = sMsg & obj.GetPathFeatureObjectType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPathRun(),ref,IJRtePathRun
+   sMsg = "*GetPathRun()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPathRun()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#special
+    Dim oSpec As IJDSpec
+    sMsg = "*GetSpec"
+    Call obj.GetSpec(oSpec)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Set Node2.Tag = oSpec
+    Node2.Text = sMsg
+'#endspecial
+'#Property,GetStartLocation,fun,ddd
+   sMsg = ""
+   Call obj.GetStartLocation(d1, d2, d3)
+   sMsg = "GetStartLocation= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetTapFeats(),ref,IJDTargetObjectCol
+   sMsg = "*GetTapFeats()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTapFeats()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetTransitionFlag,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetTransitionFlag=... [ ]")
+'#Property,GetTypeAndFunction,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetTypeAndFunction=... [ ]")
+'#Property,HasComponents
+   sMsg = "HasComponents= "
+   sMsg = sMsg & obj.HasComponents
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsMatingFunction,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "IsMatingFunction=... [ ]")
+'#Property,...,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "...=... [ ]")
+'#special
+
+'TODO: call outputIJRtePathFeatUtility(...)
+    Dim oPathFeatUtil As IJRtePathFeatUtility
+    Dim oPrevFeat As IJRtePathFeat
+    Dim oNextFeat As IJRtePathFeat
+    
+    sMsg = "GetAdjacentFeatures()"
+    Set oPathFeatUtil = o
+    oPathFeatUtil.GetAdjacentFeatures oPrevFeat, oNextFeat
+    
+   
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+    sMsg = "*Previous"
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , sMsg)
+   Set Node3.Tag = oPrevFeat
+     sMsg = "*Next"
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , sMsg)
+   Set Node3.Tag = oNextFeat
+   
+   sMsg = "*GetFirstOfflineFeature"
+   Set o1 = Nothing
+   Set o1 = oPathFeatUtil.GetFirstOfflineFeature()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node2.Tag = o1
+   
+   sMsg = "*GetOfflineLegs()"
+   Set o1 = Nothing
+   Set o1 = oPathFeatUtil.GetOfflineLegs()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node2.Tag = o1
+   
+'#endspecial
+     
+  outputIJRtePathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+     
+   
+
+'#function,IJRtePathRun
+Public Function outputIJRtePathRun(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRtePathRun
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRtePathRun = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetConnectionItems() As IJDObjectCollection
+   sMsg = "*GetConnectionItems()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnectionItems()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetDistribConnections() As IJDObjectCollection
+   sMsg = "*GetDistribConnections()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetDistribConnections()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetLogicalDistribConnections() As IJDObjectCollection
+   sMsg = "*GetLogicalDistribConnections()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetLogicalDistribConnections()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetParts() As IJDObjectCollection
+   sMsg = "*GetParts()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetParts()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPathFeatures() As IJDTargetObjectCol
+   sMsg = "*GetPathFeatures()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPathFeatures()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetSpec() As IJDSpec
+   sMsg = "*GetSpec()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSpec()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJRtePathRun = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJRteEndPathFeat
+Public Function outputIJRteEndPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteEndPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteEndPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetConnectToDistribPartOcc() As Unknown
+   sMsg = "*GetConnectToDistribPartOcc()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnectToDistribPartOcc()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,IsIntermediateFeature
+   sMsg = "IsIntermediateFeature= "
+   sMsg = sMsg & obj.IsIntermediateFeature
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsRunChange,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "IsRunChange=... [ ]")
+'#Property,RotateAngle
+   sMsg = "RotateAngle= "
+   sMsg = sMsg & obj.RotateAngle
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SizeReductionPreference
+   sMsg = "SizeReductionPreference= "
+   sMsg = sMsg & obj.SizeReductionPreference
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRteEndPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJRteStraightPathFeat
+Public Function outputIJRteStraightPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteStraightPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteStraightPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetInsertedFeatures() As IJElements
+   sMsg = "*GetInsertedFeatures()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetInsertedFeatures()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetProjectionEntityForOutline,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetProjectionEntityForOutline=... [ ]")
+'#Property,Length
+   sMsg = "Length= "
+   sMsg = sMsg & obj.Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRteStraightPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+'#function,IJRteTurnPathFeat
+Public Function outputIJRteTurnPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteTurnPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteTurnPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,BendAngle
+   sMsg = "BendAngle= "
+   sMsg = sMsg & obj.BendAngle
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,BendRadius
+   sMsg = "BendRadius= "
+   sMsg = sMsg & obj.BendRadius
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,BRadMulti
+   sMsg = "BRadMulti= "
+   sMsg = sMsg & obj.BRadMulti
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetNumMiters
+   sMsg = "GetNumMiters= "
+   sMsg = sMsg & obj.GetNumMiters
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPlaneNormal() As IJDVector
+   sMsg = "*GetPlaneNormal()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPlaneNormal()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPrimaryLeg() As IJRtePathLeg
+   sMsg = "*GetPrimaryLeg()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPrimaryLeg()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetTangent,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetTangent=... [ ]")
+'#Property,GetTurnType,enum,RefDataPipingTurnTypes
+   sMsg = "GetTurnType= " & obj.GetTurnType & " [RefDataPipingTurnTypes]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,ThroatRadius
+   sMsg = "ThroatRadius= "
+   sMsg = sMsg & obj.ThroatRadius
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,TransientBendAngle,comment,compile error!
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "TransientBendAngle=... [ compile error!]")
+     
+  outputIJRteTurnPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJRteCableEnterExitPathFeat
+Public Function outputIJRteCableEnterExitPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCableEnterExitPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCableEnterExitPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetNormal,fun,ddd
+   sMsg = ""
+   Call obj.GetNormal(d1, d2, d3)
+   sMsg = "GetNormal= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPortIndex
+   sMsg = "GetPortIndex= "
+   sMsg = sMsg & obj.GetPortIndex
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetTrunkFeature() As IJRtePathFeat
+   sMsg = "*GetTrunkFeature()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTrunkFeature()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetTrunkLeg() As IJRtePathLeg
+   sMsg = "*GetTrunkLeg()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTrunkLeg()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJRteCableEnterExitPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+ 
+
+
+'#function,IJRteAlongLegPathFeat
+Public Function outputIJRteAlongLegPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteAlongLegPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteAlongLegPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetAfterDistance
+   sMsg = "GetAfterDistance= "
+   sMsg = sMsg & obj.GetAfterDistance
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetBeforeDistance
+   sMsg = "GetBeforeDistance= "
+   sMsg = sMsg & obj.GetBeforeDistance
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOffset() As IJDVector
+   sMsg = "*GetOffset()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetOffset()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetRotAngle
+   sMsg = "GetRotAngle= "
+   sMsg = sMsg & obj.GetRotAngle
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsFlipped
+   sMsg = "IsFlipped= "
+   sMsg = sMsg & obj.IsFlipped
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRteAlongLegPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJRteEntryExitTrunkPathFeat
+Public Function outputIJRteEntryExitTrunkPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteEntryExitTrunkPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteEntryExitTrunkPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetNormal,fun,ddd
+   sMsg = ""
+   Call obj.GetNormal(d1, d2, d3)
+   sMsg = "GetNormal= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPortIndex
+   sMsg = "GetPortIndex= "
+   sMsg = sMsg & obj.GetPortIndex
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetTrunkFeature() As IJRtePathFeat
+   sMsg = "*GetTrunkFeature()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTrunkFeature()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetTrunkLeg() As IJRtePathLeg
+   sMsg = "*GetTrunkLeg()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTrunkLeg()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJRteEntryExitTrunkPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJRteCableOccur
+Public Function outputIJRteCableOccur(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCableOccur
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCableOccur = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,SpareCableLength
+   sMsg = "SpareCableLength= "
+   sMsg = sMsg & obj.SpareCableLength
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Straight1Length
+   sMsg = "Straight1Length= "
+   sMsg = sMsg & obj.Straight1Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Straight2Length
+   sMsg = "Straight2Length= "
+   sMsg = sMsg & obj.Straight2Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Tail1Length
+   sMsg = "Tail1Length= "
+   sMsg = sMsg & obj.Tail1Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Tail2Length
+   sMsg = "Tail2Length= "
+   sMsg = sMsg & obj.Tail2Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRteCableOccur = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+ 
+
+
+
+'#function,IJDistribConnection
+Public Function outputIJDistribConnection(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDistribConnection
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDistribConnection = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetConnectionItems() As IJDTargetObjectCol
+   sMsg = "*GetConnectionItems()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnectionItems()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetOtherPorts,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetOtherPorts=... [ ]")
+'#Property,GetPorts() As IJDTargetObjectCol
+   sMsg = "*GetPorts()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPorts()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,IsParent
+   sMsg = "IsParent= "
+   sMsg = sMsg & obj.IsParent
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJDistribConnection = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJRtePathLeg
+Public Function outputIJRtePathLeg(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRtePathLeg
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRtePathLeg = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#special
+   Dim oIJRtePathFeat As IJRtePathFeat
+   Dim i As Long
+   sMsg = "List of features:"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set oIJRtePathFeat = obj.GetFirstFeature()
+   While Not oIJRtePathFeat Is Nothing
+        i = i + 1
+        Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*PathFeat " & i)
+        Set o1 = oIJRtePathFeat
+        Set Node3.Tag = oIJRtePathFeat
+        Set oIJRtePathFeat = obj.GetNextFeature(oIJRtePathFeat)
+   Wend
+   Set oIJRtePathFeat = Nothing
+'#endspecial
+'#Property,GetActualSlope
+   sMsg = "GetActualSlope= "
+   sMsg = sMsg & obj.GetActualSlope
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetAdjacentFeatures,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAdjacentFeatures=... [ ]")
+'#Property,GetDirectionAndOffset,fun,dddddd
+   sMsg = ""
+   Call obj.GetDirectionAndOffset(d1, d2, d3, d4, d5, d6)
+   sMsg = "GetDirectionAndOffset= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetDirectionVector,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetDirectionVector=... [ ]")
+'#Property,GetFeatureIndex,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetFeatureIndex=... [ ]")
+'#Property,GetFeatures,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetFeatures=... [ ]")
+'#Property,GetFirstFeature() As IJRtePathFeat
+   sMsg = "*GetFirstFeature()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetFirstFeature()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetInsertedFeatures() As IJElements
+   sMsg = "*GetInsertedFeatures()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetInsertedFeatures()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetLastFeature() As IJRtePathFeat
+   sMsg = "*GetLastFeature()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetLastFeature()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#special
+#If VERSION < 7 Then
+'#endspecial
+'#Property,GetMinSlope
+   sMsg = "GetMinSlope= "
+   sMsg = sMsg & obj.GetMinSlope
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+#Else
+'#endspecial
+'#Property,GetMinSlope,fun,dl
+   sMsg = ""
+   Call obj.GetMinSlope(d1, l2)
+   sMsg = "GetMinSlope= " & "( " & sDouble(d1) & ", " & l2 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+#End If
+'#endspecial
+'#Property,GetNextFeature,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetNextFeature=... [ ]")
+'#Property,GetStartEndLocs,fun,dddddd
+   sMsg = ""
+   Call obj.GetStartEndLocs(d1, d2, d3, d4, d5, d6)
+   sMsg = "GetStartEndLocs= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsSlopeValid
+   sMsg = "IsSlopeValid= "
+   sMsg = sMsg & obj.IsSlopeValid
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsTopologicalDirectionNormal
+   sMsg = "IsTopologicalDirectionNormal= "
+   sMsg = sMsg & obj.IsTopologicalDirectionNormal
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Length
+   sMsg = "Length= "
+   sMsg = sMsg & obj.Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,LengthLocked
+   sMsg = "LengthLocked= "
+   sMsg = sMsg & obj.LengthLocked
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRtePathLeg = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJCablePart
+Public Function outputIJCablePart(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJCablePart
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJCablePart = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CableDiameter
+   sMsg = "CableDiameter= "
+   sMsg = sMsg & obj.CableDiameter
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,MinBendRadius
+   sMsg = "MinBendRadius= "
+   sMsg = sMsg & obj.MinBendRadius
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,NoOfConductors
+   sMsg = "NoOfConductors= "
+   sMsg = sMsg & obj.NoOfConductors
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,UnitWeight
+   sMsg = "UnitWeight= "
+   sMsg = sMsg & obj.UnitWeight
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJCablePart = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJRtePathFeatInTrunk
+Public Function outputIJRtePathFeatInTrunk(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRtePathFeatInTrunk
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRtePathFeatInTrunk = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetBoundaries,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetBoundaries=... [ ]")
+'#Property,GetTrunkFeatures() As IJDObjectCollection
+   sMsg = "*GetTrunkFeatures()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTrunkFeatures()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,IsDetermined
+   sMsg = "IsDetermined= "
+   sMsg = sMsg & obj.IsDetermined
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRtePathFeatInTrunk = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJDPipeSpec
+Public Function outputIJDPipeSpec(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDPipeSpec
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDPipeSpec = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetAbsoluteBendRadius,fun,dsd
+   sMsg = ""
+   Call obj.GetAbsoluteBendRadius(d1, s2, d3)
+   sMsg = "GetAbsoluteBendRadius= " & "( " & sDouble(d1) & ", " & s2 & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetAllComponents,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAllComponents=... [ ]")
+'#Property,GetAllowableNPDs,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAllowableNPDs=... [ ]")
+'#Property,GetAllowableRoutingAngles,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAllowableRoutingAngles=... [ ]")
+'#Property,GetAllowableTurnTypes,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAllowableTurnTypes=... [ ]")
+'#Property,GetBendRadiusData,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetBendRadiusData=... [ ]")
+'#Property,GetBoltConnectionParts,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetBoltConnectionParts=... [ ]")
+'#Property,GetBoltExtensionData,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetBoltExtensionData=... [ ]")
+'#Property,GetCorrosionAllowance,fun,ll
+   sMsg = ""
+   Call obj.GetCorrosionAllowance(l1, l2)
+   sMsg = "GetCorrosionAllowance= " & "( " & l1 & ", " & l2 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetDefaultPipeOutsideDiameter,fun,ds
+   sMsg = ""
+   Call obj.GetDefaultPipeOutsideDiameter(d1, s2)
+   sMsg = "GetDefaultPipeOutsideDiameter= " & "( " & sDouble(d1) & ", " & s2 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,...,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "...=... [ ]")
+     
+  outputIJDPipeSpec = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJLine
+Public Function outputIJLine(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJLine
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJLine = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetDirection,fun,ddd
+   sMsg = ""
+   Call obj.GetDirection(d1, d2, d3)
+   sMsg = "GetDirection= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetEndPoint,fun,ddd
+   sMsg = ""
+   Call obj.GetEndPoint(d1, d2, d3)
+   sMsg = "GetEndPoint= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetStartPoint,fun,ddd
+   sMsg = ""
+   Call obj.GetStartPoint(d1, d2, d3)
+   sMsg = "GetStartPoint= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Infinite
+   sMsg = "Infinite= "
+   sMsg = sMsg & obj.Infinite
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Length
+   sMsg = "Length= "
+   sMsg = sMsg & obj.Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJLine = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJRteCablewayPathFeat
+Public Function outputIJRteCablewayPathFeat(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCablewayPathFeat
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCablewayPathFeat = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#special
+    sMsg = "*GetSelectedSpec"
+    Dim ppSelectedSpec As IJDCablewaySpec
+    Call obj.GetSelectedSpec(ppSelectedSpec)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Set Node2.Tag = ppSelectedSpec
+    Node2.Text = sMsg
+'#endspecial
+     
+  outputIJRteCablewayPathFeat = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+'  CHILDS
+'============================================================================
+
+'#function,IJSystemChild
+Public Function outputIJSystemChild(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJSystemChild
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJSystemChild = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetParent,ref
+   sMsg = "*GetParent"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetParent
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJSystemChild = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJDesignChild
+Public Function outputIJDesignChild(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDesignChild
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDesignChild = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetParent,ref
+   sMsg = "*GetParent"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetParent
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,RelationType,comment,Error accessing in VB!
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "RelationType=... [ Error accessing in VB!]")
+     
+  outputIJDesignChild = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJDesignParent
+Public Function outputIJDesignParent(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDesignParent
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDesignParent = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetCount,fun,l
+   sMsg = ""
+   Call obj.GetCount(l1)
+   sMsg = "GetCount= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+    sMsg = "*GetChildren= "
+    Dim ppChildren As IJDObjectCollection
+    Call obj.GetChildren(ppChildren)
+    sMsg = sMsg & ppChildren.Count
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Set Node2.Tag = ppChildren
+    Node2.Text = sMsg
+'#endspecial
+     
+  outputIJDesignParent = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJAssemblyChild
+Public Function outputIJAssemblyChild(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJAssemblyChild
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJAssemblyChild = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Index
+   sMsg = "Index= "
+   sMsg = sMsg & obj.Index
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Locked
+   sMsg = "Locked= "
+   sMsg = sMsg & obj.Locked
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,MfgParts As IJElements
+   sMsg = "*MfgParts"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.MfgParts
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Parent As Unknown
+   sMsg = "*Parent"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Parent
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Spaces As IJElements
+   sMsg = "*Spaces"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Spaces
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJAssemblyChild = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJElements
+Public Function outputIJElements(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJElements
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJElements = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Count
+   sMsg = "Count= "
+   sMsg = sMsg & obj.Count
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+    sMsg = ""
+    Dim oElement As Object
+    For Each oElement In obj
+        sMsg = "*Object= " & TypeName(oElement)
+        Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+        Set Node2.Tag = oElement
+        Node2.Text = sMsg
+    Next oElement
+'#endspecial
+     
+  outputIJElements = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+'' Hanger
+'===============================================================================
+
+
+ 
+
+
+
+'#function,IJHgrSupport
+Public Function outputIJHgrSupport(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrSupport
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrSupport = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CommandType,enum,HgrCmdType
+   sMsg = "CommandType= " & obj.CommandType & " [HgrCmdType]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,GetConnectedAssemblyJoints() As Object
+   sMsg = "*GetConnectedAssemblyJoints()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnectedAssemblyJoints()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetDesignNextSupportingPort,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetDesignNextSupportingPort=... [ ]")
+'#Property,GetFreePortColl,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetFreePortColl=... [ ]")
+'#Property,GetSecAssmSelRule,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetSecAssmSelRule=... [ ]")
+'#Property,GetSupportInputs,fun,ooo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Set o3 = Nothing
+   Call obj.GetSupportInputs(o1, o2, o3)
+   sMsg = "GetSupportInputs= " & "( " & "Par1" & ", " & "Par2" & ", " & "Par3" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par3")
+   Set Node3.Tag = o3
+'#Property,GetSupportPosition,fun,ddd
+   sMsg = ""
+   Call obj.GetSupportPosition(d1, d2, d3)
+   sMsg = "GetSupportPosition= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsBuiltUpAssembly,fun,b
+   sMsg = ""
+   Call obj.IsBuiltUpAssembly(b1)
+   sMsg = "IsBuiltUpAssembly= " & "( " & b1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsDesignSupportAssembly,fun,b
+   sMsg = ""
+   Call obj.IsDesignSupportAssembly(b1)
+   sMsg = "IsDesignSupportAssembly= " & "( " & b1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsPlacementCommand
+   sMsg = "IsPlacementCommand= "
+   sMsg = sMsg & obj.IsPlacementCommand
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsStandardSupportAssembly,fun,b
+   sMsg = ""
+   Call obj.IsStandardSupportAssembly(b1)
+   sMsg = "IsStandardSupportAssembly= " & "( " & b1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,MaxLoad
+   sMsg = "MaxLoad= "
+   sMsg = sMsg & obj.MaxLoad
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PrimaryRunName
+   sMsg = "PrimaryRunName= "
+   sMsg = sMsg & obj.PrimaryRunName
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,RouteConnectionEnabled
+   sMsg = "RouteConnectionEnabled= "
+   sMsg = sMsg & obj.RouteConnectionEnabled
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,StructConnectionEnabled
+   sMsg = "StructConnectionEnabled= "
+   sMsg = sMsg & obj.StructConnectionEnabled
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,StructFacePosConnectionEnabled
+   sMsg = "StructFacePosConnectionEnabled= "
+   sMsg = sMsg & obj.StructFacePosConnectionEnabled
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SupportDefinition As Unknown
+   sMsg = "*SupportDefinition"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.SupportDefinition
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,TypeSelectionRule
+   sMsg = "TypeSelectionRule= "
+   sMsg = sMsg & obj.TypeSelectionRule
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+   '
+   If TypeOf o Is IJHgrInputObjectInfo Then
+     sMsg = "Implements also IJHgrInputObjectInfo"
+     Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     Call outputIJHgrInputObjectInfo(Form, Node2, o)
+   End If
+   If TypeOf o Is IJHgrInputConfigHlpr Then
+     sMsg = "Implements also IJHgrInputConfigHlpr"
+     Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     Call outputIJHgrInputConfigHlpr(Form, Node2, o)
+   End If
+   
+     sMsg = "Tests for Slab Positions"
+     Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Call TestSlabPositions(Form, Node2, o)
+   
+'#endspecial
+     
+  outputIJHgrSupport = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'STRUCTS
+'=======================================================================
+
+'#function,IJAnalysisChild
+Public Function outputIJAnalysisChild(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJAnalysisChild
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJAnalysisChild = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetParent() As Unknown
+   sMsg = "*GetParent()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetParent()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,RelationType,comment,GUID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "RelationType=... [ GUID]")
+     
+  outputIJAnalysisChild = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+ 
+
+
+
+'#function,ISPSCrossSection
+Public Function outputISPSCrossSection(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSCrossSection
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSCrossSection = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CardinalPoint
+   sMsg = "CardinalPoint= "
+   sMsg = sMsg & obj.CardinalPoint
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Definition As IJCrossSection
+   sMsg = "*Definition"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Definition
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetCardinalPointOffset,fun,ddd
+   sMsg = ""
+   Call obj.GetCardinalPointOffset(d1, d2, d3)
+   sMsg = "GetCardinalPointOffset= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SectionName
+   sMsg = "SectionName= "
+   sMsg = sMsg & obj.SectionName
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SectionStandard
+   sMsg = "SectionStandard= "
+   sMsg = sMsg & obj.SectionStandard
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SectionType
+   sMsg = "SectionType= "
+   sMsg = sMsg & obj.SectionType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Symbol As Object
+   sMsg = "*Symbol"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Symbol
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputISPSCrossSection = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,ISPSAxisRotation
+Public Function outputISPSAxisRotation(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSAxisRotation
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSAxisRotation = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,BetaAngle
+   sMsg = "BetaAngle= "
+   sMsg = sMsg & obj.BetaAngle
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Control As Object
+   sMsg = "*Control"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Control
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetOrientationVector,fun,ddd
+   sMsg = ""
+   Call obj.GetOrientationVector(d1, d2, d3)
+   sMsg = "GetOrientationVector= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetTransform,fun,M
+   sMsg = ""
+   Call obj.GetTransform(M1)
+   sMsg = "GetTransform= " & "( " & outputIJDT4x4(M1) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetTransformAtPosition,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetTransformAtPosition=... [ ]")
+'#Property,Mirror
+   sMsg = "Mirror= "
+   sMsg = sMsg & obj.Mirror
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SetOrientationVector,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "SetOrientationVector=... [ ]")
+     
+  outputISPSAxisRotation = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,ISPSMemberPartPrismatic
+Public Function outputISPSMemberPartPrismatic(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSMemberPartPrismatic
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSMemberPartPrismatic = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,AddCutbackSurface,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "AddCutbackSurface=... [ ]")
+'#Property,Axis As IJCurve
+   sMsg = "*Axis"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Axis
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,AxisPort(SPSMemberAxisStart) As ISPSSplitAxisPort
+   sMsg = "*AxisPort(SPSMemberAxisStart)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.AxisPort(SPSMemberAxisStart)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,AxisPort(SPSMemberAxisEnd) As ISPSSplitAxisPort
+   sMsg = "*AxisPort(SPSMemberAxisEnd)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.AxisPort(SPSMemberAxisEnd)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,AxisPort(SPSMemberAxisAlong) As ISPSSplitAxisPort
+   sMsg = "*AxisPort(SPSMemberAxisAlong)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.AxisPort(SPSMemberAxisAlong)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,CrossSection As ISPSCrossSection
+   sMsg = "*CrossSection"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.CrossSection
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Cutbacks(SPSMemberAxisStart) As IJElements
+   sMsg = "*Cutbacks(SPSMemberAxisStart)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Cutbacks(SPSMemberAxisStart)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Cutbacks(SPSMemberAxisEnd) As IJElements
+   sMsg = "*Cutbacks(SPSMemberAxisEnd)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Cutbacks(SPSMemberAxisEnd)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Cutbacks(SPSMemberAxisAlong) As IJElements
+   sMsg = "*Cutbacks(SPSMemberAxisAlong)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Cutbacks(SPSMemberAxisAlong)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,CutLength
+   sMsg = "CutLength= "
+   sMsg = sMsg & obj.CutLength
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetEndFacePositions,fun,dddddddddddd
+   sMsg = ""
+   Call obj.GetEndFacePositions(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12)
+   sMsg = "GetEndFacePositions= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ", " & sDouble(d7) & ", " & sDouble(d8) & ", " & sDouble(d9) & ", " & sDouble(d10) & ", " & sDouble(d11) & ", " & sDouble(d12) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Loads As IJElements
+   sMsg = "*Loads"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Loads
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,MaterialDefinition As IJDMaterial
+   sMsg = "*MaterialDefinition"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.MaterialDefinition
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,MemberReleases As ISPSMemberReleases
+   sMsg = "*MemberReleases"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.MemberReleases
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,MemberSystem As ISPSMemberSystem
+   sMsg = "*MemberSystem"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.MemberSystem
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,MemberType As ISPSMemberType
+   sMsg = "*MemberType"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.MemberType
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,PointAtEnd(SPSMemberAxisStart) As IJPoint
+   sMsg = "*PointAtEnd(SPSMemberAxisStart)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.PointAtEnd(SPSMemberAxisStart)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,PointAtEnd(SPSMemberAxisEnd) As IJPoint
+   sMsg = "*PointAtEnd(SPSMemberAxisEnd)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.PointAtEnd(SPSMemberAxisEnd)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,PointAtEnd(SPSMemberAxisAlong) As IJPoint
+   sMsg = "*PointAtEnd(SPSMemberAxisAlong)"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.PointAtEnd(SPSMemberAxisAlong)
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Rotation As ISPSAxisRotation
+   sMsg = "*Rotation"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Rotation
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputISPSMemberPartPrismatic = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,ISPSMemberSystem
+Public Function outputISPSMemberSystem(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSMemberSystem
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSMemberSystem = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Continuity As IJStructContinuity2
+   sMsg = "*Continuity"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Continuity
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,DesignParent As IJDesignParent
+   sMsg = "*DesignParent"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.DesignParent
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,DesignPartAtEnd,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "DesignPartAtEnd=... [ ]")
+'#Property,DesignParts As IJElements
+   sMsg = "*DesignParts"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.DesignParts
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,DesignSeams As IJElements
+   sMsg = "*DesignSeams"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.DesignSeams
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,LogicalAxis As ISPSLogicalAxis
+   sMsg = "*LogicalAxis"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.LogicalAxis
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,MemberType As ISPSMemberType
+   sMsg = "*MemberType"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.MemberType
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,PhysicalAxis As IJCurve
+   sMsg = "*PhysicalAxis"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.PhysicalAxis
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,PointOnJoints As IJElements
+   sMsg = "*PointOnJoints"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.PointOnJoints
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Rotation As ISPSAxisRotation
+   sMsg = "*Rotation"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Rotation
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,SplitConnections As IJElements
+   sMsg = "*SplitConnections"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.SplitConnections
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputISPSMemberSystem = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJCurve
+Public Function outputIJCurve(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJCurve
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJCurve = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Area
+   sMsg = "Area= "
+   sMsg = sMsg & obj.Area
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Centroid,fun,ddd
+   sMsg = ""
+   Call obj.Centroid(d1, d2, d3)
+   sMsg = "Centroid= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,EndPoints,fun,dddddd
+   sMsg = ""
+   Call obj.EndPoints(d1, d2, d3, d4, d5, d6)
+   sMsg = "EndPoints= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Form,enum,Geom3dCurveFormConstants
+   sMsg = "Form= " & obj.Form & " [Geom3dCurveFormConstants]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,Length
+   sMsg = "Length= "
+   sMsg = sMsg & obj.Length
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Normal,fun,lddd
+   sMsg = ""
+   Call obj.Normal(l1, d2, d3, d4)
+   sMsg = "Normal= " & "( " & l1 & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,ParamRange,fun,dd
+   sMsg = ""
+   Call obj.ParamRange(d1, d2)
+   sMsg = "ParamRange= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Scope,enum,Geom3dCurveScopeConstants
+   sMsg = "Scope= " & obj.Scope & " [Geom3dCurveScopeConstants]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+     
+  outputIJCurve = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJDObject
+Public Function outputIJDObject(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDObject
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDObject = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,AccessControl,enum,AccessControlConstant
+   sMsg = "AccessControl= " & obj.AccessControl & " [AccessControlConstant]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,ApprovalReason
+   sMsg = "ApprovalReason= "
+   sMsg = sMsg & obj.ApprovalReason
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,ApprovalStatus,enum,ApprovalStatusValue
+   sMsg = "ApprovalStatus= " & obj.ApprovalStatus & " [ApprovalStatusValue]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,DateCreated
+   sMsg = "DateCreated= "
+   sMsg = sMsg & obj.DateCreated
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,DateLastModified
+   sMsg = "DateLastModified= "
+   sMsg = sMsg & obj.DateLastModified
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PermissionGroup
+   sMsg = "PermissionGroup= "
+   sMsg = sMsg & obj.PermissionGroup
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,ProjectID
+   sMsg = "ProjectID= "
+   sMsg = sMsg & obj.ProjectID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,UserCreated
+   sMsg = "UserCreated= "
+   sMsg = sMsg & obj.UserCreated
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,UserLastModified
+   sMsg = "UserLastModified= "
+   sMsg = sMsg & obj.UserLastModified
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJDObject = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJDOutfittingCrossSection
+Public Function outputIJDOutfittingCrossSection(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDOutfittingCrossSection
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDOutfittingCrossSection = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CornerRadius
+   sMsg = "CornerRadius= "
+   sMsg = sMsg & obj.CornerRadius
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,CrossSectionShape
+   sMsg = "CrossSectionShape= "
+   sMsg = sMsg & obj.CrossSectionShape
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Depth
+   sMsg = "Depth= "
+   sMsg = sMsg & obj.Depth
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,DimensionBaseOuter
+   sMsg = "DimensionBaseOuter= "
+   sMsg = sMsg & obj.DimensionBaseOuter
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetShape
+   sMsg = "GetShape= "
+   sMsg = sMsg & obj.GetShape
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetSymbolDefinition
+   sMsg = "GetSymbolDefinition= "
+   sMsg = sMsg & obj.GetSymbolDefinition
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Width
+   sMsg = "Width= "
+   sMsg = sMsg & obj.Width
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJDOutfittingCrossSection = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJPort
+Public Function outputIJPort(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJPort
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJPort = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Connectable As IJConnectable
+   sMsg = "*Connectable"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Connectable
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Geometry As Object
+   sMsg = "*Geometry"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Geometry
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Type
+   sMsg = "Type= "
+   sMsg = sMsg & obj.Type
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJPort = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJRteCrossSectOccur
+Public Function outputIJRteCrossSectOccur(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCrossSectOccur
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCrossSectOccur = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetOrientation,fun,dddddd
+   sMsg = ""
+   Call obj.GetOrientation(d1, d2, d3, d4, d5, d6)
+   sMsg = "GetOrientation= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOutline() As IJCurve
+   sMsg = "*GetOutline()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetOutline()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetParameters,fun,lddd
+   sMsg = ""
+   Call obj.GetParameters(l1, d2, d3, d4)
+   sMsg = "GetParameters= " & "( " & l1 & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetRefDataCrossSect() As IJDOutfittingCrossSection
+   sMsg = "*GetRefDataCrossSect()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetRefDataCrossSect()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,IsDimBaseOuter
+   sMsg = "IsDimBaseOuter= "
+   sMsg = sMsg & obj.IsDimBaseOuter
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,OrientationAngle
+   sMsg = "OrientationAngle= "
+   sMsg = sMsg & obj.OrientationAngle
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+     
+  outputIJRteCrossSectOccur = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJPartOcc
+Public Function outputIJPartOcc(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJPartOcc
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJPartOcc = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetMatrix,fun,M
+   sMsg = ""
+   Call obj.GetMatrix(M1)
+   sMsg = "GetMatrix= " & "( " & outputIJDT4x4(M1) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOrigin,fun,ddd
+   sMsg = ""
+   Call obj.GetOrigin(d1, d2, d3)
+   sMsg = "GetOrigin= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#special
+    Dim oIJDPart As IJDPart
+    sMsg = "*GetPart"
+    Call obj.GetPart(oIJDPart)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Set Node2.Tag = oIJDPart
+    Node2.Text = sMsg
+'#endspecial
+     
+  outputIJPartOcc = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJDPart
+Public Function outputIJDPart(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDPart
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDPart = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetNozzles,ref
+   sMsg = "*GetNozzles"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetNozzles
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPartCLSID
+   sMsg = "GetPartCLSID= "
+   sMsg = sMsg & obj.GetPartCLSID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPartIID
+   sMsg = "GetPartIID= "
+   sMsg = sMsg & obj.GetPartIID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPartOccCLSID
+   sMsg = "GetPartOccCLSID= "
+   sMsg = sMsg & obj.GetPartOccCLSID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPartOccIID
+   sMsg = "GetPartOccIID= "
+   sMsg = sMsg & obj.GetPartOccIID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetRelatedPartClassName
+   sMsg = "GetRelatedPartClassName= "
+   sMsg = sMsg & obj.GetRelatedPartClassName
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetReplacementParts() As IJDCollection
+   sMsg = "*GetReplacementParts()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetReplacementParts()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,MirrorBehaviorOption
+   sMsg = "MirrorBehaviorOption= "
+   sMsg = sMsg & obj.MirrorBehaviorOption
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PartDescription
+   sMsg = "PartDescription= "
+   sMsg = sMsg & obj.PartDescription
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PartNumber
+   sMsg = "PartNumber= "
+   sMsg = sMsg & obj.PartNumber
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJDPart = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+'#function,IJNamedItem
+Public Function outputIJNamedItem(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJNamedItem
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJNamedItem = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Icon,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Icon=... [ ]")
+'#Property,IconID
+   sMsg = "IconID= "
+   sMsg = sMsg & obj.IconID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IIDforTypeString,comment, As GUID
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "IIDforTypeString=... [  As GUID]")
+'#Property,InternalTypeString
+   sMsg = "InternalTypeString= "
+   sMsg = sMsg & obj.InternalTypeString
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Name
+   sMsg = "Name= "
+   sMsg = sMsg & obj.Name
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,TypeString
+   sMsg = "TypeString= "
+   sMsg = sMsg & obj.TypeString
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJNamedItem = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJSmartOccurrence
+Public Function outputIJSmartOccurrence(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJSmartOccurrence
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJSmartOccurrence = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Item
+   sMsg = "Item= "
+   sMsg = sMsg & obj.Item
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,ItemObject As Object
+   sMsg = "*ItemObject"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.ItemObject
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,RootSelection
+   sMsg = "RootSelection= "
+   sMsg = sMsg & obj.RootSelection
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,RootSelectionObject As Object
+   sMsg = "*RootSelectionObject"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.RootSelectionObject
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJSmartOccurrence = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJSystem
+Public Function outputIJSystem(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJSystem
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJSystem = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CountSystemsBelow,fun,lll
+   sMsg = ""
+   Call obj.CountSystemsBelow(l1, l2, l3)
+   sMsg = "CountSystemsBelow= " & "( " & l1 & ", " & l2 & ", " & l3 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetChildren() As IJDTargetObjectCol
+   sMsg = "*GetChildren()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetChildren()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJSystem = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJHgrPart
+Public Function outputIJHgrPart(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrPart
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrPart = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CrossSection,ref
+   sMsg = "*CrossSection"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.CrossSection
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetMaterialGivenTypeAndGrade,fun,ss
+   sMsg = ""
+   Call obj.GetMaterialGivenTypeAndGrade(s1, s2)
+   sMsg = "GetMaterialGivenTypeAndGrade= " & "( " & s1 & ", " & s2 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Material,ref
+   sMsg = "*Material"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Material
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,PartType
+   sMsg = "PartType= "
+   sMsg = sMsg & obj.PartType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PipeStock,ref
+   sMsg = "*PipeStock"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.PipeStock
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJHgrPart = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,IJDSymbol
+Public Function outputIJDSymbol(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDSymbol
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDSymbol = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,IJDInputsArg,ref
+   sMsg = "*IJDInputsArg"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.IJDInputsArg
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,IJDReferencesArg,ref
+   sMsg = "*IJDReferencesArg"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.IJDReferencesArg
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,IJDSymbolDefinition,comment,(readWriteMode As Integer) As IJDSymbolDefinition
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "IJDSymbolDefinition=... [ (readWriteMode As Integer) As IJDSymbolDefinition]")
+'#Property,IJDValuesArg,ref
+   sMsg = "*IJDValuesArg"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.IJDValuesArg
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,ReplaceDefinition,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "ReplaceDefinition=... [ ]")
+     
+  outputIJDSymbol = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJHgrSupportComponent
+Public Function outputIJHgrSupportComponent(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrSupportComponent
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrSupportComponent = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetComponentConnections,ref
+   sMsg = "*GetComponentConnections"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetComponentConnections
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetConnectionPorts,ref
+   sMsg = "*GetConnectionPorts"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnectionPorts
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetHgrConnectionPorts,ref
+   sMsg = "*GetHgrConnectionPorts"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetHgrConnectionPorts
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetOccAssembly,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetOccAssembly=... [ ]")
+'#Property,GetPartCrossSection,ref
+   sMsg = "*GetPartCrossSection"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPartCrossSection
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPartPipeStock,ref
+   sMsg = "*GetPartPipeStock"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPartPipeStock
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetSymbolOutputByName,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetSymbolOutputByName=... [ ]")
+'#Property,RouteIndex
+   sMsg = "RouteIndex= "
+   sMsg = sMsg & obj.RouteIndex
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,StructIndex
+   sMsg = "StructIndex= "
+   sMsg = sMsg & obj.StructIndex
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SupportDetailNumber
+   sMsg = "SupportDetailNumber= "
+   sMsg = sMsg & obj.SupportDetailNumber
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJHgrSupportComponent = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJHgrBOM
+Public Function outputIJHgrBOM(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrBOM
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrBOM = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,BOMdescription
+   sMsg = "BOMdescription= "
+   sMsg = sMsg & obj.BOMdescription
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJHgrBOM = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJHgrConnComponent
+Public Function outputIJHgrConnComponent(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrConnComponent
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrConnComponent = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#special
+#If VERSION > 6 Then
+    Dim i As Long
+    Dim pIJSymbolUtilHngSup As SymbolUtilHngSup
+    Set pIJSymbolUtilHngSup = CreateObject("SupportEntityUtil.SymbolUtilHngSup")
+    Dim pIJDSymbol  As IJDSymbol
+    Dim pPortElems  As IJElements
+    Set pIJDSymbol = o
+    Set pPortElems = pIJSymbolUtilHngSup.GetHgrSymbolPorts(pIJDSymbol)
+
+    sMsg = "GetHgrSymbolPorts returns ports=" & pPortElems.Count
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+
+    For i = 1 To pPortElems.Count
+        sMsg = "*GetHgrSymbolPorts" & i
+        Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+        Set Node2.Tag = pPortElems.Item(i)
+    Next i
+#End If
+'#endspecial
+     
+  outputIJHgrConnComponent = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+
+'#function,IJHgrPort
+Public Function outputIJHgrPort(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrPort
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrPort = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Category,enum,HgrSymbolPortCategory
+   sMsg = "Category= " & obj.Category & " [HgrSymbolPortCategory]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,ConnectionInfo
+   sMsg = "ConnectionInfo= "
+   sMsg = sMsg & obj.ConnectionInfo
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOrientation,fun,ddddddddd
+   sMsg = ""
+   Call obj.GetOrientation(d1, d2, d3, d4, d5, d6, d7, d8, d9)
+   sMsg = "GetOrientation= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ", " & sDouble(d7) & ", " & sDouble(d8) & ", " & sDouble(d9) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,MatingType
+   sMsg = "MatingType= "
+   sMsg = sMsg & obj.MatingType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,MaxSize
+   sMsg = "MaxSize= "
+   sMsg = sMsg & obj.MaxSize
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,MinSize
+   sMsg = "MinSize= "
+   sMsg = sMsg & obj.MinSize
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Name
+   sMsg = "Name= "
+   sMsg = sMsg & obj.Name
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PortType
+   sMsg = "PortType= "
+   sMsg = sMsg & obj.PortType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Size
+   sMsg = "Size= "
+   sMsg = sMsg & obj.Size
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SupportComponent As Object
+   sMsg = "*SupportComponent"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.SupportComponent
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Type,enum,HgrPortType
+   sMsg = "Type= " & obj.Type & " [HgrPortType]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,UnitType
+   sMsg = "UnitType= "
+   sMsg = sMsg & obj.UnitType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+     
+  outputIJHgrPort = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,ISPSSlabsDefinition
+Public Function outputISPSSlabsDefinition(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSSlabsDefinition
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSSlabsDefinition = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Contour As Object
+   sMsg = "*Contour"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Contour
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#special
+    Dim oIJElements As IJElements
+    Dim dOverhang() As Double
+    Dim ePortFacePosition() As PortFacePosition
+    Dim i As Long
+    Dim s As String
+    
+    sMsg = "*GetBoundaryInfo(ppBoundaryObject.."
+    Call obj.GetBoundaryInfo(oIJElements, dOverhang, ePortFacePosition)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Set Node2.Tag = oIJElements
+    Node2.Text = sMsg
+    
+    sMsg = "GetBoundaryInfo(..dOverhang..=" & JoinDouble(dOverhang)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Node2.Text = sMsg
+    
+    For i = LBound(ePortFacePosition) To UBound(ePortFacePosition)
+        s = s & ", " & ePortFacePosition(i)
+    Next i
+    
+    sMsg = "GetBoundaryInfo(..ePortFacePosition)= (" & s & " )"
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Node2.Text = sMsg
+    
+'#endspecial
+'#special
+    Dim eSupportMethod As StructPlaneType
+    Dim dSupportParameter As Double
+    sMsg = "*GetSupportInfo() ="
+    Call obj.GetSupportInfo(oIJElements, eSupportMethod, dSupportParameter)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    Set Node2.Tag = oIJElements
+    sMsg = sMsg & " eSupportMethod=" & eSupportMethod & " dSupportParameter=" & dSupportParameter
+    Node2.Text = sMsg
+'#endspecial
+'#Property,GetSupportInfo,comment,(ppSupportObject As IJElements, eSupportMethod As StructPlaneType, dSupportParameter As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetSupportInfo=... [ (ppSupportObject As IJElements, eSupportMethod As StructPlaneType, dSupportParameter As Double)]")
+'#special
+    Dim oSlabFacePosition As SlabFacePosition
+    sMsg = "GetPositioningInfo ="
+    Call obj.GetPositioningInfo(oSlabFacePosition)
+    Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+    sMsg = sMsg & oSlabFacePosition
+    Node2.Text = sMsg
+'#endspecial
+'#Property,SupportMethod,enum,StructPlaneType
+   sMsg = "SupportMethod= " & obj.SupportMethod & " [StructPlaneType]"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Node2.Text = sMsg
+'#Property,SupportParameter
+   sMsg = "SupportParameter= "
+   sMsg = sMsg & obj.SupportParameter
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Supports As IJElements
+   sMsg = "*Supports"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Supports
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputISPSSlabsDefinition = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+'#function,ISPSSlabsComposition
+Public Function outputISPSSlabsComposition(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSSlabsComposition
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSSlabsComposition = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,LayerCount
+   sMsg = "LayerCount= "
+   sMsg = sMsg & obj.LayerCount
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Layers As IJElements
+   sMsg = "*Layers"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Layers
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,ReferenceLayer
+   sMsg = "ReferenceLayer= "
+   sMsg = sMsg & obj.ReferenceLayer
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputISPSSlabsComposition = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,ISPSSlabProperties
+Public Function outputISPSSlabProperties(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSSlabProperties
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSSlabProperties = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Angle
+   sMsg = "Angle= "
+   sMsg = sMsg & obj.Angle
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,BOC
+   sMsg = "BOC= "
+   sMsg = sMsg & obj.BOC
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,CGX
+   sMsg = "CGX= "
+   sMsg = sMsg & obj.CGX
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,CGY
+   sMsg = "CGY= "
+   sMsg = sMsg & obj.CGY
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,CGZ
+   sMsg = "CGZ= "
+   sMsg = sMsg & obj.CGZ
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,DeltaZ
+   sMsg = "DeltaZ= "
+   sMsg = sMsg & obj.DeltaZ
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetSlabProperties,comment,(TotalVolume As Double, NetVolume As Double, TotalSurface As Double, NetSurface As Double, TotalProjectedArea As Double, NetProjectedArea As Double, CGX As Double, CGY As Double, CGZ As Double, weight As Double, Openings As Long, Angle As Double, Slope As Double, LowPoint As Double, HighPoint As Double, DeltaZ As Double, BOC As Double, TOC As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetSlabProperties=... [ (TotalVolume As Double, NetVolume As Double, TotalSurface As Double, NetSurface As Double, TotalProjectedArea As Double, NetProjectedArea As Double, CGX As Double, CGY As Double, CGZ As Double, weight As Double, Openings As Long, Angle As Double, Slope As Double, LowPoint As Double, HighPoint As Double, DeltaZ As Double, BOC As Double, TOC As Double)]")
+'#Property,GetSlabProperties,fun,ddddddddddlddddddd
+   sMsg = ""
+   Call obj.GetSlabProperties(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, l11, d12, d13, d14, d15, d16, d17, d18)
+   sMsg = "GetSlabProperties= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ", " & sDouble(d7) & ", " & sDouble(d8) & ", " & sDouble(d9) & ", " & sDouble(d10) & ", " & l11 & ", " & sDouble(d12) & ", " & sDouble(d13) & ", " & sDouble(d14) & ", " & sDouble(d15) & ", " & sDouble(d16) & ", " & sDouble(d17) & ", " & sDouble(d18) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,HighPoint
+   sMsg = "HighPoint= "
+   sMsg = sMsg & obj.HighPoint
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,LowPoint
+   sMsg = "LowPoint= "
+   sMsg = sMsg & obj.LowPoint
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,NetProjectedArea
+   sMsg = "NetProjectedArea= "
+   sMsg = sMsg & obj.NetProjectedArea
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,NetSurface
+   sMsg = "NetSurface= "
+   sMsg = sMsg & obj.NetSurface
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,NetVolume
+   sMsg = "NetVolume= "
+   sMsg = sMsg & obj.NetVolume
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Openings
+   sMsg = "Openings= "
+   sMsg = sMsg & obj.Openings
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Slope
+   sMsg = "Slope= "
+   sMsg = sMsg & obj.Slope
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,TOC
+   sMsg = "TOC= "
+   sMsg = sMsg & obj.TOC
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,TotalProjectedArea
+   sMsg = "TotalProjectedArea= "
+   sMsg = sMsg & obj.TotalProjectedArea
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,TotalSurface
+   sMsg = "TotalSurface= "
+   sMsg = sMsg & obj.TotalSurface
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,TotalVolume
+   sMsg = "TotalVolume= "
+   sMsg = sMsg & obj.TotalVolume
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,weight
+   sMsg = "weight= "
+   sMsg = sMsg & obj.Weight
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputISPSSlabProperties = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,ISPSSlabEntity
+Public Function outputISPSSlabEntity(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As ISPSSlabEntity
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputISPSSlabEntity = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Boundaries As ISPSSlabBoundaries
+   sMsg = "*Boundaries"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.Boundaries
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,CompositionType As Unknown
+   sMsg = "*CompositionType"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.CompositionType
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GeneralType As Unknown
+   sMsg = "*GeneralType"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GeneralType
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputISPSSlabEntity = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJEquipment
+Public Function outputIJEquipment(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJEquipment
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJEquipment = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Description
+   sMsg = "Description= "
+   sMsg = sMsg & obj.Description
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetMatrix,fun,M
+   sMsg = ""
+   Call obj.GetMatrix(M1)
+   sMsg = "GetMatrix= " & "( " & outputIJDT4x4(M1) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetPosition,fun,ddd
+   sMsg = ""
+   Call obj.GetPosition(d1, d2, d3)
+   sMsg = "GetPosition= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,SetMatrix,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "SetMatrix=... [ ]")
+'#Property,SetPosition,comment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "SetPosition=... [ ]")
+     
+  outputIJEquipment = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJAssembly
+Public Function outputIJAssembly(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJAssembly
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJAssembly = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,AddChild,comment,(pChild As IJAssemblyChild)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "AddChild=... [ (pChild As IJAssemblyChild)]")
+'#Property,countChildren
+   sMsg = "countChildren= "
+   sMsg = sMsg & obj.CountChildren
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,CountSubAssemblies
+   sMsg = "CountSubAssemblies= "
+   sMsg = sMsg & obj.CountSubAssemblies
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetChildren() As IJDTargetObjectCol
+   sMsg = "*GetChildren()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetChildren()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,InsertChild,comment,(Child As IJAssemblyChild, index As Long)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "InsertChild=... [ (Child As IJAssemblyChild, index As Long)]")
+'#Property,ProcessAssignment,comment,As IJProcessAssignment
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "ProcessAssignment=... [ As IJProcessAssignment]")
+'#Property,RemoveChild,comment,(pChild As IJAssemblyChild)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "RemoveChild=... [ (pChild As IJAssemblyChild)]")
+     
+  outputIJAssembly = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJStructGraphConnectable
+Public Function outputIJStructGraphConnectable(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJStructGraphConnectable
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJStructGraphConnectable = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#special
+  Dim vOperation As Variant
+'#endspecial
+'#Property,FindPortsByMonikerId,fun,o"PortCenterline, -1, -1, 512, -1, CurrentGeometry, vOperation"
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.FindPortsByMonikerId(o1, PortCenterline, -1, -1, 512, -1, CurrentGeometry, vOperation)
+   sMsg = "FindPortsByMonikerId= " & "( " & "Par1" & ", " & "PortCenterline, -1, -1, 512, -1, CurrentGeometry, vOperation" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,FindPortsByMonikerId,fun,o"PortEdge, -1, -1, 512, -1, CurrentGeometry, vOperation"
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.FindPortsByMonikerId(o1, PortEdge, -1, -1, 512, -1, CurrentGeometry, vOperation)
+   sMsg = "FindPortsByMonikerId= " & "( " & "Par1" & ", " & "PortEdge, -1, -1, 512, -1, CurrentGeometry, vOperation" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,FindPortsByMonikerId,fun,o"PortFace, -1, -1, 512, -1, CurrentGeometry, vOperation"
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.FindPortsByMonikerId(o1, PortFace, -1, -1, 512, -1, CurrentGeometry, vOperation)
+   sMsg = "FindPortsByMonikerId= " & "( " & "Par1" & ", " & "PortFace, -1, -1, 512, -1, CurrentGeometry, vOperation" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,FindPortsByMonikerId,fun,o"PortEnd , -1, -1, 512, -1, CurrentGeometry, vOperation"
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.FindPortsByMonikerId(o1, PortEnd, -1, -1, 512, -1, CurrentGeometry, vOperation)
+   sMsg = "FindPortsByMonikerId= " & "( " & "Par1" & ", " & "PortEnd , -1, -1, 512, -1, CurrentGeometry, vOperation" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,FindPortsByMonikerId,fun,o"PortFace, -1, -1, 512, -1, CurrentGeometry, vOperation"
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.FindPortsByMonikerId(o1, PortFace, -1, -1, 512, -1, CurrentGeometry, vOperation)
+   sMsg = "FindPortsByMonikerId= " & "( " & "Par1" & ", " & "PortFace, -1, -1, 512, -1, CurrentGeometry, vOperation" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,FindPortsByMonikerId,fun,o"PortNozzle , -1, -1, 512, -1, CurrentGeometry, vOperation"
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.FindPortsByMonikerId(o1, PortNozzle, -1, -1, 512, -1, CurrentGeometry, vOperation)
+   sMsg = "FindPortsByMonikerId= " & "( " & "Par1" & ", " & "PortNozzle , -1, -1, 512, -1, CurrentGeometry, vOperation" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,
+     
+  outputIJStructGraphConnectable = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+'#function,IJAppConnection
+Public Function outputIJAppConnection(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJAppConnection
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJAppConnection = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property, findPort,comment,(pObject As IJConnectable, ppPort As IJPort)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , " findPort=... [ (pObject As IJConnectable, ppPort As IJPort)]")
+'#Property, findPort,fun,oo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Call obj.findPort(o1, o2)
+   sMsg = " findPort= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+     
+  outputIJAppConnection = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJConnectable
+Public Function outputIJConnectable(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJConnectable
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJConnectable = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,enumConnectablePorts,comment,(ppEnumPorts As IJElements, [filterType As PortType = PortEdge])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "enumConnectablePorts=... [ (ppEnumPorts As IJElements, [filterType As PortType = PortEdge])]")
+'#Property,enumConnectablePorts,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.enumConnectablePorts(o1)
+   sMsg = "enumConnectablePorts= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,enumConnectedPorts,comment,(ppEnumPorts As IJElements, [filterType As PortType = PortEdge])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "enumConnectedPorts=... [ (ppEnumPorts As IJElements, [filterType As PortType = PortEdge])]")
+'#Property,enumConnectablePorts,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.enumConnectablePorts(o1)
+   sMsg = "enumConnectablePorts= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,enumPorts,comment,(ppEnumPorts As IJElements, [filterType As PortType = PortEdge])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "enumPorts=... [ (ppEnumPorts As IJElements, [filterType As PortType = PortEdge])]")
+'#Property,enumPorts,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.enumPorts(o1)
+   sMsg = "enumPorts= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,isConnectedTo,comment,(pObject As IJConnectable, pFlag As Boolean, ppEnumConnections As IJElements)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "isConnectedTo=... [ (pObject As IJConnectable, pFlag As Boolean, ppEnumConnections As IJElements)]")
+'#Property,isConnectedTo,fun,obo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o3 = Nothing
+   Call obj.isConnectedTo(o1, b2, o3)
+   sMsg = "isConnectedTo= " & "( " & "Par1" & ", " & b2 & ", " & "Par3" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par3")
+   Set Node3.Tag = o3
+     
+  outputIJConnectable = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJKeyPoint
+Public Function outputIJKeyPoint(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJKeyPoint
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJKeyPoint = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetKeyPoint,comment,(nIndex As Long, x As Double, y As Double, z As Double, KeyPointType As KeyPointType, HandleType As HandleType)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetKeyPoint=... [ (nIndex As Long, x As Double, y As Double, z As Double, KeyPointType As KeyPointType, HandleType As HandleType)]")
+'#Property,GetKeyPoint,fun,"1,"dddll
+   sMsg = ""
+   Call obj.GetKeyPoint(1, d5, d6, d7, l8, l9)
+   sMsg = "GetKeyPoint= " & "( " & "1," & ", " & sDouble(d5) & ", " & sDouble(d6) & ", " & sDouble(d7) & ", " & l8 & ", " & l9 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,KeyPointCount
+   sMsg = "KeyPointCount= "
+   sMsg = sMsg & obj.KeyPointCount
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJKeyPoint = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJHgrInputObjectInfo
+Public Function outputIJHgrInputObjectInfo(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrInputObjectInfo
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrInputObjectInfo = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetAttributeByRule,comment,(RuleName As String, [pInputContext As Object]) As Variant()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetAttributeByRule=... [ (RuleName As String, [pInputContext As Object]) As Variant()]")
+'#Property,GetCommandType
+   sMsg = "GetCommandType= "
+   sMsg = sMsg & obj.GetCommandType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetInsulationData,comment,(index As Long, lInsulationPurpose As Long, lInsulationMaterial As Long, dInsulationThickness As Double, pbIsInsulated As Boolean)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "GetInsulationData=... [ (index As Long, lInsulationPurpose As Long, lInsulationMaterial As Long, dInsulationThickness As Double, pbIsInsulated As Boolean)]")
+'#Property,GetInsulationData,fun,llldb
+   sMsg = ""
+   Call obj.GetInsulationData(l1, l2, l3, d4, b5)
+   sMsg = "GetInsulationData= " & "( " & l1 & ", " & l2 & ", " & l3 & ", " & sDouble(d4) & ", " & b5 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetSupportDefinition() As Object
+   sMsg = "*GetSupportDefinition()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSupportDefinition()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetSupportedObjectPorts() As Object
+   sMsg = "*GetSupportedObjectPorts()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSupportedObjectPorts()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetSupportedObjects() As Object
+   sMsg = "*GetSupportedObjects()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSupportedObjects()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetSupportingObjectPorts() As Object
+   sMsg = "*GetSupportingObjectPorts()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSupportingObjectPorts()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetSupportingObjects() As Object
+   sMsg = "*GetSupportingObjects()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetSupportingObjects()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetTargetPoint() As IJDPosition
+   sMsg = "*GetTargetPoint()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetTargetPoint()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+     
+  outputIJHgrInputObjectInfo = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+'#function,IJHgrInputConfigHlpr
+Public Function outputIJHgrInputConfigHlpr(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJHgrInputConfigHlpr
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJHgrInputConfigHlpr = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Sub AddAttribute(pAttribInfo As IJDAttributeInfo)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub AddAttribute(pAttribInfo As IJDAttributeInfo)")
+'#Property,Function CalculateGenericReferencePorts(pEnumUnk_SupportPositions As IEnumUnknown, pEnumUnk_SupportingPorts As IEnumUnknown, pEnumUnk_SupportedPorts As IEnumUnknown) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function CalculateGenericReferencePorts(pEnumUnk_SupportPositions As IEnumUnknown, pEnumUnk_SupportingPorts As IEnumUnknown, pEnumUnk_SupportedPorts As IEnumUnknown) As Object")
+'#Property,Function CalculateGenericRefPortsCollection() As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function CalculateGenericRefPortsCollection() As Object")
+'#Property,Function CreateNote(NoteName As String) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function CreateNote(NoteName As String) As Object")
+'#Property,Sub CreatePhysicalConnection(PartIndex_A As Long, PortName_A As String, PartIndex_B As Long, PortName_B As String, [ConnectionValue As Long = -1])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub CreatePhysicalConnection(PartIndex_A As Long, PortName_A As String, PartIndex_B As Long, PortName_B As String, [ConnectionValue As Long = -1])")
+'#Property,Function DeleteNote(NoteName As String) As Boolean
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function DeleteNote(NoteName As String) As Boolean")
+'#Property,Sub GetAttribute(bstrAttribName As String, ppOutAttribute As IJDAttribute)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetAttribute(bstrAttribName As String, ppOutAttribute As IJDAttribute)")
+'#Property,Sub GetAttributeValue(bstrAttribName As String, [pInputContext As Object], varAttribValue)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetAttributeValue(bstrAttribName As String, [pInputContext As Object], varAttribValue)")
+'#Property,Sub GetBendRadiusAndCenterOfRotation(pDispTurnFeature As Object, dBendRadius As Double, dCoRX As Double, dCoRY As Double, dCoRZ As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetBendRadiusAndCenterOfRotation(pDispTurnFeature As Object, dBendRadius As Double, dCoRX As Double, dCoRY As Double, dCoRZ As Double)")
+'#Property,Function GetBoundingBoxInfo(bstrBBName As String) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetBoundingBoxInfo(bstrBBName As String) As Object")
+'#Property,GetCableTray,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetCableTray(o1)
+   sMsg = "GetCableTray= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,Function GetDataByRule(RuleName As String, [pInputContext As Object]) As Variant()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetDataByRule(RuleName As String, [pInputContext As Object]) As Variant()")
+'#Property,Sub GetDistanceBetweenPortCurves([eDistanceType As HgrPortDistanceType], dblMinDistance As Double, dblMaxDistance As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetDistanceBetweenPortCurves([eDistanceType As HgrPortDistanceType], dblMinDistance As Double, dblMaxDistance As Double)")
+'#Property,Function GetDistanceBetweenPorts(strFirstPortName As String, strSecondPortName As String, [eDistanceType As HgrPortDistanceType]) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetDistanceBetweenPorts(strFirstPortName As String, strSecondPortName As String, [eDistanceType As HgrPortDistanceType]) As Double")
+'#Property,GetDucts,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetDucts(o1)
+   sMsg = "GetDucts= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,Function GetErrorDescription(lErrorCode As Long) As String
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetErrorDescription(lErrorCode As Long) As String")
+'#Property,Function GetExternalPipeDiameter(pDisp_IJPort_Pipe As Object) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetExternalPipeDiameter(pDisp_IJPort_Pipe As Object) As Double")
+'#Property,GetHgrSupStatus,fun,l
+   sMsg = ""
+   Call obj.GetHgrSupStatus(l1)
+   sMsg = "GetHgrSupStatus= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function GetJointSet(pSupportedColl As Object, pSupportingColl As Object, pPartOccColl As Object, pInputPartColl As Object, AssmInfoRule As String, [JointParamColl As Object]) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetJointSet(pSupportedColl As Object, pSupportingColl As Object, pPartOccColl As Object, pInputPartColl As Object, AssmInfoRule As String, [JointParamColl As Object]) As Object")
+'#Property,Function GetMinimumDistanceBetweenPorts(pDisp_Pipe As Object, pDisp_Struct As Object) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetMinimumDistanceBetweenPorts(pDisp_Pipe As Object, pDisp_Struct As Object) As Double")
+'#Property,Function GetPartFromClass(strPartClassIID As String) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPartFromClass(strPartClassIID As String) As Object")
+'#Property,Sub GetPartIndexes(pEnumUnkInpPartColl As IEnumUnknown, bstrInpPartName As String, pSAPartIndexes() As Long, bPartFound As Boolean)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetPartIndexes(pEnumUnkInpPartColl As IEnumUnknown, bstrInpPartName As String, pSAPartIndexes() As Long, bPartFound As Boolean)")
+'#Property,Function GetPartProxyFromName(strObjectName As String, [strSelectionRule As String]) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPartProxyFromName(strObjectName As String, [strSelectionRule As String]) As Object")
+'#Property,Function GetPipeDiameter(pDisp_IJPort_Pipe As Object, pstrUnitType As String) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPipeDiameter(pDisp_IJPort_Pipe As Object, pstrUnitType As String) As Double")
+'#Property,Function GetPipeRelativeCenter(pDispTurnFeat As Object, [strObjectName As String]) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPipeRelativeCenter(pDispTurnFeat As Object, [strObjectName As String]) As Object")
+'#Property,GetPipes,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetPipes(o1)
+   sMsg = "GetPipes= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,GetPoint,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetPoint(o1)
+   sMsg = "GetPoint= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,GetPortConfiguration
+   sMsg = "GetPortConfiguration= "
+   sMsg = sMsg & obj.GetPortConfiguration
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function GetPortOrientAngle([eOrientType As HgrPortOrientType], strFirstPortName As String, eFirstAxis As HgrPortAixsType, [strSecondPortName As String], [eSecondAxis As HgrPortAixsType]) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPortOrientAngle([eOrientType As HgrPortOrientType], strFirstPortName As String, eFirstAxis As HgrPortAixsType, [strSecondPortName As String], [eSecondAxis As HgrPortAixsType]) As Double")
+'#Property,Function GetPortServiceObject(lStructureIndex As Long) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPortServiceObject(lStructureIndex As Long) As Object")
+'#Property,Function GetPropertyFromSupporting(strPropertyName As String, [pDispSupportingPort As Object])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPropertyFromSupporting(strPropertyName As String, [pDispSupportingPort As Object])")
+'#Property,Function GetReferenceInput(index As Long)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetReferenceInput(index As Long)")
+'#Property,GetRefPorts As Object
+   sMsg = "*GetRefPorts"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetRefPorts
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetRouteConnectionValue
+   sMsg = "GetRouteConnectionValue= "
+   sMsg = sMsg & obj.GetRouteConnectionValue
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function GetRouteStructAngle(pdispRoute As Object, pDispStruct As Object) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetRouteStructAngle(pdispRoute As Object, pDispStruct As Object) As Double")
+'#Property,Function GetRouteStructConfigAngle(RoutePortName As String, StructPortName As String, eAxis As HgrPortAixsType) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetRouteStructConfigAngle(RoutePortName As String, StructPortName As String, eAxis As HgrPortAixsType) As Double")
+'#Property,Function GetRouteStructDistByType(enumDistType As HgrRouteStructDistType, LegOffset As Double) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetRouteStructDistByType(enumDistType As HgrRouteStructDistType, LegOffset As Double) As Double")
+'#Property,Sub GetRteCrossSectParams(pDispRtePathFeat As Object, eShapeType As CrossSectionShapeTypes, pstrUnitType As String, pRadius As Double, pWidth As Double, pDepth As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetRteCrossSectParams(pDispRtePathFeat As Object, eShapeType As CrossSectionShapeTypes, pstrUnitType As String, pRadius As Double, pWidth As Double, pDepth As Double)")
+'#Property,Sub GetRteOrientationAngle(pDispRtePathFeat As Object, pAngle As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetRteOrientationAngle(pDispRtePathFeat As Object, pAngle As Double)")
+'#Property,Function GetRteSpec(pRteObject As Object) As String
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetRteSpec(pRteObject As Object) As String")
+'#Property,Function Function GetRteSpecVersion(pRteObject As Object) As String
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function Function GetRteSpecVersion(pRteObject As Object) As String")
+'#Property,GetStructure,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetStructure(o1)
+   sMsg = "GetStructure= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,Function GetStructureShape(pDispStruct As Object) As HgrPortShape
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetStructureShape(pDispStruct As Object) As HgrPortShape")
+'#Property,GetSupportedCollection,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetSupportedCollection(o1)
+   sMsg = "GetSupportedCollection= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,GetSupportingCollection,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetSupportingCollection(o1)
+   sMsg = "GetSupportingCollection= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,Function GetSupportingProperty(bstrPropName As String, index As Long) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetSupportingProperty(bstrPropName As String, index As Long) As Double")
+'#Property,Function GetSupportingShape(pDispSupporting As Object) As HgrPortShape
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetSupportingShape(pDispSupporting As Object) As HgrPortShape")
+'#Property,Function GetSymbolReference(pDispPart As Object) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetSymbolReference(pDispPart As Object) As Object")
+'#Property,Sub GetTurnFeatProperties([pDispTurnFeat As Object], FaceToCenter As Double, BendRadius As Double, BendAngle As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetTurnFeatProperties([pDispTurnFeat As Object], FaceToCenter As Double, BendRadius As Double, BendAngle As Double)")
+'#Property,Sub HgrLogError(lErrorCode As Long)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub HgrLogError(lErrorCode As Long)")
+'#Property,IsModificationFromOutSide
+   sMsg = "IsModificationFromOutSide= "
+   sMsg = sMsg & obj.IsModificationFromOutSide
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsPlaceByStructure
+   sMsg = "IsPlaceByStructure= "
+   sMsg = sMsg & obj.IsPlaceByStructure
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsPlacement
+   sMsg = "IsPlacement= "
+   sMsg = sMsg & obj.IsPlacement
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function PrimaryPipeDiameter(pstrUnitType As String) As Double
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function PrimaryPipeDiameter(pstrUnitType As String) As Double")
+'#Property,Sub ResetReferenceInput()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub ResetReferenceInput()")
+'#Property,RouteIndex
+   sMsg = "RouteIndex= "
+   sMsg = sMsg & obj.RouteIndex
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,RouteStructDistance
+   sMsg = "RouteStructDistance= "
+   sMsg = sMsg & obj.RouteStructDistance
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub SetAttributeValue(bstrAttribName As String, [pInputContext As Object], varAttribValue)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub SetAttributeValue(bstrAttribName As String, [pInputContext As Object], varAttribValue)")
+'#Property,...,comment,...
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "...=... [ ...]")
+'#Property,Property SupportedParts(index As Long) As Object
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Property SupportedParts(index As Long) As Object")
+'#Property,Property SupportedPartsCount(index As Long) As Long
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Property SupportedPartsCount(index As Long) As Long")
+'#Property,Property SupportedSectionOrientation(index As Long) As HgrEnumSectionSide
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Property SupportedSectionOrientation(index As Long) As HgrEnumSectionSide")
+     
+  outputIJHgrInputConfigHlpr = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJRteConduitRun
+Public Function outputIJRteConduitRun(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteConduitRun
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteConduitRun = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GetDefaultBendRadius
+   sMsg = "GetDefaultBendRadius= "
+   sMsg = sMsg & obj.GetDefaultBendRadius
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetNominalDiameter,fun,s
+   sMsg = ""
+   Call obj.GetNominalDiameter(s1)
+   sMsg = "GetNominalDiameter= " & "( " & s1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetTrueOD
+   sMsg = "GetTrueOD= "
+   sMsg = sMsg & obj.GetTrueOD
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetUsedSpec() As IJConduitSpec
+   sMsg = "*GetUsedSpec()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetUsedSpec()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,Ncd
+   sMsg = "Ncd= "
+   sMsg = sMsg & obj.Ncd
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,NcdUnitType
+   sMsg = "NcdUnitType= "
+   sMsg = sMsg & obj.NcdUnitType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,PutUsedSpec,comment,(pNewSpec As IJConduitSpec)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "PutUsedSpec=... [ (pNewSpec As IJConduitSpec)]")
+'#Property,SetNominalDiameter,comment,(dNomDiaSize As Double, strNomDiaType As String)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "SetNominalDiameter=... [ (dNomDiaSize As Double, strNomDiaType As String)]")
+     
+  outputIJRteConduitRun = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+
+'#function,IJPlane
+Public Function outputIJPlane(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJPlane
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJPlane = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,BoundaryCount
+   sMsg = "BoundaryCount= "
+   sMsg = sMsg & obj.BoundaryCount
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetBoundaries,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetBoundaries(o1)
+   sMsg = "GetBoundaries= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,GetNormal,fun,ddd
+   sMsg = ""
+   Call obj.GetNormal(d1, d2, d3)
+   sMsg = "GetNormal= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetRootPoint,fun,ddd
+   sMsg = ""
+   Call obj.GetRootPoint(d1, d2, d3)
+   sMsg = "GetRootPoint= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetUDirection,fun,ddd
+   sMsg = ""
+   Call obj.GetUDirection(d1, d2, d3)
+   sMsg = "GetUDirection= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetVDirection,fun,ddd
+   sMsg = ""
+   Call obj.GetVDirection(d1, d2, d3)
+   sMsg = "GetVDirection= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Reversed
+   sMsg = "Reversed= "
+   sMsg = sMsg & obj.Reversed
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJPlane = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+
+'#function,IJComplexString
+Public Function outputIJComplexString(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJComplexString
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJComplexString = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,CurveCount
+   sMsg = "CurveCount= "
+   sMsg = sMsg & obj.CurveCount
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetCurves,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetCurves(o1)
+   sMsg = "GetCurves= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+     
+  outputIJComplexString = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+
+'#function,IJDAttributes
+Public Function outputIJDAttributes(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDAttributes
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDAttributes = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Property CollectionOfAttributes(InterfaceType) As IJDAttributesCol
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Property CollectionOfAttributes(InterfaceType) As IJDAttributesCol")
+'#Property,Count
+   sMsg = "Count= "
+   sMsg = sMsg & obj.Count
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Property IsInterfacePublic(InterfacePublic) As Boolean
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Property IsInterfacePublic(InterfacePublic) As Boolean")
+     
+  outputIJDAttributes = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJFoulCheck
+Public Function outputIJFoulCheck(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJFoulCheck
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJFoulCheck = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#special
+'#Property,GetConnectedParts,fun,o
+   sMsg = ""
+   Set o1 = New JObjectCollection ' This is specific
+   Call obj.GetConnectedParts(o1)
+   sMsg = "GetConnectedParts= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set o1 = Nothing ' this is specific
+'#endspecial
+'#Property,GetFoulInterfaceType,fun,l
+   sMsg = ""
+   Call obj.GetFoulInterfaceType(l1)
+   sMsg = "GetFoulInterfaceType= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJFoulCheck = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJRteCableRouter
+Public Function outputIJRteCableRouter(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCableRouter
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCableRouter = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Sub ConfigureOutOfNetworkLeg(pUnkEntryExitFeat As Unknown)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub ConfigureOutOfNetworkLeg(pUnkEntryExitFeat As Unknown)")
+'#Property,Sub GetRouteLengths(dLength As Double, dSt1Length As Double, dSt2Length As Double, dTail1Length As Double, dTail2Length As Double, dCutLength As Double, dSpareLength As Double)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetRouteLengths(dLength As Double, dSt1Length As Double, dSt2Length As Double, dTail1Length As Double, dTail2Length As Double, dCutLength As Double, dSpareLength As Double)")
+'#Property,GetRouteLengths,fun,ddddddd
+   sMsg = ""
+   Call obj.GetRouteLengths(d1, d2, d3, d4, d5, d6, d7)
+   sMsg = "GetRouteLengths= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ", " & sDouble(d7) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsPathValid
+   sMsg = "IsPathValid= "
+   sMsg = sMsg & obj.IsPathValid
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsRouted
+   sMsg = "IsRouted= "
+   sMsg = sMsg & obj.IsRouted
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function IsRouteSame(pRteCableRun As IJRtePathRun) As Boolean
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function IsRouteSame(pRteCableRun As IJRtePathRun) As Boolean")
+'#Property,IsThisBadCable
+   sMsg = "IsThisBadCable= "
+   sMsg = sMsg & obj.IsThisBadCable
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub MergeLegs(pSegmentFeat1 As IJRtePathFeat, pSegmentFeat2 As IJRtePathFeat)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub MergeLegs(pSegmentFeat1 As IJRtePathFeat, pSegmentFeat2 As IJRtePathFeat)")
+'#Property,Function ReportCable(rteType As RteCableReports) As IJDCollection
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function ReportCable(rteType As RteCableReports) As IJDCollection")
+'#special
+    Dim oIJDColl As IJDCollection
+    Dim var As Variant
+    Dim oCableFeat As IJRtePathFeat
+    Dim oCol As IJDObjectCollection
+ 
+    Dim i As Long
+    Set oIJDColl = obj.ReportCable(RTE_FEATURE_REPORT)
+    If Not oIJDColl Is Nothing Then
+    For i = 1 To oIJDColl.Size Step 3
+        var = oIJDColl.Item(i)
+        Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , i & ": Distance from Start:" & var)
+        Set oCableFeat = oIJDColl.Item(i + 1)
+      
+        Call Form.moMyObject.ShowObject(oCableFeat, Node3)
+        Set oCol = oIJDColl.Item(i + 2)
+  
+        Call Form.moMyObject.ShowObject(oCol, Node3)
+    Next i
+    End If
+'#endspecial
+'#Property,RouteStatus
+   sMsg = "RouteStatus= "
+   sMsg = sMsg & obj.RouteStatus
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function SetViewForCable(pResourceMgr As Unknown, pCableRuns As IJDObjectCollection, ppLowPos As IJDPosition, ppHighPos As IJDPosition) As IJDCollection
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function SetViewForCable(pResourceMgr As Unknown, pCableRuns As IJDObjectCollection, ppLowPos As IJDPosition, ppHighPos As IJDPosition) As IJDCollection")
+'#Property,SpareLength
+   sMsg = "SpareLength= "
+   sMsg = sMsg & obj.SpareLength
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub SplitTheLeg(pSegmentPathFeat As IJRtePathFeat)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub SplitTheLeg(pSegmentPathFeat As IJRtePathFeat)")
+'#Property,Sub SplitTheLegEx(pSegmentPathFeat As IJRtePathFeat)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub SplitTheLegEx(pSegmentPathFeat As IJRtePathFeat)")
+'#Property,Sub SubmitEntryExit(pTrunkPathFeat As IJRtePathFeat, x As Double, y As Double, z As Double, bEntry As Boolean, RteError As RteCableErrors, [nPortIndex As Long])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub SubmitEntryExit(pTrunkPathFeat As IJRtePathFeat, x As Double, y As Double, z As Double, bEntry As Boolean, RteError As RteCableErrors, [nPortIndex As Long])")
+'#Property,Sub SubmitPathToRoute(pTrunkPathFeat As IJRtePathFeat, x As Double, y As Double, z As Double, RteError As RteCableErrors, [bAutoroute As Boolean = False])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub SubmitPathToRoute(pTrunkPathFeat As IJRtePathFeat, x As Double, y As Double, z As Double, RteError As RteCableErrors, [bAutoroute As Boolean = False])")
+     
+  outputIJRteCableRouter = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJRteCableTrayDistribConnection
+Public Function outputIJRteCableTrayDistribConnection(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRteCableTrayDistribConnection
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRteCableTrayDistribConnection = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,GapWidth
+   sMsg = "GapWidth= "
+   sMsg = sMsg & obj.GapWidth
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJRteCableTrayDistribConnection = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+'#function,IJDistribPort
+Public Function outputIJDistribPort(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJDistribPort
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJDistribPort = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,DistribPortStatus
+   sMsg = "DistribPortStatus= "
+   sMsg = sMsg & obj.DistribPortStatus
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,DistribPortType
+   sMsg = "DistribPortType= "
+   sMsg = sMsg & obj.DistribPortType
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetCollectionOfConnectionMonikers() As IJDObjectCollection
+   sMsg = "*GetCollectionOfConnectionMonikers()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetCollectionOfConnectionMonikers()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetConnection() As IJDistribConnection
+   sMsg = "*GetConnection()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnection()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetConnPartOccurs() As IJElements
+   sMsg = "*GetConnPartOccurs()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnPartOccurs()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetConnPorts() As IJElements
+   sMsg = "*GetConnPorts()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetConnPorts()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetDirectionVector() As IJDVector
+   sMsg = "*GetDirectionVector()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetDirectionVector()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetDirectionVectorXYZ,fun,ddd
+   sMsg = ""
+   Call obj.GetDirectionVectorXYZ(d1, d2, d3)
+   sMsg = "GetDirectionVectorXYZ= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetFlowDir,fun,l
+   sMsg = ""
+   Call obj.GetFlowDir(l1)
+   sMsg = "GetFlowDir= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetInternalID,fun,s
+   sMsg = ""
+   Call obj.GetInternalID(s1)
+   sMsg = "GetInternalID= " & "( " & s1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetLabel()
+   sMsg = "GetLabel()= "
+   sMsg = sMsg & obj.GetLabel()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOrientation,fun,oo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Call obj.GetOrientation(o1, o2)
+   sMsg = "GetOrientation= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,GetOrientationXYZ,fun,dddddd
+   sMsg = ""
+   Call obj.GetOrientationXYZ(d1, d2, d3, d4, d5, d6)
+   sMsg = "GetOrientationXYZ= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ", " & sDouble(d4) & ", " & sDouble(d5) & ", " & sDouble(d6) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetParentConnection() As IJDistribConnection
+   sMsg = "*GetParentConnection()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetParentConnection()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPartOccur() As IJDistribPartOccur
+   sMsg = "*GetPartOccur()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPartOccur()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPortLocation() As IJDPosition
+   sMsg = "*GetPortLocation()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetPortLocation()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetPortLocationXYZ,fun,ddd
+   sMsg = ""
+   Call obj.GetPortLocationXYZ(d1, d2, d3)
+   sMsg = "GetPortLocationXYZ= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetRadialOrient() As IJDVector
+   sMsg = "*GetRadialOrient()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetRadialOrient()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetRadialOrientXYZ,fun,ddd
+   sMsg = ""
+   Call obj.GetRadialOrientXYZ(d1, d2, d3)
+   sMsg = "GetRadialOrientXYZ= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsBasePort,fun,l
+   sMsg = ""
+   Call obj.IsBasePort(l1)
+   sMsg = "IsBasePort= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsConnected,fun,l
+   sMsg = ""
+   Call obj.IsConnected(l1)
+   sMsg = "IsConnected= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IsFreePort,fun,l
+   sMsg = ""
+   Call obj.IsFreePort(l1)
+   sMsg = "IsFreePort= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+     
+  outputIJDistribPort = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,IJRtePathFeatUtility
+Public Function outputIJRtePathFeatUtility(Form As frmShowElement, Node1 As Node, o As Object) As Long
+Dim obj As IJRtePathFeatUtility
+Dim Node2 As MSComctlLib.Node
+Dim Node3 As MSComctlLib.Node
+Dim sMsg As String
+  outputIJRtePathFeatUtility = -1
+  On Error GoTo Handler
+  Set obj = o
+  If obj Is Nothing Then Exit Function
+'#Property,Sub AreFeaturesConnected(pFeat2 As IJRtePathFeat, pvbFeaturesAreConnected As Boolean)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub AreFeaturesConnected(pFeat2 As IJRtePathFeat, pvbFeaturesAreConnected As Boolean)")
+'#Property,Function AreInlineFeaturesConnected(pOtherFeat As IJRtePathFeat, ppFeat1Port As IJDistribPort, ppFeat2Port As IJDistribPort) As Boolean
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function AreInlineFeaturesConnected(pOtherFeat As IJRtePathFeat, ppFeat1Port As IJDistribPort, ppFeat2Port As IJDistribPort) As Boolean")
+'#Property,DoesFeatureHaveCS,fun,b
+   sMsg = ""
+   Call obj.DoesFeatureHaveCS(b1)
+   sMsg = "DoesFeatureHaveCS= " & "( " & b1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,DoesFeatureHaveSpecialBasePart
+   sMsg = "DoesFeatureHaveSpecialBasePart= "
+   sMsg = sMsg & obj.DoesFeatureHaveSpecialBasePart
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetAdjacentFeatures,fun,oo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Call obj.GetAdjacentFeatures(o1, o2)
+   sMsg = "GetAdjacentFeatures= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,Function GetAdjacentFeatureStartEndSideOnTurn(pAdjacentFeat As IJRtePathFeat, BaseFeatureLeg As IJRtePathLeg) As ePathFeatureSide
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetAdjacentFeatureStartEndSideOnTurn(pAdjacentFeat As IJRtePathFeat, BaseFeatureLeg As IJRtePathLeg) As ePathFeatureSide")
+'#Property,Sub GetAdjacentFeaturesTypesAndRuns(ppPreviousFeature As IJRtePathFeat, PreviousFeatureType As PathFeatureObjectTypes, ppPreviousRun As IJRtePathRun, ppNextFeature As IJRtePathFeat, NextFeatureType As PathFeatureObjectTypes, ppNextRun As IJRtePathRun)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetAdjacentFeaturesTypesAndRuns(ppPreviousFeature As IJRtePathFeat, PreviousFeatureType As PathFeatureObjectTypes, ppPreviousRun As IJRtePathRun, ppNextFeature As IJRtePathFeat, NextFeatureType As PathFeatureObjectTypes, ppNextRun As IJRtePathRun)")
+'#Property,GetAllParts,fun,lo
+   sMsg = ""
+   Set o2 = Nothing
+   Call obj.GetAllParts(l1, o2)
+   sMsg = "GetAllParts= " & "( " & l1 & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,GetBasePartIndices,fun,ll
+   sMsg = ""
+   Call obj.GetBasePartIndices(l1, l2)
+   sMsg = "GetBasePartIndices= " & "( " & l1 & ", " & l2 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetBranchsAlongsBasePart,fun,oo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Call obj.GetBranchsAlongsBasePart(o1, o2)
+   sMsg = "GetBranchsAlongsBasePart= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,Function GetConnectionPosition(ConnectionDirection As eConnectionDirection, pLegWeAreOn As IJRtePathLeg) As IJDPosition
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetConnectionPosition(ConnectionDirection As eConnectionDirection, pLegWeAreOn As IJRtePathLeg) As IJDPosition")
+'#Property,GetEndsConnections,fun,oo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Call obj.GetEndsConnections(o1, o2)
+   sMsg = "GetEndsConnections= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,Sub GetFeaturePortsByType(eType As RteFeatureTerminusPortTypes, ppPortPrevious As IJDistribPort, ppPortNext As IJDistribPort)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetFeaturePortsByType(eType As RteFeatureTerminusPortTypes, ppPortPrevious As IJDistribPort, ppPortNext As IJDistribPort)")
+'#Property,Sub GetFeatureSpec(ppSpec As IJDSpec, pbSpecOverride As Boolean)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetFeatureSpec(ppSpec As IJDSpec, pbSpecOverride As Boolean)")
+'#Property,GetFirstOfflineFeature() As IJRtePathFeat
+   sMsg = "*GetFirstOfflineFeature()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetFirstOfflineFeature()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetFlowDirection´,fun,l
+   sMsg = ""
+   Call obj.GetFlowDirection´(l1)
+   sMsg = "GetFlowDirection´= " & "( " & l1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetIgnoredBaseParts,fun,lo
+   sMsg = ""
+ 
+   Set Node3.Tag = o3
+'#Property,Function GetIgnoredMatingParts(bBefore As Long, pCount As Long) As IJElements
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetIgnoredMatingParts(bBefore As Long, pCount As Long) As IJElements")
+'#Property,GetIgnoredParts,fun,lo
+   sMsg = ""
+   Set o2 = Nothing
+   Call obj.GetIgnoredParts(l1, o2)
+   sMsg = "GetIgnoredParts= " & "( " & l1 & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,GetIgnoredParts,fun,lo
+   sMsg = ""
+   Set o2 = Nothing
+   Call obj.GetIgnoredParts(l1, o2)
+   sMsg = "GetIgnoredParts= " & "( " & l1 & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,GetLegDirection,fun,ddd
+   sMsg = ""
+   Call obj.GetLegDirection(d1, d2, d3)
+   sMsg = "GetLegDirection= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub GetLegSharedByFeatures(pOtherFeat As IJRtePathFeat, ppSharedLeg As IJRtePathLeg)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetLegSharedByFeatures(pOtherFeat As IJRtePathFeat, ppSharedLeg As IJRtePathLeg)")
+'#Property,GetLogicalTermPort,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetLogicalTermPort(o1)
+   sMsg = "GetLogicalTermPort= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,GetMinimumStraightLength()
+   sMsg = "GetMinimumStraightLength()= "
+   sMsg = sMsg & obj.GetMinimumStraightLength()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOfflineCount()
+   sMsg = "GetOfflineCount()= "
+   sMsg = sMsg & obj.GetOfflineCount()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,GetOfflineLegs() As IJDObjectCollection
+   sMsg = "*GetOfflineLegs()"
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild)
+   Set o1 = Nothing
+   Set o1 = obj.GetOfflineLegs()
+   Set Node2.Tag = o1
+   Node2.Text = sMsg
+'#Property,GetOfflinePortOfFeature,fun,o
+   sMsg = ""
+   Set o1 = Nothing
+   Call obj.GetOfflinePortOfFeature(o1)
+   sMsg = "GetOfflinePortOfFeature= " & "( " & "Par1" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+'#Property,GetLegDirection,fun,ddd
+   sMsg = ""
+   Call obj.GetLegDirection(d1, d2, d3)
+   sMsg = "GetLegDirection= " & "( " & sDouble(d1) & ", " & sDouble(d2) & ", " & sDouble(d3) & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Function GetPartAtPosition(pPosition As IJDPosition) As IJElements
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetPartAtPosition(pPosition As IJDPosition) As IJElements")
+'#Property,GetRealAdjacentFeatures,fun,oo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o2 = Nothing
+   Call obj.GetRealAdjacentFeatures(o1, o2)
+   sMsg = "GetRealAdjacentFeatures= " & "( " & "Par1" & ", " & "Par2" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par2")
+   Set Node3.Tag = o2
+'#Property,GetRealAdjacentFeaturesTypesAndRuns,fun,oloolo
+   sMsg = ""
+   Set o1 = Nothing
+   Set o3 = Nothing
+   Set o4 = Nothing
+   Set o6 = Nothing
+   Call obj.GetRealAdjacentFeaturesTypesAndRuns(o1, l2, o3, o4, l5, o6)
+   sMsg = "GetRealAdjacentFeaturesTypesAndRuns= " & "( " & "Par1" & ", " & l2 & ", " & "Par3" & ", " & "Par4" & ", " & l5 & ", " & "Par6" & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par1")
+   Set Node3.Tag = o1
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par3")
+   Set Node3.Tag = o3
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par4")
+   Set Node3.Tag = o4
+   Set Node3 = Form.TreeView1.Nodes.Add(Node2, tvwChild, , "*Par6")
+   Set Node3.Tag = o6
+'#Property,Sub GetStartAndEndSideFeatures(ppStartSideFeature As IJRtePathFeat, ppEndSideFeature As IJRtePathFeat)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetStartAndEndSideFeatures(ppStartSideFeature As IJRtePathFeat, ppEndSideFeature As IJRtePathFeat)")
+'#Property,Sub GetStartEndFeatureSide(pFeat2 As IJRtePathFeat, pFeat1Side As ePathFeatureSide, pFeat2Side As ePathFeatureSide)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetStartEndFeatureSide(pFeat2 As IJRtePathFeat, pFeat1Side As ePathFeatureSide, pFeat2Side As ePathFeatureSide)")
+'#Property,Function GetTerminusPortOfFeature(eFeatSide As ePathFeatureSide) As IJDistribPort
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Function GetTerminusPortOfFeature(eFeatSide As ePathFeatureSide) As IJDistribPort")
+'#Property,Sub GetTopologicallyAdjacentFeatures(ppPrevFeature As IJRtePathFeat, ppNextFeature As IJRtePathFeat)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub GetTopologicallyAdjacentFeatures(ppPrevFeature As IJRtePathFeat, ppNextFeature As IJRtePathFeat)")
+'#Property,GetTrueOD()
+   sMsg = "GetTrueOD()= "
+   sMsg = sMsg & obj.GetTrueOD()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,IgnoreBaseParts,fun,b
+   sMsg = ""
+   Call obj.IgnoreBaseParts(b1)
+   sMsg = "IgnoreBaseParts= " & "( " & b1 & ")" & sMsg
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub IgnoreMatingParts(bBefore As Long, bIgnoreBaseParts As Boolean)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub IgnoreMatingParts(bBefore As Long, bIgnoreBaseParts As Boolean)")
+'#Property,IsAdjacentAStraight()
+   sMsg = "IsAdjacentAStraight()= "
+   sMsg = sMsg & obj.IsAdjacentAStraight()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub IsFeatureWithCabletray(bIsCableTray As Boolean, [ppCableTrayPart As IJDPart])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub IsFeatureWithCabletray(bIsCableTray As Boolean, [ppCableTrayPart As IJDPart])")
+'#Property IsStraightParallelTransition()
+'#Property,IsZeroLengthStraight()
+   sMsg = "IsZeroLengthStraight()= "
+   sMsg = sMsg & obj.IsZeroLengthStraight()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , sMsg)
+'#Property,Sub ResetConnection(pPOM As Unknown, pFromPort As IJDistribPort, pToPort As IJDistribPort, pGenPart As IJRtePathGenPart, [pNewRun As IJRtePathRun])
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub ResetConnection(pPOM As Unknown, pFromPort As IJDistribPort, pToPort As IJDistribPort, pGenPart As IJRtePathGenPart, [pNewRun As IJRtePathRun])")
+'#Property,Sub ReverseBasePartsOrder()
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub ReverseBasePartsOrder()")
+'#Property,Sub TraverseToAdjacentFeatWithParts(pFirstAdjFeat As IJRtePathFeat, ppAdjFeatWithParts As IJRtePathFeat, ppAdjAdjFeat As IJRtePathFeat, ppPartsList As IJElements, pListCount As Long)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub TraverseToAdjacentFeatWithParts(pFirstAdjFeat As IJRtePathFeat, ppAdjFeatWithParts As IJRtePathFeat, ppAdjAdjFeat As IJRtePathFeat, ppPartsList As IJElements, pListCount As Long)")
+'#Property,Sub TraverseToNonRunChangeFeature(pFirstAdjFeat As IJRtePathFeat, doOneStep As Long, ppRun As IJRtePathRun)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub TraverseToNonRunChangeFeature(pFirstAdjFeat As IJRtePathFeat, doOneStep As Long, ppRun As IJRtePathRun)")
+'#Property,Sub TraverseToRunChangeFeature(bDirection As Boolean, ppAdjRunChangeFeat As IJRtePathFeat, ppAdjRunRefFeat As IJRtePathFeat)
+   Set Node2 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Sub TraverseToRunChangeFeature(bDirection As Boolean, ppAdjRunChangeFeat As IJRtePathFeat, ppAdjRunRefFeat As IJRtePathFeat)")
+     
+  outputIJRtePathFeatUtility = 0
+  Exit Function
+Handler:
+  sMsg = sMsg & "[Error: " & Err.Description & "]"
+  Resume Next
+End Function
+'#endfunction
+
+
+
+
+'#function,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#endfunction
+
+
+
+
+'#function,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#endfunction
+
+
+
+
+'#function,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#endfunction
+
+
+
+
+'#function,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#Property,
+'#endfunction
+
+
+
+
+
+Public Sub Publish(colActions As Collection)
+'#colActions
+     colActions.Add Me, "IJRteCableway"
+     colActions.Add Me, "IJRteCableRun"
+     colActions.Add Me, "IJDSpec"
+     colActions.Add Me, "IJRtePathFeat"
+     colActions.Add Me, "IJRtePathRun"
+     colActions.Add Me, "IJRteEndPathFeat"
+     colActions.Add Me, "IJRteStraightPathFeat"
+     colActions.Add Me, "IJRteTurnPathFeat"
+     colActions.Add Me, "IJRteCableEnterExitPathFeat"
+     colActions.Add Me, "IJRteAlongLegPathFeat"
+     colActions.Add Me, "IJRteEntryExitTrunkPathFeat"
+     colActions.Add Me, "IJRteCableOccur"
+     colActions.Add Me, "IJDistribConnection"
+     colActions.Add Me, "IJRtePathLeg"
+     colActions.Add Me, "IJCablePart"
+     colActions.Add Me, "IJRtePathFeatInTrunk"
+     colActions.Add Me, "IJDPipeSpec"
+     colActions.Add Me, "IJLine"
+     colActions.Add Me, "IJRteCablewayPathFeat"
+     colActions.Add Me, "IJSystemChild"
+     colActions.Add Me, "IJDesignChild"
+     colActions.Add Me, "IJDesignParent"
+     colActions.Add Me, "IJAssemblyChild"
+     colActions.Add Me, "IJElements"
+     colActions.Add Me, "IJHgrSupport"
+     colActions.Add Me, "IJAnalysisChild"
+     colActions.Add Me, "ISPSCrossSection"
+     colActions.Add Me, "ISPSAxisRotation"
+     colActions.Add Me, "ISPSMemberPartPrismatic"
+     colActions.Add Me, "ISPSMemberSystem"
+     colActions.Add Me, "IJCurve"
+     colActions.Add Me, "IJDObject"
+     colActions.Add Me, "IJDOutfittingCrossSection"
+     colActions.Add Me, "IJPort"
+     colActions.Add Me, "IJRteCrossSectOccur"
+     colActions.Add Me, "IJPartOcc"
+     colActions.Add Me, "IJDPart"
+     colActions.Add Me, "IJNamedItem"
+     colActions.Add Me, "IJSmartOccurrence"
+     colActions.Add Me, "IJSystem"
+     colActions.Add Me, "IJHgrPart"
+     colActions.Add Me, "IJDSymbol"
+     colActions.Add Me, "IJHgrSupportComponent"
+     colActions.Add Me, "IJHgrBOM"
+     colActions.Add Me, "IJHgrConnComponent"
+     colActions.Add Me, "IJHgrPort"
+     colActions.Add Me, "ISPSSlabsDefinition"
+     colActions.Add Me, "ISPSSlabsComposition"
+     colActions.Add Me, "ISPSSlabProperties"
+     colActions.Add Me, "ISPSSlabEntity"
+     colActions.Add Me, "IJEquipment"
+     colActions.Add Me, "IJAssembly"
+     colActions.Add Me, "IJStructGraphConnectable"
+     colActions.Add Me, "IJAppConnection"
+     colActions.Add Me, "IJConnectable"
+     colActions.Add Me, "IJKeyPoint"
+     colActions.Add Me, "IJHgrInputObjectInfo"
+     colActions.Add Me, "IJHgrInputConfigHlpr"
+     colActions.Add Me, "IJRteConduitRun"
+     colActions.Add Me, "IJPlane"
+     colActions.Add Me, "IJComplexString"
+     colActions.Add Me, "IJDAttributes"
+     colActions.Add Me, "IJFoulCheck"
+     colActions.Add Me, "IJRteCableRouter"
+     colActions.Add Me, "IJRteCableTrayDistribConnection"
+     colActions.Add Me, "IJDistribPort"
+     colActions.Add Me, "IJRtePathFeatUtility"
+'#endcolActions
+End Sub
+Public Sub Display(Form As frmShowElement, Node1 As MSComctlLib.Node, o As Object, sIntName As String)
+    Dim Node0 As Node
+    Set Node0 = Form.TreeView1.Nodes.Add(Node1, tvwChild, , "Interface Specific Output...")
+    
+    Select Case sIntName
+'#case
+     Case "IJRteCableway"
+        Call outputIJRteCableway(Form, Node0, o)
+     Case "IJRteCableRun"
+        Call outputIJRteCableRun(Form, Node0, o)
+     Case "IJDSpec"
+        Call outputIJDSpec(Form, Node0, o)
+     Case "IJRtePathFeat"
+        Call outputIJRtePathFeat(Form, Node0, o)
+     Case "IJRtePathRun"
+        Call outputIJRtePathRun(Form, Node0, o)
+     Case "IJRteEndPathFeat"
+        Call outputIJRteEndPathFeat(Form, Node0, o)
+     Case "IJRteStraightPathFeat"
+        Call outputIJRteStraightPathFeat(Form, Node0, o)
+     Case "IJRteTurnPathFeat"
+        Call outputIJRteTurnPathFeat(Form, Node0, o)
+     Case "IJRteCableEnterExitPathFeat"
+        Call outputIJRteCableEnterExitPathFeat(Form, Node0, o)
+     Case "IJRteAlongLegPathFeat"
+        Call outputIJRteAlongLegPathFeat(Form, Node0, o)
+     Case "IJRteEntryExitTrunkPathFeat"
+        Call outputIJRteEntryExitTrunkPathFeat(Form, Node0, o)
+     Case "IJRteCableOccur"
+        Call outputIJRteCableOccur(Form, Node0, o)
+     Case "IJDistribConnection"
+        Call outputIJDistribConnection(Form, Node0, o)
+     Case "IJRtePathLeg"
+        Call outputIJRtePathLeg(Form, Node0, o)
+     Case "IJCablePart"
+        Call outputIJCablePart(Form, Node0, o)
+     Case "IJRtePathFeatInTrunk"
+        Call outputIJRtePathFeatInTrunk(Form, Node0, o)
+     Case "IJDPipeSpec"
+        Call outputIJDPipeSpec(Form, Node0, o)
+     Case "IJLine"
+        Call outputIJLine(Form, Node0, o)
+     Case "IJRteCablewayPathFeat"
+        Call outputIJRteCablewayPathFeat(Form, Node0, o)
+     Case "IJSystemChild"
+        Call outputIJSystemChild(Form, Node0, o)
+     Case "IJDesignChild"
+        Call outputIJDesignChild(Form, Node0, o)
+     Case "IJDesignParent"
+        Call outputIJDesignParent(Form, Node0, o)
+     Case "IJAssemblyChild"
+        Call outputIJAssemblyChild(Form, Node0, o)
+     Case "IJElements"
+        Call outputIJElements(Form, Node0, o)
+     Case "IJHgrSupport"
+        Call outputIJHgrSupport(Form, Node0, o)
+     Case "IJAnalysisChild"
+        Call outputIJAnalysisChild(Form, Node0, o)
+     Case "ISPSCrossSection"
+        Call outputISPSCrossSection(Form, Node0, o)
+     Case "ISPSAxisRotation"
+        Call outputISPSAxisRotation(Form, Node0, o)
+     Case "ISPSMemberPartPrismatic"
+        Call outputISPSMemberPartPrismatic(Form, Node0, o)
+     Case "ISPSMemberSystem"
+        Call outputISPSMemberSystem(Form, Node0, o)
+     Case "IJCurve"
+        Call outputIJCurve(Form, Node0, o)
+     Case "IJDObject"
+        Call outputIJDObject(Form, Node0, o)
+     Case "IJDOutfittingCrossSection"
+        Call outputIJDOutfittingCrossSection(Form, Node0, o)
+     Case "IJPort"
+        Call outputIJPort(Form, Node0, o)
+     Case "IJRteCrossSectOccur"
+        Call outputIJRteCrossSectOccur(Form, Node0, o)
+     Case "IJPartOcc"
+        Call outputIJPartOcc(Form, Node0, o)
+     Case "IJDPart"
+        Call outputIJDPart(Form, Node0, o)
+     Case "IJNamedItem"
+        Call outputIJNamedItem(Form, Node0, o)
+     Case "IJSmartOccurrence"
+        Call outputIJSmartOccurrence(Form, Node0, o)
+     Case "IJSystem"
+        Call outputIJSystem(Form, Node0, o)
+     Case "IJHgrPart"
+        Call outputIJHgrPart(Form, Node0, o)
+     Case "IJDSymbol"
+        Call outputIJDSymbol(Form, Node0, o)
+     Case "IJHgrSupportComponent"
+        Call outputIJHgrSupportComponent(Form, Node0, o)
+     Case "IJHgrBOM"
+        Call outputIJHgrBOM(Form, Node0, o)
+     Case "IJHgrConnComponent"
+        Call outputIJHgrConnComponent(Form, Node0, o)
+     Case "IJHgrPort"
+        Call outputIJHgrPort(Form, Node0, o)
+     Case "ISPSSlabsDefinition"
+        Call outputISPSSlabsDefinition(Form, Node0, o)
+     Case "ISPSSlabsComposition"
+        Call outputISPSSlabsComposition(Form, Node0, o)
+     Case "ISPSSlabProperties"
+        Call outputISPSSlabProperties(Form, Node0, o)
+     Case "ISPSSlabEntity"
+        Call outputISPSSlabEntity(Form, Node0, o)
+     Case "IJEquipment"
+        Call outputIJEquipment(Form, Node0, o)
+     Case "IJAssembly"
+        Call outputIJAssembly(Form, Node0, o)
+     Case "IJStructGraphConnectable"
+        Call outputIJStructGraphConnectable(Form, Node0, o)
+     Case "IJAppConnection"
+        Call outputIJAppConnection(Form, Node0, o)
+     Case "IJConnectable"
+        Call outputIJConnectable(Form, Node0, o)
+     Case "IJKeyPoint"
+        Call outputIJKeyPoint(Form, Node0, o)
+     Case "IJHgrInputObjectInfo"
+        Call outputIJHgrInputObjectInfo(Form, Node0, o)
+     Case "IJHgrInputConfigHlpr"
+        Call outputIJHgrInputConfigHlpr(Form, Node0, o)
+     Case "IJRteConduitRun"
+        Call outputIJRteConduitRun(Form, Node0, o)
+     Case "IJPlane"
+        Call outputIJPlane(Form, Node0, o)
+     Case "IJComplexString"
+        Call outputIJComplexString(Form, Node0, o)
+     Case "IJDAttributes"
+        Call outputIJDAttributes(Form, Node0, o)
+     Case "IJFoulCheck"
+        Call outputIJFoulCheck(Form, Node0, o)
+     Case "IJRteCableRouter"
+        Call outputIJRteCableRouter(Form, Node0, o)
+     Case "IJRteCableTrayDistribConnection"
+        Call outputIJRteCableTrayDistribConnection(Form, Node0, o)
+     Case "IJDistribPort"
+        Call outputIJDistribPort(Form, Node0, o)
+     Case "IJRtePathFeatUtility"
+        Call outputIJRtePathFeatUtility(Form, Node0, o)
+'#endcase
+    Case Else
+    
+    End Select
+ 
+End Sub
+ 
+

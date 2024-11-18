@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Stress Analysis Dry Weight in lbm" Description="Dry Weight per part, for export to stress analysis">
+	<QUERIES>
+		<QUERY Name="Piping Stress Analysis Dry Weight in lbm" Site="User" Path="Piping Stress Analysis Dry Weight in lbm.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Stress Analysis Dry Weight in lbm" Site="User" Path="Piping Stress Analysis Dry Weight in lbm.rfm"/>
+</REPORT_TEMPLATE>

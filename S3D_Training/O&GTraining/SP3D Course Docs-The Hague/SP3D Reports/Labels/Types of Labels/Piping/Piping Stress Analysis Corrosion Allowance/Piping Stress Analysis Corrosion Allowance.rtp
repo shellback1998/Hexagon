@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Stress Analysis Corrosion Allowance" Description="Corrosion Allowance per part, for export to stress analysis">
+	<QUERIES>
+		<QUERY Name="Piping Stress Analysis Corrosion Allowance" Site="User" Path="Piping Stress Analysis Corrosion Allowance.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Stress Analysis Corrosion Allowance" Site="User" Path="Piping Stress Analysis Corrosion Allowance.rfm"/>
+</REPORT_TEMPLATE>

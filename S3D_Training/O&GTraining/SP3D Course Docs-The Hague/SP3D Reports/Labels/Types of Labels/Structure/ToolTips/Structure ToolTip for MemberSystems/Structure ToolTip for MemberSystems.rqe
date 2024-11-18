@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="MemberSystem"
+ Description="Tooltip for MemberSystems"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="System"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="Parent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Priority"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="ISPSMemberType"
+             DestinationProperty="Priority"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Type"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="IJStructContinuity2"
+             DestinationProperty="ContinuityType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="TypeCategory"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="ISPSMemberType"
+             DestinationProperty="TypeCategory"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Category"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="ISPSMemberType"
+             DestinationProperty="Type"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="UserCreated"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="IJDObject"
+             DestinationProperty="UserCreated"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="ApprovalStatus"
+       SQLType="Codelist">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="IJDObject"
+             DestinationProperty="ApprovalStatus"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Proj"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSProjectChild"
+                   RelationCollection="project"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Contract"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberSystem"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJWBSItemChild"
+                   RelationCollection="WBSParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

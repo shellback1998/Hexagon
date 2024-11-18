@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="DivideScalars" Description=""><QUERIES><QUERY Name="DivideScalars" Site="User" Path="DivideScalars.rqe"/></QUERIES><FORMATTING Name="DivideScalars" Site="User" Path="DivideScalars.rfm"/></REPORT_TEMPLATE>

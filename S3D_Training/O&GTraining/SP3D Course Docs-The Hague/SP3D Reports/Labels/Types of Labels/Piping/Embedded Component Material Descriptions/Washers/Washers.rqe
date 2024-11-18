@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_QUERY Name="Washers" Description="Material Description Label for Washers" RequiresFilter="No">
+<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+<SQL Timeout="0"><![CDATA[ 
+	Select JWa.WasherType_ShortValue,
+	RteW.WasherQuantity,
+	Wsf.BoltDiameter,
+	JWa.WasherThickness,
+	JWa.GeometricIndustryStandard_ShortValue as GeomIndStandard_ShortValue, JGMCD.Manufacturer_ShortValue,
+	JWa.MaterialsGrade,
+	JWa.CoatingType from dbo.JWasher_CL JWa
+	JOIN XImpliedMatingParts Imp ON (JWa.oid = Imp.oiddestination)
+	JOIN dbo.JRteWasher RteW ON (RteW.Oid = Imp.oidOrigin)
+	JOIN JWasherSelectionFilter Wsf ON (Wsf.ContractorCommoditycode = JWa.IndustryCommoditycode)
+	JOIN JGenericMaterialControlData_CL JGMCD on (JGMCD.ContractorCommoditycode = JWa.IndustryCommoditycode)
+	where Imp.oidOrigin= ?
+    	]]></SQL>
+<ORASQL Timeout="0">
+	<![CDATA[ 
+    	select ClWT.SHORTSTRINGVALUE as WasherType_ShortValue,
+	RteW.WasherQuantity,
+	Wsf.BoltDiameter,
+	JWa.WasherThickness,
+	ClGIS.SHORTSTRINGVALUE as GeomIndStandard_ShortValue,
+	ClMfd.SHORTSTRINGVALUE as Manufacturer_ShortValue,
+	ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue,
+	ClCoaT.SHORTSTRINGVALUE as CoatingType_ShortValue
+	from CL_WasherType ClWT
+	JOIN JWasher JWa on (ClWT.VALUEID = JWa.WasherType)
+	JOIN JRteWasher RteW ON (RteW.Oid = JWa.Oid)
+	join JWasherSelectionFilter Wsf ON (Wsf.ContractorCommoditycode = JWa.IndustryCommoditycode)
+	join CL_GEOMETRICINDUSTRYSTANDARD ClGIS on (ClGIS.VALUEID= GeometricIndustryStandard)
+	join JGenericMaterialControlData JGMCD on (JGMCD.ContractorCommoditycode = JWa.IndustryCommoditycode)
+	join CL_MANUFACTURER ClMfd on (ClMfd.VALUEID = JGMCD.Manufacturer)
+	join CL_MATERIALSGRADE ClMGr on (ClMGr.VALUEID = JWa.MaterialsGrade)
+	join CL_CoatingType ClCoaT on (ClCoaT.VALUEID = JWa.CoatingType) 
+	join XImpliedMatingParts Imp ON (Jwa.oid = Imp.oiddestination)
+	where Imp.oidOrigin= ?
+    	]]></ORASQL>
+<QUERY_PARAMETERS Name="Washers" Site="User" Path="Washers.rqp"/>
+</REPORT_QUERY>
+

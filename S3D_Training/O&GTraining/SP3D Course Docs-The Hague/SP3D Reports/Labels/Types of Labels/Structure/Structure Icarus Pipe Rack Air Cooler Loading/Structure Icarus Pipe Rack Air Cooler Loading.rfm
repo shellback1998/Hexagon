@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Structure Icarus Pipe Rack Air Cooler Loading" Description=" ">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<FORMATTING_PARAMETERS Name="Structure Icarus Pipe Rack Air Cooler Loading" Site="User" Path="Structure Icarus Pipe Rack Air Cooler Loading.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="AirCoolerLoading" UOM="AirCoolerLoading" Visible="yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

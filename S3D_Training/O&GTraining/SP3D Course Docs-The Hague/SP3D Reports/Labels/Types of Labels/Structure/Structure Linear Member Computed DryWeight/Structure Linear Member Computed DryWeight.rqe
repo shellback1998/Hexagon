@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Structure Linear Member Computed DryWeight"
+ Description=""
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="UnitWeight"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="IStructCrossSectionUnitWeight"
+             DestinationProperty="UnitWeight"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberPartPrismatic"
+                   RelationCollection="MemberCSEdge_DEST"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="Yes"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="CutLength"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="ISPSMemberPartPrismatic"
+             SourceBOC=""
+             DestinationInterface="ISPSMemberPartPrismatic"
+             DestinationProperty="CutLength"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

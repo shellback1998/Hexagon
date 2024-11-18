@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_QUERY
+ Name="Miscellaneous Parts"
+ Description="Material Description Label for Miscellaneous Parts"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+	select 	Pcom.CommodityType_LongValue, 
+			'[Pressure Rating 1]' As PressureRating, 
+			Mfd.ValveManufacturer_ShortValue, 
+			Mfd.ValveModelNumber_ShortValue,
+			Pcom.GeometricIndustryStandard_ShortValue as GeomIndStandard_ShortValue, 
+			mcd.Manufacturer_ShortValue, 
+			Pcom.MaterialsGrade_ShortValue, 
+			Mfd.MiscRequisitionClassification_ShortValue as MiscReqClassfn_ShortValue 
+	FROM JRteCompOccur pc
+	JOIN xmadefrom xmf on xmf.oidorigin = pc.oid
+	JOIN JDPipeComponent_CL Pcom on pcom.oid = xmf.oiddestination
+	join dbo.JUAManufacturerData_CL Mfd ON (Pcom.Oid = Mfd.Oid)
+	JOIN xpartocctomaterialcontroldata xptmcd on xptmcd.oidorigin = pc.oid
+	JOIN JGenericMaterialControlData_CL mcd on mcd.oid = xptmcd.oiddestination
+	join xmadefrom rmf ON (pcom.oid = rmf.oiddestination)
+	where pc.oid = ?
+           ]]>
+   </SQL>
+
+   <ORASQL
+    Timeout="0">
+      <![CDATA[ 
+	Select	ClPco.LONGSTRINGVALUE as CommodityType_LongValue,
+			'[Pressure Rating 1]' As PressureRating, 
+			ClVMf.SHORTSTRINGVALUE as ValveManufacturer_ShortValue, 
+			ClVMN.SHORTSTRINGVALUE as ValveModelNumber_ShortValue,
+			ClGIS.SHORTSTRINGVALUE as GeomIndStandard_ShortValue,  
+			ClMfd.SHORTSTRINGVALUE As Manufacturer_ShortValue,
+			ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue, 
+			ClMRC.SHORTSTRINGVALUE as MiscReqClassfn_ShortValue
+	FROM JRteCompOccur pc
+	JOIN xmadeFROM xmf on xmf.oidorigin = pc.oid
+	join JDPIPECOMPONENT Pcom on (ClPco.VALUEID = Pcom.COMMODITYTYPE)
+	JOIN CL_PIPINGCOMMODITYTYPE ClPco (ClPco.VALUEID = Pcom.COMMODITYTYPE) 
+	join CL_VALVEMANUFACTURER ClVMf on (ClVMf.VALUEID = Mfd.ValveManufacturer)
+	join CL_VALVEMODELNUMBER ClVMN  on (ClVMN.VALUEID = Mfd.ValveModelNumber)
+	join CL_GEOMETRICINDUSTRYSTANDARD ClGIS on (ClGIS.VALUEID= pcom.GeometricIndustryStandard)
+	JOIN xpartocctomaterialcontroldata xptmcd on xptmcd.oidorigin = pc.oid
+	JOIN JGenericMaterialControlData mcd on mcd.oid = xptmcd.oiddestination
+	join CL_MANUFACTURER ClMfd on (ClMfd.VALUEID = mcd.Manufacturer)
+	join CL_MATERIALSGRADE ClMGr on (ClMGr.VALUEID = Pcom.MaterialsGrade)
+	join JUAManufacturerData Mfd ON (Pcom.Oid = Mfd.Oid)
+	Left OUTER join CL_MISCREQUISITIONCLASSIFICATI ClMRC on (ClMRC.VALUEID = Mfd.MiscRequisitionClassification)
+	where pc.oid = ?
+           ]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS
+    Name="Miscellaneous Parts"
+    Site="User"
+    Path="Miscellaneous Parts.rqp" />
+</REPORT_QUERY>
+

@@ -1,0 +1,46 @@
+<xml> 
+<PopupMenu id="AutomationToolsPopup">
+  <Menuitem caption="Show ToolBar (S S S)" action="mnuShowAutomationToolkitToolBar"/>
+  <Menuitem caption="SmartSketch Settings (C S S)" action="mnuShowSSKOptionsForm"/>
+  <Menuitem caption="Select Set Browser (S C S)"  action="mnuSelectSetBrowser"/>
+  <Menuitem caption="Manage Object Sets (S C C)"  action="mnuManageObjectSets"/>
+  <Menuitem caption="NumPad View Control (C S C)" action="HighPriorityCmd" arg1="SP3DAutomation.S3DRvw"/>
+  <Menuitem caption="Super ShortCuts (S S C)" action="mnuToggleHandlingSuperShortCuts" checked="yes"/>  
+  <Menuitem caption="Show This Popup (C C S)" grayed="yes"/>  
+  <Menuitem caption="Show Forms (C C C)" action="mnuBringMyFormsToTop" />
+  <Menuitem caption="-" />
+  <Menuitem caption="Hide"	action="NormalCmd"	arg1="GSCADShowHideCmd.Hide"/>
+  <Menuitem caption="Show Only Selected Objects" action="StartCommand" arg1="SP3DAutomation.MiscCmds01" arg2="ShowOnlySelectedObjects"/>
+  <Menuitem caption="Show All"  action="NormalCmd" arg1="GSCADShowHideCmd.ShowAll"/>
+  <Menuitem caption="-" />
+  <Menu caption="PinPoint">
+    <Menuitem caption="Lock" action="mnuLockPinPoint" arg1="Lock"/>
+    <Menuitem caption="Lock To Zero" action="mnuLockPinPoint" arg1="LockAtZero"/>
+    <Menuitem caption="UnLock" action="mnuLockPinPoint" arg1="Unlock"/>
+  </Menu>
+  <Menu caption="Viewing">
+	  <Menuitem caption="Next Standard View   Ctrl+0" action="mnuSetPrevOrNextStdView" arg1="NEXT"/>
+	  <Menuitem caption="Previous Standard View    Ctrl+9" action="mnuSetPrevOrNextStdView" arg1="PREVIOUS"/>
+  </Menu>
+  <Menu caption="Local IFC Detect">
+	  <Menuitem caption="ON" action="mnuChangeIFCLocalDetectState" arg1="ON"/>  
+	  <Menuitem caption="OFF" action="mnuChangeIFCLocalDetectState" arg1="OFF"/>  
+  </Menu>
+  <IncludeXML href="$CommonApp\menuSP3DAutomationCustomPopupTools.xml"/>
+</PopupMenu>
+<PopupMenu caption = "Reference File" id="{96C93B62-0923-4843-8FD1-538ECB58EEB9}">
+	<Menuitem caption="&amp;Show"	id="mnuShowRefFile"	action="StartCommand"	arg1="SP3DAutomation.MiscCmds01" arg2="ShowHideReferenceFiles;Show"/>
+	<Menuitem caption="&amp;Hide"	id="mnuHideRefFile"	action="StartCommand"	arg1="SP3DAutomation.MiscCmds01" arg2="ShowHideReferenceFiles;Hide"/>
+	<Menuitem caption="-"/>
+	<Menuitem caption="&amp;Delete"	id="mnuEditDelete"	action="NormalCmd"	arg1="IMSDeleteCmd.CDelete"/>
+	<Menuitem caption="-"/>
+	<Menuitem caption="Propert&amp;ies"	id="mnuEditProperties"	action="mnuEditProperties"/>
+</PopupMenu>
+<PopupMenu caption = "SAT File Imported Shape" id="{AD1D1C62-D9F2-4DC7-92EC-37F260CA533C}">
+	<Menuitem caption="&amp;Update"	action="StartCommand"	arg1="SP3DDebugCommands.CUpdateObjects"/>
+	<Menuitem caption="-"/>
+	<Menuitem caption="&amp;Delete"	id="mnuEditDelete"	action="NormalCmd"	arg1="IMSDeleteCmd.CDelete"/>
+	<Menuitem caption="-"/>
+	<Menuitem caption="Propert&amp;ies"	id="mnuEditProperties"	action="mnuEditProperties"/>
+</PopupMenu>
+</xml>

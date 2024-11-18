@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Stress Analysis Wall Thickness (port2)" Description="Wall thickness per part, for export to stress analysis">
+	<QUERIES>
+		<QUERY Name="Piping Stress Analysis Wall Thickness (port2)" Site="User" Path="Piping Stress Analysis Wall Thickness (port2).rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Stress Analysis Wall Thickness (port2)" Site="User" Path="Piping Stress Analysis Wall Thickness (port2).rfm"/>
+</REPORT_TEMPLATE>

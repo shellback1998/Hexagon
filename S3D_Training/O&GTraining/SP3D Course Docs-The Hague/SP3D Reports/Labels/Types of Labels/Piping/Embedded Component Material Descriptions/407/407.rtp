@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="407" Description="Comp sch/thk 2">
+	<QUERIES>
+		<QUERY Name="407" Site="User" Description="Query to get the schedule thickness from pipe Component port 2" Path="407.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="407" Site="User" Description="Comp sch/thk 2 format" Path="407.rfm"/>
+</REPORT_TEMPLATE>

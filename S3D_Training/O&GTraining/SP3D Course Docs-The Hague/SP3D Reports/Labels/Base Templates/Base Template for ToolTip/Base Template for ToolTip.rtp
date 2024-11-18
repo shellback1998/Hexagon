@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Base Template for ToolTip" Description="Example of a ToolTip Label">
+	<QUERIES>
+		<QUERY Name="Base Template for ToolTip" Site="User" Path="Base Template for ToolTip.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Base Template for ToolTip" Site="User" Path="Base Template for ToolTip.rfm"/>
+</REPORT_TEMPLATE>

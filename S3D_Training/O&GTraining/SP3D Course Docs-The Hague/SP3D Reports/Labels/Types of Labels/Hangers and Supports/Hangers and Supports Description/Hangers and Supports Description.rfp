@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<FORMATTING_PARAMETERS
+ Name="Support"
+ Description="UOMs for Hangers and Supports Description">
+   <DESIGN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <UOMS>
+      <UOM
+       Name="Length"
+       CanInherit="yes"
+       Type="DISTANCE"
+       Primary="ft"
+       Secondary="in"
+       Tertiary=""
+       UnitsDisplayed="yes"
+       PrecisionType="Fractional"
+       DecimalPrecision="2"
+       FractionalPrecision="16"
+       LeadingZero=""
+       TrailingZeros=""
+       ReduceFraction="" />
+   </UOMS>
+
+   <MATRIXES>
+   </MATRIXES>
+</FORMATTING_PARAMETERS>
+

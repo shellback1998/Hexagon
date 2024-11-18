@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Structure Linear Member Cut Length" Description="CutLength">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+	<UOMS>
+		<UOM Name="Length" CanInherit="Yes" Type="DISTANCE" Primary="ft" Secondary="" Tertiary="" UnitsDisplayed="No" PrecisionType="Fractional" DecimalPrecision="0" FractionalPrecision="2" LeadingZero="No" TrailingZeros="No" ReduceFraction="Yes"/>
+	</UOMS>
+</FORMATTING_PARAMETERS>

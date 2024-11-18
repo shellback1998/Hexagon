@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Equipment with Repeating Nozzles" Description="List Equipment name and all the nozzle names, NPDs and End Preps that are connected on this Equipment" RequiresFilter="No">
+   <DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DRuntimeQuery.CQIDistribPartPipePort" Action="" Arg="" />
+   
+<!-- SP3DRuntimeQuery.CQIDistribPartPipePort allows user to add more properties that start from IJDistribPort 
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY Name="EndPrep" SQLType="BStr">
+         <PATHS>
+            <PATH SourceType="IJDistribPort" DestinationInterface="IJDPipePort" DestinationProperty="EndPreparation" Concatenate="No" PathSeparator="">
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+-->
+</REPORT_QUERY>
+

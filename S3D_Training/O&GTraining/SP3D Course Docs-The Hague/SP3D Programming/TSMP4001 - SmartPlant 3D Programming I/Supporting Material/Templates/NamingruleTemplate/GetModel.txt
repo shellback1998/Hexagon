@@ -1,0 +1,28 @@
+'----------------------------------------------------------------------------------------
+'Description
+' Function returns the ModelResource Manager
+'----------------------------------------------------------------------------------------
+Private Function GetModelResourceManager() As IUnknown
+    Const METHOD = "GetModelResourceManager"
+    On Error GoTo ErrHandler
+    
+    Dim jContext As IJContext
+    Dim oDBTypeConfig As IJDBTypeConfiguration
+    Dim oConnectMiddle As IJDAccessMiddle
+    Dim strModelDBID As String
+    Set jContext = GetJContext()
+    Set oDBTypeConfig = jContext.GetService("DBTypeConfiguration")
+    Set oConnectMiddle = jContext.GetService("ConnectMiddle")
+    strModelDBID = oDBTypeConfig.get_DataBaseFromDBType("Model")
+    Set GetModelResourceManager = oConnectMiddle.GetResourceManager(strModelDBID)
+    
+    Set jContext = Nothing
+    Set oDBTypeConfig = Nothing
+    Set oConnectMiddle = Nothing
+
+Exit Function
+ErrHandler:
+    m_oErrors.Add Err.Number, "GetModelResourceManager", Err.Description
+    Err.Raise E_FAIL
+End Function
+

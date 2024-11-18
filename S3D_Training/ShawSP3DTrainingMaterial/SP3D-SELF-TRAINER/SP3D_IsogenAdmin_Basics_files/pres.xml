@@ -1,0 +1,50 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" gridspacingx="49152" gridspacingy="49152"
+  subsetembed="1">
+  <p:master id="4" slidesn="1C76101,F35C1BF0" type="main" href="master04.htm"
+   xmlhref="master04.xml" template="Custom Design" preserved="t"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="5" slidesn="1C75549,60F87E20" type="main" href="master05.htm"
+   xmlhref="master05.xml" template="2_Custom Design" preserved="t"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="125" slidesn="1C75549,60F87E20" type="main" href="master125.htm"
+   xmlhref="master125.xml" template="3_Custom Design" preserved="t"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="1" slidesn="1C78DB3,ABC7AA00" type="notes" href="master01.htm"
+   layout="notes" slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:master id="2" slidesn="1C8B472,3E978D10" type="handout" href="master02.htm"
+   layout="handout" slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="2" slidesn="1C76100,DC347C70" href="slide0002.htm"
+   masterhref="master125.htm"/>
+  <p:slide id="3" slidesn="1C78DB1,C1D94D00" href="slide0003.htm"
+   masterhref="master05.htm"/>
+  <p:slide id="22" slidesn="1C78DB1,C1D94D00" href="slide0022.htm"
+   masterhref="master05.htm"/>
+  <p:slide id="8" slidesn="1C78DB1,C1D94D00" href="slide0008.htm"
+   masterhref="master05.htm"/>
+  <p:slide id="23" slidesn="1C78DB1,C1D94D00" href="slide0023.htm"
+   masterhref="master05.htm"/>
+  <p:viewstate type="slideView" restoredleft="85" restoredtop="897"
+   manualadjustleft="t" manualadjusttop="t" hideoutlineicons="t"/>
+  <p:headersfooters nouserdate="t" nofooter="t" noheader="t" nodate="t"
+   todaydate="t"/>
+  <p:headersfooters notes="t" nouserdate="t" nofooter="t" noheader="t"
+   nodate="t" todaydate="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="15366">
+  <o:colormru v:ext="edit" colors="#3968aa,#f15f23,#fba919,#115241,#007a4c,#001949,#608142,#77a042"/>
+ </o:shapedefaults></xml>

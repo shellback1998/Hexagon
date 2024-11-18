@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Equipment Insulation Thickness" Description="Get UOM Formatted Thickness of Equipment Insulation">
+<DESIGN_TIME Progid="" Action="" Arg=""/>
+<RUN_TIME Progid="" Action="" Arg=""/>
+<UOMS>
+    <UOM Name="Thickness" CanInherit="Yes" Type="DISTANCE" Primary="ft" Secondary="in" Tertiary="" UnitsDisplayed="yes" PrecisionType="Fractional" DecimalPrecision="" FractionalPrecision="64" LeadingZero="" TrailingZeros="" ReduceFraction="yes"/>
+</UOMS>
+</FORMATTING_PARAMETERS>

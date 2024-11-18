@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE 
+	Name="Ports" 
+	Description="Pipe/Component port properties">
+
+	<QUERIES>
+		<QUERY	Name="Ports" 
+			Site="User" 
+			Description="Query to get the properties of ports"
+			Path="Ports.rqe"/>
+		
+	</QUERIES>
+
+	<FORMATTING
+		Name="Ports" 
+		Site="User" 
+		Description="Sch_Format"
+		Path="Ports.rfm"/>
+
+</REPORT_TEMPLATE>

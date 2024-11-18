@@ -1,0 +1,329 @@
+<html>
+<head>
+<!-- saved from url=(0025)http://www.techsmith.com/ -->
+<title>Created by Camtasia Studio 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language=javascript type="text/javascript">
+function OnLoad()
+{
+   loadPage();
+}
+</script>
+<Script language=javascript type="text/javascript" >
+
+// Define exception/error codes
+var Error = 0;
+// local variable definitions
+var apiHandle = null; 
+var API = null; 
+var findAPITries = 0; 
+	
+		
+/*******************************************************************************
+**
+** Function findAPI(win)
+** Inputs:  win - a Window Object
+** Return:  If an API object is found, it's returned, otherwise null is returned
+**
+** Description:
+** This function looks for an object named API in parent and opener windows
+**
+*******************************************************************************/
+function findAPI(win)
+{
+   while ((win.API == null) && (win.parent != null) && (win.parent != win))
+   {
+      findAPITries++;
+      
+      // Note: 7 is an arbitrary number, but should be more than sufficient
+      if (findAPITries > 7) 
+      {
+         alert("Error finding API -- too deeply nested.");
+         return null;
+      }
+      win = win.parent;
+   }
+   return win.API;
+}
+
+
+/*******************************************************************************
+**
+** Function getAPI()
+** Inputs:  none
+** Return:  If an API object is found, it's returned, otherwise null is returned
+**
+** Description:
+** This function looks for an object named API, first in the current window's 
+** frame hierarchy and then, if necessary, in the current window's opener window
+** hierarchy (if there is an opener window).
+**
+*******************************************************************************/
+function getAPI()
+{
+   var theAPI = findAPI(window);
+   
+   if ((theAPI == null) && (window.opener != null) && (typeof(window.opener) != "undefined"))
+   {
+      theAPI = findAPI(window.opener);
+   }
+   if (theAPI == null)
+   {
+      //alert("Unable to find an API adapter");
+   }
+   return theAPI;
+}
+
+/******************************************************************************
+**
+** Function getAPIHandle()
+** Inputs:  None
+** Return:  value contained by APIHandle
+**
+** Description:
+** Returns the handle to API object if it was previously set,
+** otherwise it returns null
+**
+*******************************************************************************/
+function getAPIHandle()
+{
+   if (apiHandle == null)
+   {
+      apiHandle = getAPI();
+   }
+
+   return apiHandle;
+}
+
+
+/******************************************************************************************
+**
+** Function: LMSInitialize()
+** Inputs:	None
+** Return:	CMIBoolean true if the initialization was successful, or
+**			CMIBoolean false if the initialization failed.
+**
+** Description:
+** Initialize communication with LMS by calling the LMSInitialize 
+** function which will be implemented by the LMS, if the LMS is 
+** compliant with the SCORM.
+**
+******************************************************************************************/
+function LMSInitialize() 
+{
+   var api = getAPIHandle();
+   if (api == null)
+   {
+      Error = 1; 
+      return false;
+   }
+
+   // call the LMSInitialize function that should be implemented by the API
+   var initResult = api.LMSInitialize("");
+	
+   return initResult;
+   
+} 
+
+/******************************************************************************************
+**
+** Function LMSFinish()
+** Inputs:	None
+** Return:	None
+**
+** Description:
+** Close communication with LMS by calling the LMSFinish 
+** function which will be implemented by the LMS, if the LMS is 
+** compliant with the SCORM.
+**
+******************************************************************************************/
+function LMSFinish()
+{
+   var api = getAPIHandle();
+   if (api == null)
+   {
+      Error = 2;
+   }
+   else
+   {
+      // call the LMSInitialize function that should be implemented by the API
+      api.LMSFinish("");
+   }   
+
+   return;
+   
+} 
+
+/******************************************************************************************
+**
+** Function LMSSetValue(name, value) 
+** Inputs:	name - string representing the cmi data model defined category or element
+**			value - the value that the named element or category will be assigned
+** Return:	None
+**
+** Description:
+** Wraps the call to the LMS LMSSetValue method
+**
+******************************************************************************************/
+function LMSSetValue(name, value) 
+{
+   var api = getAPIHandle();
+   if (api == null)
+   {
+      Error = 3;
+   }
+   else
+   {
+      api.LMSSetValue(name, value);
+   }   
+
+   return;
+}
+
+/******************************************************************************************
+**
+** Function LMSCommit() 
+** Inputs:	None
+** Return:	None
+**
+** Description:
+** Call the LMSCommit function which will be implemented by the LMS, 
+** if the LMS is compliant with the SCORM.
+**
+******************************************************************************************/
+function LMSCommit()
+{
+   var api = getAPIHandle();
+   if (api == null)
+   {
+      Error = 4;
+   }
+   else
+   {
+      // call the LMSInitialize function that should be implemented by the API
+      api.LMSCommit("");
+   }   
+
+   return;
+   
+} 
+
+/******************************************************************************************
+**
+** Function loadPage() 
+** Inputs:	None
+** Return:	None
+**
+** Description:
+** Calls all of the necessary API functions to give the student credit for viewing this course
+**	Displays an error message if the API can not be found or if one of the functions fails.
+**
+******************************************************************************************/
+function loadPage()
+{
+   LMSInitialize();
+      LMSSetValue("cmi.core.lesson_status", "completed"); 
+   LMSCommit();
+   LMSFinish();
+	
+   // An error occurred, and the LMS could not be found
+   if( Error != 0 )
+   {
+      alert( "Unable to locate the LMS" );
+   }
+}
+
+
+
+</Script>
+
+</head>
+
+<body onload="OnLoad()" >
+<table border="0" cellpadding="0" align="center" width="860">
+  <tr> 
+    <td ><OBJECT ID="mediaPlayer" 
+        WIDTH    ="860" 
+        HEIGHT   ="713"
+        CLASSID  ="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6"
+        CODEBASE ="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"
+        STANDBY  ="Loading Microsoft Windows Media Player components..." 
+        TYPE=application/x-oleobject" VIEWASTEXT>
+            <PARAM name="autoStart" value="true">
+            <PARAM name="url"		value="01-Navigate_media/01-Navigate.avi">
+            <PARAM name="wmode"     value="transparent">
+            <PARAM name="uiMode"    value="full">
+            <PARAM name="loop"      value="false">
+	<script language=javascript type="text/javascript">
+	{
+		//////////////////////////////////
+		// the subfolder and file name - these are used only on the mozilla browser
+		var videosubdirectory = "01-Navigate_media/";
+		var videofile = "01-Navigate.avi";
+
+		//this will be the final video link (absolute path)
+		var videolink = location.href;
+
+		//remove the file:// because windows media doesn't understand that
+		var file = videolink.indexOf( "file://");
+
+		if ( file > -1 )
+		{
+			// THIS IS A LOCAL PATH
+			videolink = videolink.substring( file + 8 );
+
+			//remove the %20 because media player doesn't understand those
+			while( videolink.lastIndexOf( "%20" ) != -1 )
+			{
+				videolink = videolink.replace( "%20", " " );
+			}
+
+			//remove the html file name now
+			var lastslash = videolink.lastIndexOf( "/");
+
+			if ( lastslash > -1 )
+				videolink = videolink.substring( 0, lastslash );
+
+			//add the subfolder (if there is one) and then the video file name
+			if ( videosubdirectory.length > 0 )
+				videolink = videolink + "/" + videosubdirectory + "/" + videofile;
+			else
+				videolink = videolink + "/" + videofile;
+		}
+		else
+		{
+			////////////////////////////
+			// THIS IS NOT A LOCAL FILE - give relative path
+
+			//no need to give an absolute path
+			if ( videosubdirectory.length > 0 )
+				videolink = videosubdirectory + "/" + videofile;
+			else
+				videolink = videofile;
+		}
+
+		//write out the mozilla complient code
+		document.write( "<EMBED NAME   =\"EmbedmediaPlayer\"");
+		document.write( "TYPE   =\"application/x-mplayer2\" ");
+		document.write( "SRC    =\"" + videolink + "\"");
+		document.write( "WIDTH  =\"860\" ");
+		document.write( "HEIGHT =\"713\"> ");
+		document.write( "</EMBED>" );
+	}
+
+	</script>
+            
+	<noscript>
+            <EMBED NAME   ="EmbedmediaPlayer"
+                   TYPE   ="application/x-mplayer2" 
+                   SRC    ="01-Navigate_media/01-Navigate.avi"                   
+                   WIDTH  ="860" 
+                   HEIGHT ="713"> 
+            </EMBED> 
+    </noscript>
+</object>  <br><p style="text-align: center; font-size:small" >No Video? <a class="notdisplayed" href="http://www.techsmith.com/redirect.asp?target=tsccensharpen&lang=enu">Download the TechSmith Screen Capture Codec</a>.</p></td>
+  </tr> 
+</table>
+</body>
+</html>

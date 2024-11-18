@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Neutral File Information" Description="Master label to provide the piping isometric data for neutral file">
+   <QUERIES>
+      <QUERY Name="Neutral File Information" Site="User" Path="Neutral File Information.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="Neutral File Information" Site="User" Path="Neutral File Information.rfm" />
+</REPORT_TEMPLATE>
+

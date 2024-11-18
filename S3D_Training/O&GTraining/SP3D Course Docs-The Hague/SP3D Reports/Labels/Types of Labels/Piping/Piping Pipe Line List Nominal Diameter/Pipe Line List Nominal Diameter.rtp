@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Pipe Line List Nominal Diameter" Description="Pipe Line List Nominal Diameter"><QUERIES><QUERY Name="Pipe Line List Nominal Diameter" Site="User" Path="Pipe Line List Nominal Diameter.rqe"/></QUERIES><FORMATTING Name="Pipe Line List Nominal Diameter" Site="User" Path="Pipe Line List Nominal Diameter.rfm"/></REPORT_TEMPLATE>

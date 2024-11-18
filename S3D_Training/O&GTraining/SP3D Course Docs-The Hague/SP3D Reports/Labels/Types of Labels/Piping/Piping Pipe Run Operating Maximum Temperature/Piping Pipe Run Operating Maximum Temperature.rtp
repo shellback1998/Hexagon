@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Pipe Run Operating Maximum Temperature" Description=" "><QUERIES><QUERY Name="Piping Pipe Run Operating Maximum Temperature" Site="User" Path="Piping Pipe Run Operating Maximum Temperature.rqe"/></QUERIES><FORMATTING Name="Piping Pipe Run Operating Maximum Temperature" Site="User" Path="Piping Pipe Run Operating Maximum Temperature.rfm"/></REPORT_TEMPLATE>

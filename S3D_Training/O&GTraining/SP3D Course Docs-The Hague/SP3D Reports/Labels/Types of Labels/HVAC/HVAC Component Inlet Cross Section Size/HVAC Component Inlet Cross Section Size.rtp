@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Component Inlet Cross Section Size" Description="Duct Component Inlet Section Size"><QUERIES><QUERY Name="HVAC Component Inlet Cross Section Size" Site="User" Path="HVAC Component Inlet Cross Section Size.rqe"/></QUERIES><FORMATTING Name="HVAC Component Inlet Cross Section Size" Site="User" Path="HVAC Component Inlet Cross Section Size.rfm"/></REPORT_TEMPLATE>

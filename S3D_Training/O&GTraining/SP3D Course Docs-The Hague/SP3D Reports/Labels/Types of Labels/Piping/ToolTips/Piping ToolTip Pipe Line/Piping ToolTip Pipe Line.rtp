@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping ToolTip Pipe Line" Description="Example of a Label for PipeLine System"><QUERIES><QUERY Name="Piping ToolTip Pipe Line" Site="User" Path="Piping ToolTip Pipe Line.rqe"/></QUERIES><FORMATTING Name="Piping ToolTip Pipe Line" Site="User" Path="Piping ToolTip Pipe Line.rfm"/></REPORT_TEMPLATE>

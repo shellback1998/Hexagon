@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="IFCObject Name"
+ Description="IFC Name for Object"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="ObjectType"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteCablewayCommon"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="ELECTRICAL"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJEquipment"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="EQUIPMENT"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="HANGER"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJRtePiping|IJRteDucting"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="PIPING"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJDArea|IJDwgVolume|IJInterferenceVolume|IJDZone"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="SPACE"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJStructBOCItem"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="STRUCTURE"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+
+            <PATH
+             SourceType="IJPDElement"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="MSTNELEMENT"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Name"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="*"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="FileName"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJPDElement"
+             SourceBOC=""
+             DestinationInterface="CONSTANT"
+             DestinationProperty="[Diagnostic Reference File Name]"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Parent"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteCablewayCommon"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="DefiningFeature"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="thePathSystemInfo"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJEquipment"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJEquipment"
+                   RelationCollection="EqpParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJDArea|IJDwgVolume|IJInterferenceVolume|IJDZone"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJSpaceChild"
+                   RelationCollection="Parent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="GrandParent"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteCablewayCommon"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="DefiningFeature"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="thePathSystemInfo"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="GreatGrandParent"
+       SQLType="BStr">
+         <PATHS>
+         	<!-- Obviously this is not the GreatGrandParent of Slabs
+         		 but it keeps the format as simple as it can be to
+         		 keep the structure classes together -->
+            <PATH
+             SourceType="ISPSSlabEntity"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitCondition="Depth"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJStructBOCItem"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="ISPSMemberSystemChild"
+                   RelationCollection="MemberDesignParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="ISPSMemberSystemSystemChild"
+                   RelationCollection="MemberSystemSystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitCondition="Depth"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="PipeRun"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionItemOwner"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJHgrPipeSupport|IJHgrDesignSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJAppConnection"
+                   RelationCollection="ConnHasPorts_ORIG"
+                   Recursive="No"
+                   Filter="First[IJRtePathFeat]"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="thePathSystemInfo"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="PipeLine"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRteWeld"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRteConnectionItemOwner"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="Owner"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+
+            <PATH
+             SourceType="IJHgrPipeSupport|IJHgrDesignSupport"
+             SourceBOC=""
+             DestinationInterface="IJNamedItem"
+             DestinationProperty="Name"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJAppConnection"
+                   RelationCollection="ConnHasPorts_ORIG"
+                   Recursive="No"
+                   Filter="First[IJRtePathFeat]"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJRtePathFeat"
+                   RelationCollection="thePathSystemInfo"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+
+                  <STROKE
+                   Interface="IJSystemChild"
+                   RelationCollection="SystemParent"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

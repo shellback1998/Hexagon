@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Structure Slab Thickness"
+ Description="Thickness"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+      SELECT sae.thickness
+      FROM JSPSSlabBoundOperationAE sae 
+      JOIN XStructBoundOperators x1 on x1.oidorigin = sae.oid
+      JOIN XStructAspect x2 on x2.oiddestination = x1.oiddestination
+      WHERE x2.oidorigin = ? 
+      ]]>
+   </SQL>
+
+   <ORASQL
+    Timeout="0">
+      <![CDATA[
+      SELECT sae.thickness
+      FROM JSPSSlabBoundOperationAE sae 
+      JOIN XStructBoundOperators x1 on x1.oidorigin = sae.oid
+      JOIN XStructAspect x2 on x2.oiddestination = x1.oiddestination
+      WHERE x2.oidorigin = ?
+            ]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS
+    Name="Structure Slab Thickness"
+    Site="User"
+    Path="Structure Slab Thickness.rqp" />
+</REPORT_QUERY>
+

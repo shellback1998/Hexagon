@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="406" Description="Comp sch/thk 1 b" RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CPipePortData" Action="" Arg="1"/><SQL Timeout="0"><![CDATA[
+	SELECT ' ' AS Dummy
+	]]></SQL><QUERY_PARAMETERS Name="406" Site="User" Path="406.rqp"/></REPORT_QUERY>

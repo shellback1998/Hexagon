@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS
+ Name="Footing"
+ Description="UOMs for ToolTip for Footings label">
+   <DESIGN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <UOMS>
+      <UOM
+       Name="SurfaceArea"
+       CanInherit="Yes"
+       Type="Area"
+       Primary="ft^2"
+       Secondary=""
+       Tertiary=""
+       UnitsDisplayed="no"
+       PrecisionType="Decimal"
+       DecimalPrecision="2"
+       FractionalPrecision=""
+       LeadingZero=""
+       TrailingZeros=""
+       ReduceFraction="" />
+
+      <UOM
+       Name="Volume"
+       CanInherit="Yes"
+       Type="volume"
+       Primary="ft^3"
+       Secondary=""
+       Tertiary=""
+       UnitsDisplayed="No"
+       PrecisionType="Decimal"
+       DecimalPrecision="2"
+       FractionalPrecision="2"
+       LeadingZero="Yes"
+       TrailingZeros="Yes"
+       ReduceFraction="No" />
+   </UOMS>
+</FORMATTING_PARAMETERS>
+

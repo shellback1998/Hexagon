@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Duct Weight" Description="Dry weight"><QUERIES><QUERY Name="HVAC Duct Weight" Site="User" Path="HVAC Duct Weight.rqe"/></QUERIES><FORMATTING Name="HVAC Duct Weight" Site="User" Path="HVAC Duct Weight.rfm"/></REPORT_TEMPLATE>

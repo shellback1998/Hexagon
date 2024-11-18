@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Nuts" Description="Material Description Label for Nuts">
+<QUERIES>
+<QUERY Name="Nuts" Site="User" Path="Nuts.rqe"/>
+</QUERIES>
+<FORMATTING Name="Nuts" Site="User" Path="Nuts.rfm"/>
+</REPORT_TEMPLATE>
+

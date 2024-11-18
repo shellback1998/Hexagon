@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Isometric Extraction Date ISO8601 Format" Description="Test for Dates">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<TEXT Visible="No" Value="Today's Date (ISO8601 Small) : "/>
+					<DATA Visible="Yes" Column="TodayDate">
+						<FORMAT_EXPRESSION Expression="yyyy-mm-dd hh:mm:ss"/>
+					</DATA>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

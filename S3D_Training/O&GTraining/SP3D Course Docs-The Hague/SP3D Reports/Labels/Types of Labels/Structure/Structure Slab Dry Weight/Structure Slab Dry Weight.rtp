@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Slab Dry Weight" Description="Dry weight label definition"><QUERIES><QUERY Name="Structure Slab Dry Weight" Site="User" Path="Structure Slab Dry Weight.rqe"/></QUERIES><FORMATTING Name="Structure Slab Dry Weight" Site="User" Path="Structure Slab Dry Weight.rfm"/></REPORT_TEMPLATE>

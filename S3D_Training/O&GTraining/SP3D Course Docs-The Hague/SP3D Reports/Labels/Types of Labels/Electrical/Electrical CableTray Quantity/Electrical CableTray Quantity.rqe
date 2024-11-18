@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Electrical CableTray Quantity" Description="Cable Tray Quantities" RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/><SQL Timeout="0"><![CDATA[Select null as QuantityTotal, null as Length]]></SQL><QUERY_PARAMETERS Name="Electrical CableTray Quantity" Site="User" Path="Electrical CableTray Quantity.rqp"/></REPORT_QUERY>

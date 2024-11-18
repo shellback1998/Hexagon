@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Icarus Closest Parent Area in System Hierarchy" Description="Query to get Name of closest parent area in system Hierarchy" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0"><![CDATA[
+			SELECT 
+			'AreaName' =
+				CASE
+					WHEN bbb.AreaName Is NULL THEN aaa.ItemName
+					ELSE bbb.AreaName
+				END
+			FROM 
+			(SELECT pli.ItemName FROM JConfigProjectRoot cpr
+				JOIN JNamedItem pli ON pli.oid=cpr.oid) as aaa
+			LEFT JOIN (SELECT TOP 1 right(pni.ItemName,24) as 'AreaName' 
+			FROM dbo.REPORTGetAllParentsInHierarchy (? , 'SystemHierarchy') aph  
+			JOIN JAreaSystem ars on ars.oid = aph.oidParent
+			JOIN JNamedItem pni on pni.oid = aph.oidparent
+			ORDER BY aph.depth) as bbb ON 1=1
+
+		]]>
+	</SQL>
+	<ORASQL Timeout="0"><![CDATA[
+			SELECT	CASE
+						WHEN bbb.AreaName Is NULL THEN aaa.ItemName
+						ELSE bbb.AreaName
+					END AreaName
+			FROM (	SELECT pli.ItemName 
+					FROM JConfigProjectRoot cpr
+					JOIN JNamedItem pli ON pli.oid=cpr.oid ) aaa
+			LEFT JOIN (	SELECT SUBSTR(pni.ItemName,-24) as AreaName
+						FROM TABLE(RPTAllParentsInHierarchy (? , 'SystemHierarchy')) aph  
+						JOIN JAreaSystem ars on ars.oid = aph.oidParent
+						JOIN JNamedItem pni on pni.oid = aph.oidparent
+						WHERE rownum = 1
+						ORDER BY aph.depth) bbb ON 1=1
+	]]>
+	</ORASQL>
+	<QUERY_PARAMETERS Name="Piping Icarus Closest Parent Area in System Hierarchy" Site="User" Path="Piping Icarus Closest Parent Area in System Hierarchy.rqp"/>
+</REPORT_QUERY>

@@ -1,0 +1,73 @@
+Successfully Opened Input Log File: C:\AmoSample\SymbolWizard\GenericComp\v91Cat.log
+
+***********************************************************
+DATABASE SERVER NAME : SOLIDS1002
+DATABASE NAME : v91Cat
+SCHEMA DATABASE NAME : v91Cat_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:34 PM
+Finished Processing sheet: CustomInterfaces in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:35 PM
+
+Processing sheet: PipingCommodityMatlControlData in WorkBook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:35 PM
+Finished processing sheet: PipingCommodityMatlControlData in workbook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:35 PM
+
+Processing sheet: InstrumentClassData in WorkBook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:35 PM
+Finished processing sheet: InstrumentClassData in workbook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:35 PM
+
+Processing sheet : BA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:35 PM
+Finished Processing sheet: BA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:36 PM
+
+Processing sheet : GenericComp in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:36 PM
+    WARNING : Failed to set the SymbolIcon property. The specified Symbol Icon file: C:\SP3D\Svr\CatalogData\Symbols\SymbolIcons\GenericComp.bmp is missing in GenericComp WorkSheet of C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook 
+    Successfully Created the PartClass Object : GenericComp
+    Successfully Created the object in row [10]
+Finished Processing sheet: GenericComp in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:37 PM
+
+Processing sheet : ANG in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:37 PM
+Finished Processing sheet: ANG in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:37 PM
+
+Processing sheet : ControlGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:37 PM
+Finished Processing sheet: ControlGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:37 PM
+
+Processing sheet : ControlGateValveOA in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:37 PM
+Finished Processing sheet: ControlGateValveOA in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:37 PM
+
+Processing sheet : ReducingGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:37 PM
+Finished Processing sheet: ReducingGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:37 PM
+
+Processing sheet : MSCBA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:37 PM
+Finished Processing sheet: MSCBA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:38 PM
+
+Processing sheet : InstIndicator in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 2:18:38 PM
+Finished Processing sheet: InstIndicator in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 2:18:38 PM
+
+
+
+Successfully appended all newly created GUIDs to their respective WorkBooks
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Adding User Types to the Object Type hierarchy...12/21/2010 2:18:38 PM
+
+Started Creating Views  at: 12/21/2010 2:26:44 PM
+
+Finished Loading Views at: 12/21/2010 2:26:50 PM
+
+Bulkload is successful with some errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+    WARNING : Failed to set the SymbolIcon property. The specified Symbol Icon file: C:\SP3D\Svr\CatalogData\Symbols\SymbolIcons\GenericComp.bmp is missing in GenericComp WorkSheet of C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook 
+

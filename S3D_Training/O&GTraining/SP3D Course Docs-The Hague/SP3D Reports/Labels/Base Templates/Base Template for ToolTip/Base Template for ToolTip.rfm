@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING
+ Name="Base Template for ToolTip"
+ Description="Example of a ToolTip Label">
+   <DESIGN_TIME
+    Progid="SP3DLabelFormatDesigner.RTFLabel"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DLabelsFormat.FormatLabel"
+    Action="RTFLabel"
+    Arg="" />
+
+   <LAYOUT_TEMPLATE
+    Type="Internal" />
+
+   <FORMATTING_PARAMETERS
+    Name="Base Template for ToolTip"
+    Site="User"
+    Path="Base Template for ToolTip.rfp" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK
+          Action="Visible">
+            <RULE
+             RuleOperator="Any"
+             RuleOperand="False" />
+
+            <TOKENS>
+               <DATA
+                Column="Name"
+                Visible="Yes">
+                  <FORMAT_EXPRESSION
+                   Expression="&amp;" />
+
+                  <CONDITION
+                   ConditionOperator="Equal"
+                   ConditionOperand1=""
+                   StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK
+          Action="Visible">
+            <RULE
+             RuleOperator="All"
+             RuleOperand="False" />
+
+            <TOKENS>
+               <DATA
+                Column="Axis"
+                Visible="Yes">
+                  <CONDITION
+                   ConditionOperator="Equal"
+                   ConditionOperand1=""
+                   StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT
+                Value=" "
+                Visible="Yes" />
+
+               <PHYSICAL
+                Column="Position"
+                UOM="Position"
+                Visible="Yes">
+                  <CONDITION
+                   ConditionOperator="Equal"
+                   ConditionOperand1=""
+                   StateOfValue="Raw" />
+               </PHYSICAL>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

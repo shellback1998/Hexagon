@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping ToolTip Nozzle Identification" Description="Example of a Label for a Nozzle"><QUERIES><QUERY Name="Piping ToolTip Nozzle Identification" Site="User" Path="Piping ToolTip Nozzle Identification.rqe"/></QUERIES><FORMATTING Name="Piping ToolTip Nozzle Identification" Site="User" Path="Piping ToolTip Nozzle Identification.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Nozzle Orientation" Description=" "><QUERIES><QUERY Name="Equipment Nozzle Orientation" Site="User" Path="Equipment Nozzle Orientation.rqe"/></QUERIES><FORMATTING Name="Equipment Nozzle Orientation" Site="User" Path="Equipment Nozzle Orientation.rfm"/></REPORT_TEMPLATE>

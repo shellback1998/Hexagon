@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Stock Instruments" Description="Example of a Label for PipeComponent">
+<QUERIES>
+<QUERY Name="Stock Instruments" Site="User" Path="Stock Instruments.rqe"/>
+</QUERIES>
+<FORMATTING Name="Stock Instruments" Site="User" Path="Stock Instruments.rfm"/>
+</REPORT_TEMPLATE>
+

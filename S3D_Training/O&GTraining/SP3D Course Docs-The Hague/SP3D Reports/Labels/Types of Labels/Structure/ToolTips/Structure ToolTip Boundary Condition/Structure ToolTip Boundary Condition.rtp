@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure ToolTip Boundary Condition" Description="Example of a Label for StructuralAnalysis BoundaryCondition">
+	<QUERIES>
+		<QUERY Name="Structure ToolTip Boundary Condition" Site="User" Description="Example of Query on Instanciated Object" Path="Structure ToolTip Boundary Condition.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Structure ToolTip Boundary Condition" Site="User" Description="Example of an ASCII Label for ToolTips" Path="Structure ToolTip Boundary Condition.rfm"/>
+</REPORT_TEMPLATE>

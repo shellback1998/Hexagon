@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="IFCObject Name"
+ Description=" ">
+   <QUERIES>
+      <QUERY
+       Name="IFCObject Name"
+       Site="User"
+       Path="IFCObject Name.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="IFCObject Name"
+    Site="User"
+    Path="IFCObject Name.rfm" />
+</REPORT_TEMPLATE>
+

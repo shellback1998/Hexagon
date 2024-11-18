@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Multiply2Scalars" Description="">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="Expression" Arg="Product" />
+
+   <FORMATTING_PARAMETERS Name="Multiply2Scalars" Site="User" Path="Multiply2Scalars.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible" Child="No">
+            <TOKENS>
+               <PHYSICAL Column="Term1" UOM="Scalar" Visible="yes" />
+
+               <PHYSICAL Column="Term2" UOM="Scalar" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

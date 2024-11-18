@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Gaskets" Description="Material Description Label for Gaskets">
+<QUERIES>
+<QUERY Name="Gaskets" Site="User" Path="Gaskets.rqe"/>
+</QUERIES>
+<FORMATTING Name="Gaskets" Site="User" Path="Gaskets.rfm"/>
+</REPORT_TEMPLATE>
+

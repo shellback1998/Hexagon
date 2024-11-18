@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Structure ToolTip for MemberSystems"
+ Description="Tooltip for Linear Member Systems">
+   <QUERIES>
+      <QUERY
+       Name="MemberSystem"
+       Site="User"
+       Path="Structure ToolTip for MemberSystems.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="MemberSystem"
+    Site="User"
+    Path="Structure ToolTip for MemberSystems.rfm" />
+</REPORT_TEMPLATE>
+

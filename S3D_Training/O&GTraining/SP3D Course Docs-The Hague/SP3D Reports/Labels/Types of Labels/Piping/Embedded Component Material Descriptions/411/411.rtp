@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="411" Description="Comp sch/thk 3 ">
+	<QUERIES>
+		<QUERY Name="411" Site="User" Description="Query to get the schedule thickness from pipe Component port 3" Path="411.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="411" Site="User" Description="Comp sch/thk 3 Format" Path="411.rfm"/>
+</REPORT_TEMPLATE>

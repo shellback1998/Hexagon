@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Structure Slab Thickness" Description="Thickness"><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="" Action="" Arg=""/><UOMS><UOM Name="Thickness" CanInherit="Yes" Type="Distance" Primary="in" Secondary="" Tertiary="" UnitsDisplayed="no" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction=""/></UOMS></FORMATTING_PARAMETERS>

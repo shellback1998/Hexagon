@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Linear Member Total Surface Area" Description="Surface area"><QUERIES><QUERY Name="Structure Linear Member Total Surface Area" Site="User" Path="Structure Linear Member Total Surface Area.rqe"/></QUERIES><FORMATTING Name="Structure Linear Member Total Surface Area" Site="User" Path="Structure Linear Member Total Surface Area.rfm"/></REPORT_TEMPLATE>

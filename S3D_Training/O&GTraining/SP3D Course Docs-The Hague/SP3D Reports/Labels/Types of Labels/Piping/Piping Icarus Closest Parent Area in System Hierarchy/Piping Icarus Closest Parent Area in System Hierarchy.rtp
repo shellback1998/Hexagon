@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Icarus Closest Parent Area in System Hierarchy" Description="Piping Label for Name of closest parent area in system Hierarchy">
+	<QUERIES>
+		<QUERY Name="Piping Icarus Closest Parent Area in System Hierarchy" Site="User" Path="Piping Icarus Closest Parent Area in System Hierarchy.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Icarus Closest Parent Area in System Hierarchy" Site="User" Path="Piping Icarus Closest Parent Area in System Hierarchy.rfm"/>
+</REPORT_TEMPLATE>

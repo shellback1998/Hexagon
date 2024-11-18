@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Isometric Extraction Date European Format" Description="Test for Dates" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0"><![CDATA[
+		SELECT Getdate() AS ToDayDate
+		 ]]></SQL>
+	<ORASQL Timeout="0"><![CDATA[
+		SELECT sysdate ToDayDate FROM dual
+		 ]]></ORASQL>
+	<QUERY_PARAMETERS Name="" Site="User" Path=""/>
+</REPORT_QUERY>

@@ -1,0 +1,412 @@
+Successfully Opened Input Log File: C:\Smart3D\Bulkload\Ten_Specs_CatalogData_SpecData.log
+
+***********************************************************
+DATABASE SERVER NAME : TR2_B2\SQLExpress
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+MODE  : Plant
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:52 PM
+Finished Processing sheet: CustomInterfaces in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet : CustomClassInterfaceList in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+    The Add/Modify/Delete mode is not supported by bulkload for this sheet. All data on sheet will be processed.
+    Successfully added user interface :IJUAManufacturerData to the class:CPPipeStock in row [6]
+Finished Processing sheet: CustomClassInterfaceList in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing CatalogRoot sheet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished Processing CatalogRoot sheet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: PipingGenericDataBolted in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: PipingGenericDataBolted in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: PipingGenericDataMechanical in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: PipingGenericDataMechanical in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: PipingGenericDataFemale in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: PipingGenericDataFemale in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: LinerThicknessData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: LinerThicknessData in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: PlainPipingGenericData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: PlainPipingGenericData in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: MaterialsData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: MaterialsData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:55 PM
+
+Processing sheet: FluidDensityRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:55 PM
+Finished processing sheet: FluidDensityRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: StandardNotesData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: StandardNotesData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet : DefaultProjectOptions in C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished Processing sheet: DefaultProjectOptions in C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: PipingMaterialsClassData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: PipingMaterialsClassData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: MatingPorts in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: MatingPorts in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: PipingCommodityMatlControlData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: PipingCommodityMatlControlData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: WeldTypeRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: WeldTypeRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: WeldModelRepresentationRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: WeldModelRepresentationRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: ValveOperatorMatlControlData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: ValveOperatorMatlControlData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: PreferredStudBoltLength in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: PreferredStudBoltLength in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: PreferredMachBoltLength in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: PreferredMachBoltLength in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: PreferredCapScrewLength in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: PreferredCapScrewLength in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: PreferredTapEndStudBoltLength in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: PreferredTapEndStudBoltLength in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: StudBoltLenCalTolerance in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: StudBoltLenCalTolerance in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:56 PM
+
+Processing sheet: MachBoltLenCalTolerance in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:56 PM
+Finished processing sheet: MachBoltLenCalTolerance in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: CapScrewLenCalTolerance in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: CapScrewLenCalTolerance in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: TapEndStudBoltLenCalTol in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: TapEndStudBoltLenCalTol in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: DefaultCommoditySelectionRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: DefaultCommoditySelectionRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: DefaultChangeOfDirection in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: DefaultChangeOfDirection in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: MinimumPipeLengthRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: MinimumPipeLengthRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: ShortCodeHierarchyRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: ShortCodeHierarchyRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: BoltPartData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: BoltPartData in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: NutPartData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: NutPartData in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: WasherPartData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: WasherPartData in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: GasketPartData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: GasketPartData in workbook: C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: PipingCommodityFilter in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: PipingCommodityFilter in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: BoltSelectionFilter in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: BoltSelectionFilter in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:57 PM
+
+Processing sheet: NutSelectionFilter in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:57 PM
+Finished processing sheet: NutSelectionFilter in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: GasketSelectionFilter in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: GasketSelectionFilter in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: WasherSelectionFilter in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: WasherSelectionFilter in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: PipeBranch in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: PipeBranch in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: PipeNominalDiameters in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: PipeNominalDiameters in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: MinimumPipeLengthRulePerSpec in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: MinimumPipeLengthRulePerSpec in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: PipeTakedownParts in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: PipeTakedownParts in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: BendAngles in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: BendAngles in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: WeldClearanceRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: WeldClearanceRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: InsideSurfaceTreatment in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: InsideSurfaceTreatment in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: OutsideSurfaceTreatment in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: OutsideSurfaceTreatment in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: PermissibleTaps in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: PermissibleTaps in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: ThicknessDataRule in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: ThicknessDataRule in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: CorrosionAllowance in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: CorrosionAllowance in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:58 PM
+
+Processing sheet: JointQualityFactor in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:58 PM
+Finished processing sheet: JointQualityFactor in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: ReinforcingPadData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: ReinforcingPadData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: TapProperties in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: TapProperties in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: AllowablePipingMaterialsClass in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: AllowablePipingMaterialsClass in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: ServiceLimits in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: ServiceLimits in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: SlipOnFlangeSetbackDistance in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: SlipOnFlangeSetbackDistance in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: NPDEquivalence in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: NPDEquivalence in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: CommoditySpecificServiceLimits in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: CommoditySpecificServiceLimits in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: FieldFitLength in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: FieldFitLength in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: ReinforcingWeldData in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: ReinforcingWeldData in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: MinPipeLengthPurchase in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: MinPipeLengthPurchase in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: MinPipeLengthPurchasePerSpec in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: MinPipeLengthPurchasePerSpec in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: PortAlignment in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: PortAlignment in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: PortAlignmentPerSpec in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: PortAlignmentPerSpec in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:31:59 PM
+
+Processing sheet: BoltExtension in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:31:59 PM
+Finished processing sheet: BoltExtension in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:32:00 PM
+
+Processing sheet: PlateFlangeSetbackDistance in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:32:00 PM
+Finished processing sheet: PlateFlangeSetbackDistance in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:32:00 PM
+
+Processing sheet: FlaredPipe in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:32:00 PM
+Finished processing sheet: FlaredPipe in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:32:00 PM
+
+Processing sheet: CalculationProgIDs in WorkBook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - Started at : 4/21/2015 12:32:00 PM
+Finished processing sheet: CalculationProgIDs in workbook: C:\Smart3D\Bulkload\Ten_Specs_SpecificationData.xls Workbook  - finished at : 4/21/2015 12:32:00 PM
+
+Processing sheet : PipeStock in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:00 PM
+Finished Processing sheet: PipeStock in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:01 PM
+
+Processing sheet : BallValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:01 PM
+Finished Processing sheet: BallValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:01 PM
+
+Processing sheet : ButterflyValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:01 PM
+Finished Processing sheet: ButterflyValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:01 PM
+
+Processing sheet : CheckValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: CheckValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : CheckValve_Fem in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: CheckValve_Fem in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : GateValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: GateValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : GateValve_Asym in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: GateValve_Asym in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : GlobeValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: GlobeValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : WaferCheckValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: WaferCheckValve in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : LapJointFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: LapJointFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : StubEnd in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: StubEnd in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : OrificeFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: OrificeFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : PlateFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: PlateFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : ReducingFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: ReducingFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : SocketweldFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:02 PM
+Finished Processing sheet: SocketweldFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:02 PM
+
+Processing sheet : ThreadedFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: ThreadedFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : WeldNeckFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: WeldNeckFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : ConcentricReducer in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: ConcentricReducer in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : ConcentricSwage in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: ConcentricSwage in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : EccentricReducer in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: EccentricReducer in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : EccentricSwage in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: EccentricSwage in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : Coupling in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: Coupling in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : Nipple in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: Nipple in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : Paddle in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: Paddle in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : SpectacleBlind in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: SpectacleBlind in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:03 PM
+
+Processing sheet : Union in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:03 PM
+Finished Processing sheet: Union in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : 45DegElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: 45DegElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : 45DegLRElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: 45DegLRElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : 90DegLRElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: 90DegLRElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : 90DegElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: 90DegElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : 90DegSRElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: 90DegSRElbow in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : Elbolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: Elbolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : Endolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: Endolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : Latrolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: Latrolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : ReducingTee in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: ReducingTee in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : ReinforcingPad in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: ReinforcingPad in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : Sockolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:04 PM
+Finished Processing sheet: Sockolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:04 PM
+
+Processing sheet : Tee in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+Finished Processing sheet: Tee in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:05 PM
+
+Processing sheet : Thredolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+Finished Processing sheet: Thredolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:05 PM
+
+Processing sheet : Weldolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+Finished Processing sheet: Weldolet in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:05 PM
+
+Processing sheet : BlindFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+Finished Processing sheet: BlindFlange in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:05 PM
+
+Processing sheet : Cap in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+Finished Processing sheet: Cap in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:05 PM
+
+Processing sheet : Plug in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+Finished Processing sheet: Plug in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:05 PM
+
+Processing sheet : PlugType2 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:05 PM
+    Successfully Created the PartClass Object : PlugType2
+    Successfully Created the object in row [19]
+Finished Processing sheet: PlugType2 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator3 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator3 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator5 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator5 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator9 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator9 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator17 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator17 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator251 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator251 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator271 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator271 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator291 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:07 PM
+Finished Processing sheet: Operator291 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:07 PM
+
+Processing sheet : Operator331 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:08 PM
+Finished Processing sheet: Operator331 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:08 PM
+
+Processing sheet : Operator332 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:08 PM
+Finished Processing sheet: Operator332 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:08 PM
+
+Processing sheet : Operator333 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:08 PM
+Finished Processing sheet: Operator333 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:08 PM
+
+Processing sheet : Operator334 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:08 PM
+Finished Processing sheet: Operator334 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:08 PM
+
+Processing sheet : Operator351 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - Started at : 4/21/2015 12:32:08 PM
+Finished Processing sheet: Operator351 in C:\Smart3D\Bulkload\Ten_Specs_CatalogData.xls Workbook  - finished at : 4/21/2015 12:32:08 PM
+
+
+
+Successfully appended all newly created GUIDs to their respective WorkBooks
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Adding User Types to the Object Type hierarchy...4/21/2015 12:32:10 PM
+
+Started Creating Views  at: 4/21/2015 12:32:16 PM
+
+Finished Loading Views at: 4/21/2015 12:32:17 PM
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

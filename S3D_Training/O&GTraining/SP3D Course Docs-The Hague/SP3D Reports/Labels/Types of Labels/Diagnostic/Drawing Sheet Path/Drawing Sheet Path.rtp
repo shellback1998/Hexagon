@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="Drawing Sheet Path"
+ Description="Diagnostic Label for Drawing Hierarchy Path">
+   <QUERIES>
+      <QUERY
+       Name="Drawing Sheet Path"
+       Site="User"
+       Path="Drawing Sheet Path.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Drawing Sheet Path"
+    Site="User"
+    Path="Drawing Sheet Path.rfm" />
+</REPORT_TEMPLATE>
+

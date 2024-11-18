@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Extraction Date Locale Sensitive" Description="Test for Dates"><QUERIES><QUERY Name="Piping Isometric Extraction Date Locale Sensitive" Site="User" Path="Piping Isometric Extraction Date Locale Sensitive.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Extraction Date Locale Sensitive" Site="User" Path="Piping Isometric Extraction Date Locale Sensitive.rfm"/></REPORT_TEMPLATE>

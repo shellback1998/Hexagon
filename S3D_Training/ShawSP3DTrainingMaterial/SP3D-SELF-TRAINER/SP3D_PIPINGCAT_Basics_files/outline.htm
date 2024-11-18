@@ -1,0 +1,1083 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 12">
+<link id=Main-File rel=Main-File href="../SP3D_PIPINGCAT_Basics.htm">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = GetObj("Main-File")
+	parent.location.href=obj.href
+}
+var gOtlHiliteClr="#ffffff",gOtlNormalClr="#000000",gOtlActiveClr="#ffff00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( g_supportsPPTHTML ) {
+		if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+		if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+	}
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+	if( parent.frames["PPTNts"] )
+		notesBtn.style.display = ""
+	if( parent.gHasNarration )
+		nb_voiceBorder.style.display = ""
+}
+function LoadOtl()
+{
+	var otl=GetObj("OtlObj")
+	otl.style.display="block"
+	otl.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr
+	InitArray()
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		}
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	var list=GetTags(document,"DIV");
+	for(ii=0; ii<list.length; ii++) {
+		obj=list.item(ii)
+		if( obj.id == null ) continue
+		if( obj.id.indexOf("PPTC") >= 0 )
+			gChildEntryTable[count++]=obj
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=GetObj("PPTL"+idx)
+	obj.style.color=fgColor
+	obj=GetObj("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( src ){ ChgClr(GetLink(src),gOtlActiveClr) }
+function Out( src ){ ChgClr(GetLink(src),gOtlHiliteClr) }
+function Follow(src){ window.location.href = GetLink(src).href; }
+function ObjExists( ii ) { obj=GetObj("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+function GetLink(src)
+{
+   if(src.tagName=="A") return src
+   else return GetTags(src,"A").item(0)
+}
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Slide " + parent.GetCurSldNum() + " of " + parent.GetNumSlds()
+	else
+		txt += "Hidden Slide"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].Enabled(1)
+	gBtnArr["nb_ntsBorder"].SetFlag( parent.gHasNts )
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+function ExecBtn()
+{
+	if (event.keyCode == 13)
+	{
+		BtnOnDown();
+		BtnOnUp();
+	}
+}
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+//--></script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:2px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+ul
+	{color:white;
+	margin-bottom:0px;
+	margin-left:20px;}
+.sldNum
+	{margin-top:5px;
+	color:white;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()" style='margin:2px'>
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="ExecBtn()" style='display:none;visibility:hidden'>
+<table id="notesBtn" style='display:none;position:relative;width:55px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" title="Show/Hide
+Notes" align=center style='position:relative;margin-left:5px;margin-right:5px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt; cursor:default'>
+ <img src="notes_flag.gif" id="nb_nts" style='display:none'> &nbsp;Notes</div>
+ <div id="nb_ntsBorder" title ="Show/Hide
+Notes" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=1 style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+
+ </div>
+ </td>
+</table>
+
+
+<table style='position:relative;width:70px' align=right cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_sldshwText" title="Full Screen Slide Show" align=center style='position:relative;margin-left:20px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt;cursor:default'>Slide
+Show</div>
+ <div id="nb_sldshwBorder" title="Full Screen Slide Show" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=5 style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_sldshw" style='position:relative;left:-254px'></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;top:0;left:-40px;
+ width:20px;height:20px' onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=4 class=button>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_voice" title="Pause/Play Narration" style='position:
+ relative;left:-290px'></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=2 class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_prev" title="Previous Slide" style='position:relative;
+ left:0px'></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=3 class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_next" title="Next Slide" style='position:relative;
+ left:-90px'></div>
+ </div>
+ </td>
+</table>
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="ExecBtn()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0 cellspacing=0>
+ <td nowrap><div title="Show/Hide
+Outline" id="nb_otl" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=11
+ style='position:absolute;top:0%;left:0%;width:100%;height:100%;cursor:default'>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;font-family:Arial;
+ color:buttontext;font-size:9pt'>Outline</div></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=12 id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Expand/Collapse Outline"
+ style='position:relative;left:-157px'></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden;'>
+
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>1</font></div>
+  </td>
+  <td width="100%">
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0001.htm');" id=PPTL1><span
+  style='mso-spacerun:yes'> </span></a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>2</font></div>
+  </td>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0002.htm');" id=PPTL2>SP3D Piping Spec Writing</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>3</font></div>
+  </td>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0031.htm');" id=PPTL3>Prerequisites</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>SP3D Common Apps training</li>
+   <li>SP3D Piping Task Training</li>
+   <li>SP3D Equipment Catalog Basics</li>
+   <li>PDS 3D Piping Specs Writing</li>
+   <li>Note: The material covers some of the most common activities in spec
+       writing to get you started, but no attempt is made to cover all there is
+       to learn about SP3D spec writing.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>4</font></div>
+  </td>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0032.htm');" id=PPTL4>Piping Catalog Task
+  Concepts</a></font></div>
+  <div id=PPTC4 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Capabilities include:</li>
+   <li>Piping spec development from scratch or from delivered specs</li>
+   <li>Bulkload utility to load new piping data to catalog</li>
+   <li>Spec Verification utility to validate spec tables and symbol placement</li>
+   <li>Sync model with catalog utility to ensure items in 3D model reflect
+       latest version of piping parts in the catalog</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>5</font></div>
+  </td>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0033.htm');" id=PPTL5>Implementing a Delivered
+  Piping Spec</a></font></div>
+  <div id=PPTC5 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Two types of information required to initiate a piping specification:
+       Spec data and spec rules</li>
+   <li>Spec data include:<span style='mso-spacerun:yes'>  </span>Spec name,
+       materials of construction, fluid service, design standard, etc</li>
+   <li>Spec rules include:<span style='mso-spacerun:yes'>  </span>Service
+       limits, NPD size table, branch table, weld clearance, etc.</li>
+   <br>
+   <br>
+   <li>See example of loading a spec’s piping materials class data as delivered
+       by Intergraph with spec rules</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>6</font></div>
+  </td>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0034.htm');" id=PPTL6>Implementing Delivered
+  Piping Part Data I</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Delivered part data can be loaded to catalog as-is</li>
+   <li>Delivered part data can be modified then loaded to catalog</li>
+   <li>Part data include: Short code, option code, size, commodity code,
+       schedule, rating, face to face, face to center, etc.</li>
+   <li>Part spec rules include: Port alignment, min pipe length, field fit
+       length, etc.</li>
+   <li>Notice that part rules worksheets do not have a “SpecName” column like
+       spec rules do</li>
+   <br>
+   <br>
+   <li>See example of loading piping part data as delivered by Intergraph</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>7</font></div>
+  </td>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0057.htm');" id=PPTL7>Implementing Delivered
+  Piping Part Data II</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Shaw-developed utility allows piping spec writer to select and extract a
+       single spec and its tables from Intergraph’s workbook with150 possible
+       specs</li>
+   <li>User can load the spec as delivered by Intergraph, or first modify it to
+       match project requirements and then load to catalog</li>
+   <br>
+   <br>
+   <li>See example of searching Intergraph piping spec using utility</li>
+   <li>See example of touching up and bulk loading spec to catalog</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Download spec-extraction utility <br>
+              (Extract to the path:<span style='mso-spacerun:yes'> 
+       </span>“C:\Dave\Macros\SP3D Spec”)</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>8</font></div>
+  </td>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0035.htm');" id=PPTL8>Creating a Custom Piping
+  Spec</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>To create a custom piping specification:</li>
+   <ul>
+    <li>Use procedure highlighted in previous slides to locate a delivered spec
+        and rules that roughly resemble the new spec</li>
+    <li>In “SpecificationData” workbook, name spec and redefine values needed
+        by the new spec <br>
+                (For details see pg 22 of C:\Program Files\Common
+        Files\Intergraph\SmartPlant\Help\PipingReferenceData.pdf)</li>
+    <li>In “SpecificationData” workbook set the spec rules for the new piping
+        spec</li>
+    <li>In “SpecificationData” workbook copy delivered spec commodities into
+        PipingCommodityFilter worksheet</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>9</font></div>
+  </td>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0036.htm');" id=PPTL9>Creating a Custom Piping
+  Spec</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <br>
+   <ul>
+    <li>In “CatalogData” workbook, locate piping parts needed, copy and modify
+        as needed, most often commodity code and dimensions are adjusted per
+        the new spec requirements</li>
+    <li>Bulkload workbooks to catalog</li>
+    <li>Run spec Verification and review report</li>
+    <li>“Allow” spec for modeling and perform preliminary manual testing</li>
+    <li>Repair, rebulkload and retest until all parts in the spec place as
+        needed</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>10</font></div>
+  </td>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0055.htm');" id=PPTL10>Spec Report</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Besides the verification report, users can extract spec reports to
+       review catalog contents</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Example of spec reports extraction</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>11</font></div>
+  </td>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0037.htm');" id=PPTL11>Working With Code
+  Listed Values</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>A code listed value provides a standard attribute linked to a numeral
+       that uniquely identifies that attribute</li>
+   <li>Spec writer can add new code lists</li>
+   <li>When modifying a code list, the spec writer must follow requirements for
+       that list, e.g. some code lists require user-added values to be greater
+       than 10,000; other code lists allow changing textual value but not
+       numeric value or meaning</li>
+   <br>
+   <br>
+   <li>See example of new Fluid Code creation</li>
+   <br>
+   <br>
+   <li>Lab 1-3</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>12</font></div>
+  </td>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0038.htm');" id=PPTL12>Implementing a Branch
+  Table</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Two key steps</li>
+   <ul>
+    <li>Define branch angle range</li>
+    <li>Define Primary branch component for that range</li>
+   </ul>
+   <li>Catalog Task can display branch table in paper-spec format</li>
+   <br>
+   <br>
+   <li>See example of branch table editing</li>
+   <li>How to display branch table in paper spec style</li>
+   <br>
+   <br>
+   <br>
+   <li>Lab 4</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>13</font></div>
+  </td>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0039.htm');" id=PPTL13>Working With Bolts and
+  Gaskets</a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>End preparation data from flanged parts is used to match them with
+       corresponding bolts/gaskets</li>
+   <li>Nuts and washers are defined following the same procedure as that of
+       bolts</li>
+   <br>
+   <br>
+   <li>Activating bolts, nuts and washers in the model</li>
+   <li>Where to define bolt data</li>
+   <li>Where to define gasket data</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>14</font></div>
+  </td>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0040.htm');" id=PPTL14>Valve Operators</a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Operators can be selected independent of the body of the valve</li>
+   <li>3D Symbol graphics are delivered for common operator types</li>
+   <br>
+   <br>
+   <br>
+   <li>Wheel operator definition data flow</li>
+   <li>Gear operator definition data flow</li>
+   <br>
+   <br>
+   <br>
+   <li>Lab 5-6</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>15</font></div>
+  </td>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0041.htm');" id=PPTL15>Defining Instrument
+  Items</a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Two types of Instruments: Catalog &amp; Custom</li>
+   <li>Catalog instruments are fully defined like regular spec components</li>
+   <li>Catalog instruments can be accessed by entering their tag or by
+       selecting them from a P&amp;ID drawing</li>
+   <li>Custom “On-the-fly” instruments are partially defined in the catalog,
+       the user selects them from a menu and then finishes defining dimensions
+       and attributes</li>
+   <li>Custom instruments can be read in from INtools in an integrated
+       environment</li>
+   <br>
+   <br>
+   <li>Catalog instrument definition			Lab 12-13</li>
+   <li>On-the-fly instrument definition</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>16</font></div>
+  </td>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0043.htm');" id=PPTL16>Model/Catalog
+  Synchronization</a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>If spec development is in progress after piping parts have been placed
+       in the model, the synchronization utility will keep modeled parts in
+       sync with their source data in the catalog</li>
+   <li>Sync will reconstruct piping parts whose graphic parameters have changed
+       in the spec</li>
+   <li>Sync acts on all disciplines</li>
+   <br>
+   <br>
+   <li>Example of updating instances of a piping item with new catalog
+       dimensions</li>
+   <br>
+   <br>
+   <li>Lab 9</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>17</font></div>
+  </td>
+  <td>
+  <div id=PPTP17 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0056.htm');" id=PPTL17>FYI</a></font></div>
+  <div id=PPTC17 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>The material covered to this point gets you started with the most common
+       procedures and commands in SP3D specs writing</li>
+   <li>For additional learning, complete the step by step labs suggested below</li>
+   <li>In SP3D, use Tasks&gt;Catalog’s F1 help to search additional spec
+       information by subject</li>
+   <li>SP3D’s Tasks&gt;Catalog offers an interactive spec writer, not covered
+       here as it’s not faster than the spreadsheet method and cannot interact
+       with Marian</li>
+   <li>The section that follows covers basic troubleshooting techniques for the
+       most common errors</li>
+   <br>
+   <br>
+   <li>Lab 7, 8, 10, 11, 14, 15</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>18</font></div>
+  </td>
+  <td>
+  <div id=PPTP18 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0044.htm');" id=PPTL18>Basic Spec
+  Troubleshooting</a></font></div>
+  <div id=PPTC18 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Three main areas of troubleshooting:</li>
+   <ul>
+    <li>Rules</li>
+    <li>Spec data</li>
+    <li>Part data</li>
+   </ul>
+   <li>Two ways of diagnosing a spec:</li>
+   <ul>
+    <li>Using Validation report: Always run after loading a spec. May have some
+        false hits that can be ignored</li>
+    <li>Using manual placement: Verifies problems found by Validation process,
+        plus may find additional issues passed by Validation such as incorrect
+        parameters</li>
+   </ul>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>19</font></div>
+  </td>
+  <td>
+  <div id=PPTP19 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0045.htm');" id=PPTL19>Spec Rules
+  Troubleshooting</a></font></div>
+  <div id=PPTC19 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Some rules can be turned off by simply not defining them in the spec.
+       For example, to avoid the Temp/Pressure limits check resulting in the
+       error below, the user can:</li>
+   <ul>
+    <li>Delete the spec’s pressure/temp. limits table from the catalog, or</li>
+    <li>Set UndefinedServiceLimitsruleOpt in DefaultProjectOptions</li>
+   </ul>
+   <br>
+   <br>
+   <li>Some rules generate To-Do entries, like pipe length violations. During
+       modeling testing always review the To-Do list &lt;CTL-T&gt; for rule
+       related errors or warnings</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>20</font></div>
+  </td>
+  <td>
+  <div id=PPTP20 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0046.htm');" id=PPTL20>Spec Rules
+  Troubleshooting</a></font></div>
+  <div id=PPTC20 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Two groups of rules:</li>
+   <ul>
+    <li>Piping Specification Rules</li>
+    <li>Piping Materials Class Rules. First column is always “SpecName”</li>
+   </ul>
+   <li>Spec rules data defined in:</li>
+   <ul>
+    <li>File: &lt;NamePrefix&gt;_SpecificationData.xls</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>21</font></div>
+  </td>
+  <td>
+  <div id=PPTP21 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0047.htm');" id=PPTL21>Spec Data
+  Troubleshooting</a></font></div>
+  <div id=PPTC21 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Spec attribute data is defined in:</li>
+   <ul>
+    <li>File: &lt;NamePrefix&gt;_SpecificationData.xls</li>
+    <li>Worksheet: PipingMaterialsClassData</li>
+   </ul>
+   <li>Only the SpecName attribute is required</li>
+   <li>Attributes under the blue columns are optional, but at least description
+       and service should be defined</li>
+   <li>Any problems with specification attributes information can be corrected
+       by editing this worksheet</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>22</font></div>
+  </td>
+  <td>
+  <div id=PPTP22 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0048.htm');" id=PPTL22>Part Data
+  Troubleshooting</a></font></div>
+  <div id=PPTC22 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>This error indicates that a piping part was defined in the
+       PipingCommodityFilter and PipingCommodityMatlControlData worksheets, but
+       there is no catalog information about it containing end prep and symbol
+       dimensional data</li>
+   <li>File: &lt;NamePrefix&gt;_CatalogData.xls</li>
+   <li>Worksheet: Part Class specific, i.e. Union, 45DegElbow, GlobeValve,
+       OrificeFlange, etc.</li>
+   <li>Action: Match commodity code and NPD from commodity filter and matl ctl
+       data worksheets with same attributes in Part Class worksheet</li>
+   <li>Beware: For valves, the valve body data may be correct, but problems
+       with the operator data, i.e. bad commodity code, may still cause this
+       error</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>23</font></div>
+  </td>
+  <td>
+  <div id=PPTP23 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0049.htm');" id=PPTL23>Part Data
+  Troubleshooting</a></font></div>
+  <div id=PPTC23 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>This error indicates that a piping part was defined in the
+       PipingCommodityFilter but no matching data is found in
+       PipingCommodityMatlControlData worksheet</li>
+   <li>File: &lt;NamePrefix&gt;_SpecificationData.xls</li>
+   <li>Worksheet: PipingCommodityMatlControlData</li>
+   <li>Action: Match component’s commodity code from piping commodity filter
+       with matl ctl data worksheet, then validate all standard note attributes
+       for component in this worksheet</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>24</font></div>
+  </td>
+  <td>
+  <div id=PPTP24 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0050.htm');" id=PPTL24>Part Data
+  Troubleshooting</a></font></div>
+  <div id=PPTC24 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>This error indicates that piping part dimensional values passed from the
+       spec to the symbol graphics placement executable did not satisfy the
+       required inputs needed to draw the graphic</li>
+   <li>File: &lt;NamePrefix&gt;_CatalogData.xls</li>
+   <li>Worksheets:</li>
+   <ul>
+    <li>Part Class specific, i.e. Union, 45DegElbow, etc.</li>
+    <li>Termination type specific, i.e. PipingGenericDataFemale</li>
+   </ul>
+   <li>Action:</li>
+   <ul>
+    <li>Check body dimensions: FacetoCenter, FacetoFace, etc.</li>
+    <li>Match part’s applicable end prep atts (Press. Rating, End Prep, End
+        Std, Schedule) with input attributes in “GenericData” worksheets to
+        make sure that end prep dimensions are found</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>25</font></div>
+  </td>
+  <td>
+  <div id=PPTP25 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0051.htm');" id=PPTL25>Implied Data
+  Troubleshooting</a></font></div>
+  <div id=PPTC25 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>This error indicates that part placement will be successful, but the
+       implied gasket(s) for the bolted end(s) are not found in the catalog</li>
+   <li>File: &lt;NamePrefix&gt;_SpecificationData.xls</li>
+   <li>Worksheet: GasketSelectionFilter, DefaultProjectOptions</li>
+   <li>File: &lt;NamePrefix&gt;_CatalogData.xls</li>
+   <li>Worksheet: GasketPartData</li>
+   <li>Action:</li>
+   <ul>
+    <li>Verify that part’s end prep data (Press. Rating, End Prep, End Std)
+        have a match in the inputs (yellow) section of the
+        GasketSelectionFilter worksheet</li>
+    <li>Make sure the gasket commodity code in GasketSelectionFilter has a
+        match in GasketPartData worksheet</li>
+    <li>Set GsktSlnForMismatchBltdEndsOpt option = 10 in Default-ProjectOptions
+        to allow for mismatched end preps</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>26</font></div>
+  </td>
+  <td>
+  <div id=PPTP26 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0052.htm');" id=PPTL26>Implied Data
+  Troubleshooting</a></font></div>
+  <div id=PPTC26 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Bolted parts will place successfully before bolt data is fully defined.
+       Reviewing the Properties&gt;connection relationships will show a line
+       for Bolts if they are properly defined. If bolt data is missing do as
+       follows</li>
+   <li>File: &lt;NamePrefix&gt;_SpecificationData.xls</li>
+   <li>Worksheet: BoltSelectionFilter, DefaultProjectOptions</li>
+   <li>File: &lt;NamePrefix&gt;_CatalogData.xls</li>
+   <li>Worksheet: BoltPartData</li>
+   <li>Action:</li>
+   <ul>
+    <li>In DefaultProjectOptions make sure that BoltLengthCalculationOption = 5
+        (Enabled)</li>
+    <li>Verify that part’s end prep data (Press. Rating, End Prep, End
+        Std)<span style='mso-spacerun:yes'>  </span>have a match in the inputs
+        (yellow) section of the BoltSelectionFilter worksheet</li>
+    <li>Make sure the bolt commodity code in BoltSelectionFilter has a match in
+        BoltPartData worksheet</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>27</font></div>
+  </td>
+  <td>
+  <div id=PPTP27 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0053.htm');" id=PPTL27>Instrument Part
+  Troubleshooting</a></font></div>
+  <div id=PPTC27 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>This warning indicates that placement cannot proceed because the entered
+       instrument does not exist in the catalog, or does not exist for the
+       active NPD and/or end preparation at the active point. To resolve this
+       do as follows</li>
+   <li>File: InstrumentData.xls</li>
+   <li>Worksheet: Instrument part class (ie FlowMeter1), InstrumentClassData,
+       PipingCommodityMatlControlData</li>
+   <li>Action:</li>
+   <ul>
+    <li>Make sure that the attribute “RequisitionType” is defined in both the
+        instrument part and InstrumentClassData worksheets</li>
+    <li>Make sure that the IndustryCommodityCode from the part sheet is matched
+        in the ContractorCommodityCode columns of InstrumentClassData and
+        PipingCommodityMatlControlData</li>
+    <li>If RequisitionType = 5, ensure that the instrument data is defined in
+        PipingCommodityMatlControlData just like a regular piping component</li>
+    <br>
+    <br>
+   </ul>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>28</font></div>
+  </td>
+  <td>
+  <div id=PPTP28 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0054.htm');" id=PPTL28>Error Logging</a></font></div>
+  <div id=PPTC28 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>When requesting troubleshooting assistance from Intergraph, the analyst
+       there may request to see a copy of the Error Log when applicable</li>
+   <li>To activate error logging navigate to:<br>
+              C:\Program Files\SmartPlant\3D\Core\Tools\Administrator\Bin</li>
+   <li>Launch ErrorLogEnable.exe</li>
+   <li>Enable error logging using the following parameters:</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <li>Time-based switch will cause a new log file to be created for every time
+       a new SP3D session is started</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+</table>
+
+
+
+</div>
+
+<div style='display:none'><a href=master04.htm></a><a href=master04.xml></a><a
+href=preview.wmf></a><a href="master04_image001.jpg"></a><a
+href="master04_image002.png"></a><a href="master04_image003.png"></a><a
+href=master05.htm></a><a href=master05.xml></a><a href="master05_image004.jpg"></a><a
+href="master05_image005.png"></a><a href="master05_image006.png"></a><a
+href="master05_image007.png"></a><a href=master101.htm></a><a
+href=master101.xml></a><a href="master101_image008.jpg"></a><a
+href=master02.htm></a><a href=pres.xml></a><a href=slide0001.htm></a><a
+href="master04_background.gif"></a><a href="master04_image009.gif"></a><a
+href="master04_image010.gif"></a><a href=slide0002.htm></a><a
+href="master101_background.gif"></a><a href="master101_image011.gif"></a><a
+href="master101_image012.gif"></a><a href="master101_image013.gif"></a><a
+href=slide0031.htm></a><a href="master05_background.gif"></a><a
+href="master05_image014.gif"></a><a href="master05_image015.gif"></a><a
+href="master05_image016.gif"></a><a href=slide0032.htm></a><a
+href=slide0033.htm></a><a href="slide0033_image017.jpg"></a><a
+href="slide0033_image018.gif"></a><a href=slide0034.htm></a><a
+href="slide0034_image019.gif"></a><a href=slide0057.htm></a><a
+href="slide0057_image020.gif"></a><a href="slide0057_image021.gif"></a><a
+href="slide0057_image022.wmz"></a><a href="slide0057_image023.gif"></a><a
+href=slide0035.htm></a><a href="slide0035_image024.gif"></a><a
+href="slide0035_image025.gif"></a><a href="slide0035_image026.gif"></a><a
+href="slide0035_image027.gif"></a><a href=slide0036.htm></a><a
+href="slide0036_image028.gif"></a><a href="slide0036_image029.gif"></a><a
+href="slide0036_image030.gif"></a><a href="slide0036_image031.gif"></a><a
+href="slide0036_image032.gif"></a><a href=slide0055.htm></a><a
+href="slide0055_image033.gif"></a><a href=slide0037.htm></a><a
+href="slide0037_image034.gif"></a><a href="slide0037_image035.gif"></a><a
+href=slide0038.htm></a><a href="slide0038_image036.gif"></a><a
+href="slide0038_image037.gif"></a><a href="slide0038_image038.gif"></a><a
+href=slide0039.htm></a><a href="slide0039_image039.gif"></a><a
+href="slide0039_image040.gif"></a><a href="slide0039_image041.gif"></a><a
+href=slide0040.htm></a><a href="slide0040_image042.gif"></a><a
+href="slide0040_image043.gif"></a><a href="slide0040_image044.gif"></a><a
+href=slide0041.htm></a><a href="slide0041_image045.gif"></a><a
+href="slide0041_image046.gif"></a><a href="slide0041_image047.gif"></a><a
+href=slide0043.htm></a><a href="slide0043_image048.gif"></a><a
+href="slide0043_image049.gif"></a><a href=slide0056.htm></a><a
+href="slide0056_image050.gif"></a><a href=slide0044.htm></a><a
+href=slide0045.htm></a><a href="slide0045_image051.png"></a><a
+href="slide0045_image052.gif"></a><a href="slide0045_image053.png"></a><a
+href="slide0045_image054.gif"></a><a href=slide0046.htm></a><a
+href="slide0046_image055.gif"></a><a href="slide0046_image056.gif"></a><a
+href=slide0047.htm></a><a href="slide0047_image057.png"></a><a
+href="slide0047_image058.gif"></a><a href=slide0048.htm></a><a
+href="slide0048_image059.png"></a><a href="slide0048_image060.gif"></a><a
+href=slide0049.htm></a><a href="slide0049_image061.png"></a><a
+href="slide0049_image062.gif"></a><a href=slide0050.htm></a><a
+href="slide0050_image063.png"></a><a href="slide0050_image064.gif"></a><a
+href=slide0051.htm></a><a href="slide0051_image065.png"></a><a
+href="slide0051_image066.gif"></a><a href=slide0052.htm></a><a
+href="slide0052_image067.png"></a><a href="slide0052_image068.gif"></a><a
+href=slide0053.htm></a><a href="slide0053_image069.png"></a><a
+href="slide0053_image070.gif"></a><a href=slide0054.htm></a><a
+href="slide0054_image071.png"></a><a href="slide0054_image072.gif"></a><a
+href=master01.htm></a><a href="master04_stylesheet.css"></a><a
+href="master05_stylesheet.css"></a><a href="master101_stylesheet.css"></a><a
+href=script.js></a><a href="../SP3D_PIPINGCAT_Basics.htm"></a><a
+href=fullscreen.htm></a><a href=buttons.gif></a><a href=frame.htm></a><a
+href=outline.htm></a></div>
+
+</body>
+
+</html>

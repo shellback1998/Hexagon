@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Piping Nipple Spool NPD with Unit Primary"
+ Description="NPD with units for primary size"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="PrimarySize"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJPartOcc"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="PrimarySize"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="PriSizeNPDUnits"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJPartOcc"
+             SourceBOC=""
+             DestinationInterface="IJDPipeComponent"
+             DestinationProperty="PriSizeNPDUnits"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJPartOcc"
+                   RelationCollection="part"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

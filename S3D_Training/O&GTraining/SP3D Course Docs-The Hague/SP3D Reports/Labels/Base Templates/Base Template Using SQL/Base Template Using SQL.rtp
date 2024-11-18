@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Base Template Using SQL" Description="">
+	<QUERIES>
+		<QUERY Name="Base Template Using SQL" Site="User" Path="Base Template Using SQL.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Base Template Using SQL" Site="User" Path="Base Template Using SQL.rfm"/>
+</REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="WBS Iso Grouping Query - Fabrication" Description="Label to name WBS Isometric groups"><QUERIES><QUERY Name="WBS Iso Grouping Query - Fabrication" Site="User" Path="WBS Iso Grouping Query - Fabrication.rqe"/></QUERIES><FORMATTING Name="WBS Iso Grouping Query - Fabrication" Site="User" Path="WBS Iso Grouping Query - Fabrication.rfm"/></REPORT_TEMPLATE>

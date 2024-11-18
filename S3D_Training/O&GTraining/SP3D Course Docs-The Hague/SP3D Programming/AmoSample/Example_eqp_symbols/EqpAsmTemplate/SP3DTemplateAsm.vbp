@@ -1,0 +1,74 @@
+Type=OleDll
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
+Reference=*\G{5A600C20-CBD5-11D1-9556-0060973D4824}#1.0#0#E:\SP3D\Client\Core\Middle\Bin\Geom3d.dll#Ingr 3D Geometry 1.0 Type Library
+Reference=*\G{25E77868-C8C1-11D1-A33B-080036409103}#1.0#0#E:\SP3D\Client\Equipment\Middle\Bin\NozzleEntities.dll#Ingr GSCAD Nozzle Entities 1.0 Type Library
+Reference=*\G{466D2870-DF74-11D1-A349-080036409103}#1.0#0#E:\SP3D\Client\CommonSchema\Middle\bin\NozzleFacelets.dll#Ingr GSCAD Nozzle Facelets 1.0 Type Library
+Reference=*\G{D2D1F562-F0DA-11D1-BE4F-0060973D4805}#1.0#0#E:\SP3D\Client\CommonSchema\Middle\bin\PartFacelets.dll#Ingr GSCAD PartFacelets 1.0 Type Library
+Reference=*\G{D015F271-07E9-11D3-B387-00104BCC2CB7}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\SymbolServices.dll#Ingr GSCAD SymbolServices 1.0 Type Library
+Reference=*\G{6FFA4BE0-4114-11D1-B831-000000000000}#1.0#0#E:\SP3D\Client\Core\Shared\Bin\AutoMath.dll#Ingr Marine AutoMath 1.0 Type Library
+Reference=*\G{0EB628E0-671D-11D1-BE0C-080036B88703}#1.0#0#E:\SP3D\Client\Core\Middle\Bin\IMSSymbolEntities.dll#Ingr Marine Symbol Entities 1.0 Type Library
+Reference=*\G{317F8489-5A1E-11D2-B96C-08003630C502}#1.0#0#E:\SP3D\Client\Core\Shared\Bin\ErrorLog.dll#Ingr SmartPlant 3D Error Log v 1.0 Library
+Reference=*\G{44A85DBE-4148-4B66-A1C0-75C35E4D797F}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\CustomCache.dll#Ingr Cmn App Symbols Custom Cache 1.0
+Reference=*\G{DF5D2992-C0B9-11D1-8DBC-0060974FF0FD}#1.0#0#E:\SP3D\Client\RefData\Middle\Bin\RefDataGlobal.dll#Ingr Sp3d RefDataGlobal 1.0 Type Library
+Reference=*\G{E99CB703-50B6-11D4-899F-00A0C98FCC33}#1.0#0#E:\SP3D\Client\Core\Shared\Bin\UOMServices.dll#Ingr SmartPlant 3D Units Of Measure Services v 1.0 Library
+Reference=*\G{F25B47D6-CE07-412F-9828-70798C99ECCA}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\SP3DSymbolHelper.dll#Ingr SP3D SymbolHelper V1.0
+Reference=*\G{D5037804-FB7F-11D3-8458-0050DA23CDEB}#1.0#0#E:\SP3D\Client\RefData\Middle\Bin\CatalogAutomation.dll#CatalogAutomation 1.0 Type Library
+Reference=*\G{11F3D0E0-EFCA-11D3-8FBF-0800362F1104}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\CMidInterfaces.dll#Ingr Sp3d CommonApp Middle Interfaces 1.0 Type Library
+Reference=*\G{086603CE-6A69-11D1-A300-080036409103}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\PartOccurrence.dll#Ingr Sp3d Part Occurrence 1.0 Type Library
+Reference=*\G{86E856C7-EA29-11D1-8E2A-0060974FF0FD}#1.0#0#E:\SP3D\Client\RefData\Middle\Bin\RefDataPipingSpec.dll#Ingr SP3D RefDataPipingSpec Entities 1.0 Type Library
+Reference=*\G{49DAE3BA-A9A5-11D3-B3BE-00105A2722B3}#1.0#0#E:\SP3D\Client\Core\Shared\Bin\CoreCollections.dll#Ingr SmartPlant 3D Core Collections v 1.0 Library
+Reference=*\G{D5C615A8-B338-426C-9096-A7911CBF51D6}#1.0#0#E:\SP3D\Client\Equipment\Middle\Bin\NozzlePHEntities.dll#Ingr SP3D Nozzle PlaceHolder Entities 1.0 Type Library
+Reference=*\G{C18A5882-BD22-11D1-A336-080036409103}#1.0#0#E:\SP3D\Client\Equipment\Middle\Bin\EqpEntities.dll#Ingr Sp3d Equipment Entities 1.0 Type Library
+Reference=*\G{419ED160-AB1B-499C-992E-6D7865FF6589}#1.0#0#E:\SP3D\Client\Equipment\Middle\Bin\SP3DEqpCADHelper.dll#Ingr SmartPlant 3D Equipment Custom Assembly Definition Helper v 1.0
+Reference=*\G{988B86D5-DC66-48DD-A237-6FA40157276B}#1.0#0#E:\SP3D\Client\Equipment\Middle\Bin\SP3DEquipCADHelperInterfaces.dll#Ingr SmartPlant 3D Equipment CAD Helper Interfaces v 1.0 Library
+Reference=*\G{09BB8138-B16F-41B1-A764-4078E8D8CD03}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\CustomAssembly.dll#Ingr CustomAssembly Entities 1.0 Type Library
+Reference=*\G{292E8660-E26D-11D4-9825-00104BD1CC25}#1.0#0#E:\SP3D\Client\CommonApp\Middle\Bin\SmartOccurrence.dll#Ingr SmartOccurrence Entities 1.0 Type Library
+Class=CSP3DTemplateSym; CSP3DTemplateSym.cls
+Class=CSimplePhysical; CSimplePhysical.cls
+Class=CSP3DTemplateDef; CSP3DTemplateDef.cls
+Module=Geometry3d; Geometry3d.bas
+Module=Geometry3DPH; Geometry3DPH.bas
+Startup="(None)"
+HelpFile=""
+Title="CommandProjectAsm"
+ExeName32="SP3DTemplateAsm.dll"
+Command32=""
+Name="SP3DTemplateAsm"
+HelpContextID="0"
+Description="<Project Needs a Description!>"
+CompatibleMode="0"
+CompatibleEXE32="..\bin\SP3DSimpleSymbolAsm-ref.dll"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="Intergraph PP&O"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=-1
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+ThreadingModel=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[RVB]
+DeleteClass1=CoreTraderKeys
+DeleteClass2=frmCmdForm
+
+[SP3D]
+V6UpgradeSO Start=7/26/2005-9:30:42 PM
+V6UpgradeSO End=7/26/2005-9:30:44 PM

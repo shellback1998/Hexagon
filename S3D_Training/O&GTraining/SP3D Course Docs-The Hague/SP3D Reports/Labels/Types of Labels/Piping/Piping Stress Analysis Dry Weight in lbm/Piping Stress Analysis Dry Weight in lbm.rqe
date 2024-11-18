@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Stress Analysis Dry Weight in lbm" Description="Dry Weight per part, for export to stress analysis" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0">
+		<![CDATA[ 
+         SELECT jwcg.DryWeight AS Weight
+         FROM JWeightCG jwcg 
+         WHERE jwcg.oid = ? 
+        ]]>
+	</SQL>
+	<QUERY_PARAMETERS Name="Piping Stress Analysis Dry Weight in lbm" Site="User" Path="Piping Stress Analysis Dry Weight in lbm.rqp"/>
+</REPORT_QUERY>

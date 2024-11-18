@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Flanges" Description="Material Description Label for Flanges">
+<QUERIES>
+<QUERY Name="Flanges" Site="User" Path="Flanges.rqe"/>
+</QUERIES>
+<FORMATTING Name="Flanges" Site="User" Path="Flanges.rfm"/>
+</REPORT_TEMPLATE>
+

@@ -1,0 +1,10 @@
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.Resources.resources
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.PlaceEqpAndPipingForm.resources
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.vbproj.GenerateResource.Cache
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\bin\Debug\SP3DNetAPIDemo.dll
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\bin\Debug\SP3DNetAPIDemo.pdb
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\bin\Debug\SP3DNetAPIDemo.xml
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.vbprojResolveAssemblyReference.cache
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.dll
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.xml
+G:\Intergraph Training\S3D_Training\O&GTraining\SP3D Course Docs-The Hague\SP3D Programming\TSMP4003 - Smart3D Net API - Course Guide\examples\SP3DNetAPIDemo\obj\Debug\SP3DNetAPIDemo.pdb

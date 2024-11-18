@@ -1,0 +1,610 @@
+                         Frequently Asked Questions
+                                     on
+                          Programmer's File Editor
+                         --------------------------
+
+   [Answers in this file refer to facilities available in PFE 0.06.002]
+
+    You may find information on any problem you have encountered in the
+ problems.txt file, which lists known major problems in the current release
+
+--
+
+Q. What version of PFE is recommended for my current environments? I use
+Windows 3.10, Windows NT and Windows 95
+
+A. PFE is supplied in two forms: the 16-bit edition (PFE.EXE) and the
+32-bit edition (PFE32.EXE). The recommended versions for various
+platforms are these:
+
+	Windows 3.1x			16-bit edition
+	Windows NT 3.51			32-bit edition
+	Windows 95			32-bit edition
+
+Although the 32-bit edition should function on a Windows 3.1x system if you
+have Win32s 1.25 or later installed, its use is not recommended. Some
+functionality is not available, and the version is not extensively tested in
+this mode. There's a more detailed table of what runs in which environment
+in the README.TXT file accompanying the release
+
+----
+
+Q. How can I arrange that edit windows are created to use the maximum area
+available in the MDI client area?
+
+A. You can do this with the Options Preferences command. Start the
+preferences dialog and select "Window Control" from the list of option
+categories on the left. This shows you a panel that lets you configure
+exactly how child windows will be created
+
+----
+
+Q. Why don't all the TrueType fonts I have installed on my system appear in the
+printer and screen fonts dialogs?
+
+A. Because PFE is a programming-oriented text editor, rather than a word
+processor, it supports only fixed pitch fonts (ones in which all characters
+occupy the same width on screen or paper). There are, sadly, very few fixed
+pitch fonts available. There are no plans to add variable fixed pitch support
+in a future release.
+
+----
+
+Q. How can I ensure that if I associate PFE with a file type in File Manager,
+double clicking on a file of that type will bring up a new PFE window rather
+than opening the file in an already-running instance?
+
+A. Normally, whenever you start PFE, it will look to see if an instance is
+already running. If it is, this instance is activated, and the names of any
+files you give on the command line will be passed to it across a DDE link. If
+you want to force a new instance of PFE to start instead of activating an
+existing one, use the '/m' command line flag.
+
+----
+
+Q. I want PFE to remember the names of more than the last 5 files I've edited,
+so I can pick them quickly from the File menu. How can I do this?
+
+A. You can configure the Most Recently Used (MRU) list with the Options
+Preferences command. Start the preferences dialog, and select "File
+Menu" from the list of option categories on the left. This shows you the
+panel that configures the MRU list.
+
+You can configure the total size of the list, and how many files from
+the list will appear on the File menu (you will be able to select from the
+entire list with a dialog command that will follow the list on the menu).
+You can also specify that the File menu should be drawn in two columns rather
+than one if you want to show a large number of files. Note that you will need
+to exit PFE and restart it before your changes take effect.
+
+----
+
+Q. I don't like the standard Windows File Manager, and prefer to use a third
+party one. How can I get the File Manager item on the Execute menu to start
+this instead of the standard one?
+
+A. You can configure what the various "Manager" items on the Execute
+menu do with the Options Preferences command. Start the preferences
+dialog and select "Windows Managers" from the list of option categories
+on the left to show the panel that handles this
+
+For each of the menu items, you can specify that PFE should run either
+the standard manager program supplied with Windows, or runs a command
+line of your choice
+
+----
+
+Q. I use 4DOS-for-NT as my Windows/NT command processor instead of Microsoft's
+cmd.exe - how can I get the Execute DOS Prompt and associated tool bar button
+to start this?
+
+A. Normally, PFE will use the executable file named in the COMSPEC environment
+variable as the command processor. If this variable is not set, it uses the
+standard defaults "command.com" under Windows 3.1x, and "cmd.exe" under Windows
+NT
+
+You can define the command processor you want to start with the Options
+Preferences command. Start the preferences dialog and select "DOS Shell" from
+the list of option categories on the left to show the relevant panel, and
+define your preference
+
+----
+
+Q. What's the difference between the Execute Launch Application command and the
+Execute Launch Windows Tool command?
+
+A. In terms of what they accomplish - to start a Windows or a DOS application
+running independently of PFE - there's none. Execute Launch Application starts
+a dialog that prompts you for a command line; it remembers the last command
+line you used, but that's all.
+
+The Execute Launch Windows Tool command, by contrast, lets you define a whole
+set of command lines, and label each one with a meaningful name. For example,
+you could name a tool entry as "Edit Help File", and associate a command line
+that runs Word for Windows to edit a file. Or you could have one called "Build
+data file" that runs a DOS application with a set of files on its command line.
+You just pick the function you want from your mnemonic list, without needing to
+bother about what the command line has to be
+
+----
+
+Q. I use Windows NT on MIPS and DEC Alpha platforms - is there an executable
+of PFE32 for these?
+
+A. PFE32 exists only for Intel and PowerPC hardware. There are no plans for
+MIPS or DEC Alpha versions
+
+----
+
+Q. How can I record my keyboard macros for use in other sessions?
+
+A. This ability is not a part of the current PFE release. A future version will
+include savable keyboard macros, implemented as editable macro libraries
+
+----
+
+Q. How does PFE manage to allow more than 32K of text to be edited in an edit
+control?
+
+A. PFE doesn't, in fact, use standard edit controls to show text. The windows
+you see are ordinary MDI child windows, and the text is drawn explicitly by PFE
+as required. Internally, a complicated memory management system keeps track of
+where each line of each file is stored.
+
+----
+
+Q. Why, if I have word wrap switched on for a window, will PFE wrap text only
+when I'm typing at the end of the line and not when I insert in the middle of
+it?
+
+A. The current design of PFE is set to do things that way for efficiency
+reasons. However, the Edit Text Reformat and Edit Text Reformat Paragraph
+commands allow you to reflow text to fit the current wrap margin at any time.
+
+----
+
+Q. Why do I get "Help file not found" when I ask for help?
+
+A. Make sure that you have the help file pfe.hlp in the same directory as the
+pfe.exe or pfe32.exe executable program
+
+----
+
+Q. Why is the default of 32 undoable actions so small? Surely, when I'm typing
+text, I'll fill that up in 32 keypresses?
+
+A. Actually, no - the undo system doesn't work in quite that way. It records
+specific _actions_ in its stack, such as a drag-drop move of text, or a cut of
+the highlighted text. When you're typing, each keypress is considered as part
+of a _single_ action, which is terminated only when you do something different,
+like moving the caret with the arrow keys, or switching to another window.
+
+Then, when you use the Undo Typing command, PFE will remove all the typing
+you've performed in that action (a future release of PFE will probably let you
+undo typing actions character-by-character too)
+
+You can change the number of undo actions that PFE records with the Options
+Preferences command. Start the preferences dialog and select "Editing Files"
+from the list of option categories on the left to show the relevant panel that
+lets you set the size of the list
+
+----
+
+Q. If I select some text and start to drag it to a new location, how can I
+change my mind without having to drop the text somewhere and then undo the
+action?
+
+A. You can cancel a drag-and-drop in one of two ways. If the highlighted text
+is visible in the window, move the mouse cursor somewhere inside it and release
+the left button. Alternatively, press the Escape key before you release the
+left mouse button.
+
+----
+
+Q. How can I use drag-and-drop to move text from one window to another?
+
+A. In the current design, PFE supports drag-and-drop only _within_ a window.
+Inter-window operation may be added in a future release.
+
+----
+
+Q. How can I configure PFE so that the File Save command and its associated
+tool bar button are always available? At the moment, I can only use the command
+when I've changed the file in some way.
+
+A. By default, PFE enables the File Save command only when the file showing in
+a window has altered. This gives you some feedback (complementing the 'file
+changed' marker in the status bar) that helps you avoid un-necessary saves.
+
+You can use the Options Preferences command to change this setting.
+Start the preferences dialog and select "Saving Files" from the list of
+option categories on the left to show the relevant panel. Check the box
+labelled "Allow File Save on unaltered files" to make the File Save
+command and the toolbar button always available
+
+----
+
+Q. I like the window that runs DOS commands with output capture to start full
+screen, and to have specific tuning details set. How can I do this?
+
+A. DOS commands with output capture are run by either the pfedos.exe (for
+Windows 3) or pfedos32.exe (for Windows NT) helper modules. To change how the
+windows are created, set up suitable PIF files pfedos.pif and/or pfedos32.pif
+in the same directory, and use the Windows PIF editor to set the details as you
+require
+
+----
+
+Q. How do I insert a Form Feed into a file, or specify it in the Find and
+Replace dialogs?
+
+A. To insert a Form Feed (or any other non-typable character) use the
+EditTextInsertASCIICode command, which is by default mapped to Ctrl+Q. This
+starts up a dialog that lets you select Esc and Ctrl+A - Ctrl+Z easily by name,
+or specify any ASCII code you like as a number.
+
+To specify Form Feed in the Find or Replace dialogs, write it as the two-
+character sequence "\f". You can also specify end-of-line by "\n" and tab by
+"\t"; and you can specify an arbitrary code as "\xhh", where "hh" represents
+two hex digits. Remember that if you actually want a "\" character, you need to
+write it as "\\".
+
+----
+
+Q. Why do I see lots of files with type .&&& (PFE version 0.05.006) or .$$$
+(PFE version 0.05.007 and later) in my directories?
+
+A. These are the backup files that PFE produces whenever you save a file. If a
+file of the same name exists already, PFE renames it with a type of .$$$ before
+writing the new data to disk.
+
+The Options Preferences command allows you to configure some defaults
+for how backup is handled. Start the preferences dialog and select "Backup"
+from the list of option categories on the left to show the relevant
+panel.
+
+In this dialog, you can disable all backup permanently; choose to have
+PFE make backup files to the same directory as the original file but
+with a file extension of your choice; or to make the copy into a file of
+the same name as the original, but in a subdirectory of the directory
+containing it
+
+The File Save As dialog and the Options Default Modes and Options
+Current Modes dialogs also let you control some backup actions on a per-
+file basis
+
+----
+
+Q. I am using the Italian version of Windows 3.1x, and when I use the
+File Open command I can only specify the name of the file to open by
+typing it in to the file name control at top left - selecting the name
+by mouse from the list of files doesn't work
+
+A. The various file opening dialogs are not controlled by PFE, but
+instead are standard Windows features provided by Microsoft. The code
+that creates the dialogs is held in a file called "commdlg.dll" which is
+kept in your Windows system directory.
+
+Some early versions of the Italian language commdlg.dll appear to have
+bugs that affect the dialogs when used by PFE (and probably other
+applications too). You should contact your supplier or your local Microsoft
+company to obtain an up-to-date version of the commdlg.dll file.
+
+----
+
+Q. I used the Options Preferences, Options Default Modes and Options
+Current Modes command to set background colours for my edit windows and
+the main PFE workspace. Why are the colours I get not the ones I
+selected?
+
+A. Depending on what type of video adapter you have fitted to your
+computer, only a very few of the infinite number of colours can be shown
+as pure or "solid" colours. Normally your system will provide 16 such
+solid colours, and you will see these in the block of colours shown at
+top left in the colour selection dialog.
+
+When Windows is asked to display some other colour, it has to use a
+technique known as "dithering", that simulates the shade you want. For
+example, it might produce a pale blue by drawing a fine grid of dark
+blue lines on a white background; this will appear to be the colour you
+wanted when seen from a suitable distance.
+
+Dithered colours are very unpleasant to use as backgrounds for text, and
+writing text on such a background is very much slower that if the
+background were a solid colour. For these reasons, PFE does not support
+the use of dithered colours, but instead translates the colour value you
+select to the closest available solid colour.
+
+----
+
+Q. Does PFE run correctly under Windows NT 3.51 and Windows 95?
+
+A. Yes it does. You should use the 32-bit edition in these environments, as
+some facilities are not available with the 16-bit edition.
+
+----
+
+Q. I work with a number of large projects and would like to have
+separate customised PFE environments. Can I do this?
+
+A. You can use PFE's ability to locate its initialisation file pfe.ini
+or pfe32.ini in arbitrary directories to do this.
+
+Start the Options Preferences command, and select the "Startup" panel
+from the list on the left. In the panel on the right, click the "In
+startup directory" button.
+
+PFE will now take its initialisation file from the directory it starts
+in, so you can have specific Program Manager icons that start t in
+directories specific to each individual project.
+
+The default key map file pfe.key or pfe32.key is also looked for in this
+directory, and perhaps you will want to do this. However, if you want to
+have only one centralised key map file, you should use the "key Mapping"
+panel of the Options Preferences dialog to set a specific path name for
+the key map file that is independent of the initialisation directory.
+This can, of course, be a path in your Windows directory.
+
+--
+
+Q. What are the licensing arrangements for PFE? I use it at home and
+would like to do so at my work too.
+
+A. PFE is FreeWare. You don't need to register to use it, and there is
+no fee. You can use it at home, or at work without restriction.
+
+If you'd like to include PFE on the distribution disks with a commercial
+product you can obtain a licence that will enable you to do this.
+
+The help file contains full details on the current usage and licensing
+position.
+
+--
+
+Q. I'm editing files on a NFS-mounted partition, and whenever I save my
+edit changes the long name of the file disappears and all I see is the
+NFS-generated 8.3 name. What's happened?
+
+A. The problem is in the way that PFE makes backups when you save files.
+In the current version, any existing file is renamed to be the backup
+copy, and a new file is created with the old name to save the changes
+into.
+
+The step of renaming the file breaks the association that NFS maintains
+between the DOS 8.3 name and the file's long name. Thus, when PFE
+creates the new file to save - using the 8.3 name - NFS can no longer
+translate this to the "real" name and so has to pass the 8.3 name itself
+to Windows.
+
+The only circumvention available in the current release is to disable
+making backup copies in these circumstances.
+
+--
+
+Q. I'm using Windows NT on an Intel system and also on a PowerPC. The
+PowerPC version of PFE does not think that keymap and template files I
+made on the Intel version are valid. What's wrong?
+
+A. For this release of PFE it was not possible to make the format of
+.key and .tpl files the same between versions of the 32-bit edition for
+different hardware platforms. This will be corrected in a forthcoming
+release
+
+--
+
+Q. Why can't I open more than one file at a time with the File Open and File
+View commands? Previous versions of PFE allowed me to do this.
+
+A. Because of a problem in handling long file names that contain spaces, due
+essentially to a design flaw in Windows, it became necessary to change the
+default mode of operation of these commands in version 0.06.002 and later.
+Although the problem manifests only on Windows NT, the design was altered in
+all editions for consistency.
+
+Now by default the file opening commands allow you to select only one file at a
+time, and on Windows NT all long file names will appear correctly. If you want
+the old behaviour, allowing multiple files to be selected, use the Options
+Preferences command and select it from the General panel. But be warned that if
+you do select this option, long file names with spaces will appear as 8.3 names
+if you're using Windows NT with the Windows 3 user interface.
+
+There's more on this topic in the next item
+
+--
+
+Q. I'm using Windows NT with the Windows 3 user interface, and I used Options
+Preferences to allow me to open more than one file at a time in the File Open
+command. However, my long file names don't apear any more - I just see the DOS
+8.3 names
+
+A. There is a basic flaw in Microsoft's design of the library that provides the
+standard file open dialogs (this code is not part of PFE). Essentially, it
+can't handle long file names THAT CONTAIN SPACES if you also allow multiple
+files to be selected. Long file names without spaces are handled correctly; but
+Microsoft's code automatically shows those with spaces as 8.3 names in order to
+get around their design error.
+
+In its default mode of operation, PFE allows you to open only one file at a
+time, and here the problem does not arise.
+
+Unfortunately, there is no way to beat this problem - if you want to open
+multiple files at one time, you won't see names with spaces in.
+
+On the good side, though, the problem does not arise at all if you're running
+Windows 95, or if you have the Windows 95 user interface on Windows NT.
+
+--
+
+Q. I'm using the 32 bit edition, and I've set up associations so that I can
+open files of type ".c" in PFE by double clicking the names in File Manager and
+Explorer. It works fine most of the time, but if the name contains spaces it
+doesn't - PFE seems to think each part of the name is a filename all by itself
+
+A. When you double click on a filename that has an association, Windows issues
+the associated command on your behalf, so that what's started might be, for
+example,
+
+              pfe32 c:\sources\file.c
+
+Many applications allow you to specify only one file on the command line, and
+they'll take the WHOLE of the command line as the file name. Thus, a command
+like
+
+              wordpad c:\sources\my source file.c
+
+will work, as the application takes
+
+              c:\sources\my source file.c
+
+as the file name.
+
+However, PFE allows you to specify multiple files on the command line, and as
+for any application, the command line components are separated by spaces. Thus,
+if you caused this command to be issued via an association
+
+              pfe32 c:\sources\my source file.c
+
+PFE thinks you want to edit three files, called c:\sources\my, source, and
+file.c
+
+You can easily get round this by setting up the association in a different way.
+When you define it, make the command that's run like this
+
+             pfe32 "%1"
+
+Now, when you double click the file name and Windows issues the command, it
+will replace the %1 in the associated line with the file name, so that what
+gets run is
+
+              pfe32 "c:\sources\my source file.c"
+
+The quotes will make PFE see the string as a single file name, and it will all
+work as you want.
+
+--
+
+Q. How do I change the font that I use to print files out? In previous releases
+there was a "Font" button in the Print Setup dialog, but it's gone in 0.06.002
+
+A. In version 0.06.002 the printer system has been redesigned to use the same
+user interface and dialogs as other applications; the Print and Print Setup
+dialogs you see are now the standard ones that are part of Windows.
+
+Unfortunately, the way that Windows works with these dialogs means that it
+isn't possible to select fonts from them. Accordingly a new command File Page
+Setup has been added, which starts a dialog allowing you to select fonts and
+margins for the current printer
+
+--
+
+Q. Previous versions of PFE used to remember the printer I was last using and
+select this; in 0.06.002, though, I always seem to get the system default
+printer when I start it
+
+A. As described in the previous item, the printer system in 0.06.002 has been
+redesigned to use the standard user interface and methods. As part of this, PFE
+now works in the Windows standard way and sets you up to work initially with
+your system's default printer.
+
+--
+
+Q. If a drag and drop a file from the Windows 95 Explorer onto a desktop
+shortcut to PFE32.EXE, why do long file names seem to get changed to their 8.3
+equivalents?
+
+A. This appears to be a quirk in how Windows 95 handles shortcuts. When you
+drag and drop in this way you're not using the same mechanism as when you drag
+and drop onto a real PFE window - this operation works with long file names as
+you expect.
+
+With a shortcut, though, Windows 95 simply works out the command to issue on
+your behalf. So if you drag and drop a file called c:\source\file.txt onto the
+shourtcut, Windows 95 issues the command line
+
+                 pfe32 c:\source\file.txt
+
+on your behalf.
+
+However, for some reason the designers of Windows 95 set it so that long file
+names are always translated into their 8.3 form when doing this - this is
+probably because they want to be sure everything will work when the shortcut is
+to an old 16-bit application, which can't handle long file names.
+
+--
+
+Q. I'm using the Execute DOS Command To Window command to run my compiler,
+which will prompt me for input if there's an error. Using the 32-bit edition I
+see the compiler output in the console window, but I never see the prompts and
+the output window seems to lock up, although if I type the expected reply blind
+it all seems to work. What's going wrong?
+
+A. The problem here arises because PFE is essentially trying to subvert the
+compiler, fooling it into thinking that it's writing to the screen (as it
+normally would) when actually it's sending all its output to PFE (actually, to
+a small helper program that PFE runs for this purpose).
+
+If the compiler or other program is simply writing, then it all works fine. But
+as you've seen, there are problems if the program wants you to perform output.
+Normally, when a program writes to the screen, Windows makes sure that all the
+output is sent there directly and not stored in the program's or Windows's
+buffers. Thus, you see the prompt as soon as the program writes it, and you
+know what to do.
+
+But when PFE runs the compiler, the output is actually not to the screen, but
+to a pipe (under Windows NT) or a communication file (under Windows 95). The
+compiler itself doesn't know the difference, but the underlying I/O systems and
+Windows certainly do. Since they know the program isn't writing to the screen,
+the compiler's output will be _buffered_ for efficiency - thus it's quite
+possible, and actually most probable, that the prompt string will be stored in
+a buffer waiting to be written to the screen when the compiler asks you to type
+- so you never see the prompt.
+
+There is no way round this problem, unfortunately. Although techniques are
+available for programs to detect what's happening and make sure that you _do_
+see the prompt, you'll be lucky to find one that uses them.
+
+The moral, sadly, is that the Execute DOS Command To Window command is not
+suitable if the program you want to run will ever require you to type in to it
+rather than simply generate output
+
+--
+
+Q. I like to work with tab width of 4 in my files, and I can set this up with
+the Options Current Modes command. However, if I edit the same files again, the
+tab setting reverts to the default of 8. How can I change this?
+
+A. The Options Current Modes command affects the modes applied to only the
+current window; the effect is limited to that window, and when it closes the
+settings are lost.
+
+To do what you want - which is to define the _default_ modes for a file - you
+need to use the Options Default Modes command.
+
+You'll find full information on how to use this command in the help file.
+Basically, you can define a number of "mode groups", which are collections of
+filename patterns like "*.c *.h readme.*". With each mode group you define the
+default modes you want; then, if any file you open has a name matching
+something in a mode group, the relevant default modes are applied.
+
+--
+
+Q. I've switched to using PFE for all my editing instead of NotePad, but
+there's one thing I miss - I can't automatically print files by dropping them
+onto Print Manager as I could with NotePad. What can I do?
+
+A. Versions of PFE prior to 0.06.002 did not support automatic printing in this
+way. However the facility is now available; all you need to do is to set the
+'print' association for a file type to be
+
+            pfe /p %1
+
+for the 16-bit Edition, or
+
+            pfe32 /p "%1"
+
+for the 32-bit Edition (note that the quotes here are important). Now you'll be
+able to drag and drop a file onto Print Manager or a printer shortcut and PFE
+will print it for you.
+
+--
+

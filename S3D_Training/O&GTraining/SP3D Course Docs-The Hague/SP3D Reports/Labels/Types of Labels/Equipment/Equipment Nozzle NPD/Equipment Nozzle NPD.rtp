@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Nozzle NPD" Description="NPD with units"><QUERIES><QUERY Name="Equipment Nozzle NPD" Site="User" Path="Equipment Nozzle NPD.rqe"/></QUERIES><FORMATTING Name="Equipment Nozzle NPD" Site="User" Path="Equipment Nozzle NPD.rfm"/></REPORT_TEMPLATE>

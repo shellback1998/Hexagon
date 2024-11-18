@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Schedule Thickness 4" Description="Schedule Thickness of port 4" RequiresFilter="No">
+   <DESIGN_TIME Progid="SP3DReportsQueryBuilder.COMQuery" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DRuntimeQuery.CPipePortData" Action="" Arg="4" />
+
+   <SQL Timeout="0">
+      <![CDATA[
+          SELECT ' ' AS Dummy
+          ]]>
+   </SQL>
+
+   <QUERY_PARAMETERS Name="Schedule Thickness 4" Site="User" Path="Schedule Thickness 4.rqp" />
+</REPORT_QUERY>
+

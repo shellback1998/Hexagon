@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="MemberPart" Description="Tooltip for Member Parts"><DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/><RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/><FORMATTING_PARAMETERS Name="MemberPart" Site="User" Path="Structure ToolTip for MemberParts.rfp"/><LAYOUT_TEMPLATE Type="Internal"/><RTF_LABEL><POINTS/><VECTORS/><BLOCKS><BLOCK Action="Visible" Child="No"><TOKENS><TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Tahoma;}{\f1\fnil\fcharset0 MS Shell Dlg;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\f0\fs17 System Name: " ToParse="no" Visible="yes"/><DATA Column="SystemName" ToParse="yes" Visible="yes"/><TEXT Value="
+\par Reference: " ToParse="no" Visible="yes"/><DATA Column="RefStd" ToParse="yes" Visible="yes"/><TEXT Value="
+\par Cut Length: " ToParse="no" Visible="yes"/><PHYSICAL Column="CutLength" UOM="Length" Visible="yes"/><TEXT Value="
+\par Cardinal Point: " ToParse="no" Visible="yes"/><DATA Column="CardinalPoint" ToParse="yes" Visible="yes"/><TEXT Value="
+\par Material: " ToParse="no" Visible="yes"/><DATA Column="Material" ToParse="yes" Visible="yes"/><TEXT Value="
+\par Section Name: " ToParse="no" Visible="yes"/><DATA Column="SectionName" ToParse="yes" Visible="yes"/><TEXT Value="
+\par \cf1 Fireproofing Spec: " ToParse="no" Visible="yes"/></TOKENS></BLOCK><BLOCK Action="Visible" Child="Yes"><RULE RuleOperator="All" RuleOperand="True"/><TOKENS><DATA Column="FireproofingSpec" ToParse="yes" Visible="yes"/><TEXT Value="," ToParse="no" Visible="yes"/><DATA Column="FireproofingSpec" ToParse="yes" Visible="no"><CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw"/></DATA></TOKENS></BLOCK><BLOCK Action="Visible" Child="No"><TOKENS><TEXT Value="
+\par \cf0 Width: " ToParse="no" Visible="yes"/><PHYSICAL Column="Width" UOM="NPD" Visible="yes"/><TEXT Value="
+\par Depth: " ToParse="no" Visible="yes"/><PHYSICAL Column="Depth" UOM="NPD" Visible="yes"/></TOKENS></BLOCK><BLOCK Action="Visible" Child="No"><RULE RuleOperator="All" RuleOperand="True"/><TOKENS><TEXT Value="
+\par Project: " ToParse="no" Visible="yes"/><DATA Column="Proj" ToParse="yes" Visible="yes"/><DATA Column="Proj" ToParse="yes" Visible="no"><CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw"/></DATA></TOKENS></BLOCK><BLOCK Action="Visible" Child="No"><RULE RuleOperator="All" RuleOperand="True"/><TOKENS><TEXT Value="
+\par Contract: " ToParse="no" Visible="yes"/><DATA Column="Contract" ToParse="yes" Visible="yes"/><DATA Column="Contract" ToParse="yes" Visible="no"><CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw"/></DATA></TOKENS></BLOCK><BLOCK Action="Visible" Child="No"><TOKENS><TEXT Value="
+\par UserCreated: " ToParse="no" Visible="yes"/><DATA Column="UserCreated" ToParse="yes" Visible="yes"/><TEXT Value="
+\par Approval Status: " ToParse="no" Visible="yes"/><DATA Column="ApprovalStatus" ToParse="yes" Visible="yes"/><TEXT Value="
+\par \f1  
+\par }
+" ToParse="no" Visible="yes"/></TOKENS></BLOCK></BLOCKS></RTF_LABEL>
+</REPORT_FORMATTING>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical Cable Diameter" Description="Diameter"><QUERIES><QUERY Name="Electrical Cable Diameter" Site="User" Path="Electrical Cable Diameter.rqe"/></QUERIES><FORMATTING Name="Electrical Cable Diameter" Site="User" Path="Electrical Cable Diameter.rfm"/></REPORT_TEMPLATE>

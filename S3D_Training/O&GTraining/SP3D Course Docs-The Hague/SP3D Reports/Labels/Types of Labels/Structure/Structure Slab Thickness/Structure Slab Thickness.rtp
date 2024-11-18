@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Slab Thickness" Description="Thickness"><QUERIES><QUERY Name="Structure Slab Thickness" Site="User" Path="Structure Slab Thickness.rqe"/></QUERIES><FORMATTING Name="Structure Slab Thickness" Site="User" Path="Structure Slab Thickness.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Member Length" Description="Length"><QUERIES><QUERY Name="Structure Member Length" Site="User" Path="Structure Member Length.rqe"/></QUERIES><FORMATTING Name="Structure Member Length" Site="User" Path="Structure Member Length.rfm"/></REPORT_TEMPLATE>

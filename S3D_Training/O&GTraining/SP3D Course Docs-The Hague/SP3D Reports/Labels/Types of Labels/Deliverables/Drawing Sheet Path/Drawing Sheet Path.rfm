@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Drawing Sheet Path" Description="The location of the Drawing Sheet in the Console Hierarchy">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS Name="Drawing Sheet Path" Site="User" Path="Drawing Sheet Path.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}} \viewkind4\uc1\pard\lang1033\f0\fs17 " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="PathName" ToParse="no" Visible="yes" >
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw" />
+               </DATA>
+           </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="PathNameAlt" ToParse="no" Visible="yes" />
+
+               <DATA Column="PathName" ToParse="no" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" OperandType1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="Any" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Value="/" ToParse="no" Visible="yes" />
+
+               <DATA Column="PathName" ToParse="no" Visible="no">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="PathNameAlt" ToParse="no" Visible="no">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="SnapInName" ToParse="no" Visible="yes" >
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" OperandType1="" StateOfValue="Raw" />
+               </DATA>
+           </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="SnapInNameAlt" ToParse="no" Visible="yes" />
+
+               <DATA Column="SnapInName" ToParse="no" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" OperandType1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value=" \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Drawing Sheet Category" Description="Returns &quot;Reqular&quot; or &quot;Special&quot;">
+   <QUERIES>
+      <QUERY Name="Drawing Sheet Category" Site="User" Path="Drawing Sheet Category.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="Drawing Sheet Category" Site="User" Path="Drawing Sheet Category.rfm" />
+</REPORT_TEMPLATE>
+

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Extraction Date ISO8601 Format" Description="Test for Dates"><QUERIES><QUERY Name="Piping Isometric Extraction Date ISO8601 Format" Site="User" Path="Piping Isometric Extraction Date ISO8601 Format.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Extraction Date ISO8601 Format" Site="User" Path="Piping Isometric Extraction Date ISO8601 Format.rfm"/></REPORT_TEMPLATE>

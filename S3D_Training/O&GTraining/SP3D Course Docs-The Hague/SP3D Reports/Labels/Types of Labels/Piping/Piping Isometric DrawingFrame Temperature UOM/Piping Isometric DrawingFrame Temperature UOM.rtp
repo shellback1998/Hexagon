@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric DrawingFrame Temperature UOM" Description="Sample Default Temperture UOM"><QUERIES><QUERY Name="Piping Isometric DrawingFrame Temperature UOM" Site="User" Path="Piping Isometric DrawingFrame Temperature UOM.rqe"/></QUERIES><FORMATTING Name="Piping Isometric DrawingFrame Temperature UOM" Site="User" Path="Piping Isometric DrawingFrame Temperature UOM.rfm"/></REPORT_TEMPLATE>

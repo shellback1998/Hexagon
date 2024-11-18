@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING
+ Name="Schedule Thickness 3" Description="Schedule Thickness of port 3">
+   <DESIGN_TIME
+    Progid="SP3DLabelFormatDesigner.RTFLabel"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DLabelsFormat.FormatLabel"
+    Action="RTFLabel"
+    Arg="" />
+
+   <LAYOUT_TEMPLATE
+    Type="Internal" />
+
+   <FORMATTING_PARAMETERS
+    Name="Length"
+    Site="User"
+    Path="Schedule Thickness 3.rfp" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK
+          Action="Visible">
+            <RULE
+             RuleOperator="All"
+             RuleOperand="True" />
+
+            <TOKENS>
+               <DATA
+                Column="EndPractice_Index"
+                Visible="No">
+                  <CONDITION
+                   ConditionOperator="LessThanOrEqual"
+                   ConditionOperand1="6"
+                   StateOfValue="Raw" />
+               </DATA>
+
+		<DATA Visible="No" Column="ScheduleThickness">
+			<CONDITION ConditionOperator="NotEqual" ConditionOperand1="0" StateOfValue="Raw"/>
+		</DATA>
+		<DATA Visible="Yes" Column="ScheduleThickness">
+			<CONDITION ConditionOperator="NotEqual" ConditionOperand1="DATA-INVALID" StateOfValue="Raw"/>
+		</DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK
+          Action="Visible">
+            <RULE
+             RuleOperator="All"
+             RuleOperand="True" />
+
+            <TOKENS>
+               <DATA
+                Column="EndPractice_Index"
+                Visible="No">
+                  <CONDITION
+                   ConditionOperator="Equal"
+                   ConditionOperand1="18"
+                   StateOfValue="Raw" />
+               </DATA>
+
+               <PHYSICAL
+                Column="PipingOutsideDiameter"
+                UOM="Length"
+                Visible="yes" />
+
+               <TEXT
+                Value=" x "
+                ToParse="NO"
+                Visible="yes" />
+
+               <PHYSICAL
+                Column="WallThicknessOrGrooveSetback"
+                UOM="Length"
+                Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_FORMATTING Name="MemberSystem" Description="Format of Tooltip for MemberSystem Location">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="MemberSystem" Site="User" Path="Structure ToolTip for MemberSystem Location.rfp" />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{System: " Visible="Yes" />
+
+               <DATA Column="SystemName" Visible="yes" />
+
+               <TEXT Value=" \par Length: " Visible="Yes" />
+
+               <PHYSICAL Column="Length" UOM="Length" Visible="Yes" />
+
+               <TEXT Value=" \par Point1(z):" Visible="Yes" />
+
+               <PHYSICAL Column="z1" UOM="Length" Visible="Yes" />
+
+               <TEXT Value=" \par Point2(z): " Visible="Yes" />
+
+               <PHYSICAL Column="z2" UOM="Length" Visible="Yes" />
+
+               <TEXT Value=" \par}" Visible="Yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

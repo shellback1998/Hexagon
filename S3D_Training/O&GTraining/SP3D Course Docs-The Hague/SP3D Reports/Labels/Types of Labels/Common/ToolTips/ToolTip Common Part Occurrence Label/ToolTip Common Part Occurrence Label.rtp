@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="ToolTip Common Part Occurrence Label" Description="Example of a Label for a single occurrence of PartOcc"><QUERIES><QUERY Name="ToolTip Common Part Occurrence Label" Site="User" Path="ToolTip Common Part Occurrence Label.rqe"/></QUERIES><FORMATTING Name="ToolTip Common Part Occurrence Label" Site="User" Path="ToolTip Common Part Occurrence Label.rfm"/></REPORT_TEMPLATE>

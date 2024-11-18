@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<FORMATTING_PARAMETERS
+ Name="Support"
+ Description="UOMs for Hangers and Supports ToolTip for Supports">
+   <DESIGN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid=""
+    Action=""
+    Arg="" />
+
+   <UOMS>
+      <UOM
+       Name="Force"
+       CanInherit="yes"
+       Type="Force"
+       Primary="kip"
+       Secondary=""
+       Tertiary=""
+       UnitsDisplayed="no"
+       PrecisionType="Decimal"
+       DecimalPrecision="2"
+       FractionalPrecision=""
+       LeadingZero=""
+       TrailingZeros=""
+       ReduceFraction="" />
+   </UOMS>
+
+   <MATRIXES>
+   </MATRIXES>
+</FORMATTING_PARAMETERS>
+

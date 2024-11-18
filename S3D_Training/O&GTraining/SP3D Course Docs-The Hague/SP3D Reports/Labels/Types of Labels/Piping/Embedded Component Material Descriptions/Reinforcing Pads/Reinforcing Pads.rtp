@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Reinforcing Pads" Description="Material Description Label for Reinforcing Pads">
+<QUERIES>
+	<QUERY Name="Reinforcing Pads" Site="User" Path="Reinforcing Pads.rqe"/>
+</QUERIES>
+<FORMATTING Name="Reinforcing Pads" Site="User" Path="Reinforcing Pads.rfm"/>
+</REPORT_TEMPLATE>
+

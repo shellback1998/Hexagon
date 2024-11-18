@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric DrawingFrame Pressure UOM" Description="Sample Default Pressure UOM"><QUERIES><QUERY Name="Piping Isometric DrawingFrame Pressure UOM" Site="User" Path="Piping Isometric DrawingFrame Pressure UOM.rqe"/></QUERIES><FORMATTING Name="Piping Isometric DrawingFrame Pressure UOM" Site="User" Path="Piping Isometric DrawingFrame Pressure UOM.rfm"/></REPORT_TEMPLATE>

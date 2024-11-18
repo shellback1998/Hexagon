@@ -1,0 +1,12 @@
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\bin\Debug\MyRouteRunNameRules.dll
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\bin\Debug\MyRouteRunNameRules.pdb
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\bin\Debug\MyRouteRunNameRules.xml
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\obj\Debug\ResolveAssemblyReference.cache
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\obj\Debug\MyRouteRunNameRules.Resources.resources
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\obj\Debug\RouteRunNameRulesNetVB.vbproj.GenerateResource.Cache
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\obj\Debug\MyRouteRunNameRules.dll
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\obj\Debug\MyRouteRunNameRules.xml
+C:\AmoSample\NameRule\RouteRunNameRulesNetVB\RouteRunNameRulesNetVB\obj\Debug\MyRouteRunNameRules.pdb
+C:\SP3D\Svr\CatalogData\Symbols\Custom Symbols\NamingRules\MyRouteRunNameRules.dll
+C:\SP3D\Svr\CatalogData\Symbols\Custom Symbols\NamingRules\MyRouteRunNameRules.pdb
+C:\SP3D\Svr\CatalogData\Symbols\Custom Symbols\NamingRules\MyRouteRunNameRules.xml

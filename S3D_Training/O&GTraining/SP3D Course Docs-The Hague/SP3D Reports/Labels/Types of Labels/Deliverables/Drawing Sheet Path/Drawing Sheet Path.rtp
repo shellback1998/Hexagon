@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Drawing Sheet Path" Description="The location of the Drawing Sheet in the Console Hierarchy">
+   <QUERIES>
+      <QUERY Name="Drawing Sheet Path" Site="User" Path="Drawing Sheet Path.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="Drawing Sheet Path" Site="User" Path="Drawing Sheet Path.rfm" />
+</REPORT_TEMPLATE>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="Piping Component Part Spec Note"
+ Description="Notes of the run spec for this part">
+   <QUERIES>
+      <QUERY
+       Name="Part Spec Note"
+       Site="User"
+       Description="Query to get the Part Spec Note"
+       Path="Part Spec Note.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Part Spec Note"
+    Site="User"
+    Description="Part Spec Note Format"
+    Path="Part Spec Note.rfm" />
+</REPORT_TEMPLATE>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Piping Stress Analysis Insulation Thickness" Description="Insulation Thickness per part, for export to stress analysis">
+   <DESIGN_TIME Progid="" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg="" />
+
+   <FIELDS />
+
+   <UOMS>
+      <UOM Name="Insulation Thickness" CanInherit="Yes" Type="distance" Primary="in" Secondary="" Tertiary="" UnitsDisplayed="Yes" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="2" LeadingZero="No" TrailingZeros="No" ReduceFraction="No" />
+   </UOMS>
+</FORMATTING_PARAMETERS>
+

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping ToolTip Pipe Weld" Description="Example of a Label for PipeWeld"><QUERIES><QUERY Name="Piping ToolTip Pipe Weld" Site="User" Path="Piping ToolTip Pipe Weld.rqe"/></QUERIES><FORMATTING Name="Piping ToolTip Pipe Weld" Site="User" Path="Piping ToolTip Pipe Weld.rfm"/></REPORT_TEMPLATE>

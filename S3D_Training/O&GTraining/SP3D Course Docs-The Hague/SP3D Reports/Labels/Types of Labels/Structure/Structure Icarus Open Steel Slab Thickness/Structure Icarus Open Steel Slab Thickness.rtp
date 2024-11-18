@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Icarus Open Steel Slab Thickness" Description=" ">
+	<QUERIES>
+		<QUERY Name="Structure Icarus Open Steel Slab Thickness" Site="User" Path="Structure Icarus Open Steel Slab Thickness.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Structure Icarus Open Steel Slab Thickness" Site="User" Path="Structure Icarus Open Steel Slab Thickness.rfm"/>
+</REPORT_TEMPLATE>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Object Integrity Status" Description="an object is in DB integrity">
+   <QUERIES>
+      <QUERY Name="Object Integrity Status" Site="User" Path="Object Integrity Status.rqe" />
+   </QUERIES>
+
+   <FORMATTING Name="Object Integrity Status" Site="User" Path="Object Integrity Status.rfm" />
+</REPORT_TEMPLATE>
+

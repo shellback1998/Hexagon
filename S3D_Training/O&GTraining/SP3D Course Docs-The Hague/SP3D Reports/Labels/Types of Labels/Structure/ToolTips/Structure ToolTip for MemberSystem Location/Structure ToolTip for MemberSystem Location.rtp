@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Structure ToolTip for MemberSystem Orientation"
+ Description="ToolTip for MemberSystem Location">
+   <QUERIES>
+      <QUERY
+       Name="MemberSystem"
+       Site="User"
+       Path="Structure ToolTip for MemberSystem Location.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="LinearMemberSystem"
+    Site="User"
+    Path="Structure ToolTip for MemberSystem Location.rfm" />
+</REPORT_TEMPLATE>
+

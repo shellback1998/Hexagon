@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Linear Duct Cross Section Size" Description="Duct Component Cross Section"><QUERIES><QUERY Name="HVAC Linear Duct Cross Section Size" Site="User" Path="HVAC Linear Duct Cross Section Size.rqe"/></QUERIES><FORMATTING Name="HVAC Linear Duct Cross Section Size" Site="User" Path="HVAC Linear Duct Cross Section Size.rfm"/></REPORT_TEMPLATE>

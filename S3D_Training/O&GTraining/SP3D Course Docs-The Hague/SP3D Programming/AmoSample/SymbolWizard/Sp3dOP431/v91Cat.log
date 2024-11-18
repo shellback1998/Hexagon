@@ -1,0 +1,61 @@
+Successfully Opened Input Log File: C:\AmoSample\SymbolWizard\Sp3dOP431\v91Cat.log
+
+***********************************************************
+DATABASE SERVER NAME : SOLIDS1002
+DATABASE NAME : v91Cat
+SCHEMA DATABASE NAME : v91Cat_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:28 PM
+Finished Processing sheet: CustomInterfaces in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:29 PM
+
+Processing sheet: PipingCommodityMatlControlData in WorkBook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:29 PM
+Finished processing sheet: PipingCommodityMatlControlData in workbook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:29 PM
+
+Processing sheet: ValveOperatorMatlControlData in WorkBook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:29 PM
+Finished processing sheet: ValveOperatorMatlControlData in workbook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:29 PM
+
+Processing sheet: InstrumentClassData in WorkBook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:29 PM
+Finished processing sheet: InstrumentClassData in workbook: C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:29 PM
+
+Processing sheet : BA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:29 PM
+Finished Processing sheet: BA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:30 PM
+
+Processing sheet : GenericComp in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:30 PM
+Finished Processing sheet: GenericComp in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:30 PM
+
+Processing sheet : Operator431 in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:30 PM
+    Successfully Created the PartClass Object : Operator431
+    Successfully Created the object in row [8]
+Finished Processing sheet: Operator431 in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:30 PM
+
+Processing sheet : ANG in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:30 PM
+Finished Processing sheet: ANG in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:31 PM
+
+Processing sheet : ControlGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:31 PM
+Finished Processing sheet: ControlGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:31 PM
+
+Processing sheet : ControlGateValveOA in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:31 PM
+Finished Processing sheet: ControlGateValveOA in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:31 PM
+
+Processing sheet : ReducingGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:31 PM
+Finished Processing sheet: ReducingGateValve in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:31 PM
+
+Processing sheet : MSCBA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:31 PM
+Finished Processing sheet: MSCBA3W in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:31 PM
+
+Processing sheet : InstIndicator in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - Started at : 12/21/2010 4:33:31 PM
+Finished Processing sheet: InstIndicator in C:\AmoSample\SymbolWizard\GenericComp\Instrument Data.xls Workbook  - finished at : 12/21/2010 4:33:31 PM
+
+
+
+Successfully appended all newly created GUIDs to their respective WorkBooks
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Adding User Types to the Object Type hierarchy...12/21/2010 4:33:32 PM
+

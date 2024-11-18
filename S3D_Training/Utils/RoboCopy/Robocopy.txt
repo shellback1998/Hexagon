@@ -1,0 +1,25 @@
+From: 	Iltanen, Jorma
+Sent: 	Wednesday, November 19, 1997 8:19 PM
+To: 	Grothaus, Uli
+Subject: 	Robocopy
+
+<<File: robocopy.wri>> <<File: robocopy.exe>> 
+
+Uli,
+	this is the example command:
+
+$ robocopy /e /v   c:\data  j:\copyofdata
+
+where
+/e is for subdirectories and empty subdirectories
+/v is for verbose
+
+source and target are directories.
+
+The attached version is nt 3.51 version, but seems to work.
+
+  
+
+Regards,
+
+Jorma Iltanen 

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Register Quantity" Description="Quantities"><QUERIES><QUERY Name="HVAC Register Quantity" Site="User" Path="HVAC Register Quantity.rqe"/></QUERIES><FORMATTING Name="HVAC Register Quantity" Site="User" Path="HVAC Register Quantity.rfm"/></REPORT_TEMPLATE>

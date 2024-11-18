@@ -1,0 +1,42 @@
+Successfully Opened Input Log File: C:\AmoSample\Example_eqp_symbols\lab1\v91Cat.log
+
+***********************************************************
+DATABASE SERVER NAME : SOLIDS1002
+DATABASE NAME : v91Cat
+SCHEMA DATABASE NAME : v91Cat_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - Started at : 12/14/2010 2:55:44 PM
+Finished Processing sheet: CustomInterfaces in C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - finished at : 12/14/2010 2:55:45 PM
+
+Processing sheet: ClassNodeType in WorkBook: C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - Started at : 12/14/2010 2:55:45 PM
+Finished processing sheet: ClassNodeType in workbook: C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - finished at : 12/14/2010 2:55:45 PM
+
+Processing sheet : SP3DTankAsm in C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - Started at : 12/14/2010 2:55:45 PM
+Finished Processing sheet: SP3DTankAsm in C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - finished at : 12/14/2010 2:55:45 PM
+
+Processing sheet : R-Hierarchy in C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - Started at : 12/14/2010 2:55:45 PM
+    Successfully created the relation between : RefdataEquipment ComponentsRoot - EqpComp Training in R-Hierarchy in row [9] WorkSheet of C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook 
+Finished Processing sheet: R-Hierarchy in C:\AmoSample\Example_eqp_symbols\lab1\SP3DTemplate.xls Workbook  - finished at : 12/14/2010 2:55:46 PM
+
+
+
+
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

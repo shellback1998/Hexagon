@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure ToolTip Structural Member" Description="Example of a Label for Structural Member"><QUERIES><QUERY Name="Structure ToolTip Structural Member" Site="User" Path="Structure ToolTip Structural Member.rqe"/></QUERIES><FORMATTING Name="Structure ToolTip Structural Member" Site="User" Path="Structure ToolTip Structural Member.rfm"/></REPORT_TEMPLATE>

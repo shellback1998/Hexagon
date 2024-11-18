@@ -1,0 +1,34 @@
+Successfully Opened Input Log File: C:\Smart3D\Bulkload\CodelessIFCRule.log
+
+***********************************************************
+DATABASE SERVER NAME : TR2_B2\SQLExpress
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+MODE  : Plant
+***********************************************************
+
+
+Processing sheet: IFCPostProcessorRule in WorkBook: C:\Smart3D\Bulkload\CodelessIFCRule.xls Workbook  - Started at : 4/24/2015 8:00:21 AM
+    Successfully modified the object in row [3]
+Finished processing sheet: IFCPostProcessorRule in workbook: C:\Smart3D\Bulkload\CodelessIFCRule.xls Workbook  - finished at : 4/24/2015 8:00:24 AM
+
+
+
+
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

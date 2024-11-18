@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Pipe Line List Operating Temperature" Description="Pipe Line List Operating Maximum Temperature"><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/><FIELDS/><UOMS><UOM Name="Operating Temperature" CanInherit="Yes" Type="temperature" Primary="F" Secondary="" Tertiary="" UnitsDisplayed="Yes" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="2" LeadingZero="No" TrailingZeros="Yes" ReduceFraction="No"/></UOMS></FORMATTING_PARAMETERS>

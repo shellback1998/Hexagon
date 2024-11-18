@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_FORMATTING Name="FrameConnection" Description="Format for Tooltip for FrameConnections">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS />
+
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 MS Sans Serif;}}\viewkind4\uc1\pard\f0\fs17 " Visible="Yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="Connection: " Visible="Yes" />
+
+               <DATA Column="Connection" Visible="yes" />
+
+               <TEXT Value="\par Name: " Visible="Yes" />
+
+               <DATA Column="Name" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Value="\par Project: " Visible="Yes" />
+
+               <DATA Visible="Yes" Column="Proj">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Value="\par Contract: " Visible="Yes" />
+
+               <DATA Visible="Yes" Column="Contract">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\par Approval Status: " Visible="Yes" />
+
+               <DATA Column="ApprovalStatus" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\par \par} " Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

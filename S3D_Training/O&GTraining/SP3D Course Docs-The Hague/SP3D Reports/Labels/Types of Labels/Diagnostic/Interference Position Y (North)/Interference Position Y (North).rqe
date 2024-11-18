@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Interference Position Y (North)"
+ Description="Interference Position Y (North)"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="FoulPositionX"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJIfcEntity"
+             SourceBOC=""
+             DestinationInterface="IJIfcEntity"
+             DestinationProperty="InterferencePosition_x" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="FoulPositiony"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJIfcEntity"
+             SourceBOC=""
+             DestinationInterface="IJIfcEntity"
+             DestinationProperty="InterferencePosition_y" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="FoulPositionz"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJIfcEntity"
+             SourceBOC=""
+             DestinationInterface="IJIfcEntity"
+             DestinationProperty="InterferencePosition_z" />
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

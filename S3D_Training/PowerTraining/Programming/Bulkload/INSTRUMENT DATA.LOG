@@ -1,0 +1,67 @@
+Successfully Opened Input Log File: C:\Smart3D\Bulkload\Instrument Data.log
+
+***********************************************************
+DATABASE SERVER NAME : TR2_B2\SQLExpress
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+MODE  : Plant
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:50 AM
+Finished Processing sheet: CustomInterfaces in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:53 AM
+
+Processing sheet: PipingCommodityMatlControlData in WorkBook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:53 AM
+Finished processing sheet: PipingCommodityMatlControlData in workbook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:53 AM
+
+Processing sheet: InstrumentClassData in WorkBook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:53 AM
+Finished processing sheet: InstrumentClassData in workbook: C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:53 AM
+
+Processing sheet : BA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:53 AM
+Finished Processing sheet: BA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:53 AM
+
+Processing sheet : ANG in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:53 AM
+Finished Processing sheet: ANG in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:53 AM
+
+Processing sheet : Operator9 in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:53 AM
+    Successfully Created the object in row [8]
+Finished Processing sheet: Operator9 in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:53 AM
+
+Processing sheet : CBallValveType1 in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:53 AM
+Finished Processing sheet: CBallValveType1 in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:54 AM
+
+Processing sheet : ControlGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:54 AM
+Finished Processing sheet: ControlGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:54 AM
+
+Processing sheet : ControlGateValveOA in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:54 AM
+Finished Processing sheet: ControlGateValveOA in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:54 AM
+
+Processing sheet : ReducingGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:54 AM
+Finished Processing sheet: ReducingGateValve in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:54 AM
+
+Processing sheet : MSCBA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:55 AM
+Finished Processing sheet: MSCBA3W in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:55 AM
+
+Processing sheet : InstIndicator in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - Started at : 4/22/2015 10:53:55 AM
+Finished Processing sheet: InstIndicator in C:\Smart3D\Bulkload\Instrument Data.xls Workbook  - finished at : 4/22/2015 10:53:55 AM
+
+
+
+
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

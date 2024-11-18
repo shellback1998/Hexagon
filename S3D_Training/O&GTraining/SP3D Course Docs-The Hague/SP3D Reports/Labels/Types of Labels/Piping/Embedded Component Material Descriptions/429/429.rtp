@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="429" Description="Blank/Spacer thk">
+	<QUERIES>
+		<QUERY Name="429" Site="User" Description="Query to get the FaceToFace" Path="429.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="429" Site="User" Description="FaceToFace_Format" Path="429.rfm"/>
+</REPORT_TEMPLATE>

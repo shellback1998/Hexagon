@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical CableTray Quantity" Description="Cable Tray Quantities"><QUERIES><QUERY Name="Electrical CableTray Quantity" Site="User" Path="Electrical CableTray Quantity.rqe"/></QUERIES><FORMATTING Name="Electrical CableTray Quantity" Site="User" Path="Electrical CableTray Quantity.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QUERY_PARAMETERS Name="Pressure Rating 4" Description="Pressure Rating of port 4">
+	<DESIGN_TIME Progid="" action="" arg=""/>
+	<RUN_TIME Progid="" action="" arg=""/>
+	<FIELDS>
+		<SQL DataType="OID" LookUp="" Name="OID" DefaultValue="" SQLType="GUID" IsHidden="yes"/>
+	</FIELDS>
+	<!-- Possible values for SQLType are:	
+	Array,BigInt,Binary,Boolean,BSTR,Chapter,Char,Currency,Date,DBDate,DBTime,DBTimeStamp,
+	Decimal,Double,Empty,Error,FileTime,GUID,Dispatch,Integer,IUnknown,LongVarBinary,LongVarChar,
+	LongVarWChar,Numeric,PropVariant,Single,SmallInt,TinyInt,UnsignedBigInt,UnsignedInt,UnsignedSmallInt,
+	UnsignedTinyInt,UserDefined,VarBinary,VarChar,Variant,VarNumeric,VarWChar,WChar
+-->
+</QUERY_PARAMETERS>

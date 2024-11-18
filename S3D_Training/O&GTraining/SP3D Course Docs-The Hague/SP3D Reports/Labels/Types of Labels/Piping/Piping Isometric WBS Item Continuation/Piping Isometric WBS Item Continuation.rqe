@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Isometric WBS Item Continuation" Description="WBS Item Continuation Label for Isometrics" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0">
+		<![CDATA[SELECT n.itemname as "Pipeline Name",
+       wbs.WBSPurpose as Purpose,
+       wn.itemname as "WBS Name"
+      FROM JPartOcc po 
+      LEFT JOIN XOwnsParts xop on xop.oiddestination = po.oid
+      LEFT join XSystemHierarchy xsh on xsh.oiddestination = xop.oidorigin
+      LEFT JOIN JNamedItem n on n.oid = xsh.oidorigin
+      LEFT JOIN XBelongsToWBSItem xbtw on xbtw.oiddestination = po.oid
+      LEFT JOIN JWBSItem wbs on wbs.oid = xbtw.oidorigin 
+      LEFT JOIN JNamedItem wn on wn.oid =wbs.oid
+      WHERE po.OID=?]]>
+	</SQL>
+	<QUERY_PARAMETERS Name="Piping Isometric WBS Item Continuation" Site="User" Path="Piping Isometric WBS Item Continuation.rqp"/>
+</REPORT_QUERY>

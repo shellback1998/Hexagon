@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Schedule Thickness 3" Description="Schedule Thickness of port 3">
+	<QUERIES>
+		<QUERY Name="Schedule Thickness 3" Site="User" Description="Query to get the schedule thickness from pipe Component port 3" Path="Schedule Thickness 3.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Schedule Thickness 3" Site="User" Description="Schedule Thickness of port 3" Path="Schedule Thickness 3.rfm"/>
+</REPORT_TEMPLATE>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Structure Linear Member Computed SurfaceArea" Description="">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="Expression" Arg="Product"/>
+	<FORMATTING_PARAMETERS Name="Structure Linear Member Computed SurfaceArea" Site="User" Path="Structure Linear Member Computed SurfaceArea.rfp"/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<TOKENS>
+					<PHYSICAL Column="Perimeter" UOM="SurfaceArea" Visible="yes"/>
+					<PHYSICAL Column="CutLength" UOM="SurfaceArea" Visible="yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

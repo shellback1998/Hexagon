@@ -1,0 +1,9 @@
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\bin\Debug\NetNameRuleTraining.dll
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\bin\Debug\NetNameRuleTraining.pdb
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\bin\Debug\NetNameRuleTraining.xml
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Debug\NetNameRuleTraining.Resources.resources
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Debug\NetNameRuleTraining.vbproj.GenerateResource.Cache
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Debug\NetNameRuleTraining.dll
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Debug\NetNameRuleTraining.xml
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Debug\NetNameRuleTraining.pdb
+C:\Users\Student\Documents\Visual Studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Debug\NetNameRuleTraining.vbprojResolveAssemblyReference.cache

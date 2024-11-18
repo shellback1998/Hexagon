@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Pipe Line Continuation" Description="Pipeline Continuation Label for Isometrics"><QUERIES><QUERY Name="Piping Isometric Pipe Line Continuation" Site="User" Path="Piping Isometric Pipe Line Continuation.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Pipe Line Continuation" Site="User" Path="Piping Isometric Pipe Line Continuation.rfm"/></REPORT_TEMPLATE>

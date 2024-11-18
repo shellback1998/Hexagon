@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="HVAC Linear Duct Cross Section Size" Description="Duct Component Cross Section">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS Name="HVAC Linear Duct Cross Section Size" Site="User" Path="HVAC Linear Duct Cross Section Size.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+<!-- Opening RTF -->
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Tahoma;}}{\colortbl ;\red0\green0\blue0;}\viewkind4\uc1\pard\cf1\f0\fs17 " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="MountRef" Visible="no">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="Surface Mounted Component" ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+<!-- When the type is not round -->
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <PHYSICAL Column="Depth" UOM="Section" Visible="yes" />
+
+<!-- we assume that no condition =false -->
+               <TEXT Value=" x " ToParse="no" Visible="yes" />
+
+               <PHYSICAL Column="Width" UOM="Section" Visible="yes" />
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Round" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value=" " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+<!-- When the type is not round and CornerRadius is not 0 -->
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <TEXT Value=" CR " ToParse="no" Visible="yes" />
+
+               <PHYSICAL Column="CornerRadius" UOM="Section" Visible="yes" />
+
+<!-- we assume that no condition =false -->
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Round" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CornerRadius" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="0" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value=" " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+<!-- When the type is round add DIA at the end -->
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <PHYSICAL Column="Depth" UOM="Section" Visible="yes" />
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Rectangular" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="FlatOval" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value=" DIA" ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+<!-- When the type is FlatOval, add FO at the end -->
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <TEXT Value=" FO" ToParse="no" Visible="yes" />
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Rectangular" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="Round" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="CSShape" Visible="no">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+<!-- Closing RTF -->
+            <TOKENS>
+               <TEXT Value="\par }" ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

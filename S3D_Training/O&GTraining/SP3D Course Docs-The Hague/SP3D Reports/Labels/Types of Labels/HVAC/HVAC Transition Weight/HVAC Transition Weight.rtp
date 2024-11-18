@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Transition Weight" Description="Dry weight"><QUERIES><QUERY Name="HVAC Transition Weight" Site="User" Path="HVAC Transition Weight.rqe"/></QUERIES><FORMATTING Name="HVAC Transition Weight" Site="User" Path="HVAC Transition Weight.rfm"/></REPORT_TEMPLATE>

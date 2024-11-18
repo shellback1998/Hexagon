@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Continuation Label Type A" Description="Example of Iso Continaution label"><QUERIES><QUERY Name="Piping Isometric Continuation Label Type A" Site="User" Path="Piping Isometric Continuation Label Type A.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Continuation Label Type A" Site="User" Path="Piping Isometric Continuation Label Type A.rfm"/></REPORT_TEMPLATE>

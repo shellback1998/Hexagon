@@ -1,0 +1,78 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" notessizex="4608" notessizey="6048"
+  gridspacingx="37159" gridspacingy="37159">
+  <p:master id="5" slidesn="1C76101,F35C1BF0" type="main" href="master05.htm"
+   xmlhref="master05.xml" template="Custom Design" preserved="t"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#ffffff,#ffffff,#000000,#ffffff,#000b74,#f8981d,#ee4623,#3968aa"/>
+   </p:schemes>
+  </p:master>
+  <p:master id="6" slidesn="1C75549,60F87E20" type="main" href="master06.htm"
+   xmlhref="master06.xml" template="2_Custom Design" preserved="t"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#ffffff,#ffffff,#000000,#ffffff,#000b74,#f8981d,#ee4623,#3968aa"/>
+   </p:schemes>
+  </p:master>
+  <p:master id="7" slidesn="1C76101,AE511740" type="title" href="master07.htm"
+   xmlhref="master07.xml" preserved="t" layout="title_subtitle"
+   slots="centerTitle,subTitle,dateTime,footer,slideNumber"/>
+  <p:master id="1" slidesn="1C57826,55DDD960" type="notes" href="master01.htm"
+   layout="notes" slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:master id="2" slidesn="1C580D3,A673D40" type="handout" href="master02.htm"
+   layout="handout" slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="23" slidesn="1C8D553,E09397B0" href="slide0023.htm"
+   layout="title_body" slots="title,body"/>
+  <p:slide id="1" slidesn="1C435E6,EACC390" href="slide0001.htm"
+   masterhref="master07.htm" layout="title_subtitle"
+   slots="centerTitle,subTitle"/>
+  <p:slide id="24" slidesn="0,0" href="slide0024.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="26" slidesn="0,0" href="slide0026.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="27" slidesn="0,0" href="slide0027.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="28" slidesn="0,0" href="slide0028.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="36" slidesn="0,0" href="slide0036.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="29" slidesn="0,0" href="slide0029.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="30" slidesn="0,0" href="slide0030.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="17" slidesn="0,0" href="slide0017.htm" masterhref="master06.htm"
+   layout="column_2_rows" slots="title,body,object,object"/>
+  <p:slide id="31" slidesn="0,0" href="slide0031.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="40" slidesn="0,0" href="slide0040.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="38" slidesn="0,0" href="slide0038.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="37" slidesn="0,0" href="slide0037.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="35" slidesn="0,0" href="slide0035.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="33" slidesn="0,0" href="slide0033.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:slide id="39" slidesn="0,0" href="slide0039.htm" masterhref="master06.htm"
+   layout="2_columns" slots="title,body,object"/>
+  <p:viewstate type="slideView" slidehref="slide0039.htm" restoredleft="65"
+   restoredtop="934" horizbarstate="2" manualadjustleft="t" manualadjusttop="t"
+   hideoutlineicons="t"/>
+  <p:font name="Arial" charset="0" type="4"/>
+  <p:font name="Arial Narrow" charset="0" type="6" family="34"/>
+  <p:font name="Wingdings" charset="2" type="6" family="2"/>
+  <p:headersfooters noheader="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="431113">
+  <o:colormru v:ext="edit" colors="#084b88"/>
+  <o:colormenu v:ext="edit" fillcolor="none" shadowcolor="none"/>
+ </o:shapedefaults></xml>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Pipe Stock and Nipples" Description="Material Description Label for Pipe Stock and Nipples">
+<QUERIES>
+<QUERY Name="Pipe Stock and Nipples" Site="User" Path="Pipe Stock and Nipples.rqe"/>
+</QUERIES>
+<FORMATTING Name="Pipe Stock and Nipples" Site="User" Path="Pipe Stock and Nipples.rfm"/>
+</REPORT_TEMPLATE>
+

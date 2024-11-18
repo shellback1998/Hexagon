@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_QUERY
+ Name="Tubing and Hose"
+ Description="Example of a Label for PipeComponent"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+	select	Pcom.CommodityType_LongValue, 
+			dbo.REPORTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS 'NPD1', 
+			'in' AS 'NPDUnitType1',
+			'Piping' AS 'Category',
+			NULL AS 'BoltDiameter', 
+			dbo.REPORTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS 'NPD2', 
+			'in' AS 'NPDUnitType2',
+			'[Ports]' AS PortsInfo, 
+			Mfd.SurfacePreparation_ShortValue,  
+			Pcom.LiningMaterial_ShortValue,
+			Pcom.GeometricIndustryStandard_ShortValue as GeomIndStandard_ShortValue, 
+			mcd.Manufacturer_ShortValue,
+			Pcom.MaterialsGrade_ShortValue, 
+			Mfd.MiscRequisitionClassification_ShortValue as MiscReqClassfn_ShortValue 
+	FROM JPartOcc po
+	JOIN xmadeFROM rmf ON (po.oid = rmf.oidorigin)
+	JOIN dbo.JDPipeComponent_CL Pcom ON (pcom.oid = rmf.oiddestination)
+	JOIN dbo.JUAManufacturerData_CL Mfd ON (Pcom.Oid = Mfd.Oid)
+	JOIN xpartocctomaterialcontroldata xptmcd on xptmcd.oidorigin = po.oid
+	JOIN JGenericMaterialControlData_CL mcd on mcd.oid = xptmcd.oiddestination
+	WHERE po.oid = ?
+           ]]>
+   </SQL>
+
+   <ORASQL
+    Timeout="0">
+      <![CDATA[ 
+	SELECT 	ClPco.LONGSTRINGVALUE as CommodityType_LongValue, 
+			RPTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS NPD1, 
+			'in' AS NPDUnitType1,
+			'Piping' AS Category,
+			NULL AS BoltDiameter, 
+			RPTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS NPD2, 
+			'in' AS NPDUnitType2, 
+			'[Ports]' AS PortsInfo, 
+			ClSPre.SHORTSTRINGVALUE as SurfacePreparation_ShortValue, 
+			ClLM.SHORTSTRINGVALUE as LiningMaterial_ShortValue,
+			ClGIS.SHORTSTRINGVALUE as GeomIndStandard_ShortValue, 
+			ClMfd.SHORTSTRINGVALUE As Manufacturer_ShortValue,
+			ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue, 
+			Mfd.ManufacturingMethod,
+			ClMRC.SHORTSTRINGVALUE as MiscReqClassfn_ShortValue
+	FROM JPartOcc po
+	JOIN xmadeFROM rmf ON (po.oid = rmf.oidorigin)
+	JOIN JDPIPECOMPONENT Pcom ON (Pcom.oid = rmf.oiddestination)
+	JOIN CL_PIPINGCOMMODITYTYPE ClPco ON (ClPco.VALUEID = Pcom.COMMODITYTYPE)
+	JOIN JUAManufacturerData Mfd ON (Pcom.Oid = Mfd.Oid)
+	JOIN xpartocctomaterialcontroldata xptmcd ON xptmcd.oidorigin = po.oid
+	JOIN JGenericMaterialControlData mcd on mcd.oid = xptmcd.oiddestination
+	Left OUTER JOIN CL_SURFACEPREPARATION ClSPre ON (Mfd.SurfacePreparation  = ClSPre.VALUEID)
+	JOIN CL_LININGMATERIAL ClLM on (ClLM.VALUEID = Pcom.LiningMaterial)
+	JOIN CL_GEOMETRICINDUSTRYSTANDARD ClGIS on (ClGIS.VALUEID= pcom.GeometricIndustryStandard)
+	JOIN CL_MANUFACTURER ClMfd on (ClMfd.VALUEID = mcd.Manufacturer)
+	JOIN CL_MATERIALSGRADE ClMGr on (ClMGr.VALUEID = Pcom.MaterialsGrade)
+	Left OUTER JOIN CL_MISCREQUISITIONCLASSIFICATI ClMRC on (ClMRC.VALUEID = Mfd.MiscRequisitionClassification)
+	WHERE po.oid = ?
+           ]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS
+    Name="Tubing and Hose"
+    Site="User"
+    Path="Tubing and Hose.rqp" />
+</REPORT_QUERY>
+

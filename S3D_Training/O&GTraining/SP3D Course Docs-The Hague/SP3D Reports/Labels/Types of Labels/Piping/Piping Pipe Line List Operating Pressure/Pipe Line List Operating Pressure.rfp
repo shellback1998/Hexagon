@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Pipe Line List Operating Pressure" Description="Pipe Line List Operating Maximum Pressure">
+<DESIGN_TIME Progid="" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+<FIELDS/>
+<UOMS><UOM Name="OperatingPressure" CanInherit="Yes" Type="force per area" Primary="Pa" Secondary="" Tertiary="" UnitsDisplayed="Yes" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="2" LeadingZero="Yes" TrailingZeros="Yes" ReduceFraction="No"/></UOMS>
+</FORMATTING_PARAMETERS>

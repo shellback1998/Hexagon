@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Electrical CableTray Weight" Description="Dry weight">
+   <DESIGN_TIME Progid="" Action="" Arg="" />
+
+   <RUN_TIME Progid="" Action="" Arg="" />
+
+   <UOMS>
+      <UOM Name="Weight" CanInherit="Yes" Type="Mass" Primary="lbm" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction="" />
+   </UOMS>
+</FORMATTING_PARAMETERS>
+

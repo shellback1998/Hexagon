@@ -1,0 +1,55 @@
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.dll
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.pdb
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.xml
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\ResolveAssemblyReference.cache
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmAttributesLab.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmEqpModCmd.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmFiltersLab.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmGraphicCmdLab.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmSelectSetLab.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmTempAndPressureMod.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmValueMgrLab.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.Resources.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.PlaceEqpAndPipingForm.resources
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.vbproj.GenerateResource.Cache
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.dll
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.xml
+C:\DotNET Automation\Labs\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.pdb
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.dll
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.pdb
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.xml
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\ResolveAssemblyReference.cache
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmAttributesLab.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmEqpModCmd.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmFiltersLab.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmGraphicCmdLab.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmSelectSetLab.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmTempAndPressureMod.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmValueMgrLab.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.Resources.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.PlaceEqpAndPipingForm.resources
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.vbproj.GenerateResource.Cache
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.dll
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.xml
+C:\DotNet Automation Code Samples\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.pdb
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmAttributesLab.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmEqpModCmd.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmFiltersLab.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmGraphicCmdLab.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmSelectSetLab.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmTempAndPressureMod.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmValueMgrLab.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.Resources.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.PlaceEqpAndPipingForm.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.vbproj.GenerateResource.Cache
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.dll
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.xml
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.pdb
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.dll
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.pdb
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\AutomationLabs.xml
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.RBEqipmentMod.resources
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\GridsMiddle.dll
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\bin\Debug\GridsMiddle.xml
+D:\Working\DotNet Automation Code Samples-2009dot1\DotNET Automation\AutomationLabs\AutomationLabs\obj\Debug\AutomationLabs.frmStructCmd2.resources

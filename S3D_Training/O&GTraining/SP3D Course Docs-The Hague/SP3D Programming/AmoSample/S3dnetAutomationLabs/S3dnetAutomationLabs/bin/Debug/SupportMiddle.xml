@@ -1,0 +1,1732 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SupportMiddle</name>
+    </assembly>
+    <members>
+        <member name="T:Ingr.SP3D.Support.Middle.Hidden.SupportComponentUtils">
+            <summary>
+            SupportComponentUtils contains helper methods for Support Component.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportComponentUtils.AddSupCompToDesignSup(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Support.Middle.DesignSupport)">
+            <summary>
+            Add given support component to design support at the given location.
+            </summary>
+            <param name="oPart">Part</param>
+            <param name="oPosition">Position</param>
+            <param name="oDesignSup">Design Support</param>
+            <returns>returns the SupportComponent</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add part to the design support.</exception>        
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportComponentUtils.AddSupCompToDesignSup(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Support.Middle.DesignSupport)">
+            <summary>
+            Add given part to design support.
+            </summary>
+            <param name="oPart">Part</param>
+            <param name="ofromPosition">fromPosition</param>
+            <param name="otoPosition">toPosition</param>
+            <param name="oDesignSup">Design Support</param>
+            <returns>returns the SupportComponent</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add part to the design support.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportComponentUtils.GetPartFromPartClass(System.String,System.String,Ingr.SP3D.Support.Middle.Support)">
+            <summary>
+            Retuns the part from the given part class.
+            </summary>
+            <param name="sPartClass">Part class name</param>
+            <param name="sPSRName">Part Selection Rule name</param>
+            <param name="oSup">Support</param>
+            <returns>returns the part</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PartFromPartClassException">Failed to get the part from part class.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportComponentUtils.GetHgrPortOriginFromSupComp(Ingr.SP3D.Support.Middle.SupportComponent,System.String)">
+            <summary>
+            Get the origin of given hgr port name using given support component.
+            </summary>
+            <param name="oSupComp">Support Component</param>
+            <param name="sPortName">Port Name</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPortFromSupCompException">Failed to get the port form support component.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.Support">
+            <summary>
+            Support abstract class contains the implementation of necessary methods and properties for 
+            the derived classes; i.e., Pipe Support, Duct Support, and so on.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.IsDesignSupportAssembly">
+            <summary>
+            Returns True or False depending on whether the support is design support or not.
+            </summary>   
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.IsDesignSupportAssemblyException">Failed to return the boolean value if support is standard or design support.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.AddSystemChild(Ingr.SP3D.Common.Middle.ISystemChild)">
+            <summary>
+            Implementation of ISystem:AddSystemChild.
+            </summary>
+            <param name="oChild">Wrapped system object to be added to the collection
+            of children.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetSystemHelper">
+            <summary>
+            Private utility method to get and manage the system helper object.
+            </summary>
+            <returns>m_oSystemHelper - Occurrence to the system helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetSystemChildHelper">
+            <summary>
+            Private utility method to get and manage the system child helper object.
+            </summary>
+            <returns>m_oSystemChildHelper - Occurrence to the system child helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetAssemblyHelper">
+            <summary>
+            Private method to get and manage an occurance of the assembly hierarchy helper of CommonMiddle.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.AddAssemblyChild(Ingr.SP3D.Common.Middle.IAssemblyChild)">
+            <summary>
+            Adds an assembly hierarchy child.
+            </summary>
+            <param name="oChild">Assembly hierarchy child to be added.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetWBSHierarchyHelper">
+            <summary>
+            Property to get the WBS hierarchy helper.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetConnectablePorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of connectable ports of a requested type.
+            </summary>
+            <param name="eType">The type of the ports to be returned.</param>
+            <returns>A read-only collection of connectable ports.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetConnectedPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of connected ports of a requested type.
+            </summary>
+            <param name="eType">The type of the ports to be returned.</param>
+            <returns>ReadOnlyCollection of connected ports.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Gets the collection of ports of a requested port type.
+            </summary>
+            <param name="eType">The type of the ports to be returned.</param>
+            <returns>Read-only collection of ports.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.IsConnectedTo(Ingr.SP3D.Common.Middle.IConnectable,System.Collections.ObjectModel.ReadOnlyCollection{Ingr.SP3D.Common.Middle.IConnection}@)">
+            <summary>
+            Determines whether the input object oConnectable is connected to this support.
+            </summary>
+            <param name="oConnectable">Object being tested to see if it is connected to this support.</param>
+            <param name="oConnectionEnum">Read-only collection of objects connected to this support.</param>
+            <returns>True if there are objects connected to this support.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            Sets the orientation of the support.
+            </summary>
+            <param name="xAxisNew">X-axis of the equipment component that needs to be set.</param>
+            <param name="yAxisNew">Y-axis of the equipment component that needs to be set.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms the support.
+            </summary>
+            <param name="oT4X4">Transform matrix.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetNameRuleHelper">
+            <summary>
+            Private utility method to get and manage the name rule helper object.
+            </summary>
+            <returns>m_oSystemChildHelper - Occurrence to the name rule helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.GetNamedItemHelper">
+            <summary>
+            Private utility method to get and manage the named item helper object.
+            </summary>
+            <returns>m_oNamedItemHelper - Occurrence of the named item helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Support.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the name of an item.
+            </summary>
+            <param name="Name">The new name string.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.SupportDefinition">
+            <summary>
+            Gets or sets the part from or on the support.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportDefinitionException">Failed to get or set the support definition.</exception>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.SupportedObjects">
+            <summary>
+            Gets or sets the supported objects from or on the support.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportedObjectsException">Failed to get or set the supported objects.</exception>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.SupportingObjects">
+            <summary>
+            Gets or sets the supporting objects from or on the support.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportingObjectsException">Failed to get or set the supporting objects.</exception>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supporting objects collection has invalid objects.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.SupportPosition">
+            <summary>
+            Gets or sets the support position from or on the support.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportPositionException">Failed to get or set the support position.</exception>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.CommandType">
+            <summary>
+            CommandType property
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.SystemChildren">
+            <summary>
+            Implementation of ISystem:SystemChildren. 
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.SystemParent">
+            <summary>
+            Implementation of ISystemChild:System parent property.  
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.AssemblyChildren">
+            <summary>
+            Gets the children of an assembly hierarchy parent.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.AssemblyParent">
+            <summary>
+            Gets or sets the parent of an object in the assembly hierarchy.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.WBSItemParents">
+            <summary>
+            Gets the collecton of WBS parents.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.Matrix">
+            <summary>
+            Gets or sets the local coordinate system matrix of the support.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.XAxis">
+            <summary>
+            Gets the X-axis vector of the support.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.YAxis">
+            <summary>
+            Gets the Y-axis vector of the support.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.ZAxis">
+            <summary>
+            Gets the Z-axis vector of the support.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.Origin">
+            <summary>
+            Gets or sets the origin of the support.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.Range">
+            <summary>
+            Gets the range box of the support.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule assigned to a run.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Support.Name">
+            <summary>
+            Gets the read-only name.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.LogicalComponent">
+            <summary>
+            LogicalComponent class.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.SupportComponent">
+            <summary>
+            SupportComponent abstract class contains all the necessary information 
+            for all other support components such as StandardComponent, LogicalComponent, and
+            ConnectionComponent.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this class.
+            </summary>
+            <param name="oPBO">PrivateBusinessObject</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.GetAssemblyHelper">
+            <summary>
+            Private method to get and manage an occurance of the assembly hierarchy helper of CommonMiddle.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.Transform(Ingr.SP3D.Common.Middle.Matrix4X4)">
+            <summary>
+            Transforms this object by the given transformation.
+            </summary>
+            <param name="oMatrix">Matrix4X4</param>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HgrTransformException">Failed to perform the transformation.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.GetConnectablePorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Returns the collection of ports given a port type that are free to be connected.
+            </summary>
+            <param name="eType">PortType</param>
+            <returns>Connectable ports collection of objects.</returns>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnComObjectNullException">Failed to get the connectable object.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HgrConnectablePortsException">Failed to get connectable ports.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.GetConnectedPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Returns the collection of connected ports of the given port type.
+            </summary>
+            <param name="eType">Type of port.</param>
+            <returns>Collection of connected ports.</returns>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnComObjectNullException">Failed to get the connectable object.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HgrConnectedPortsException">Failed to get connected ports.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.GetPorts(Ingr.SP3D.Common.Middle.PortType)">
+            <summary>
+            Returns the collection of ports of the given port type on the support component.
+            </summary>
+            <param name="eType">Type of port.</param>
+            <returns>Collection of ports.</returns>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnComObjectNullException">Failed to get the connectable object.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HgrPortsException">Failed to get the ports.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.IsConnectedTo(Ingr.SP3D.Common.Middle.IConnectable,System.Collections.ObjectModel.ReadOnlyCollection{Ingr.SP3D.Common.Middle.IConnection}@)">
+            <summary>
+            Checks whether the support or support component is connected through any of its ports. 
+            </summary>
+            <param name="oConnectable">Connectable object.</param>
+            <param name="oConnectionEnum">List of objects connected to the object through any of its ports.</param>
+            <returns>Boolean to represent if it is connected.</returns>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnComObjectNullException">Failed to get the connectable object.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HgrIsConnectedToException">Failed to get whether the given object is connected to this component.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.GetNameRuleHelper">
+            <summary>
+            Private utility method to get and manage the name rule helper object.
+            </summary>
+            <returns>m_oSystemChildHelper - Occurrence to the name rule helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.GetNamedItemHelper">
+            <summary>
+            Private utility method to get and manage the named item helper object.
+            </summary>
+            <returns>m_oNamedItemHelper - Occurrence of the named item helper object.</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.SupportComponent.SetUserDefinedName(System.String)">
+            <summary>
+            Sets the name of an item.
+            </summary>
+            <param name="Name">The new name string.</param>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.SupportComponent.SystemParent">
+            <summary>
+            Gets or sets the system parent associated to the component.
+            </summary>        
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.SupportComponent.AssemblyParent">
+            <summary>
+            Gets or sets the parent of an object in the assembly hierarchy.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.SupportComponent.Range">
+            <summary>
+            Returns the range of the support component.
+            </summary>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportObjectNullException"> No COM IJHgrSupportComponent is returned from the factory.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.SupportComponent.ActiveNameRule">
+            <summary>
+            Gets or sets the active name rule assigned to a run.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.SupportComponent.Name">
+            <summary>
+            Gets the read-only name.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.LogicalComponent.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.LogicalComponent.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructs a LogicalComponent from the database.
+            </summary>
+            <param name="oPrivateBusinessObject">PrivateBusinessObject</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Services.HgrCommandType">
+            <summary>
+            HgrCommandType enumerator.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Services.HgrCommandType.HgrByStructCmdType">
+            <summary>
+            HgrByStructCmdType defines the support, which is placed by using the structure command.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Services.HgrCommandType.HgrByPointCmdType">
+            <summary>
+            HgrByPointCmdType defines the support, which is placed by using the point command.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Services.HgrCommandType.HgrAllCmdType">
+            <summary>
+            HgrAllCmdType defines the support, which can be placed using either the structure or point command.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.CableTraySupport">
+            <summary>
+            Used to create the cable tray support and allow modification.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.CableTraySupport.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for  to access this CableTraySupport class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.CableTraySupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject})">
+            <summary>
+            Constructor to create a cable tray support given a parent, a collection of supporting objects,
+            and a collection of objects to be supported.
+            </summary>
+            <param name="oParentSys">System hierarchy parent of this support.</param>
+            <param name="oSupportedColl">Collection of objects to be supported.</param>
+            <param name="oSupportingColl">Collection of objects from which this support will be hung.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.CableTraySupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Constructor to create a cable tray support given a parent, a collection of
+            supporting objects, a collection of objects to be supported, and a position for the support.
+            </summary>
+            <param name="oParentSys">System hierarchy parent of this support.</param>
+            <param name="oSupportedColl">Collection of objects to be supported.</param>
+            <param name="oSupportingColl">Collection of objects from which this support will be hung.</param>
+            <param name="oPosition">Location at which the support is to be created.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.CableTraySupport.SupportedObjects">
+            <summary>
+            Overrides the SupportedObjects property.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.HgrPortType">
+            <summary>
+            Enumerator for defining the port type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.HgrPortType.UndifinedType">
+            <summary>
+            Undefined port type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.HgrPortType.SupportingType">
+            <summary>
+            SupportingType port type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.HgrPortType.SupportedType">
+            <summary>
+            SupportedType port type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.HgrPortType.FlexibleMemberPort">
+            <summary>
+            FlexibleMemberPort port type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.HgrPortType.SupportingMemberPort">
+            <summary>
+            SupportingMemberPort port type.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.HgrPortType.SupportedMemberPort">
+            <summary>
+            SupportedMemberPort port type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.Port">
+            <summary>
+            Used to create the Port object and allow modification.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Port.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Private business object constructor.
+            </summary>
+            <param name="oPB">Private business object.</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Port.#ctor(Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.ReferenceData.Middle.Part,System.String)">
+            <summary>
+            This is the constructor for port which will create the Port object given the port name 
+            and part. Origin and orientation must be set explicitly.
+            </summary>
+            <param name="oConnection">Connection to the database.</param>
+            <param name="oPart">Part required for constructing the port.</param>
+            <param name="sPortName">Name of the port.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PortCreationException">Failed to create the hanger port.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Port.#ctor(Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.ReferenceData.Middle.Part,System.String,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+            This is the constructor for port which will create the Port object given the port name. It sets all its
+            properties and sets the orientation using the values provided in the constructor.
+            </summary>
+            <param name="oConnection">Connection to the database.</param>
+            <param name="oPart">Part required for constructing the port.</param>
+            <param name="sPortName">Name of the port.</param>
+            <param name="Org">Origin to set the orientation.</param>
+            <param name="xDir">X-direction to set the orientation.</param>
+            <param name="zDir">Z-direction to set the orientation.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PortCreationException">Failed to create the hanger port.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Port.GetOrientation(Ingr.SP3D.Common.Middle.Vector@,Ingr.SP3D.Common.Middle.Vector@)">
+            <summary>
+            Gets the orientation on the port.
+            </summary>
+            <param name="XAxis">X-axis of the port.</param>
+            <param name="ZAxis">Z-axis of the port.</param>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PortOrientationException">Failed to get the orientation of the hanger port.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Port.SetOrientation(Ingr.SP3D.Common.Middle.Vector,Ingr.SP3D.Common.Middle.Vector)">
+            <summary>
+             Sets the orientation of the port.
+            </summary>
+            <param name="XAxis">X-axis of the port.</param>
+            <param name="ZAxis">Z-axis of the port.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PortOrientationException">Failed to get the orientation of the hanger port.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Port.Origin">
+            <summary>
+            Sets or gets the Origin property on the port.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PortOriginException">Failed to get or set the origin on the hanger port.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Port.Connectable">
+            <summary>
+            Gets the connectable from the member system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Port.Connections">
+            <summary>
+            Get the connections connected to member system.
+            </summary>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.Port.PortType">
+            <summary>
+            Gets the port type.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.CombinedSupport">
+            <summary>
+            Used to create the combined support and allow modification.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.CombinedSupport.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this CombinedSupport class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.CombinedSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject})">
+            <summary>
+            Constructor used to create the new combined support by giving the inputs.
+            </summary>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oSupportedColl">Supported collection.</param>
+            <param name="oSupportingColl">Supporting collection.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.CombinedSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Constructor used to create the new combined support by giving the inputs.
+            </summary>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oSupportedColl">Supported collection.</param>
+            <param name="oSupportingColl">Supporting collection.</param>
+            <param name="oPosition">Support position.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.Hidden.SupportUtils">
+            <summary>
+            SupportUtils class contains helper methods
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportUtils.GetProxy(Ingr.SP3D.Common.Middle.Services.SP3DConnection,Ingr.SP3D.ReferenceData.Middle.Part)">
+            <summary>
+            return the proxy object of the given part
+            </summary>
+            <param name="oModelConn">Model Connection</param>
+            <param name="oPart">Part</param>
+            <returns>Proxy object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportUtils.IsValidateSupportedObjs(System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.String)">
+            <summary>
+            returns true if supportedobjects are valid
+            </summary>
+            <param name="oSupEdObjects">SupporetedObjects</param>
+            <param name="sValInterfaces">ValidateInterfaceNames String</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportUtils.IsValidateSupportIngObjs(System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},System.String)">
+            <summary>
+            This method validates the supporting objects.
+            </summary>
+            <param name="oSupIngObjects">Supporting Objects</param>
+            <param name="sValInterfaces">sInterface names</param>
+            <returns>returns true/false</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportUtils.GetDefaultNameRule">
+            <summary>
+            returns the defaultname rule object
+            </summary>
+            <returns>default Hanger Namerule object</returns>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.Hidden.SupportUtils.CreateSupport(Ingr.SP3D.Common.Middle.ISystem,System.String)">
+            <summary>
+            returns COM Support based on SupProgID
+            </summary>
+            <param name="oSys">System</param>
+            <param name="sSupProgID">Support Prog ID</param>
+            <returns>Support COM object</returns>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">
+            <summary>
+            Raised when an invalid argument is passed to the method.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException.#ctor(System.Int32,System.String)">
+             <summary>
+            Instantiates when an invalid argument is passed to the method. 
+             </summary>
+             <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+             <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">
+            <summary>
+            Raised when calling routines do not have a proper parent system object passed as an argument.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException.#ctor(System.Int32,System.String)">
+            <summary>
+             Instantiates when calling routines do not have a proper parent system object passed as an argument.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportFactoryFailedException">
+            <summary>
+            Raised when calling routines do not have a proper parent system object passed as an argument.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportFactoryFailedException.#ctor(System.Int32,System.String)">
+            <summary>
+             Instantiates when fails to create a support factory.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportObjectNullException">
+            <summary>
+            This exception is thrown when a null is returned by calling IJDPOM.GetObject.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportObjectNullException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the ObjectNullException 
+            class with the message passed in.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportSOMHelperCreationException">
+            <summary>
+            This exception is thrown when failed to create a .NET helper.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportSOMHelperCreationException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes when fails to create a .NET helper.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportCreateAEException">
+            <summary>
+            This exception is thrown when failed to create support assembly entity.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportCreateAEException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes when failed to create a support assembly entity.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportCreateAEException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SupportCreateAEException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportDefinitionException">
+            <summary>
+            This exception is thrown when failed to get or set the support definition.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportDefinitionException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to get or set the support definition on support.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportDefinitionException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SupportDefinitionException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportingObjectsException">
+            <summary>
+            This exception is thrown when failed to get or set the supporting objects.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportingObjectsException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to get or set the supportiong objects.
+            </summary>
+            <param name="iMessageID">The error message that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportingObjectsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SupportingObjectsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportedObjectsException">
+            <summary>
+            This exception is thrown when failed to get or set the supported objects.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportedObjectsException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to get or set the supported objects.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportedObjectsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SupportedObjectsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.SupportPositionException">
+            <summary>
+            This exception is thrown when failed to get or set the support position.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportPositionException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to get or set the support position.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.SupportPositionException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SupportPositionException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.IsDesignSupportAssemblyException">
+            <summary>
+            This exception is thrown when failed to return the boolean value if support is a standard or design support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.IsDesignSupportAssemblyException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to return the boolean value if support is standard or design support.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.IsDesignSupportAssemblyException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the IsDesignSupportAssemblyException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.PortCreationException">
+            <summary>
+            This exception is thrown when failed to create the hanger port.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PortCreationException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to create the hanger port.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PortCreationException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the PortCreationException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.PortOriginException">
+            <summary>
+            This exception is thrown when failed to get or set the origin of the hanger port.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PortOriginException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to get or set the origin of the hanger port.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PortOriginException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the PortOriginException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.PortOrientationException">
+            <summary>
+            This exception is thrown when failed to get or set the orientation of the hanger port.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PortOrientationException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to get or set the orientation of the hanger port.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PortOrientationException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the PortOrientationException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrConnectablePortsException">
+            <summary>
+            This exception is thrown when failed to get connectable ports of the support or support component.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrConnectablePortsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrConnectablePortsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrConnectedPortsException">
+            <summary>
+            This exception is thrown when failed to get connected ports of the support or support component.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrConnectedPortsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrConnectedPortsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrPortsException">
+            <summary>
+            This exception is thrown when failed to get ports of the support or support component.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrPortsException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrPortsException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrIsConnectedToException">
+            <summary>
+            This exception is thrown when failed to get the objects, which are connected to the support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrIsConnectedToException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrIsConnectedToException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrLCSPositionOrOrientationException">
+            <summary>
+            This exception is thrown when failed to get the position or orientation of the local coordinate system of the support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrLCSPositionOrOrientationException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrLCSPositionOrOrientationException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrRangeException">
+            <summary>
+            This exception is thrown when failed to get the range of the support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrRangeException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrRangeException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HgrTransformException">
+            <summary>
+            This exception is thrown when failed to perform a transform of the support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HgrTransformException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the HgrTransformException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HangerPortFactoryFailedException">
+            <summary>
+            Failed to create the hanger port factory.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HangerPortFactoryFailedException.#ctor(System.Int32,System.String)">
+            <summary>
+             Instantiates when failed to create a hanger port factory.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HangerPartException">
+            <summary>
+            Hanger part is invalid.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HangerPartException.#ctor(System.Int32,System.String)">
+            <summary>
+            Hanger part is invalid.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.AddPartException">
+            <summary>
+            Failed to add a part to design support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.AddPartException.#ctor(System.Int32,System.String)">
+            <summary>
+            Failed to add a part to the design support.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.AddPartException.#ctor(System.Runtime.InteropServices.COMException)">
+            <summary>
+            Initializes a new instance of the SupportCreateAEException 
+            class with a reference to the inner COMException that is the cause of this exception.
+            </summary>
+            <param name="inner">The COMException that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.PartFromPartClassException">
+            <summary>
+            Falied to get the part from the part class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.PartFromPartClassException.#ctor(System.Int32,System.String)">
+            <summary>
+            Hanger part is invalid.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.HangerPortFromSupCompException">
+            <summary>
+            Failed to get the hanger port from the given support component.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.HangerPortFromSupCompException.#ctor(System.Int32,System.String)">
+            <summary>
+            Hanger part is invalid.
+            </summary>
+            <param name="iMessageID">The error message number that explains the reason for the exception.</param>
+            <param name="sDefaultMessage"> Default error message. </param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Exceptions.CannotSetMatrixOnLocalCoorOfSup">
+            <summary>
+            Raised if the user cannot set the matrix on the local coordinate system of support.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Exceptions.CannotSetMatrixOnLocalCoorOfSup.#ctor">
+            <summary>
+            Raised an exception if the user tried to set the matrix on the local coordinate system of support.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.DuctSupport">
+            <summary>
+            DuctSupport class which inherits from the Support base class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DuctSupport.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this DuctSupport class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DuctSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject})">
+            <summary>
+            Constructor to create a duct support given a parent, a collection of supporting objects,
+            and a collection of objects to be supported.
+            </summary>
+            <param name="oParent">System hierarchy parent of this support.</param>
+            <param name="oSupportedColl">Collection of objects to be supported.</param>
+            <param name="oSupportingColl">Collection of objects from which this support will be hung.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.InvalidParentException">Parent system is not valid.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnAccessDeniedException">Access denied, unable to create the object.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Unable to create the object due to working status.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DuctSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            DuctSupport constructor used to create a duct support given a parent, a collection of
+            supporting objects, a collection of objects to be supported, and a position for the support.
+            </summary>
+            <param name="oParent">System hierarchy parent of this support.</param>
+            <param name="oSupportedColl">Collection of objects to be supported.</param>
+            <param name="oSupportingColl">Collection of objects from which this support will be hung.</param>
+            <param name="oPosition">Location at which the support is to be created.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.InvalidParentException">Parent system is not valid.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnAccessDeniedException">Access denied, unable to create the object.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Unable to create the object due to working status.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.DuctSupport.SupportedObjects">
+            <summary>
+            Overrides the SupportedObjects property.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.PipeSupport">
+            <summary>
+            Used to create the pipe support and allow modification.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.PipeSupport.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this PipeSupport class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.PipeSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject})">
+            <summary>
+            Pipe support constructor used to create the new pipe support by giving the inputs.
+            </summary>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oSupportedColl">Supported collection.</param>
+            <param name="oSupportingColl">Supporting collection.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.PipeSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Pipe support constructor used to create the new pipe support by giving the inputs.
+            </summary>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oSupportedColl">Supported collection.</param>
+            <param name="oSupportingColl">Supporting collection.</param>
+            <param name="oPosition">Support position.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.PipeSupport.SupportedObjects">
+            <summary>
+            Overrides the SupportedObjects property.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.StandardComponent">
+            <summary>
+            StandardComponent class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.StandardComponent.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.StandardComponent.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructs a StandardComponent from the database.
+            </summary>
+            <param name="oPrivateBusinessObject">PrivateBusinessObject</param>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs">
+            <summary>
+            Support resource identifiers.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrInvalidArguments">
+            <summary>
+            Invalid input arguments.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrRetrieveObject">
+            <summary>
+            Failed to retrieve Object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrModifyObject">
+            <summary>
+            Failed to Modify the Object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrParent">
+            <summary>
+            Failed to get Parent.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrInvalidparent">
+            <summary>
+            Invalid Parent.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.NoComSupportComponent">
+            <summary>
+            Failed to get COM Support Componet object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrElements">
+            <summary>
+            Error in get/set the elements.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrInvalidCategory">
+            <summary>
+            Invalid Category.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrURetrieveObject">
+            <summary>
+            Error in retrieve user object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrUVerifyObject">
+            <summary>
+            Error in Verify the user object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrVerifyObject">
+            <summary>
+            Error in Verify the object.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrInvalidSupportedColl">
+            <summary>
+            Invalid Supported Collection.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrInvalidSupportingColl">
+            <summary>
+            Invalid Supporting Collection.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrSupportFactory">
+            <summary>
+            Error in Support Factory.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrFailedSupportFactory">
+            <summary>
+            Failed to get the Support Factory.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrSupportSOMHelperFailure">
+            <summary>
+            Failed to get the Support SOM Helper.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrSupportCreateAE">
+            <summary>
+            Failed to create Support AE.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrIsValidateSupportedObjs">
+            <summary>
+            Error in Validate Supported Objects.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrIsValidateSupportingObjs">
+            <summary>
+            Error in Validate supporting objects.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrFailedinSupDef">
+            <summary>
+            Failed to get/set the support definition.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrFailedinSupEd">
+            <summary>
+            Failed to get/set the supported objects on support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrFailedinSupIng">
+            <summary>
+            Failed to get/set the supporting objects on support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrFailedinSupPos">
+            <summary>
+            Failed to get/set the support position on support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrFailedinIsDesignAsmm">
+            <summary>
+            Failed to return true/false, whether given support is design support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPortCreation">
+            <summary>
+            Failed to create the PortCreation.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPortOrigin">
+            <summary>
+            Failed to set/get the Port Origin.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPortOrientation">
+            <summary>
+            Failed to set/get the Port Orientation.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrConnectablePort">
+            <summary>
+            Failed to get the Connectable Ports.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrConnectedPort">
+            <summary>
+            Failed to get the Connected Ports.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPort">
+            <summary>
+            Failed to get the Ports.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrIsConnectedTo">
+            <summary>
+            Fialed to get the Connected Ports of the given port.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrLCSPosOrientation">
+            <summary>
+            Failed to set Position or Orientation on LCS.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrHgrRange">
+            <summary>
+            Failed to get the Range of the Support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrHgrTransform">
+            <summary>
+            Failed to do trasfomation of the Support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPortFac">
+            <summary>
+            Failed to create the Hanger Port Factory.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrInvalidHangerPart">
+            <summary>
+            Hanger part is Invalid.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrAddPart">
+            <summary>
+            Failed to add part to design support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPartFromPartClass">
+            <summary>
+            Failed to get the Part from given part class.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrPortFromSupComp">
+            <summary>
+            Failed to get the port from support component.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ThirdPartyConfiguration">
+            <summary>
+            ThirdParty PlugIn Configuration.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ThirdPartyPlugInNotFound">
+            <summary>
+            Not able to get the ThirdParty Plugin From the Catalog Rule or Default Rule.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.SelectSuppComp">
+            <summary>
+            Select SupportComponent.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.SelectDesignSupport">
+            <summary>
+            Select Design Support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.SelectDesignSuppCompSteel">
+            <summary>
+            Select a Design Support Component (secondary steel) before calling the command!
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.PartNotSelected">
+            <summary>
+            Part Not Selected
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.SlecetDiffPart">
+            <summary>
+            Select part from different part class.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.InvalidRuleSpecified">
+            <summary>
+            The Rule Specified is Invalid.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.SelectMatchPart">
+            <summary>
+            Select the Part wchich matches
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.ErrCannotSetMatrix">
+            <summary>
+            Can not able to set matrix on local coordinate system of support.
+            </summary>
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.DEFAULT_RESOURCE">
+            <summary>
+            Default Resource Name.
+            </summary>   
+        </member>
+        <member name="F:Ingr.SP3D.Support.Middle.Services.SupportResourceIDs.DEFAULT_ASSEMBLY">
+            <summary>
+            Default Assembly Name.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.ConduitSupport">
+            <summary>
+            Used to create the conduit support and allow modification.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.ConduitSupport.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .HNET to access this ConduitSupport class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.ConduitSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject})">
+            <summary>
+            Constructor to create a conduit support given a parent, a collection of supporting objects,
+            and a collection of objects to be supported.
+            </summary>
+            <param name="oParentSys">System hierarchy parent of this support.</param>
+            <param name="oSupportedColl">Collection of objects to be supported.</param>
+            <param name="oSupportingColl">Collection of objects from which this support will be hung.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.ConduitSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Constructor to create a conduit support given a parent, a collection of
+            supporting objects, a collection of objects to be supported, and a position for the support.
+            </summary>
+            <param name="oParentSys">System hierarchy parent of this support.</param>
+            <param name="oSupportedColl">Collection of objects to be supported.</param>
+            <param name="oSupportingColl">Collection of objects from which this support will be hung.</param>
+            <param name="oPosition">Location at which the support is to be created.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.ConduitSupport.SupportedObjects">
+            <summary>
+            Overrides the SupportedObjects property.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>        
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.HgrConnection">
+            <summary>
+            HgrConnection class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.HgrConnection.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.HgrConnection.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructs a hanger connection from the database.
+            </summary>
+            <param name="oPrivateBusinessObject">PrivateBusinessObject</param>
+        </member>
+        <member name="P:Ingr.SP3D.Support.Middle.HgrConnection.SystemParent">
+            <summary>
+            Returns or sets the system parent associated to the component.
+            </summary>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.DesignSupport">
+            <summary>
+            Used to create the design support and allow for modification.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructor for .NET to access this DesignSupport class.
+            </summary>
+            <param name="oPB">Private Business object</param>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject})">
+            <summary>
+            Design support constructor used to create the new design support by giving the inputs.
+            </summary>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oSupportedColl">Supported collection.</param>
+            <param name="oSupportingColl">Supporting collection.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.#ctor(Ingr.SP3D.Common.Middle.ISystem,System.Collections.ObjectModel.Collection{Ingr.SP3D.Route.Middle.RouteFeature},System.Collections.ObjectModel.Collection{Ingr.SP3D.Common.Middle.BusinessObject},Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Design support constructor used to create the new design support by giving the inputs.
+            </summary>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oSupportedColl">Supported collection.</param>
+            <param name="oSupportingColl">Supporting collection.</param>
+            <param name="oPosition">Support position</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidArgumentException">Supported objects collection has invalid objects.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.#ctor(Ingr.SP3D.Support.Middle.Support,Ingr.SP3D.Common.Middle.ISystem)">
+            <summary>
+            Design support constructor takes the standard support and system parent as inputs. 
+            <para>Adds all the components of this standard support to design support and this standard support is deleted.</para>
+            </summary>
+            <param name="oSupport">Standard support.</param>
+            <param name="oParentSys">Parent system.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Given support is not in the working status.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.#ctor(Ingr.SP3D.Support.Middle.Support,Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.ISystem,Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Design support constructor for creating the design support which takes the standard support
+            and adds both standard support and the given part to the design support. It is created under the given system parent.
+            </summary>
+            <param name="oSupport">Standard support.</param>
+            <param name="oPart">Part object.</param>
+            <param name="oParentSys">Parent system.</param>
+            <param name="oPostion">Position object.</param>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnInvalidArgumentException">Invalid arguments.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.SupportInvalidParentException">Parent is not ISystem.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Given support is not in the working status.</exception>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.AddSupportComponent(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Adds the given part to the design support at the given location.
+            </summary>
+            <param name="oPart">Part name.</param>
+            <param name="oPosition">Position object.</param>
+            <returns>Returns the support component.</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add the part to the design support.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Support is not in working status.</exception>
+            <example>
+            This example shows how to add a hanger component to design support at the given location.
+            <code>
+            'Create the design support.
+            Dim oDesignSup As DesignSupport = Nothing
+            'Create the hanger component.
+            Dim oPart As Part = Nothing
+            'Set the position, where the hanger part needs to placed in the given design support.
+            Dim oPosition As Position = Nothing
+            'Declare support component object.
+            Dim oSupComp As SupportComponent = Nothing
+            'Using AddSupportComponent(), to add the hanger part to the design support at the given location.
+            oSupComp = oDesignSup.AddSupportComponent(oPart, oPosition)
+            </code>
+            </example>        
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.AddSupportComponent(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Adds the given part to design support.
+            </summary>
+            <param name="oPart">Part object.</param>
+            <param name="ofromPosition">From position to add the support.</param>
+            <param name="otoPosition">To position to add the support.</param>
+            <returns>Returns the support component.</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add the part to the design support.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Support is not in working status.</exception>
+            <example>This example shows how to add the part to the design support using from and to Positions.
+            <code>
+            'Create the design support.
+            Dim oDesignSup As DesignSupport = Nothing
+            'Create the hanger component, which is the stretchable part.
+            Dim oPart As Part = Nothing
+            'Define the from position and to position.
+            Dim ofromPosition As Position = Nothing
+            Dim otoPosition As Position = Nothing
+            'Declare support component object.
+            Dim oSupComp As SupportComponent = Nothing
+            'Using AddSupportComponent(), to add the hanger part to the design support using from and to position.
+            oSupComp = oDesignSup.AddSupportComponent(oPart, oPosition)
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.AddSupportComponent(System.String,Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Adds the part of the given part class to the design support.
+            </summary>
+            <param name="sPartClass">Part class name.</param>
+            <param name="oPosition">Position object.</param>
+            <returns>Returns the support component.</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add part to the design support.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PartFromPartClassException">Failed to get the part from part class.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Support is not in working status.</exception>
+            <example>This example shows how to add the part class of the hanger part to the design support.
+            <code>
+            'Create the design support.
+            Dim oDesignSup As DesignSupport = Nothing
+            'Define the part class name of the hanger part.
+            Dim sPartClass As String = Nothing
+            'Set the position, where the hanger part needs to be placed in the given design support.
+            Dim oPosition As Position = Nothing
+            'Declare support component object.
+            Dim oSupComp As SupportComponent = Nothing
+            'Using AddSupportComponent(), to add the part class of hanger part to the design support at the given location.
+            oSupComp = oDesignSup.AddSupportComponent(sPartClass, oPosition)
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.AddSupportComponent(System.String,Ingr.SP3D.Common.Middle.Position,Ingr.SP3D.Common.Middle.Position)">
+            <summary>
+            Adds the part of the given part class to the design support using from and to position.
+            </summary>
+            <param name="sPartClass">Part class name.</param>
+            <param name="ofromPosition">From position to add the part.</param>
+            <param name="otoPosition">To position to add the part.</param>
+            <returns>Returns the support component.</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add part to the design support.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.PartFromPartClassException">Failed to get the part from part class.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Support is not in working status.</exception>
+            <example>This example shows how to add the part class of the hanger part to the design support.
+            <code>
+            'Create the design support.
+            Dim oDesignSup As DesignSupport = Nothing
+            'Define the PartClass name of the hanger part.
+            Dim sPartClass As String = Nothing
+            'Define the from position and to position.
+            Dim ofromPosition As Position = Nothing
+            Dim otoPosition As Position = Nothing
+            'Declare support component object.
+            Dim oSupComp As SupportComponent = Nothing
+            'Using AddSupportComponent(), to add the part class of hanger part to the design support using from and to position.
+            oSupComp = oDesignSup.AddSupportComponent(sPartClass, ofromPosition, otoPosition)
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.AddSupportComponent(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Support.Middle.SupportComponent,System.String)">
+            <summary>
+            Adds the given part to the design support using port of the existing support component.
+            </summary>
+            <param name="oPart">Part object.</param>
+            <param name="oExistingSupComp">Support component.</param>
+            <param name="sPortName">Port name.</param>
+            <returns>Returns the support component.</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add part to the design support.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPortFromSupCompException">Failed to get the port from the support component.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Support is not in working status.</exception>
+            <example>This example shows how to add the hanger part to the design support at given port location of existing support component.
+            <code>
+            'Create the design support.
+            Dim oDesignSup As DesignSupport = Nothing
+            'Define hanger part
+            Dim oPart As Part = Nothing
+            'Define existing support component and port name of existing support component.
+            Dim oExistingSupComp As SupportComponent = Nothing
+            Dim sPortName As String = Nothing
+            'Declare support component object.
+            Dim oSupComp As SupportComponent = Nothing
+            'Using AddSupportComponent(), to add the hanger part to the design support at given port location of existing support component.
+            oSupComp = oDesignSup.AddSupportComponent(oPart, oExistingSupComp, sPortName)
+            </code>
+            </example>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.DesignSupport.AddSupportComponent(Ingr.SP3D.ReferenceData.Middle.Part,Ingr.SP3D.Support.Middle.SupportComponent,System.String,Ingr.SP3D.Support.Middle.SupportComponent,System.String)">
+            <summary>
+            Adds the given part to the design support using ports of the existing support components.
+            </summary>
+            <param name="oPart">Part object.</param>
+            <param name="oExistingSupComp1">Support component.</param>
+            <param name="sPortName1">Port name.</param>
+            <param name="oExistingSupComp2">Support component.</param>
+            <param name="sPortName2">Port name.</param>
+            <returns>Returns the support component.</returns>
+            <exception cref="T:System.ArgumentNullException">One or more arguments are null.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPartException">Hanger part is invalid.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.AddPartException">Failed to add part to the design support.</exception>
+            <exception cref="T:Ingr.SP3D.Support.Exceptions.HangerPortFromSupCompException">Failed to get the port from the support component.</exception>
+            <exception cref="T:Ingr.SP3D.Common.Exceptions.CmnNotInWorkingStatusException">Support is not in working status.</exception>
+            <example>This example shows how to add the hanger part to the design support using the port lcoations of existing support components.
+            <code>
+            'Create the design support.
+            Dim oDesignSup As DesignSupport = Nothing
+            'Define hanger part
+            Dim oPart As Part = Nothing
+            'Define existing support component 1 and port name of existing support component 1.
+            Dim oExistingSupComp1 As SupportComponent = Nothing
+            Dim sPortName1 As String = Nothing
+            'Define existing support component 2 and port name of existing support component 2.
+            Dim oExistingSupComp2 As SupportComponent = Nothing
+            Dim sPortName2 As String = Nothing
+            'Declare support component object.
+            Dim oSupComp As SupportComponent = Nothing
+            'Using AddSupportComponent(), to add the hanger part to the design support using the port lcoations of existing support components.
+            oSupComp = oDesignSup.AddSupportComponent(oPart, oExistingSupComp1, sPortName1, oExistingSupComp2, sPortName2)
+            </code>
+            </example>
+        </member>
+        <member name="T:Ingr.SP3D.Support.Middle.ConnectionComponent">
+            <summary>
+            ConnectionComponent class.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.ConnectionComponent.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Ingr.SP3D.Support.Middle.ConnectionComponent.#ctor(Ingr.SP3D.Common.Middle.PrivateBusinessObject)">
+            <summary>
+            Constructs a ConnectionComponent from the database.
+            </summary>
+            <param name="oPrivateBusinessObject">PrivateBusinessObject</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Electrical Cable Power" Description="Power Rating" RequiresFilter="No">
+   <DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg="" />
+
+   <SQL Timeout="0">
+      <![CDATA[
+            SELECT cabcap.PowerCapacity AS PowerCapacity
+              FROM JRteCableRun cabrun
+              LEFT JOIN XSpecifiedCable cabs ON cabs.oidOrigin = cabrun.oid
+              LEFT JOIN JCablePart cabprt ON cabprt.oid = cabs.oiddestination
+              LEFT JOIN JCableCapacity cabcap ON cabcap.oid = cabprt.oid
+              WHERE cabrun.oid = ?
+                                  ]]>
+   </SQL>
+
+   <QUERY_PARAMETERS Name="Electrical Cable Power" Site="User" Path="Electrical Cable Power.rqp" />
+</REPORT_QUERY>
+

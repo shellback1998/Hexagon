@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Washers" Description="Material Description Label for Washers">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="Washers" Site="User" Path="Washers.rfp" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="WasherType_ShortValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", " />
+
+               <DATA Visible="Yes" Column="WasherQuantity" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", " />
+
+               <DATA Visible="Yes" Column="BoltDiameter" />
+
+               <TEXT Visible="Yes" Value=" m " />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", " />
+
+               <DATA Visible="Yes" Column="WasherThickness" />
+
+               <TEXT Visible="Yes" Value=" m " />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="GeomIndStandard_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="Manufacturer_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Column="MaterialsGrade_ShortValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="CoatingType_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="NULL" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="Yes" Column="CoatingType_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

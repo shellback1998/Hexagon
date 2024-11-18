@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Object Integrity Status" Description="an object is in DB integrity" RequiresFilter="No">
+   <DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg="" />
+
+   <SQL Timeout="0">
+      <![CDATA[SELECT Status FROM JObjectIntegrity WHERE Objectoid=?]]>
+   </SQL>
+
+   <ORASQL Timeout="0">
+      <![CDATA[SELECT Status FROM JObjectIntegrity WHERE Objectoid=?]]>
+   </ORASQL>
+
+   <QUERY_PARAMETERS Name="Object Integrity Status" Site="User" Path="Object Integrity Status.rqp" />
+</REPORT_QUERY>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric WBS Item Continuation" Description="WBS Item Continuation Label for Isometrics">
+	<QUERIES>
+		<QUERY Name="Piping Isometric WBS Item Continuation" Site="User" Path="Piping Isometric WBS Item Continuation.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Isometric WBS Item Continuation" Site="User" Path="Piping Isometric WBS Item Continuation.rfm"/>
+</REPORT_TEMPLATE>

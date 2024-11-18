@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_QUERY Name="Stock Piping Specialties" Description="Material Description Label for Stock Piping Specialties" RequiresFilter="No">
+<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+<SQL Timeout="0"><![CDATA[ 
+	select Pcom.CommodityType_LongValue, dbo.REPORTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS 'NPD1', 
+		   'in' AS 'NPDUnitType1',
+		   'Piping' AS 'Category',
+		   NULL AS 'BoltDiameter', 
+		   dbo.REPORTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS 'NPD2', 
+		   'in' AS 'NPDUnitType2',
+	'[Ports]' AS PortsInfo, 
+	Mfd.SurfacePreparation_ShortValue, 
+	Pcom.LiningMaterial_ShortValue,
+	Pcom.GeometricIndustryStandard_ShortValue as GeomIndStandard_ShortValue,
+	Pcom.MaterialsGrade_ShortValue, 
+	Mfd.MiscRequisitionClassification_ShortValue as MiscReqClassfn_ShortValue from dbo.JDPipeComponent_CL Pcom 
+	Left OUTER join dbo.JUAManufacturerData_CL Mfd ON (pcom.oid = Mfd.oid)	
+	join xmadefrom rmf ON (pcom.oid = rmf.oiddestination)
+	where rmf.oidorigin = ?
+    	]]></SQL>
+<ORASQL Timeout="0">
+	<![CDATA[ 
+	select ClPco.LONGSTRINGVALUE as CommodityType_LongValue, RPTConvertNPD('in',Pcom.PriSizeNPDUnits, Pcom.PrimarySize) AS NPD1, 
+		   'in' AS NPDUnitType1,
+		   'Piping' AS Category,
+		   NULL AS BoltDiameter, 
+		   RPTConvertNPD('in',Pcom.SecSizeNPDUnits, Pcom.SecondarySize) AS NPD2, 
+		   'in' AS NPDUnitType2, 
+	'[Ports]' AS PortsInfo, 
+	ClSPre.SHORTSTRINGVALUE as SurfacePreparation_ShortValue, 
+	ClLM.SHORTSTRINGVALUE as LiningMaterial_ShortValue, 
+	ClGIS.SHORTSTRINGVALUE as GeomIndStandard_ShortValue,
+	ClMGr.SHORTSTRINGVALUE as MaterialsGrade_ShortValue,
+	ClMRC.SHORTSTRINGVALUE as MiscReqClassfn_ShortValue 
+ 	from CL_PIPINGCOMMODITYTYPE ClPco 
+	join JDPIPECOMPONENT Pcom on (ClPco.VALUEID = Pcom.COMMODITYTYPE) 
+	Left OUTER join JUAManufacturerData Mfd ON (Pcom.Oid = Mfd.Oid) 
+	Left OUTER join CL_SURFACEPREPARATION ClSPre ON (Mfd.SurfacePreparation  = ClSPre.VALUEID)
+	join CL_LININGMATERIAL ClLM on (ClLM.VALUEID = Pcom.LiningMaterial)
+	join CL_GEOMETRICINDUSTRYSTANDARD ClGIS on (ClGIS.VALUEID= pcom.GeometricIndustryStandard)
+	join CL_MATERIALSGRADE ClMGr on (ClMGr.VALUEID = Pcom.MaterialsGrade)
+	Left OUTER join CL_MISCREQUISITIONCLASSIFICATI ClMRC on (Mfd.MiscRequisitionClassification = ClMRC.VALUEID) 
+        join xmadefrom rmf ON (pcom.oid = rmf.oiddestination) 
+        where rmf.oidorigin = ?
+    	]]></ORASQL>
+<QUERY_PARAMETERS Name="Stock Piping Specialties" Site="User" Path="Stock Piping Specialties.rqp"/>
+</REPORT_QUERY>
+

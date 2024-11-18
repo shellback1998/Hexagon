@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Equipment Nozzle Orientation" Description="">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<FORMATTING_PARAMETERS Name="Equipment Nozzle Orientation" Site="User" Path="Equipment Nozzle Orientation.rfp"/>
+	<RTF_LABEL>
+		<VECTORS>
+			<VECTOR Name="NozzleOrientation" X="NozDirX" Y="NozDirY" Z="NozDirZ" Matrix="MyTransformA" UOM="HVOrientationDegMinSec" HorizontalAngleStyle="QuadrantCW" VerticalAngleStyle="ElevationMatrixZ"/>
+		</VECTORS>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="NozDirZ" Visible="No">
+						<CONDITION ConditionOperator="Between" ConditionOperand1="-0.001" ConditionOperand2="0.001" StateOfValue="Raw"/>
+					</DATA>
+					<ORIENTATION Plane="Horizontal" Vector="NozzleOrientation" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="NozDirZ" Visible="No">
+						<CONDITION ConditionOperator="Between" ConditionOperand1="0.999" ConditionOperand2="1.001" StateOfValue="Raw"/>
+					</DATA>
+					<ORIENTATION Plane="Vertical" Vector="NozzleOrientation" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="NozDirZ" Visible="No">
+						<CONDITION ConditionOperator="Between" ConditionOperand1="-1.001" ConditionOperand2="-0.999" StateOfValue="Raw"/>
+					</DATA>
+					<ORIENTATION Plane="Vertical" Vector="NozzleOrientation" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="NozDirZ" Visible="No">
+						<CONDITION ConditionOperator="Between" ConditionOperand1="0.001" ConditionOperand2="0.999" StateOfValue="Raw"/>
+					</DATA>
+					<ORIENTATION Plane="Horizontal" Vector="NozzleOrientation" Visible="Yes"/>
+					<TEXT Visible="Yes" Value=", "/>
+					<ORIENTATION Plane="Vertical" Vector="NozzleOrientation" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="NozDirZ" Visible="No">
+						<CONDITION ConditionOperator="Between" ConditionOperand1="-0.999" ConditionOperand2="-0.001" StateOfValue="Raw"/>
+					</DATA>
+					<ORIENTATION Plane="Horizontal" Vector="NozzleOrientation" Visible="Yes"/>
+					<TEXT Visible="Yes" Value=", "/>
+					<ORIENTATION Plane="Vertical" Vector="NozzleOrientation" Visible="Yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

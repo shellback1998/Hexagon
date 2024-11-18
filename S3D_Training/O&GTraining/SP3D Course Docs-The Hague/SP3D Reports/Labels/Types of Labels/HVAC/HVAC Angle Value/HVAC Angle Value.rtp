@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Angle Value" Description=""><QUERIES><QUERY Name="HVAC Angle Value" Site="User" Path="HVAC Angle Value.rqe"/></QUERIES><FORMATTING Name="HVAC Angle Value" Site="User" Path="HVAC Angle Value.rfm"/></REPORT_TEMPLATE>

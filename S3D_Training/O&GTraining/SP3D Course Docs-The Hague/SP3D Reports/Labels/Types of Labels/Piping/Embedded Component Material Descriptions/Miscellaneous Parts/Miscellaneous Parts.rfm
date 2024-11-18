@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<REPORT_FORMATTING Name="Miscellaneous Parts" Description="Material Description Label for Miscellaneous Parts">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <FORMATTING_PARAMETERS Name="Miscellaneous Parts" Site="User" Path="Miscellaneous Parts.rfp" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="CommodityType_LongValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", " />
+
+               <DATA Column="PressureRating" ToParse="Yes" Visible="Yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="ValveManufacturer_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="ValveModelNumber_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="MiscReqClassfn_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="Yes" Column="Manufacturer_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="Undefined" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Column="MaterialsGrade_ShortValue" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <TEXT Visible="Yes" Value=", ">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </TEXT>
+
+               <DATA Visible="No" Column="MiscReqClassfn_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="Yes" Column="MiscReqClassfn_ShortValue">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="NULL" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

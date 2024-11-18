@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Component Material Description" Description="Pipe Component Material Description"><QUERIES><QUERY Name="Piping Component Material Description" Site="User" Path="Piping Component Material Description.rqe"/></QUERIES><FORMATTING Name="Piping Component Material Description" Site="User" Path="Piping Component Material Description.rfm"/></REPORT_TEMPLATE>

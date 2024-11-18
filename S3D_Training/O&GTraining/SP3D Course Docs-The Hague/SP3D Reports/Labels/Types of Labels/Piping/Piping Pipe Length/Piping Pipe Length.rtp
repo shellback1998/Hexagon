@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Pipe Length" Description="Length"><QUERIES><QUERY Name="Piping Pipe Length" Site="User" Path="Piping Pipe Length.rqe"/></QUERIES><FORMATTING Name="Piping Pipe Length" Site="User" Path="Piping Pipe Length.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Delimiter" Description="Separator for multiple properties for different standards"><QUERIES><QUERY Name="Delimiter" Site="User" Path="Delimiter.rqe"/></QUERIES><FORMATTING Name="Delimiter" Site="User" Path="Delimiter.rfm"/></REPORT_TEMPLATE>

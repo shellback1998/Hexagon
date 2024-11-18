@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Stress Analysis Insulation Density" Description="Insulation density per part, for export to stress analysis" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0">
+		<![CDATA[SELECT 
+        CASE 
+        	WHEN jim_FEAT.Density IS NULL THEN jim_RUN.Density
+        	ELSE jim_FEAT.Density
+        END InsulationDensity
+        FROM JRtePathGenPart jpgp
+        JOIN XOwnsParts rop on rop.oiddestination = jpgp.oid
+        JOIN XPathGeneratedParts rpgp on rpgp.oiddestination = jpgp.oid
+        JOIN JRteInsulation jri_FEAT on jri_FEAT.oid = rpgp.oidorigin
+        JOIN JInsulationMaterial jim_FEAT on jim_FEAT.MaterialType = jri_FEAT.InsulationMaterial
+        JOIN JRteInsulation jri_RUN on jri_RUN.oid = rop.oidorigin
+        JOIN JInsulationMaterial jim_RUN on jim_RUN.MaterialType = jri_RUN.InsulationMaterial
+            WHERE jpgp.oid = ?
+            ]]>
+	</SQL>
+	<QUERY_PARAMETERS Name="Piping Stress Analysis Insulation Density" Site="User" Path="Piping Stress Analysis Insulation Density.rqp"/>
+</REPORT_QUERY>

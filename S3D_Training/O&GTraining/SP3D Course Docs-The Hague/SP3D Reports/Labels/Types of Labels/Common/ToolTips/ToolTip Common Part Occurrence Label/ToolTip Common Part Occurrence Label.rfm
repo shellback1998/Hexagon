@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="ToolTip Common Part Occurrence Label" Description="Example of a Label for a single occurrence of PartOcc"><DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/><RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/><FORMATTING_PARAMETERS Name="ToolTip Common Part Occurrence Label" Site="User" Path="ToolTip Common Part Occurrence Label.rfp"/><LAYOUT_TEMPLATE Type="Internal"/><RTF_LABEL><POINTS/><VECTORS/><BLOCKS><BLOCK Action="Visible"><TOKENS><TEXT Value="{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0 Courier New;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red255\green0\blue0;}
+\viewkind4\uc1\pard\cf1\lang1033\b\f0\fs20 Item Name: " ToParse="no" Visible="yes"/><DATA Column="Name" ToParse="NO" Visible="yes"/><TEXT Value="
+\par Part Class: " ToParse="no" Visible="yes"/><DATA Column="PartClass" ToParse="NO" Visible="yes"/><TEXT Value="
+\par Part No: " ToParse="no" Visible="yes"/><DATA Column="PartNumber" ToParse="NO" Visible="yes"/><TEXT Value="
+\par Dry Weight: " ToParse="no" Visible="yes"/><PHYSICAL Column="DryWeight" UOM="Weight" Visible="yes"/><TEXT Value="\cf0\b0\f1\fs17 
+\par }
+" ToParse="no" Visible="yes"/></TOKENS></BLOCK></BLOCKS></RTF_LABEL>
+</REPORT_FORMATTING>

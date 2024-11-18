@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Piping Stress Analysis Corrosion Allowance" Description="Corrosion Allowance per part, for export to stress analysis">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+	<FIELDS/>
+	<UOMS>
+		<UOM Name="Length" CanInherit="No" Type="DISTANCE" Primary="in" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="5" FractionalPrecision="" LeadingZero="" TrailingZeros="" ReduceFraction=""/>
+	</UOMS>
+</FORMATTING_PARAMETERS>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Transition Quantity" Description="Quantities"><QUERIES><QUERY Name="HVAC Transition Quantity" Site="User" Path="HVAC Transition Quantity.rqe"/></QUERIES><FORMATTING Name="HVAC Transition Quantity" Site="User" Path="HVAC Transition Quantity.rfm"/></REPORT_TEMPLATE>

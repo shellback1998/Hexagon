@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical Cable Power" Description="Power Rating"><QUERIES><QUERY Name="Electrical Cable Power" Site="User" Path="Electrical Cable Power.rqe"/></QUERIES><FORMATTING Name="Electrical Cable Power" Site="User" Path="Electrical Cable Power.rfm"/></REPORT_TEMPLATE>

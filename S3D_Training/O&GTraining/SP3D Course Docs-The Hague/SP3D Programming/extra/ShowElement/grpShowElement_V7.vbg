@@ -1,0 +1,5 @@
+VBGROUP 5.0
+Project=Code\prjUpdateCode.vbp
+StartupProject=C:\Programme\SmartPlant\3D\Programming\Debug\Container\Src\Host\SP3DTaskHost_ShowObject.vbp
+Project=Code\ShowElement_V7.vbp
+Project=Code\User.vbp

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="SmartPlant To Do List Property Names"
+ Description="Special label for SmartPlant Todo List"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CEFWPIDInterpreter"
+    Action=""
+    Arg="" />
+
+   <QUERY_PARAMETERS
+    Name="SmartPlant To Do List Property Names"
+    Site="User"
+    Path="SmartPlant To Do List Property Names.rqp" />
+</REPORT_QUERY>
+

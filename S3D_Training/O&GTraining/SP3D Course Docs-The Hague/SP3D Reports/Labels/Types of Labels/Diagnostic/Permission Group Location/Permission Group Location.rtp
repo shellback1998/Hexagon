@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Permission Group Location" Description="Diagnostic Label for Permission Group Location Name"><QUERIES><QUERY Name="Permission Group Location" Site="User" Path="Permission Group Location.rqe"/></QUERIES><FORMATTING Name="Permission Group Location" Site="User" Path="Permission Group Location.rfm"/></REPORT_TEMPLATE>

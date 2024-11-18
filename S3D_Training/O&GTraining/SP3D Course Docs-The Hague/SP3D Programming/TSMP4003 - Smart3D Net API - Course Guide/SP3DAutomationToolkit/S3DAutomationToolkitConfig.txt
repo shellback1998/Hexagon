@@ -1,0 +1,126 @@
+! '!' is the comment character in this file. Anything to the right of '!' is ignored.
+! Blank lines are permitted in this file.
+! Read through this file to understand the format of this file and know .
+! This file allows one to Customize and Configure the SP3D Automation Toolkit.
+!   Administrator can setup common settings that apply to ALL USERS, and 
+!   User(s) can override certain settings.
+! For the Admin deployed common settings - customize and save this file as 
+!   S3DAutomationToolkitConfig.txt in the SymbolShare folder.
+! For User overridable settings, customize and save this file as
+!   'My-S3DAutomationToolkitConfig.txt' in the toolkit's installation folder.
+
+! You can do the following customization by editing various sections in this file
+!   1. Add new Select Filters to specified tasks.
+!   2. Filters shown on 'Filter Selected Objects' Command.
+!   3. Specify commands from this toolkit which are restricted except for 
+       certain Users/Permission Groups.
+!   4. Specify Users/Permission Groups for which no Command Restrictions apply.
+!   5. User Configured 'Super Short Cuts' set by Admin.
+!   6. User Configured 'Super Short Cuts' set by User.
+		 
+! The below sections explain how you can do the above mentioned customization.
+
+! To define the task the filters you want to add, specify task name 
+!   within [ ], see entries below.
+! A new select filter is defined as follows.
+!       Filter Name  =  Filter Definition
+!   Filter Name ==> Name to appear in Select Filters Combo Box
+!   Filter Definition ==> Filter criteria defined using Interface Names and
+!     Logical Operators (AND, OR, NOT, XOR). Cannot use brackets parenthesis.
+!     Logical operators apply to the next Interface Name specified. i.e.,
+!       'IJRtePipePathFeat NOT IJRteEndPathFeat' means all Pipe features 
+!         which are NOT End Path Features.
+!       'IJDesignChild AND IJSystem' means all objects which are 
+!         IJDesignChild AND IJSystem.
+!     See entries below for more examples. Use MetadataBrowser to get Interface Names.
+
+[All Tasks]  ! Specify the filters you want to see in All the tasks.
+	Control Points = IJControlPoint
+	Interferences = IJIFCEntity
+	WBS Item = IJWBSItem
+	
+[Piping;Electrical;HVAC] ! Can specify a list of semicolon(;) separated Task names (SP3D title bar contains active task name)
+	End Features           	 =  IJRteEndPathFeat
+	Straight Features      	 =  IJRteStraightPathFeat
+	Along Leg Features     	 =  IJRteAlongLegPathFeat
+	Turn Features          	 =  IJRteTurnPathFeat
+	Branch Features        	 =  IJRteBranchPathFeat
+	Stock Parts 			 =  IJRteStockPartoccur
+
+[Piping] ! Below filters are for Piping task alone, in addition to the ones added above for [All tasks] and [Piping;Electrical;HVAC]
+	Tap Occurrences        	 =  IJRteTapOccur
+	Instruments            	 =  IJRteInstrumentOccur
+	Specialties            	 =  IJRteSpecialtyOccur
+	Taps + Pipe End Features =  IJRtePipeTapOccur OR IJRtePipeEndPathFeat
+
+[Equipment] ! Below filters are for Equipment Alone, in addition to the ones added above for [All Tasks] if any.
+
+
+[Electrical] ! Below filters are for Electrical Alone, in addition to the ones added above for [All Tasks] if any.
+
+
+! The below section defines the filters shown on 'Filter Selected Objects' 
+!   Command. One can add more filters here which show up on the command's
+!   form along with other predefined filters.
+[Filter Selected Objects Command]
+    Piping Runs = IJRtePipeRun
+	Cable And Duct Runs = IJRtePathRun AND IJRteDucting OR IJRtePathRun AND IJRteCablewayCommon
+
+
+! The below section defines the 'Toolkit Commands List' which are to be disabled 
+!   for all excepting those Users and Permission Groups listed in sections named
+!     'Users Without Command Restrictions' and
+!     'Permission Groups Without Command Restrictions' respectively
+! Specify the entry as the Custom SuperShortCut command's
+! - ToolTip text for inbuilt toolkit commands - the two left-most toolbars of this toolkit
+! - ProgID (if no Argument is specified)
+! - ProgID and Argument, separated by ";"
+[Restricted Commands]
+
+
+! The below section defines the LOGINs List for which NO command 
+!   restrictions apply. Specify ONE login name per Line.
+! To distinguish users from different DOMAINs specify entries like 
+!   (DOMAINNAME\USERNAME). You should follow a uniform convention
+!   i.e. DOMAIN names must either be specifed for all entries or 
+!   skipped for all entries. 
+[Users Without Command Restrictions]
+
+
+! The below section defines the Permission Group List for which NO command 
+!   restrictions apply. Specify ONE Permission Group Name per Line.
+[Permission Groups Without Command Restrictions]
+
+
+! Below section allows you to Configure 'Custom Super ShortCuts' - commands 
+!   to run when 3 keys are TAPPED in QUICK sequence (i.e. not together). 
+!   (Shift or Ctrl keys for first two, and any key in a-z/0-9 for the third)
+!   This mechanism lets you configure upto 144 keyins;
+!   4 combinations with C/S, a-z/0-9 = 144 keyins. Specify entries as below.
+! UserShortCutKey = Command Name;Type;ProgID;Arg
+!   UserShortCutKey ==> like CC1 for Ctrl-Ctrl-1, SCd for Shift-Ctrl-D
+!   Command Name    ==> Shown in status bar & button tooltip.
+!           Type    ==> Can be NormalCmd / HighPriorityCmd / StartCmdAsst /
+!                   (v9 and above) StartAssemblyCmdNormal / StartAssemblyCmdHigh
+!   		ProgID 	==> Command's ProgID (see Tools>Custom Commands for info)
+!   		Arg 	==> String argument to send to the command being started.
+!
+! Admin -> Configure this section (of the file in SymbolShare location) to add
+!   Custom Super ShortCuts which will apply to ALL USERS.
+! To use your own icons for your Custom Super ShortCuts, create a folder in 
+!   SymbolShare named 'S3DAutomationToolkitCustomIcons' with the icons. 
+!   Use the same SuperShortCut key for the icon's filename i.e. CCv.bmp for 
+!   Ctrl-Ctrl-V and so on. Icons must be 256 color, 16x16 size, BMP/ICO/GIF.
+
+! User -> You Can configure overriding Custom Super ShortCuts of combinations
+!   starting with Shift (i.e. SS[a-z/0-9] and SC[a-z/0-9]).
+!   Configure a copy of this file as 'My-S3DAutomationToolkitConfig.txt' in
+!   your toolkit installation folder and edit this section accordingly
+!   to configure your own private Custom Super ShortCuts.
+! To use your own icons for your Custom Super ShortCuts, save them in a folder
+!   named 'My-S3DAutomationToolkitCustomIcons' in your toolkit installation 
+!   folder. See above for info on icon's filename and allowed icon file types.
+
+[Custom Super ShortCuts]
+CCv = View Manipulation (Rotate/Zoom/Pan);HighPriorityCmd;SP3DAutomation.ViewManipulation
+

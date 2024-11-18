@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Multiply2Scalars" Description=""><QUERIES><QUERY Name="Multiply2Scalars" Site="User" Path="Multiply2Scalars.rqe"/></QUERIES><FORMATTING Name="Multiply2Scalars" Site="User" Path="Multiply2Scalars.rfm"/></REPORT_TEMPLATE>

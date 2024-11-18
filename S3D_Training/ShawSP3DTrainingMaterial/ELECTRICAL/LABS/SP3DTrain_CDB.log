@@ -1,0 +1,76 @@
+Successfully Opened Input Log File: C:\LABS\SP3DTrain_CDB.log
+
+***********************************************************
+DATABASE SERVER NAME : DENSP3DDEV\DENSP3DDEV
+DATABASE NAME : SP3DTrain_CDB
+SCHEMA DATABASE NAME : SP3DTrain_CDB_SCHEMA
+CREATE FLAVORS  : Disabled
+UPDATE OBJECT TYPE HIERARCHY AND CATALOG VIEWS : Enabled
+MODE OF OPERATION  : Add/Modify/Delete
+***********************************************************
+
+
+Processing sheet : CustomInterfaces in C:\LABS\Ductbank.xls Workbook  - Started at : 5/27/2010 2:43:01 PM
+Finished Processing sheet: CustomInterfaces in C:\LABS\Ductbank.xls Workbook  - finished at : 5/27/2010 2:43:01 PM
+
+Processing sheet: CablewaySpec in WorkBook: C:\LABS\Ductbank.xls Workbook  - Started at : 5/27/2010 2:43:02 PM
+    Successfully created the object in row [6]
+Finished processing sheet: CablewaySpec in workbook: C:\LABS\Ductbank.xls Workbook  - finished at : 5/27/2010 2:43:03 PM
+
+Processing sheet: CableWayNominalSizes in WorkBook: C:\LABS\Ductbank.xls Workbook  - Started at : 5/27/2010 2:43:03 PM
+    Successfully created the relation between : SHAW-DBS1-OCS-4X4 in row [34] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-6X4 in row [35] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-6X6 in row [36] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-7X7 in row [37] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-8X4 in row [38] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-8X6 in row [39] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-8X7 in row [40] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-8X8 in row [41] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-9X7 in row [42] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-9X8 in row [43] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-10X4 in row [44] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-10X6 in row [45] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-10X7 in row [46] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-10X8 in row [47] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-12X6 in row [48] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-14X12 in row [49] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-14X4 in row [50] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-14X6 in row [51] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-16X4 in row [52] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-16X8 in row [53] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-18X4 in row [54] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-20X4 in row [55] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-20X6 in row [56] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-22X6 in row [57] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-26X6 in row [58] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+    Successfully created the relation between : SHAW-DBS1-OCS-28X6 in row [59] in CableWayNominalSizes in WorkBook :C:\LABS\Ductbank.xls
+Finished processing sheet: CableWayNominalSizes in workbook: C:\LABS\Ductbank.xls Workbook  - finished at : 5/27/2010 2:43:04 PM
+
+Processing sheet: CableWayBendRadius in WorkBook: C:\LABS\Ductbank.xls Workbook  - Started at : 5/27/2010 2:43:04 PM
+    Successfully created the object in row [12]
+    Successfully created the object in row [13]
+    Successfully created the object in row [14]
+    Successfully created the object in row [15]
+    Successfully created the object in row [16]
+    Successfully created the object in row [17]
+    Successfully created the object in row [18]
+    Successfully created the object in row [19]
+Finished processing sheet: CableWayBendRadius in workbook: C:\LABS\Ductbank.xls Workbook  - finished at : 5/27/2010 2:43:04 PM
+
+
+
+
+
+Successfully Updated the Excel WorkBooks after UpdateBulkload
+
+Bulkload is successful with out any errors/warnings.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                              ERROR   ANALYSIS                                                                  
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+

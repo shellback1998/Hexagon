@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_FORMATTING
+	Name        = "Ports" 
+	Description = "Ports_Format">
+
+	<DESIGN_TIME 
+		Progid = "SP3DLabelFormatDesigner.RTFLabel" 
+		Action = "" 
+		Arg    = ""/>
+
+	<RUN_TIME 
+		Progid = "SP3DLabelsFormat.FormatLabel" 
+		Action = "RTFLabel" 
+		Arg    = ""/>
+
+	<LAYOUT_TEMPLATE Type="Internal"/>
+
+	<RTF_LABEL>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+			  	<TOKENS>
+					<DATA Visible="Yes" ToParse = "Yes" Column="EndPreparation1"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value="/" >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>
+					<DATA Visible="No" ToParse = "Yes" Column="EndPreparation2">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>					
+					<DATA Visible="Yes" ToParse = "Yes" Column="EndPreparation2">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "EndPreparation1" 
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value="/" >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>
+					<DATA Visible="No" ToParse = "Yes" Column="EndPreparation3">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>					
+					<DATA Visible="Yes" ToParse = "Yes" Column="EndPreparation3">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "EndPreparation1" 
+							       ConditionOperand2 = "EndPreparation2"
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value="/" >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>
+					<DATA Visible="No" ToParse = "Yes" Column="EndPreparation4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>					
+					<DATA Visible="Yes" ToParse = "Yes" Column="EndPreparation4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "EndPreparation1" 
+							       ConditionOperand2 = "EndPreparation2"
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+					<DATA Visible="Yes" ToParse = "Yes" Column="EndPreparation4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "EndPreparation3" 
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = ""
+							       StateOfValue = "Raw" />
+					</TEXT>
+					<DATA Visible="No" ToParse = "Yes" Column="PressureRating1">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = ""
+							       StateOfValue = "PreFormatted" />
+					</DATA>	
+					<DATA Visible="Yes" ToParse = "Yes" Column="PressureRating1">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "Undefined"
+							       StateOfValue = "PreFormatted" />
+					</DATA>				
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>				
+					<DATA Visible="No" ToParse = "Yes" Column="PressureRating2">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>
+					<DATA Visible="Yes" ToParse = "Yes" Column="PressureRating2">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "PressureRating1" 
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>	
+					<DATA Visible="No" ToParse = "Yes" Column="PressureRating3">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>			
+					<DATA Visible="Yes" ToParse = "Yes" Column="PressureRating3">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "PressureRating1" 
+							       ConditionOperand2 = "PressureRating2"
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>	
+					<DATA Visible="No" ToParse = "Yes" Column="PressureRating4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>			
+					<DATA Visible="Yes" ToParse = "Yes" Column="PressureRating4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "PressureRating1" 
+							       ConditionOperand2 = "PressureRating2"
+							       ConditionOperand3 = "PressureRating3" 
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = ""
+							       StateOfValue = "Raw" />
+					</TEXT>
+					<DATA Visible="No" ToParse = "Yes" Column="ScheduleThickness1">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>	
+					<DATA Visible="Yes" ToParse = "Yes" Column="ScheduleThickness1">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "Undefined" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>					
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>				
+					<DATA Visible="No" ToParse = "Yes" Column="ScheduleThickness2">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>
+					<DATA Visible="Yes" ToParse = "Yes" Column="ScheduleThickness2">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "ScheduleThickness1" 
+							       ConditionOperand2 = "Undefined" 
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>	
+					<DATA Visible="No" ToParse = "Yes" Column="ScheduleThickness3">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>			
+					<DATA Visible="Yes" ToParse = "Yes" Column="ScheduleThickness3">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "ScheduleThickness1" 
+							       ConditionOperand2 = "ScheduleThickness2"
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK Action="Visible">
+		  	  	<RULE RuleOperator = "All" RuleOperand = "True"/>
+			  	<TOKENS>
+					<TEXT Visible="Yes"	Value=", " >
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "Raw" />
+					</TEXT>	
+					<DATA Visible="No" ToParse = "Yes" Column="ScheduleThickness4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "" 
+							       StateOfValue = "PreFormatted" />
+					</DATA>			
+					<DATA Visible="Yes" ToParse = "Yes" Column="ScheduleThickness4">
+					    <CONDITION ConditionOperator = "NotEqual" 
+							       ConditionOperand1 = "ScheduleThickness1" 
+							       ConditionOperand2 = "ScheduleThickness2"
+							       ConditionOperand3 = "ScheduleThickness3" 
+							       OperandType1 = "Variable"
+							       StateOfValue = "PreFormatted" />
+				        </DATA>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+
+</REPORT_FORMATTING>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Vessel Occurrence Location X (East)" Description=" "><QUERIES><QUERY Name="Equipment Vessel Occurrence Location X (East)" Site="User" Path="Equipment Vessel Occurrence Location X (East).rqe"/></QUERIES><FORMATTING Name="Equipment Vessel Occurrence Location X (East)" Site="User" Path="Equipment Vessel Occurrence Location X (East).rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Linear Member Weight" Description="Dry weight"><QUERIES><QUERY Name="Structure Linear Member Weight" Site="User" Path="Structure Linear Member Weight.rqe"/></QUERIES><FORMATTING Name="Structure Linear Member Weight" Site="User" Path="Structure Linear Member Weight.rfm"/></REPORT_TEMPLATE>

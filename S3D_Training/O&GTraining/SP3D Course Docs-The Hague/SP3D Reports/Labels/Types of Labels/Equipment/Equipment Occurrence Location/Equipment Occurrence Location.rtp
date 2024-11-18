@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Occurrence Location" Description=" "><QUERIES><QUERY Name="Equipment Occurrence Location" Site="User" Path="Equipment Occurrence Location.rqe"/></QUERIES><FORMATTING Name="Equipment Occurrence Location" Site="User" Path="Equipment Occurrence Location.rfm"/></REPORT_TEMPLATE>

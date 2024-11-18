@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<REPORT_TEMPLATE Name="Stud Bolts Machine Bolts Cap Screws and Jack Screws" Description="Material Description Label for Stud Bolts Machine Bolts Cap Screws and Jack Screws">
+<QUERIES>
+<QUERY Name="Stud Bolts Machine Bolts Cap Screws and Jack Screws" Site="User" Path="Stud Bolts Machine Bolts Cap Screws and Jack Screws.rqe"/>
+</QUERIES>
+<FORMATTING Name="Stud Bolts Machine Bolts Cap Screws and Jack Screws" Site="User" Path="Stud Bolts Machine Bolts Cap Screws and Jack Screws.rfm"/>
+</REPORT_TEMPLATE>
+

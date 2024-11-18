@@ -1,0 +1,85 @@
+
+
+Quick Setup Instructions for Smart 3D Automation Toolkit
+--------------------------------------------------------
+
+
+------------------------
+Automatic Installation 
+------------------------
+1.	Unzip the file into a Local Folder (ex: C:\Program Files\SP3DAutomation)
+2.	Run the Install.VBS from the Local Directory 
+    (double-click it from Windows Explorer)
+
+If you get any errors during installation, refer to the Install.LOG file,
+ or look for manual installation and configuration steps below.
+
+------------------------------
+End Of Automatic Installation 
+------------------------------
+
+-------------------------	
+Automatic Uninstallation
+-------------------------
+1.	Run the Uninstall.BAT from the Local Directory where you 
+    installed the toolkit. (double-click it from Windows Explorer)
+
+--------------------------------
+End of Automatic Uninstallation
+--------------------------------
+	
+
+
+	
+ 
+------------------------------------
+Manual Installation & Configuration
+------------------------------------
+
+------------------------------------------
+How to Manually Install & Configure Menus
+------------------------------------------
+1. Save Contents of the zip file onto disk somewhere 
+    (something like C:\Program Files\SP3DAutomation\).
+   
+2. Run the appropriate registration script for YOUR INSTALLED SP3D version.
+    Register-SP3DAutomation-v7SP4.bat or
+    Register-SP3DAutomation-v7SP5.bat or
+    Register-SP3DAutomation-v2009.bat
+
+3. Review the delivered S3DAutomationToolkitConfig.txt file, customize it 
+    as desired and save it (or merge updates in it into your existing copy 
+    of it) in the SymbolShare directory of the project(s) you want to use 
+    this toolkit functionality.
+
+4. Copy the file menuSP3DAutomationPopupTools.xml
+    to $CommonApp\Environment\XML directory.
+
+5. If you have not previously copied and customized the file 
+    menuSP3DAutomationCustomPopupTools.xml to $CommonApp\Environment\XML 
+	directory, do it now. Otherwise keep your existing file.
+   
+6. Add below Line 
+      <COMObject progid="SP3DAutomation.CAutomation" optional="yes"/>
+   AFTER the FIRST <xml> line in
+      $CommonApp\Environment\XML\CommonServices.xml
+       
+7. Insert the below line
+      <IncludeXML href="$CommonApp\menuSP3DAutomationPopupTools.xml"/>
+    BEFORE the last line (</xml>) in
+      a) $CommonApp\Environment\XML\CommonPopups.xml
+      b) $SpaceMgmt\Environment\XML\ModifiedCommonPopups.xml
+
+Notes:
+• You will have to redo steps 1, 2, 3 and 4 on each update to this Toolkit.
+• If the Automation Tools Popup-menu doesn’t show up after you re-install or 
+  update SmartPlant 3D software, you will have to redo steps 4, 5, 6 & 7 above.
+
+
+----------------------
+Manual Uninstallation
+----------------------
+To Uninstall, just unregister the OCX
+(using command line regsvr32 /u SP3DAutomation.ocx.
+
+You can leave the other changes (of steps 1, 2, 3, 4, 5 & 7) as it is as they wouldn’t interfere.

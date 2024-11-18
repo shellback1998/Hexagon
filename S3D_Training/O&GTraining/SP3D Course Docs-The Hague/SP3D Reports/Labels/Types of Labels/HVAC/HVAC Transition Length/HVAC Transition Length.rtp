@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Transition Length" Description="Length"><QUERIES><QUERY Name="HVAC Transition Length" Site="User" Path="HVAC Transition Length.rqe"/></QUERIES><FORMATTING Name="HVAC Transition Length" Site="User" Path="HVAC Transition Length.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="HVAC Component Outlet Cross Section Size" Description="Duct Component Outlet Section Size"><DESIGN_TIME Progid="" Action="" Arg=""/><RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/><UOMS><UOM Name="Section" CanInherit="Yes" Type="distance" Primary="in" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="0" FractionalPrecision="2" LeadingZero="No" TrailingZeros="No" ReduceFraction="yes"/></UOMS></FORMATTING_PARAMETERS>

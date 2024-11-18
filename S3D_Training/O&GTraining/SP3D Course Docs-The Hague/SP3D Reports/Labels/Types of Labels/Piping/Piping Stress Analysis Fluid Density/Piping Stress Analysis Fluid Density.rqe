@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Piping Stress Analysis Fluid Density" Description="Fluid density per part, for export to stress analysis" RequiresFilter="No">
+	<DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/>
+	<SQL Timeout="0">
+		<![CDATA[SELECT Density as FluidDensity 
+            FROM JRtePathGenPart jpgp
+            JOIN XOwnsParts rop on rop.oiddestination = jpgp.oid
+            JOIN JProcessDataInfo jpdi on jpdi.oid = rop.oidorigin
+            JOIN YPipelinetoPipingParts eppp on eppp.oidorigin = jpgp.oid
+            JOIN JPipelineSystem jps on jps.oid = eppp.oiddestination
+            JOIN JFluidDensityRule jfdr on jfdr.FluidCode = jps.FluidCode
+            WHERE jpdi.OperatingMaxTemp Between TemperatureFrom AND TemperatureTo
+            	AND jpgp.oid = ? ]]>
+	</SQL>
+	<QUERY_PARAMETERS Name="Piping Stress Analysis Fluid Density" Site="User" Path="Piping Stress Analysis Fluid Density.rqp"/>
+</REPORT_QUERY>

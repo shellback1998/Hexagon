@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Structure Linear Member Computed DryWeight" Description="">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+	<UOMS>
+		<UOM Name="Weight" CanInherit="Yes" Type="Mass" Primary="lbm" Secondary="" Tertiary="" UnitsDisplayed="No" PrecisionType="Decimal" DecimalPrecision="2" FractionalPrecision="" LeadingZero="yes" TrailingZeros="yes" ReduceFraction=""/>
+	</UOMS>
+</FORMATTING_PARAMETERS>

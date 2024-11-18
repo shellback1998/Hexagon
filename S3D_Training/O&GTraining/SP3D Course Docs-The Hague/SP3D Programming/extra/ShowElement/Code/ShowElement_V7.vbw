@@ -1,0 +1,17 @@
+ShowObject = 70, 94, 771, 579, C
+frmShowElement = 28, 69, 993, 640, C, 22, 22, 899, 555, C
+CoreTraderKeys = 110, 110, 823, 507, C
+modHelper = 92, 65, 890, 642, 
+modLogAS = 102, 132, 900, 709, C
+modSpecial = 74, 71, 872, 648, C
+frmShowLines = 88, 88, 886, 665, C, 44, 44, 742, 534, C
+ShowLines = 44, 44, 842, 621, C
+TestCmd = 0, 0, 291, 495, Z
+clsEmpty = 154, 154, 823, 638, C
+frmMessages = 0, 0, 735, 548, C, 154, 154, 889, 547, C
+ShowGuid = 176, 176, 1119, 737, C
+frmShowGuid = 46, 10, 925, 722, C, 198, 198, 1141, 759, C
+clsObject = -55, 37, 910, 668, C
+frmTree = 121, 13, 876, 486, C, 154, 154, 909, 627, C
+ObjInfo = 110, 110, 865, 583, C
+clsShow = 36, 105, 926, 685, 

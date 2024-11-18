@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping ToolTip Pipe Run" Description="Pipe Run for Tooltips and Drawings">
+	<QUERIES>
+		<QUERY Name="Piping ToolTip Pipe Run" Site="User" Path="Piping ToolTip Pipe Run.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping ToolTip Pipe Run" Site="User" Path="Piping ToolTip Pipe Run.rfm"/>
+</REPORT_TEMPLATE>

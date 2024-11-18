@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Piping Pipes NPD with Unit"
+ Description="NPD with units"
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="NPD"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJRtePipePathFeat"
+             DestinationProperty="NPD"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="DefiningFeature"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="NPDUnitType"
+       SQLType="BStr">
+         <PATHS>
+            <PATH
+             SourceType="IJRtePathGenPart"
+             SourceBOC=""
+             DestinationInterface="IJRtePipePathFeat"
+             DestinationProperty="NPDUnitType"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJRtePathGenPart"
+                   RelationCollection="DefiningFeature"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

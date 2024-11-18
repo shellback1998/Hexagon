@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE
+ Name="SmartPlant To Do List SP3D Values"
+ Description="Special label for SmartPlant Todo List">
+   <QUERIES>
+      <QUERY
+       Name="SmartPlant To Do List SP3D Values"
+       Site="User"
+       Path="SmartPlant To Do List SP3D Values.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="SmartPlant To Do List SP3D Values"
+    Site="User"
+    Path="SmartPlant To Do List SP3D Values.rfm" />
+</REPORT_TEMPLATE>
+

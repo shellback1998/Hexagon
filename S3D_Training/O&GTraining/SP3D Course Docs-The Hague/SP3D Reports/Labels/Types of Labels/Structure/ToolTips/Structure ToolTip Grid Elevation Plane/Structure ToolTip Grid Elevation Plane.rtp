@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure ToolTip Grid Elevation Plane" Description="Example of a Label for Grid Elevation Plane"><QUERIES><QUERY Name="Structure ToolTip Grid Elevation Plane" Site="User" Path="Structure ToolTip Grid Elevation Plane.rqe"/></QUERIES><FORMATTING Name="Structure ToolTip Grid Elevation Plane" Site="User" Path="Structure ToolTip Grid Elevation Plane.rfm"/></REPORT_TEMPLATE>

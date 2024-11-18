@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="Full Permission Group Folder Path" Description="Diagnostic Label for full parent folders path of permission group ">
+<DESIGN_TIME Progid="" Action="" Arg=""/>
+<RUN_TIME Progid="SP3DPrompts.ctlTab" Action="" Arg=""/>
+    <FIELDS/>
+</FORMATTING_PARAMETERS>

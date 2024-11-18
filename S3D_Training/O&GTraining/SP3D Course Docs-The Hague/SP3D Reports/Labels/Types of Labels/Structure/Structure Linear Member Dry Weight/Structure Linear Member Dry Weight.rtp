@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Linear Member Dry Weight" Description="Dry weight label definition"><QUERIES><QUERY Name="Structure Linear Member Dry Weight" Site="User" Path="Structure Linear Member Dry Weight.rqe"/></QUERIES><FORMATTING Name="Structure Linear Member Dry Weight" Site="User" Path="Structure Linear Member Dry Weight.rfm"/></REPORT_TEMPLATE>

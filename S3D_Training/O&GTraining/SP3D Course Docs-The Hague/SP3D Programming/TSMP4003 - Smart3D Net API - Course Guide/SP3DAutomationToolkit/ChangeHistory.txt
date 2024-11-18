@@ -1,0 +1,101 @@
+------------------------------------------------------
+Sept 10 2009 : Version 1.0.0.10 - See below for updates
+------------------------------------------------------
+ 1. Added a new Functionality - Save Snapshot of View(s)
+
+------------------------------------------------------
+Sept 01 2009 : Version 1.0.0.9 - See below for updates
+------------------------------------------------------
+ 1. Added an Installer (Install.VBS)
+ 2. Added capability to add Custom Menu Items to Toolkit's Popup menu
+    See menuSP3DAutomationCustomPopupTools.xml with Toolkit.
+	
+------------------------------------------------------
+August 21 2009 : Version 1.0.0.8 - See below for updates
+------------------------------------------------------
+ 1. Added a New Command - Codelist Value Lookup.
+ 2. Added capability to let admin/user configure own Customized icons for 
+    the Super ShortCuts which they can control.
+ 3. Modified the name and location of the **OPTIONAL** USER OVERRIDING 
+    Config file. This is now expected as "My-S3DAutomationToolkitConfig.txt" 
+	in local toolkit installation folder. 
+ 4. Updated S3DAutomationToolkitConfig.txt with more comments & info. Review 
+    and Merge into your admin/user local configuration file(s) as appropriate.
+ 
+------------------------------------------------------
+July 09 2009 : Version 1.0.0.7 - See below for updates
+------------------------------------------------------
+ 1. Added a New Command - Name Rule Check.
+ 2. Added a New Command - Find Duplicate Structure Items.
+ 3. Added a New Command - Use Run Insulation.
+
+------------------------------------------------------
+June 11 2009 : Version 1.0.0.6 - See below for updates
+------------------------------------------------------
+ 1. Added a New Command - Lock PinPoint to Centroid of Geometry.
+
+------------------------------------------------------
+June 05 2009 : Version 1.0.0.5 - See below for updates
+------------------------------------------------------
+ 1. Updated S3DAutomationToolkitConfig.txt to allow configuring
+    a third column of buttons for your own custom commands.
+ 2. Added new functionality - Custom Super ShortCuts. See the section named
+    [Custom Super ShortCuts] in the delivered S3DAutomationToolkitConfig.txt
+	for more details.
+ 3. Changed 'Delete Empty Runs' command to 'Select Empty Runs', so that you
+    could use the product's delivered Delete command itself.
+ 4. Enhanced 'Select Set Browser' command to allow Custom Attribute/Relation watch.
+ 5. Added a new Command, View Manipulation, currently configured out of the box
+    with a Custom Super ShortCut 'C-C-v'. Sometime later this functionality will
+	be merged into 'View Manipulation With Numeric Pad' Command. 
+ 6. Fixed issue in 'Part Substitution Impact' command on MSSQL which occurs
+    if the plant name starts with a digit, like '2009_SP3DTrain'.
+	
+-----------------------------------------------------
+Feb 11 2009 : Version 1.0.0.4 - See below for updates
+-----------------------------------------------------
+ 1. Updated menuSP3DAutomationPopupTools.xml. Pls replace your local copy.
+    Previously edited CommonPopups.xml will need editing, please review the 
+    Document Section 'How to install & Configure Menus' step #6.
+ 2. Provided 'Add Selected Elements to SmartSketch Stack' functionality in 
+    SmartSketch Settings utility.
+ 3. Show/Hide commands implemented for Reference Files, available on PopupMenu for
+    ReferenceFile objects.
+
+-----------------------------------------------------
+Jan 27 2009 : Version 1.0.0.3 - See below for updates
+-----------------------------------------------------
+ 1. Renamed CustomSelectFilters.txt to S3DAutomationToolkitConfig.txt. Read the newly
+    delivered file and merge with your customized CustomSelectFilters.txt if any.
+ 2. Provided facility for admin to restrict any given commands in this toolkit
+    by configuring S3DAutomationToolkitConfig.txt. Read the file delivered with
+    this toolkit to know more details.
+
+-----------------------------------------------------
+Jan 21 2009 : Version 1.0.0.2 - See below for updates
+-----------------------------------------------------
+ 1. Enhanced Filter Nested Systems By Name command to allow wildcards 
+     for system names.
+ 2. Added Interferences and WBS Items to CustomSelectFilters.txt - Review and 
+     add to your local copy in SymbolShare.
+ 3. Fixed error mutliple error message boxes shown when Add Configured Select 
+     Filters command is run more than once in a task.
+
+-----------------------------------------------------
+Jan 14 2009 : Version 1.0.0.1 - See below for updates
+-----------------------------------------------------
+ 1. Updated menuSP3DAutomationPopupTools.xml. Replace your local copy.
+ 2. New Super ShortCut - Shift - Shift - Shift ==> Show Toolbar.
+ 3. Enhanced Precision Move Select Set command to support moving in Local 
+     or Global Coordinate Systems.
+ 4. Enhanced NumPad View Control Command as below.
+     - Now shows mouse 3D Position in both Local & Global Coordinate Systems.
+	 - Holding Ctrl while mousemove bypasses SmartSketch for point solver 
+	    and uses 3D point as interpreted in Active View.
+ 5. Minor fixes 
+     - Filter By Piping Spec cmd shows up a stray error message in one 
+	    particular workflow.
+
+-----------------------------------------------------
+Jan 07 2009 : Version 1.0.0.0 released
+-----------------------------------------------------

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Pressure Rating 4" Description="Pressure Rating of port 4">
+	<QUERIES>
+		<QUERY Name="Pressure Rating 4" Site="User" Description="Pressure Rating of port 4" Path="Pressure Rating 4.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Pressure Rating 4" Site="User" Description="Pressure Rating of port 4" Path="Pressure Rating 4.rfm"/>
+</REPORT_TEMPLATE>

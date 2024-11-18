@@ -1,0 +1,1782 @@
+                         Programmer's File Editor
+                      History of Development Changes
+                      ------------------------------
+                      
+Not all the versions whose numbers appear in the list below have been released
+publicly
+
+Items are flagged thus:
+
+  [PFE32]  : item is specific to the 32-bit edition on all platforms
+  [WIN95]  : item is specific to the 32-bit edition under Windows 95
+  [NT]     : item is specific to the 32-bit edition under Windows NT
+               (all platforms)
+  [NT-IN]  : item is specific to the 32-bit edition under Windows NT
+               (Intel platforms)
+  [NT-PPC] : item is specific to the 32-bit edition under Windows NT
+               (PowerPC platforms)
+  [PFE16]  : item is specific to the 16-bit edition
+
+
+0.06.002
+--------
+
+Added Edit Text Reformat and Edit Text ReformatParagraph commands to reformat
+existing text to the current wrap margin
+
+[NT] Many changes to handle long file names with embedded spaces when using the
+old style common dialogs. To overcome deficiencies in Windows when using the
+File Open and File View dialogs, by default only one file can now be opened at
+a time, in which mode all long file names are handled correctly. The Options
+Preferences "General Options" panel allows the dialogs to be set for multiple
+selection, at the cost of having long file names containing spaces appear as
+8.3 names
+
+Fixed bug causing the options list box in the Options Preferences dialog to
+cover the buttons below with some displays
+
+Fixed bug which caused some sizes of some screen fonts to be remembered
+incorrectly between sessions
+
+Fixed bug which caused some printer fonts to be remembered incorrectly between
+sessions
+
+Fixed bug preventing the Options Key Mapping command being used from a mapped
+keyboard key
+
+[PFE32] Print Setup now works correctly under Windows 95 and Win32s. The
+printing dialogs' appearances have changed slightly
+
+[PFE32] Under Windows 95 and Windows NT with the new user-interface shell, all
+dialogs now have the correct new-style appearance with non-bold fonts
+
+[PFE32] Under Windows 95 and Windows NT with the new user-interface shell, the
+Explorer dialogs are now used for all file open and save operations
+
+[PFE32] General improvements to appearance under Windows 95 and the new-style
+Windows NT shell
+
+The status bar now includes a sizing grip in the bottom right corner of the
+main window
+
+Fixed bug restricting the wrap column specified in the Options Current Modes
+and Options Default Modes "Text Formatting" panel to 2 digits
+
+Added command Execute Explorer to run the Windows 95 Explorer; this
+functionality is available in both the 16-bit and 32-bit editions when run on a
+system with the Windows 95 user interface
+
+To follow Windows 95 practice, a right mouse click in the application workspace
+area now brings up a menu of common actions rather than directly opening a file
+
+The printing system and the associated user interfaces have been extensively
+reworked to cure bugs, function reliably under Windows 95 and Win32s, and to
+operate more in line with other Windows applications:
+  - The common print dialogs are now used instead of custom ones
+  - Page margin selection and font selection are now handled by a new
+    File Page Setup command rather than from the File Print Setup
+    dialog
+  - Each session of PFE now uses the system default printer initially;
+    however page setup and font details are still recorded for each
+    printer used
+
+[PFE32] Printing should now work reliably under Win32s
+
+[WIN95] Printing should now work reliably under Windows 95
+
+[NT] Fixed a bug preventing printing to some network devices whose descriptions
+contained spaces
+
+Toolbar button clicks and status bar clicks are now recorded in keyboard macros
+
+The capacity of a keyboard recording has been substantially increased
+
+Execution of keyboard recordings can now be interrupted by pressing Escape
+
+Fixed bug causing GPF when the clipboard viewer chain was changed by another
+application; most noticeable under Windows 95 when using the Font Browser from
+Control Panel
+
+Added command line option '/p' to automatically print all files named on the
+command line and exit. Note that file names containing spaces need to be
+enclosed in quotes; a suitable command to associate with a file type would be
+         pfe32 /p "%1"
+or       pfe /p %1
+
+Fixed various bugs causing GPFs when printing files whose pathnames contain
+long final component
+
+Added File Print All command to print all open files in one operation
+
+Added DDE commands FilePrint() and FilePrintAll()
+
+[PFE32] Fixed bug causing the main window to be created slightly displaced from
+its last closing position if the taskbar was set to be always on top and not
+automatically hidden on Windows 95 and Windows NT with the new shell
+
+[NT-PPC] 3D effects in dialogs are now supported
+
+To avoid problems when distributing PFE as separate files on CDROM, the helper
+modules $pfedos.exe and $pfeds32.exe, which handle the Execute DOS Command To
+Window command, are now called pfedos.exe and pfedos32.exe respectively
+
+[WIN95] The pfedos32.exe helper module has been redesigned to work around some
+Windows 95 bugs affecting communication between processes which can cause the
+display window, and in some cases the entire system, to lock up
+
+Added DDE POKE items FileOpenEx and FileViewEx, which have the same
+functionality as the previous FileOpen and FileView items, but use a new data
+format supporting long file names containing spaces. New applications should
+use the new items in preference to the old ones.
+
+Fixed bug causing some options in the Window Control panel of the Options
+Preferences dialog to be switched in effect
+
+General release October 17 1995
+
+
+0.06.001
+--------
+
+Screen font options have been removed from the Options menu; the functionality
+is now in the Screen Font panel of the Options Preferences dialog. The mappable
+commands have been retained
+
+Files opened from the MRU list on the file menu now normally open with the
+window at the same position in the MDI workspace, and the caret at the same
+position in the file, as when they were closed. Holding Shift down when the
+menu item is selected suppresses this action.
+
+When a file is selected from the MRU list in the File menu, holding the Control
+key down as the menu item is selected will force it to be opened in read-only
+mode
+
+Window and caret positioning data can optionally be used when files are opened
+from the various File Open dialogs, over a DDE link, or from the command line.
+The DDE commands FileOpen and FileView by default do not use saved position
+data to avoid disturbing other applications, but may change this with a new
+optional extra argument. A command line argument /w0 prohibits use of recorded
+positions for command line files, and /w1 forces use.
+
+[PFE32] Fixed bug that would stop PFE coming to the foreground if control is
+passed from another instance
+
+Added DDE command "ComeToForeground()" to restore PFE from iconic and make it
+the active foreground window
+
+Fixed bug that did not make filenames given on the command line absolute if
+control was passed to another instance
+
+If a window being printed contains a highlight, the default in the File
+Print dialog is now to print the selected text only, rather than the
+whole file
+
+Many minor adjustments for compatibility with Windows 95
+
+[WIN95] The Exit Windows dialog now works correctly
+
+Icons redesigned to reflect the new split into 16-bit and 32-bit
+editions rather than Windows and Windows NT versions
+
+[PFE32] Fixed bug cause the Execute dialogs to fail if the working
+directory path was specified as a relative name
+
+Fixed bug causing the bitmap images in horizontal toolbar buttons to be
+only partially redrawn in some circumstances
+
+Fixed bug whereby the mouse cursor shape would change to reflect the
+selection location of the child window with focus when the cursor was
+over any other window
+
+Fixed bug where a delete of a text area, or an undo of a typing sequence,
+entirely contained in one line sometimes did not update the affected line
+in windows showing the same file
+
+Fixed bug which left the Options Key Mapping dialog having no control with
+focus when one of the buttons was clicked
+
+[General release 31 March 1995]
+
+0.05.008
+--------
+
+Use 3D controls in dialogs; some dialogs have been amended slightly for
+artistic and practical reasons (3D effects are not available for PFE32
+running under Win32s in this release)
+
+Major internal redesign of the text display system
+
+Text windows now show a small margin to the left of the text to make mouse
+pointing easier
+
+Fixed bug that led to underscore characters not being printed on some printer
+drivers
+
+Added Options Preferences command to set all configurable items; editing the
+ini file is no longer necessary and is discouraged
+
+The formats and names of the [fileopen-filters], [help-files] and [managers]
+sections of the ini file have changed, and values set by versions prior to
+0.05.008 will not be processed. To set new values, use the Options Preferences
+command
+
+Fixed a bug in the File Open and related dialogs, whereby anything typed
+between issuing the command and the dialog's appearing would leak into any
+active edit window
+
+[PFE32] Fixed a bug that would cause some filenames to be erroneously lower-
+cased
+
+Fixed a memory leak caused by the DDE service name not being freed from the
+atom table on termination
+
+Fixed bug that would save changed key map data to the standard default file if
+changes were unsaved at closedown, even if the user had used the /k command
+line option to specify another keymap file
+
+[PFE32] Fixed a bug that caused the Save As sub-dialog of the Options Key Map
+dialog always to lower case the supplied filename
+
+Added a configuration option in Options Preferences to allow the keymap file
+loaded by default at startup to be specified
+
+The file extension used when backing up to files in the same directory as the
+original can now be specified through Options Preferences
+
+The maximum number of recently-used files shown on the File menu has been
+increased to 32; to accomodate the larger menu length, the Options Preferences
+command can be used to specify that the list be placed in a second column
+rather than appended linearly to the File menu
+
+Fixed a bug causing wildcarded files on the command line to be opened in write
+mode regardless of any /v options specifying read-only
+
+Colours used for the MDI workspace, the status bar and the toolbar can now be
+configured with the Options Preferences command
+
+The Options Default File/Window Modes and Options Current File/Window Modes
+commands have been completely redesigned, and are now Options Default Modes and
+Options Current Modes respectively. Modes now include text colours, and are
+stored for sets of wildcardable file name patterns known as mode groups rather
+than on an individual file extension basis. Mode values saved by earlier versions
+of PFE will need to be redefined with Options Default Modes
+
+Added the ability to select that a block caret be used for insert mode
+and a line caret for overtype mode, reversing the default state
+
+Added an Open Other File button to the More Files MRU list dialog, to
+allow a quick way of getting to the File Open dialog if the desired file
+is not in the MRU list
+
+Fixed bug in Execute DOS Command to Window dialog that limited command
+line length to whatever would fit in the Command Line edit control
+without scrolling
+
+The data format in a DDE Request from another application is now correctly
+checked; PFE will respond only if the format is CF_TEXT
+
+Added Browse Working Directory buttons to the Execute DOS Command to
+Window, Execute Launch Application and Execute Launch Windows Tool
+dialogs
+
+A commmand line, rather than simply an executable name, can now be
+specified in Options Preferences as the object to be run by the Execute
+DOS Prompt command
+
+The EditGotoLine dialog and EditGotoLine DDE command now accept a file
+position specification string, allowing absolute or relative movement
+to lines and to window columns or characters within lines
+
+Added a -g command line option introducing a file position
+specification, which is used to move automatically to the specified
+location in the first file named on the command line
+
+Tool bar and status bar commands have been removed from the Options menu
+and the functionality transferred to the Options Preferences dialog. The
+key-mappable commands are still available
+
+Fixed bug causing GPF when > 64 characters were deleted with delete
+forward or back, the file was closed without saving, and the question on
+saving changes was answered "no"
+
+The MRU Files dialog now allows the selected file to be opened in read-
+only mode
+
+The default behaviour where the first mouse click moving between child
+windows does not move the caret can now be changed with Options Preferences
+
+The tool bar paste button is now correctly set when other applications
+move data on and off the clipboard
+
+Scroll bars in the MDI desktop window, normally created when an edit
+window is partly out of view, can now be suppressed with the Options
+Preferences command
+
+When auto-minimizing the main window when the last edit window is
+closed, PFE now transfers activation to the next window in Windows'
+list rather than retaining focus in its own icon
+
+The directory containing the initialisation file can now be specified
+with the Options Preferences command
+
+PFE now checks whether the disk versions of files being edited have been
+altered by other applications or network workstations; checks are made
+whenever PFE becomes the active application, and when any file is saved
+
+
+0.05.007
+--------
+
+Fixed untidy button alignment in the EditGotoLine dialog
+
+The Find and Replace With edit controls in the Replace dialog now can be
+scrolled horizontally to see the whole of long strings
+
+The file type for backup files has changed from ".&&&" to ".$$$" to avoid
+problems with command processors using "&" as a special character
+
+The mouse cursor is now set to a hand when over a drag-and-droppable
+highlighted area for a better cue to the user
+
+[PFE32] Fixed a bug that led to a drag-and-drop operation being recorded as two
+undo actions, with a spurious Undo Paste action being left active
+
+The mouse cursor is now less flickery when a highlight is being extended by
+dragging with the left button down
+
+Fixed a bug that could lead to Alt key menu-accelerators being ignored in
+complicated circumstances
+
+The Save As button in the Options Key Mapping dialog is now enabled only when
+the key mapping has changed
+
+Circumvented a Common Dialog bug that ignored the Read Only checkbox when
+multiple files were opened at one time with the FileOpen dialog
+
+Fixed several major bugs in the memory manager that could lead to GPFs sometime
+after deleting a large section of a file
+
+Fixed a loader bug that allocated control blocks inefficiently when a file
+was loaded and consumed more memory than necessary
+
+Fixed a bug in the Options Key Map dialog whereby the Change button could be
+clicked with no command selected in the Commands section, leading to a GPF in
+PFE16 and (probably) the wrong thing happening in PFE32
+
+Fixed a bug that prevented the key sequences Esc Space, Ctrl+Space and
+Ctrl+Alt+Space being mapped to commands
+
+Fixed a bug that would cause a hang or a GPF if a Find string that ended in
+a '\' character was specified; a Replace string that ended in '\' would be
+incorrectly handled also
+
+The '^' character is no longer supported as an escape in Find and Replace
+strings; '\' must now be used
+
+Fixed a bug that would cause the NumLock and CapsLock status bar indicators to
+get out-of-state with the keyboard if the lock keys were allowed to auto-repeat
+
+Added DDE enquiry topic "VersionString" that returns the id of the current
+version in "x.yy.zzz" format as in the Help About dialog
+
+Added command EditSelectLine and corresponding DDE command to select all the
+text in the line containing the caret, leaving the caret at the left hand end
+
+Fixed a bug that would cause a GPF on startup if any ini file argument
+contained an embedded quote. This would commonly occur if Find/Replace strings
+had been saved
+
+Fixed a bug that could cause saved find/replace strings containing quotes or
+commas to be corrupted or ignored on startup
+
+Fixed a bug that lost the state of the "show full pathnames" checkbox in the
+file MRU dialog between successive uses of the dialog
+
+Fixed a bug that allowed the EditDeleteSelection command to be invoked from the
+keyboard with no text selected, causing a GPF
+
+The OK button in the Execute DOS Command to Window and Execute Launch
+Application dialogs is now enabled when the command is chosen with the Browse
+button
+
+The File Name command now marks the file as having been altered, allowing it
+easily to be saved under its new identity
+
+The Window Next command no longer hangs the system if used when some windows
+are iconic
+
+Edit Repeat Last Find and Edit Repeat Last Replace no longer cause hangs or
+GPFs if invoked when no previous find or replace has taken place
+
+Added backup-mode=5 to the [options] section of the ini file to disable all
+file backups
+
+Fixed bug where adding a template to a template file could fail to note that
+the in-store copy of the file had changed, and make it impossible to detach the
+template file
+
+Fixed bug where template files larger than about 32K (but under the maximum
+permitted size of around 62K) failed to attach, with a "template file is not a
+valid size" message
+
+Fixed bug that did not check whether a template file contained the maximum
+supported number of templates (64) before saving another one, leading to file
+corruptions
+
+Fixed bug where a template could be saved to a template file and make it larger
+than the maximum supported size (about 62K)
+
+Fixed bug where updating a template in a template file would fail if there was
+insufficient space in the template file for both the old and new versions of
+the template
+
+File names containing '&' characters are now correctly displayed in the MRU
+list on the File menu
+
+The Options Default File/Window Modes dialog now allows Read Only mode to be
+defined
+
+The keyboard handlers have been changed to make the right hand Alt key
+functional on US keyboards. On non-US keyboards the key should function as
+AltGr for national character generation
+
+Child windows now are constrained to be no smaller than 3 full lines of text in
+depth and 10 characters in width. This overcomes various GPFs in code that
+assumed a minimum window size was being enforced by someone else.
+
+Fixed a bug that did not return focus correctly to a child window if the
+Execute DOS Command to Window or similar command was run, unsaved files
+existed, and the user replied Cancel to the query on whether to save them
+
+Fixed a bug that caused filenames that contained "." and ".." directory
+components not be made absolute if passed on the command line
+
+Fixed a bug that showed an un-necessary drive letter in a filename in the MRU
+list if the drive had been specified in upper case
+
+The File Name command now correctly lower-cases the supplied filename under
+Windows 3
+
+The subdirectory name used for backups when the appropriate mode is selected
+can now be 12 characters long, allowing the full 8.3 filename format
+
+General release 12 July 1994
+
+
+
+0.05.006
+--------
+
+EditTextInsertASCIICode now correctly inserts Ctrl+I as a single 0x09 character
+regardless of whether the window is set for soft tabs
+
+Added functions CaretTopOfWindow (Ctrl+PgUp) and CaretTopOfWindowSelect
+(Ctrl+Shift+PgUp), and a corresponding DDE command CaretTopOfWindow, which move
+the caret to the top left of the current window
+
+Added functions CaretBottomOfWindow (Ctrl+PgDn) and CaretBottomOfWindowSelect
+(Ctrl+Shift+PgDn), and a corresponding DDE command CaretBottomOfWindow, which
+move the caret to the bottom left of the current window
+
+Added functions CaretStartOfText (Alt+Home) and CaretStartOfTextSelect
+(Alt+Shift+Home), and a corresponding DDE command CaretStartOfText, which move
+the caret to the first non-white-space character in the current line
+
+A number of function names and DDE command names have changed to be more
+consistent with others:
+	EditGotoEnd[Select]	now	CaretEndOfFile[Select]
+	EditGotoStart[Select]	now	CaretStartOfFile[Select]
+	CaretHome[Select]	now	CaretStartOfLine[Select]
+	CaretEnd[Select]	now	CaretEndOfLine[Select]
+
+Fixed a bug that would cause strange behaviour if WindowTileVertical was
+used with the current child window maximized
+
+Fixed a bug that would leave the caret and the insertion point at different
+places if EditShowCaret was used with the caret in the line immediately above
+or below the visible window
+
+Changed the menu accelerator keys for Edit|Copy and Edit|Cut to be compliant
+with standard Windows usage
+
+Fixed a bug that would cause PgUp and PgDn to corrupt the undo stack, leading
+to subsequent GPFs or data corruption
+
+[PFE16] Fixed a bug whereby pressing and releasing AltGr would stop keypad and
+caret movement keys working again in the session
+
+The default backup mode is now to keep the file in the same directory as the
+original, with a file type of ".&&&", and the backup-mode numbers in the
+[options] section of the ini file have changed to make this '0'
+
+[PFE32] Circumvented a Win32s 1.1 bug that would corrupt the font size set
+in the printer and screen font selection dialogs when running the 32-bit version
+under Windows 3.1
+
+General release on 13 January 1994
+
+
+0.05.005
+--------
+
+Fixed a bug whereby an Edit Copy following a sequence of typing or deleting
+would corrupt the undo stack and lead to a GPF sometime later
+
+Menu items now show descriptive text in the status bar when they are selected
+
+Status bar updates are now somewhat smoother and less flickery
+
+[PFE32] DOS Command-with-capture menu and toolbar items are now correctly
+disabled under Win32s
+
+Backup now has two modes, selectable with the 'backup-mode' key in the
+[options] section of the ini file; files can be backed up either to
+subdirectories with the same name, or in the same directory as the original
+with a file type of ".&&&"
+
+The documented escape character in search strings is now '\' (so that, for
+example, a tab is '\t'). The old '^' escape is still supported for the moment,
+but needs to be phased out to allow regular expressions to be implemented
+
+Fixed a bug that would prevent network printers identified by UNCname being
+correctly remembered as the default printer between sessions, and would prevent
+the settings for such printers being remembered
+
+Fixed a bug that would cause a machine using PathWorks to report a network fail
+on drive "?" when PFE was started in the root directory of a drive
+
+[PFE32] File names are no longer forced to be lower case in any circumstances,
+avoiding problems in case-aware filing systems like NTFS
+
+The Execute DOS Command to Window and Execute Launch Application dialogs now
+record the last 8 command lines executed, and the last 8 working directories
+visited
+
+Fixed a bug that would add the wrong title to an attachment icon when mailing a
+file via a MAPI mailer
+
+Line numbering is no longer confused when printing a file with Form Feed
+characters appearing other than at the beginning of lines
+
+Toolbar buttons and menu items are now set up correctly when a file is opened
+in read only mode by File View
+
+Added a language type "TeX"; this differs from plain text only in that "-" is
+not considered a break point for line wrapping
+
+
+
+0.05.004
+--------
+
+Fixed several bugs synchronising undo actions across windows showing the same
+file
+
+Added a command line option '/v' which will cause all files named on the
+command line to be opened in read-only mode
+
+Fixed a bug that caused brace matching to fail in some files with language type
+of "(none)"
+
+Added menu items Execute Program Manager and Execute Task Manager and related
+commands
+
+Fixed a bug that could cause file corruption or GPFs when undoing a 'delete
+back' action
+
+Fixed a bug that would cause a GPF when the Ins key was pressed when no file
+was open
+
+Fixed bugs with non-English keyboards that prevented AltGr+number keys from
+generating characters like { and }
+
+Fixed bugs that could interfere with use of the numeric keyboard to synthesise
+character codes
+
+File save actions now clear the stack of recorded undo actions by default; this
+can be changed with the 'save-clears-undo' setting in the [options] section of
+the ini file
+
+Fixed a file handle leak that would occur whenever a write to disk operation
+failed
+
+By default, any operation that saves a file to disk will now take a backup copy
+of any existing file of the same name before starting; this can be controlled
+by setting the "Backup" file mode
+
+Fixed bugs in the EditTextWidenBrace command that would fail to locate closing
+braces occurring immediately after an existing selection
+
+[PFE32] Fixed a bug that would cause random GPFs and malfunctions in handling
+DDE commands
+
+The EditCopy DDE command now works as documented
+
+Added context help search, to provide help on text in edit windows, available
+from the Help Context Help command or a double click on the right mouse button
+
+The Window Tile Vertical command now preferentially locates windows showing
+command output at the top of the screen
+
+[PFE16] Fixed a bug that could leave work files created to catch command output
+undeleted
+
+The horizontal scroll bar algorithms have been changed, and the thumbtack is
+now more usable on files of normal line widths
+
+The name of the file in the current window can now automatically be substituted
+in command lines executed by the Execute DOS Command To Window, Execute Repeat
+DOS Command To Window, and Execute Launch Application commands
+
+
+
+0.05.003
+--------
+
+The Execute File Manager, Execute Control Panel and Execute Print Manager
+menu items and related commands now work correctly after being broken in
+0.05.002
+
+When setting a selection as the default find string, the Edit Find and Edit Replace 
+dialogs now correctly translate characters with codes greater than 127 into "^xnn"
+notation
+
+When undo returns a file to an unchanged state, the toolbar Save button and File
+Save menu items are now de-activated
+
+Fixed a bug causing Dr Watson to report parameter validation errors in
+ModifyMenu on startup or on load of a keymap file
+
+The EditCMatchBrace command has been renamed EditTextMatchBrace and now has a menu
+item mapped to Ctrl+B. If the window has a language of "none", brace matching
+is done on {}, [], () and <> without regard to any syntactic elements; if the
+language is "C", matching is done on {}, [] and () and (some) C syntax is taken
+into account
+
+Added command EditTextMatchBraceSelect, mapped to Shift+Ctrl+B, which acts as for
+EditTextMatchBrace but also selects the text between and including the braces
+
+Fixed a bug that would cause problems if brace matching was used when any text
+was highlighted
+
+Fixed a bug that made the KeyPad5 key unusable
+
+Added a command EditTextWidenBraceSelect, mapped to Shift+Ctrl+W, which selects
+successively larger areas of text between braces, using the same brace location
+algorithms as EditTextMatchBrace
+
+Fixed a bug introduced in 0.05.002 that caused the Tab key (and the EditInsertTab
+command it maps to by default) to insert a hard tab even if soft tabs were
+selected for the window
+
+The "Add Ctrl+Z On Save" and "No EOLN after last line" check boxes in the
+Options Default File/Window Modes dialog now work correctly
+
+The default key mappings of Shift+Tab to EditInsertSoftTab and Ctrl+Tab to
+EditInsertHardTab have been removed, as these conflict with standard MDI usage
+
+The status bar is now a little prettier when showing static text messages
+
+The applications run by the Execute File Manager, Execute Print Manager and
+Execute Control Panel menu items can now be customised by means of entries in
+the [managers] section of the ini file
+
+
+
+0.05.002
+--------
+
+Key mapping has been completely redesigned. Very many more key combinations
+(including Alt keys) can be mapped; any or all of Ctrl+A..Ctrl+Z and Esc can be
+used as prefix keys; and the Key Mapping dialog has been made far easier to
+use. Key map files saved with earlier versions of PFE are not compatible with
+the new system.
+
+The OptionsPrefixKeys command has been removed; prefix keys can now only be
+configured from within the Key Mapping dialog
+
+Added functions EditInsertTab (mapped to Tab), EditInsertHardTab and
+EditInsertSoftTab to insert hard/soft tabs, hard tabs always, and soft tabs 
+always, respectively
+
+Added command SysSetMenuMode, mapped to F10, to highlight the leftmost item on
+the main menu, for compatibility with standard practice
+
+The 16-bit and 32-bit ini and default keymap files have been separated. The
+Windows 3.1 version continues to use pfe.ini and pfe.key; the Windows/NT
+version now uses pfe32.ini and pfe32.key
+
+Fixed a bug whereby a sequence like Find-overtype-find-overtype would corrupt
+the Undo stack
+
+Keyboard macro items have been split from the Execute menu and placed in their
+own Macro menu
+
+Added a "Print Manager" item to the Execute menu
+
+The WindowCentreCaret command has been renamed EditShowCaret and now appears
+on the Edit menu
+
+Message boxes that support F1 help now announce this in the status bar
+
+Added a system menu item "Save Screen" to activate a standard Windows screen
+saver program immediately
+
+Arbitrary character codes can now be specified in Find and Replace strings using
+the notation "^xnn", where "nn" are 2 hexadecimal digits
+
+The Replace dialog now contains an "Undo Last" button to undo the last replace
+operation
+
+
+
+0.05.001
+--------
+
+[PFE32] The File Mail command now loads the correct MAPI DLL (MAPI32.DLL
+instead of MAPI.DLL)
+
+[PFE32] The File Save As dialog now shows a Network button on networked
+machines
+
+The Goto Line dialog now correctly accepts an attempt to specify the final
+line of a file
+
+Form Feed characters can now be specified in Find and Replace strings using
+the notation "^f"
+
+Moved the hot-spot in the toolbar 'hand' cursor to the tip of the index finger,
+to make use more intuitive
+
+Fixed a bug that would cause a UAE if Edit Select All or Edit Select Word were
+followed by any cursor movement key that also extended the selection
+
+File loading has been made faster; load time is now much closer to proportional
+to file size, rather than degrading progressively as lines are loaded
+
+When a file is opened, the loader now displays the first window's worth of text
+as soon as it is read from disk, to give better feedback on what is happening
+
+The Edit Find and Edit Replace dialogs now retain the last 8 strings used, and
+these can be reselected from drop-down list boxes. Optionally, the strings can
+be recorded at the end of a session and reloaded in the next
+
+The Edit Find and Edit Replace dialogs now default the text in their Find What
+edit controls to the first 256 characters of any selected text in the current
+window. The previously-used search string will always be available as the first
+in the drop-down list
+
+Added a command EditTextInsertASCIICode, mapped to Ctrl+Q by default, which
+runs a dialog allowing control characters and other non-typable characters to
+be inserted
+
+Implemented a multi-level undo facility to reverse edit actions
+
+Added file modes to strip any trailing Ctrl+Z when a file is loaded;
+to automatically add a Ctrl+Z to the end when a file is saved; and to suppress
+writing an EOLN terminator at the end of the last line when a file is saved
+
+Added a command HelpScreenMenuHelp, mapped to Shift+F1, which enters the
+help system at an appropriate point when the mouse is clicked on a menu command
+or an area of the tool bar or status bar
+
+
+
+0.04.009
+--------
+
+[PFE16] PFE now can detect it is running under WOW and tailor things
+accordingly
+
+Fixed a bug that limited the maximum value of the 'mru-files-shown' ini file
+option to 5 instead of the documented 8; also set the minimum value to 0
+rather than 3
+
+Added an ini file option 'sound-beep' to suppress all beeps associated with
+message boxes
+
+Ctrl+Backspace can now be mapped correctly
+
+Cleared the confusion in handling mapping of Shift+Backspace; for the moment
+this has required that Ctrl+Shift+H is no longer mappable
+
+Fixed a bug that caused a print operation to fail when the last line of the
+file was printed on the last line of any page
+
+The Edit Goto Line dialog now has a system menu
+
+The OK button in the Edit Goto Line dialog is now enabled only if a line number
+has been typed in the Line To Goto edit control
+
+The Edit Goto Line dialog now accepts line numbers preceded by "+" or "-" as
+meaning relative to the current line number
+
+Fixed a bug in the Default File/Window Modes dialog that would cause the tab
+size to be set as a negative value if soft tabbing was selected
+
+Edit controls in dialogs that accept numeric input are now insensitive to
+leading and trailing white space
+
+The Key Mapping dialog now prompts if there are unsaved changes when the Load
+button is clicked, and correctly resets the "unsaved changes" flag
+
+Changes to windows made by allowing keys to auto-repeat, and tracking of mouse
+selections, should now appear better on slower machines
+
+The "auto-indent" window mode is now respected by the routines that wrap text
+as it is being typed
+
+Fixed some bugs in control block chaining that could cause UAEs when closing
+some of a large number of open windows and/or files
+
+Installing a printer of an existing type, but connected to a different port,
+while PFE is running no longer confuses the Print Setup dialog over which
+printer is the default
+
+Printers connected to files by means of a "pathname=" line in the [Ports]
+section of win.ini are now handled correctly, and the filename is not corrupted
+
+When text wrapping is active, typing at the end of a line that already extends
+past the wrap column now correctly breaks the line at the break point closest
+to, and left of, the wrap column
+
+[PFE32] Circumvented a Windows/NT bug that caused a GP fault when the Apply
+button was clicked in the Options Default File/Window Modes dialog and some
+other dialogs (October 1992 beta only)
+
+The ini file [options] setting "auto-unix" has been renamed "auto-format"
+
+If PFE is exited with the tool bar floating and also hidden, the tool bar is
+now drawn correctly the next time it is made visible
+
+The Edit Cut tool bar button, and the key mapped to EditCut, are now correctly
+disabled if the current file is marked read-only
+
+PFE now correctly responds when printers are changed via Control Panel.It
+no longer records the driver name in its ini file, so that it will not try to
+use an obsolete driver after an upgrade
+
+Fixed a bug that caused a parameter validation error in GetWindowLong if
+the left button was double clicked in the menu bar and no file was open
+
+Fixed further bugs that would cause looping replacing strings containing
+"^n" characters
+
+Fixed a bug causing a parameter validation error in SetWindowText when the
+"Remap Key" button of the Options Key Mapping dialog was pressed
+
+[PFE32] Full template functionality is now available. PFE32 now correctly uses
+the same file format as PFE16; template files created under earlier versions of
+PFE32 will no longer work
+
+[PFE32] The system shutdown options in the "Exit Windows/NT" dialog now
+work correctly
+
+[PFE32] It is now possible to run DOS commands and capture output
+
+Fixed a bug that would cause PFE to hang or misbehave while searching if the
+text contained characters > 127
+
+The file position in the status bar is now updated correctly after a succesful
+search from the Find or Replace dialog
+
+[PFE32] File Insert no longer fails with a "Cannot get file size" message
+
+Fixed a bug that would cause a UAE when performing a template action after
+detaching a template file
+
+The File Save All command now saves all open files, and not only altered ones,
+if the ini file option 'allow-save-always' is set
+
+A file's save format now cannot be altered if the file is marked as read only
+
+Changing the format a file is saved in via the modes dialog or with the status
+bar now marks the file as changed
+
+Added a DDE command EditGotoLine
+
+Added an ini file option 'auto-file-action' to have PFE either create an empty
+edit window or show the File Open dialog automatically if started with no file
+names on the command line
+
+Files whose first character is a Form Feed (0x0c) character now print correctly
+
+Fixed numerous bugs affecting synchronisation of changes in duplicated windows
+
+File Close now correctly asks if changes should be saved if the current file
+is visible in more than one window
+
+[PFE32] File Close now works correctly always
+
+Fixed a bug that would randomly cause the ini file option 'open-maximized' to
+be ignored
+
+Fixed a printing bug that would lose the header line giving the file name when
+a top margin was selected
+
+[PFE32] Fixed a bug causing a UAE trying to display an empty line that is
+not within a selection
+
+[PFE32] Drag and drop of files from File Manager into the PFE window now
+correctly opens them
+
+Fixed a bug that could produce "Bad offset" warnings or misplace the caret
+when inserting files larger than 8K whose last lines did not end in CRLF or LF
+
+General release on April 28 1993
+
+
+0.04.008
+--------
+
+[PFE32] Fixed a bug that would cause a UAE on clicking the OK box of any font-
+selection dialog
+
+Added a 'toolbar-size' option to the ini file to override the automatic sizing
+of the tool bar
+
+Removed the confusing Edit|Undo menu option; it will reappear when Undo is
+actually implemented
+
+General release on February 1 1993
+
+
+0.04.007
+--------
+
+Fixed a bug that caused DDE errors to occur on startup if PFE was invoked with
+file names on the command line
+
+Added a "/k" command line option to allow a key map file to be specified for
+loading at startup in place of pfe.key; this option implies "/m"
+
+Instances started with command line options implying multi-instance mode are no
+longer erroneously activated by a succeeding start without options
+
+Instances started with options implying multi-instance mode no longer update
+the most-recently-used-file list on termination
+
+Added a "/d" option to force the DDE server to be enabled at start-up even if
+options implying multi-instance mode are used
+
+Where multiple printers of the same type are configured on different ports, PFE
+now shows them all in the print-related dialogs instead of only the first
+
+[PFE32] F1 now correctly activates context-specific help in dialogs
+
+When a search operation is initiated from a Find or Replace dialog, the window
+will be redrawn to show the matching string in the second line from the top, to
+try to avoid it being hidden by the dialog box
+
+The function names EditIndent, EditUndent, EditLowercaseSelection,
+EditUppercaseSelection and EditTransposeCharacters have been changed to be
+EditTextIndent, EditTextUndent and so on; key mappings to the old names will
+need to be re-instated
+
+Fixed a bug that could put PFE into a loop when using the Window Next command
+with all edit windows iconic
+
+The most-recently-used-file list can now be up to 64 names long; names not
+shown on the File menu can be selected from a "More Files" dialog
+
+Added a Window Select command, mapped by default to Ctrl+W, to select from many
+open windows; the dialog for this replaces the standard MDI "More Windows" dialog
+
+[PFE32] The DDE service name has been changed to be "PFE32", to separate the
+services of the Windows/16 and Windows/NT versions
+
+Remedied the omission of the Ctrl+X Ctrl+S combination from the list of keys
+that can be mapped
+
+The DDE command EditInsertString has been renamed EditInsert
+
+Fixed bug that would leave a caret in the middle of the Find or Replace dialog
+when a match was found
+
+Mappable functions EditRepeatFind and EditRepeatReplace have been renamed
+EditRepeatLastFind and EditRepeatLastReplace
+
+Added an Options|ResetFile/WindowModes command to reset the modes of the
+current window and the file it shows to those appropriate to the file type
+
+The Printer Font dialog now correctly returns focus to its parent dialog on
+close
+
+Limited release to beta testers 20 January 1993
+
+
+0.04.006
+--------
+
+Dialogs now show help if F1 is pressed, as well as with their Help buttons
+
+Fixed a bug introduced in 0.04.005 that caused Ctrl+End to leave the caret
+showing beyond the actual end of file
+
+Fixed a bug introduced in 0.04.005 that caused the File Write dialog to be run
+twice
+
+Fixed a bug that would leave bitmaps undeleted on exit if ever child windows
+were closed by double-clicking in their system menu boxes
+
+[PFE32] Scroll bar elevators now work
+
+[PFE32] Child windows can now be closed by double-clicking in their system menu
+boxes
+
+Automatic horizontal scrolling now endeavours to keep the caret as far right in
+a window as possible, which should improve the appearance of searches, word
+wraps and the like
+
+A command line option "/m" now allows you to force a new instance of PFE to
+start even if another is running
+
+Added a "DDE Server" command on the Options menu and equivalent mappable
+functions to allow the DDE server system to be turned on and off at will
+
+Added a DDE data item FileName to return the name of the current file
+
+Added a DDE data item WindowTitle to return the title of the current window
+
+Added a DDE command EditFind to perform string searches
+
+Added DDE Poke items OpenFiles and ViewFiles to allow opening of several files
+in a single operation over a DDE link
+
+The mechanism for passing command line filenames to previously-running
+instances has been rewritten to run asynchronously from the client and pass all
+the filenames in one transaction, rather than in separate commands
+
+The mechanism for pasting data over a DDE Poke link has been rewritten to run
+asynchronously from the client
+
+Limited release to beta testers 10 January 1993
+
+
+0.04.005
+--------
+
+The status bar has had its intelligence raised, and responds to double-left-
+clicks thus: in the line/column area, it starts an Edit Goto Line dialog; in
+the Read-Only area it toggles read-only mode; in the Recorder status area it
+toggles the recorder on and off; in the Wrap area it toggles line wrap on and
+off; in the insert/overwrite area it toggles between the settings. The only way
+to banish the status bar is now from the Options menu.
+
+The format a file will be saved in (DOS/Unix) is now shown in the status bar,
+and can be altered by double-clicking
+
+The mouse cursor now changes shape to give cues when over the tool bar, over
+the status bar, and over a selection
+
+Fixed a bug introduced in 0.04.004 that caused a UAE loading files in UNIX
+format
+
+The mouse cursor is now hidden when the user starts typing
+
+Drag-and-drop operations are now disabled completely in read-only files
+
+Fixed a bug that caused a UAE when a drag-and-drop area extended over more than
+one line, and the drop target was in the same line as the end point of the
+highlight
+
+Fixed a bug that would cause PFE to loop when replacing all occurrences of end-
+of-line (^n) characters
+
+Fixed a bug whereby the default file name was not set up in the File Save As
+dialog edit control as it should have been
+
+Tool bar buttons are now set correctly if a file is changed from being read-
+only to being writable
+
+If a DOS command with output capture action re-uses an existing output window,
+the caret is now shown in the correct position relative to the new contents
+
+The Execute DOS Command to Window dialog now has an option to position the
+window at the end of the output rather than at the start; this is now the
+default behaviour
+
+On startup PFE now checks whether files in the most-recently-used list of files
+that are on local hard disks still exist, and silently removes them if not
+
+When a drag-and-drop operation is aborted by pressing ESC, the caret is
+returned to the start of the highlighted area and the window redrawn to show it
+
+Added a File Save All command that will save all altered files, store all
+altered templates, and save all altered template files
+
+The "Templates" item on the main menu is now "Template" to match every other
+reference to it
+
+The help file has been completely rewritten and may now even be useful;
+corresponding changes have been made to the Help menu
+
+Dialogs now have Help buttons to give instructions on their use
+
+Dialogs now all have system menu boxes
+
+The File Save command now detects that a window showing DOS command output
+has no associated file name, and turns itself into File Save As
+
+
+0.04.004
+--------
+
+A Replace All operation no longer misses out a match in a selection
+produced by a previous Replace or FindNext
+
+If the current window is iconic when a Find or a Replace dialog is started,
+the window will be restored before the dialog box is shown
+
+Added an ini file option 'allow-save-always' to allow the File|Save menu
+item and the corresponding tool bar button to function even if the current
+file has not changed
+
+Fixed a bug that erroneously lit the tool bar cut and copy buttons after a
+Find operation with 'select matching text' turned off
+
+Fixed a memory manager bug that could cause data corruption or UAEs in
+complex circumstances most often seen in replace operations in large files
+
+Added an ini file option 'minimize-on-empty' that iconizes the main window
+when the last child window in use is closed
+
+File names shown as the titles of windows are now abbreviated to exclude as
+much as possible of the current directory name
+
+Corrected mis-spelling in status bar help line for the 'Repeat DOS Command'
+toolbar button
+
+PFE now records its state in the ini file correctly if Windows is shut down
+while it is running
+
+When a file name is changed (by File|SaveAs or File|Name) the file and window
+modes now change to match those appropriate to the file type in the new name
+
+The status bar INS/OVR flag is now updated correctly if insert mode is turned
+on or off using the 'Set Current Modes' dialog
+
+Edit|Text|Indent and Edit|Text|Undent functions now allow the current line, or
+all the lines in a selection, to be indented or undented by one tab stop
+
+The Shift+Backspace key combination is now mappable to functions
+
+Automatic text wrapping of lines as they are typed is now implemented
+
+An 'Exit Windows' item has been added to the system menu, permitting Windows to
+be closed down in a variety of exciting ways from within PFE.
+
+When the 'Save Changes' message box is shown on exit from the Key Mapping
+dialog, focus is now correctly restored to the current edit window
+
+The status bar now shows feedback on the progress of load and save operations
+
+Fixed a bug that caused a spurious blank line to be created whenever a file
+being loaded contained a CR-LF byte pair that straddled a storage block
+boundary
+
+Auto-indenting is now carried out if a line is split, or if a newline is
+inserted, when the caret is in the middle of a line as well as at the end
+
+PFE now has a marginally better knowledge of C syntax and handles brace lineup,
+auto-indent and brace matching in a rather more useful way in C language files
+
+Internal re-organisation needed for porting to Windows/NT
+
+Added a way to circumvent a Windows/NT bug that refuses to show fixed-pitch
+fonts in the Choose Font dialogs, affecting both the 16- and 32-bit versions;
+putting 'fix-font-bug=1' in the [options] section of the ini file will show all
+fonts, but attempts to select variable-pitch ones will be rejected [there is no
+plan for PFE to support variable pitch fonts]
+
+The File|Name, File|Write and File|Save dialogs now default the file name to
+that of the current file, if it has one
+
+The File|Open, File|Name, File|Write and File|Save dialogs now independently
+record the filename filter last used, and take that as the default on the next
+invocation
+
+A drag and drop operation can now be aborted by pressing ESCAPE before
+releasing the left mouse button
+
+Up to five user-defined items may now be added to the Help menu, each one
+invoking a specified Windows help file. The menu item Help|WindowsSDK has been
+deleted; you should insert an entry in the [help-files] section of the ini file
+to access it.
+
+Limited release to beta testers 21 December 1992
+
+
+
+0.04.003
+--------
+
+The tool bar buttons are now maintained at approximately the same physical
+size on all screen resolutions
+
+Changed the way child windows are opened maximized for a better visual
+appearance, avoiding a transient restored state
+
+Files can be mailed using MAPI-compliant mail systems
+
+The way that the termination of DOS commands is detected has been changed,
+and no longer calls GetModuleUsage with an invalid module handle
+
+The menu item for "Repeat DOS Command", and the "Run DOS Command" toolbar
+button, are now disabled while a DOS command is running
+
+Search and Replace operations now use the common dialogs. To be consistent,
+"Search" has been changed to "Find" in menus and command names
+
+The file name is now shown in the print Abort dialog, and a faulty call to
+SetDlgItemText with an invalid control handle corrected
+
+Fixed a bug that caused a UAE if a strictly empty file was loaded and
+a character was typed (this would happen if PFE was used as the editor for
+WinQVT/net's POP mailer)
+
+The cursor now changes to an hourglass when cutting or deleting a selection
+
+The format of the [modes] section of the ini file has changed slightly. Soft
+tabs are no longer recorded as a -ve tab size, but as a positive value with
+a bit flag in the window modes word. Versions of PFE from here on will accept
+the old format on startup, but write the new one
+
+Auto-indenting now inserts the relevant number of spaces instead of a single
+tab character if the window is set to use soft tabs
+
+Fixed a bug that caused a non-ANSI screen font selected in one session to
+be incorrectly selected on subsequent sessions
+
+
+0.04.002
+--------
+
+The "file changed" marker in the status bar has been changed from "C" to "#"
+to avoid confusion with language types
+
+Added a standard key mapping Ctrl+Shift+O to invoke EditSplitLine
+
+Fixed random return value from routine that detected a second PFE instance
+
+Characters with ASCII values > 127 are now printed correctly as ANSI characters
+rather than as digraphs
+
+Extending a selection generated by a successful search no longer causes a UAE
+
+It is now possible to set the screen font and printer font to non-ANSI as well
+as ANSI fonts
+
+The most-recently-used-file list is no longer erroneously appended to the
+system menu instead of the File menu if the MDI child is started maximized
+
+Files specified on the command line with names beginning '\' are now handled
+correctly
+
+Search-and-replace no longer disregards the 'read-only' status of a file
+
+The filter for "*.exe" files in the Browse sub-dialog of the "Configure
+Windows Tools" dialog now works correctly
+
+Fixed a bug whereby some files would not be saved on exit or from a 
+File|CloseAll operation if some altered files were untitled
+
+General release as the second beta version on 3 November 1992
+
+
+0.04.001
+--------
+
+Improved scrolling behaviour when dragging a selection with a mouse and
+fixed several bugs that caused the selection to freeze
+
+Fixed a bug introduced in 0.03.036 that stopped drag-and-drop copy from
+working
+
+Fixed some UAEs when scrolling with PageUp when the caret is in the top line
+of the screen, with less than one window's worth of lines above it
+
+Fixed inaccurate scrolling down by pages when less than one window's worth
+of lines remained below the window and the bottom line of the window was
+not one full row in height
+
+If PFE is terminated when the tool bar is a floating window, it will now
+restart with the tool bar as a floating window
+
+Making PFE iconic when the tool bar is floating no longer erroneously changes
+it to a bar on the right hand border
+
+The way PFE locates the Windows SDK helpfile for the Help|SDK function has been
+made more sensible. If the [options] section of the ini file contains a
+'sdk-helpfile' key, the name given is used; if not, PFE looks for first
+"win31wh.hlp" and then "sdkwin.hlp" on the PATH and uses the first one found.
+
+Limited release to beta testers for validation as the possible beta 2 version
+on 19/10/92
+
+
+
+0.03.036
+--------
+
+When configuring the first tool in the Configure Windows Tools dialog, the
+Add button now correctly becomes active as soon as something is typed in
+the Command Line edit control
+
+The default mapping of Ctrl-P to File|Print is now shown on the menu
+
+Fixed a bug whereby, if PFE was maximized, made iconic, and closed from the
+icon's system menu, it would restart restored rather than maximized
+
+Added an ini file setting "start-maximized" to the [options] section, which
+controls whether PFE starts maximized, overriding the saved state at last
+closedown
+
+Shift-PgUp and Shift-PgDn no longer cause UAEs or select the wrong sections of
+text
+
+Added an ini file [options] setting "track-vertical-thumbtack" that controls
+whether PFE scrolls to follow vertical thumbtack dragging
+
+PFE now leaves selected text highlighted after it is copied to the clipboard.
+An ini file [options] setting can specify that highlighting is to be removed
+
+Key names in menus and the Key Mapping dialog now use '+' rather than '-'
+to link components, to be CUA compliant
+
+The Settings menu has been renamed Options
+
+Corrected a bug in the command line parser that would cause DDE commands and
+ini file lines whose last argument was in quotes to be mis-parsed
+
+Added a most-recently-used files list to the File menus
+
+Added a menu option and tool bar action to repeat the last DOS command run
+
+Corrected PgUp and PgDn and scroll bar page moves when caret is not within the
+window
+
+The default setting for the 'auto-unix' key in the [options] section of the
+ini file is now 1, so that UNIX files will save in UNIX format by default
+
+The Browse Application dialog started from the Browse button in the Configure
+Windows Tools now uses a filter showing only "*.exe" files
+
+
+0.03.035
+--------
+
+Improved icons
+
+Some development code that was accidentally left active and caused a UAE
+when Ctrl-Z was pressed for an Undo has been removed; undo actions are not
+yet supported
+
+Fixed a bug that prevented disabling only a subset of the possible prefix
+keys
+
+Dragging the mouse to extend a selection should no longer leave a caret trail
+on slower machines
+
+Windows are now scrolled to track movements of the thumbtack in the vertical
+scroll bar
+
+All references to "Development Tools" in menus and functions have changed to
+use "Windows Tools", to clarify the intended use of the facilities
+
+Details of the actual command line used and working directory are now stored
+for all Windows Tools between sessions, and not solely for the last one
+used
+
+Limited release to beta testers 05/10/92
+
+       
+
+0.03.034
+--------
+
+When a window is duplicated, the second copy's scroll bars are now set
+correctly
+
+Fixed a bug whereby, if a window lost focus when its caret had been scrolled
+out of view, the caret would be wrongly placed when the window regained
+focus
+
+The tool bar is now disabled when PFE is waiting for the second key of a
+two-character command sequence
+
+If the left button is pressed in the tool bar, and the mouse is moved out of
+the tool bar before it is released, focus is now correctly restored to the
+current window
+
+If the left button is pressed in a tool bar button and the mouse then moved
+off the button, the button will return to its down state should the mouse
+move back onto it
+
+When dragging the tool bar from a border, the state will now not change
+unless the mouse cursor is outside the tool bar when the left button is
+released
+
+A 1-pixel gap between the area showing line numbers and the area showing the
+text in a window has been eliminated
+
+Ctrl-K can now be used as a prefix key
+
+The prefix keys ESC, Ctrl-B, Ctrl-F, Ctrl-K and Ctrl-X can individually be
+enabled and disabled from a sub-dialog of the key mapping dialog. When
+disabled as a prefix key, each of them can be mapped to a function as required.
+By default they are all disabled, and the hard-coded key mappings are now fully
+CUA-compliant. As a result the format of .key files has changed
+
+Pressing TAB when no file is open no longer causes a UAE
+
+Page Down now does nothing if the final line of the file is visible in the
+window
+
+Added a File|Name menu item and equivalent DDE command that allows the file name
+associated with a window to be changed without writing any data to a disk
+
+The EditPageUp and EditPageDown functions have been redesigned to maintain the
+caret in the same screen row, and to keep a memory of the caret column. This
+means that a page down followed by a page up returns to exactly the starting
+position
+
+Vertical scrolling using the scroll bar now does not move the caret within the
+file, but moves it with the text
+
+Selections are no longer removed when the data is scrolled using the vertical
+thumbtack
+
+Functions EditShowNextLine, EditShowPreviousLine, EditShowNextPage and
+EditShowPreviousPage have been added to give keyboard equivalents of vertical
+scroll bar actions
+
+Menu items File|Open, File|New and File|Print are now bound by default to Ctrl-O,
+Ctrl-N and Ctrl-P as recommended in the CUA
+
+Pressing a key that is not mapped no longer causes the window to scroll to
+show the caret if this is not initially visible
+
+
+
+0.03.033
+--------
+
+Fixed a bug whereby directories whose names were a single letter or '.' were
+not accepted in the Working Directory controls of the DOS Command and Launch
+Tool dialogs
+
+Scroll bars no longer respond to the first mouse click if their window is
+inactive; the click simply activates the window without disturbing its state
+
+The caret now follows the mouse cursor in a somewhat more friendly fashion
+when dragging with the left mouse button down
+
+The File Print dialog now allows line numbering, line wrapping and page header
+options to be specified. The corresponding window mode values are now the
+default settings for the dialog rather than the active settings
+
+An initialisation file option now allows new windows to be created always
+restored; always maximized; or maximized if and only if an existing window is
+also maximized. These options can also be made conditional on the main window
+being maximized too.
+
+ESCAPE now closes the About dialog box
+
+The vertical elevator is now correctly positioned after a search or a
+Window|CentreCaret operation
+
+The ini file and keymap files are now found correctly if the Windows directory
+is in a JOINed or mounted directory that appears as the root directory of a 
+drive
+
+Printer font selection now uses the Font common dialog
+
+Filenames are now correctly set in the document title used by Print Manager 
+when a file is printed
+
+Window titles for unnamed files, unnamed templates and command output have been
+redesigned; the title for an unnamed template and a command output window now
+includes a sequence number
+
+PFE no longer beeps to warn of an impossible scroll request (e.g. scrolling
+up a line when already in the top line)
+
+The Template|SaveFile and Template|Store menu items no longer both have 'S'
+as their hot key
+
+The Template|SaveFile menu item now has an ellipsis to show a dialog will be
+run
+
+The File menu has been re-arranged for better CUA compliance
+
+The top and bottom margin checkboxes are no longer confused in the Print
+Setup dialog
+
+
+
+0.03.032
+--------
+
+Changing file and window modes with the Settings|CurrentSettings dialog no
+longer erroneously lights the toolbar Cut button
+
+Files can now be loaded and saved in UNIX format, using LF as a line terminator
+
+Clipboard data in excess of 64K is now handled correctly
+
+The File Open and File View dialogs now allow multiple files to be selected
+
+Wildcarded file names can now be given both on the command line and in the
+DDE commands FileOpen and FileView
+
+Fixed a bug in which an invalid window handle was passed to IsIconic on
+startup, which was trapped by the debugging kernel
+
+Captured output from DOS commands can now be shown in an existing Command
+Output window as an alternative to creating a new window
+
+Windows can now be tiled in a custom vertical pattern that maximizes their
+width
+
+A new function FileAbandon and corresponding DDE command allows a changed file
+to be closed with the changes discarded
+
+
+
+0.03.031
+--------
+
+Cursor resource memory is now properly freed after the toolbar has been
+dragged with the multi-headed-arrow cursor
+
+Text drag-and-drop is now implemented
+
+When a window is duplicated, the copy now correctly inherits the text colours
+and language type of the parent
+
+Fixed a bug whereby a non-stock font would not be deleted on termination
+
+
+0.03.030
+--------
+
+If an invalid line number is entered as the target in the Goto Line dialog,
+focus is now set back to the control after the error message is shown
+
+Menu items to select the fixed pitch ANSI, OEM and SYSTEM fonts have been added
+
+The "Free Key" and "Free All Keys" buttons in the Key Mapping dialog have been
+renamed to "Unmap Key" and "Unmap All"
+
+Selecting Window|Next when all windows are iconic now restores the current
+window rather than entering an infinite loop
+
+The Status Bar now uses the Windows variable-pitch ANSI font
+
+Added an Edit|SelectAll menu item to select an entire file
+
+Maximized MDI child windows can now be closed by double-clicking in the
+system menu box
+
+The "goto start of file" and "goto end of file" operations are now by default
+invoked by Ctrl-Home and Ctrl-End rather than Ctrl-PgUp and Ctrl-PgDn, to
+be in line with standard Windows practice
+
+Selected text is now displayed in the correct text and background colours as
+set up from the Control Panel
+
+If the current window is set to have a language type of "C", Edit|SelectWord
+treats an underscore character as alphanumeric, so that identifiers such as
+WM_CREATE can be selected as a single entity
+
+Fixed a nasty memory manager bug that could cause a UAE inserting a newline
+after a line deletion in very complicated circumstances to do with the fact
+that line control blocks are held in groups of 1024
+
+The vertical thumbtack is now set more sensibly, reflecting the line number
+of the line at the top of the window
+
+Positioning within a file containing more than 65535 lines by moving the
+vertical thumbtack now works correctly
+
+Tabstop ordering in the Print Setup dialog has been made sensible
+
+Limited release to beta testers 19/08/92
+
+
+0.03.029
+--------
+
+Selecting text with a mouse has been enhanced. Holding SHIFT down while clicking
+the left button will select between the caret and the mouse cursor, or will
+extend an existing selection
+
+The Window|Widen menu option will now restore iconic or maximized windows before
+resizing them
+
+Shift+click on the "Toggle Keyboard Recorder" toolbar button now replays the
+keyboard recording
+
+The 'Save File' toolbar button now invokes the TemplateStore function if the
+current window contains a template. The button state now correctly reflects the
+change state of template windows
+
+The caret now changes size to indicate whether a window is in insert or overwrite
+mode
+
+Selecting a word by double-clicking the mouse or using Edit|SelectWord no
+longer selects white space to the right of the word
+
+Fixed a bug whereby, after doing a Window|Tile, the wrong window would respond
+to keyboard input and scroll bar actions
+
+Fixed a bug which would sometimes cause File|Insert not to close the file that
+was inserted
+
+
+
+0.03.028
+--------
+
+The font used in edit windows may now be selected from all the available
+fixed pitch ANSI screen fonts
+
+The 'search' dialog now permits you to specify whether the matching string
+is to be selected or not (the default is settable in the ini file). The
+dialog also allows you to choose to extend the selection from the initial
+caret position to the matching string
+
+All dialogs have been redesigned to use 8pt MS Sans Serif text instead of
+10pt System
+
+The algorithm for positioning the caret in the text when the left mouse
+button is clicked has been improved: clicking in the left half of a
+character cell places the caret to the left of that character, and clicking
+in the right half places it to the right
+
+The "Key Mapping" dialog now permits a key to be remapped from one function to
+another with a single button click, instead of needing first to free it and
+then map it to the target function
+
+The "Free All Keys" button in the "Key Mapping" dialog now requests
+confirmation before proceeding
+
+
+
+0.03.027
+--------
+
+Minor internal changes to make the source compatible with MSC 7.0
+
+The Edit|Text|Uppercase and Edit|Text|Lowercase functions now correctly
+mark the file as being changed. They also produce an error if used
+on a read-only file. Both now handle characters with ASCII codes > 127
+properly; note, though, that neither these, nor anything else in PFE,
+will work with Kanji or other languages using 2-byte codes
+
+
+
+0.03.026
+--------
+
+Altered files can now be saved to disk automatically before running a
+DOS command or launching an application or a development tool
+
+The details of the last-used DOS command, application or development tool
+are now remembered between PFE sessions. The details of the last used
+development tool are also shown as the default each time the dialog is
+started
+
+The Run DOS Command dialog box now has a Browse button
+
+
+
+0.03.025
+--------
+
+Extra functions are now available from the toolbar by using the SHIFT and
+CONTROL keys in combination with the left mouse button. See the help file
+for details.
+
+The "Window" menu item on the menu bar has been moved to be the last apart
+from "Help", to match the standard menu layout for MDI applications
+
+Windows may now be set to use "soft tabs": tabs will be inserted
+as an appropriate number of spaces rather than as single 0x09 characters
+
+The "Insert Template" toolbar button is now correctly set as template files
+are attached and detached
+
+The TemplateInsert, TemplateEdit, TemplateStore and TemplateStoreAs functions
+no longer cause UAEs if no template file is attached
+
+Files that have the "read only" attribute set are opened in read-only mode,
+regardless of the "read only" button state in the File Open dialog
+
+Characters with ASCII codes from 128-255 can now be inserted from the
+keyboard
+
+
+0.03.024
+--------
+
+Many of the functions shown in the Key Mapping dialog, and the
+equivalent DDE commands, have been renamed. They now correspond better
+to the menus where they are held (or would be held)
+
+A bug whereby a DDE Poke operation received DDE_FACK on a fail and
+DDE_FNOTPROCESSED on successful termination has been cleared
+
+A successful search now sets the toolbar cut and paste buttons correctly
+
+Several new DDE commands and enquiries added
+
+The syntax of the DDE commands CaretLeft(), CaretLeftWord(), CaretRight()
+and CaretRightWord() is now changed so that each takes two mandatory
+arguments. The first is the count of the number of characters or words
+to move, and the second is 1 to extend a selection and 0 not to do so
+
+To avoid confusion over what it is, the support module PFEDOS.EXE, which
+is used by PFE to handle output redirection in DOS commands, has been renamed
+$PFEDOS.EXE, which hopefully looks less like a DOS version of PFE. The
+associated PIF file is now called $PFEDOS.PIF to match
+
+Using selection-extend keys like Shift-Left after marking a selection with
+the mouse now has the desired effect. Other minor bugs when moving the
+caret with Shift down to extend selection have been cleared
+
+Caret movement keys can now be remapped. This has required an incompatible
+change in the format of key mapping files, so that files saved with
+earlier releases of PFE cannot be used
+
+The semantics of the default PgUp and PgDn mapping is slightly altered; if
+line 1 is at the top of the window, PgUp moves to the start of the file, and
+if the last line is at the top of the window, PdDn moves to the end of file.
+
+Shift-PgUp and Shift-PgDn are now mapped to page up/down moves that extend
+the selection
+
+To be compatible with standard MDI practice, Shift-F4 now maps to
+WindowTile by default, and Shift-F5 to WindowCascade. TemplateInsertMarker
+has moved to F6, and CaretCentre to Ctrl-F5
+
+The Goto Line dialog has been enhanced to allow optional extending of
+a selection
+
+^T is now accepted as meaning TAB in a search or replace string, as well
+as ^t
+
+
+
+0.03.020
+--------
+
+Released as the Beta 1 version of PFE 28/07/92
+
+
+------------------------------------------------------------------------------
+Thanks to all the beta testers whose bug reports, comments and suggestions
+have gone towards the development of PFE
+------------------------------------------------------------------------------
+

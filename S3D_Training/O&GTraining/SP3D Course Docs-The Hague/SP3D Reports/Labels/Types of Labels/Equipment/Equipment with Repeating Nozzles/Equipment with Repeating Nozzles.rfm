@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Equipment with Repeating Nozzles" Description="List Equipment name and all the nozzle names, NPDs and End Preps that are connected on this Equipment">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS Name="Equipment with Repeating Nozzles" Site="User" Path="Equipment with Repeating Nozzles.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible" Child="No">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}}{\colortbl ;\red0\green0\blue0;}\viewkind4\uc1\pard\lang1033\f0\fs17 " ToParse="no" Visible="yes" />
+
+               <DATA Column="EqpName" ToParse="yes" Visible="yes" />
+
+               <TEXT Value="\cf1 \par " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible" Child="Yes">
+            <TOKENS>
+               <DATA Column="NozName" ToParse="yes" Visible="yes" />
+
+               <TEXT Value=" - " ToParse="no" Visible="yes" />
+
+               <DATA Column="NPD" ToParse="yes" Visible="yes" />
+
+               <TEXT Value=" " ToParse="no" Visible="yes" />
+
+               <DATA Column="NPDUnitType" ToParse="yes" Visible="yes" />
+
+               <TEXT Value=" - " ToParse="no" Visible="yes" />
+
+               <DATA Column="Type" ToParse="yes" Visible="yes" />
+
+               <TEXT Value=" \par " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible" Child="No">
+            <TOKENS>
+               <TEXT Value="\cf0\fs17 \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

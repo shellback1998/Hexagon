@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Stress Analysis Operating Temperature" Description="Operating Temperature per part, for export to stress analysis">
+	<QUERIES>
+		<QUERY Name="Piping Stress Analysis Operating Temperature" Site="User" Path="Piping Stress Analysis Operating Temperature.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Stress Analysis Operating Temperature" Site="User" Path="Piping Stress Analysis Operating Temperature.rfm"/>
+</REPORT_TEMPLATE>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Structure Linear Member Surface Area" Description="Surface area" RequiresFilter="No"><DESIGN_TIME Progid="SP3DReportsQueryBuilder.SQLQuery" Action="" Arg=""/><RUN_TIME Progid="SP3DRuntimeQuery.CQueryInterpreter" Action="" Arg=""/><SQL Timeout="0"><![CDATA[ 
+			SELECT jsa.SurfaceArea AS SurfaceArea
+			FROM JSurfaceArea jsa 
+			WHERE jsa.oid = ? 
+		]]></SQL><QUERY_PARAMETERS Name="Structure Linear Member Surface Area" Site="User" Path="Structure Linear Member Surface Area.rqp"/></REPORT_QUERY>

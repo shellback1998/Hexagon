@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Neutral File Information" Description="Master label to provide the piping isometric data for neutral file">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <FORMATTING_PARAMETERS Name="Neutral File Information" Site="User" Path="Neutral File Information.rfp" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+   <RTF_LABEL>
+      <POINTS />
+
+      <VECTORS />
+
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}} \viewkind4\uc1\pard\lang1033\f0\fs17 " ToParse="no" Visible="yes" />
+
+               <DATA Column="Fabrication Type_index" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="FeatureSpecName" ToParse="NO" Visible="yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="SUPPORT" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="FeatureSpecName" ToParse="NO" Visible="No">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="SUPPORT" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="Category" ToParse="NO" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\tab\cf1 " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <PHYSICAL Column="Quantity" UOM="Length" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </PHYSICAL>
+
+               <PHYSICAL Column="QuantityEach" UOM="QuanityEach" Visible="No">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </PHYSICAL>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <PHYSICAL Column="QuantityEach" UOM="QuantityEach" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </PHYSICAL>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK>
+            <TOKENS>
+               <TEXT Value="\cf0\tab\cf1 " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="WBSAlt" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="WBS" Visible="No">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="WBS" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\cf0\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Spec Name" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab\tab " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Column="Tag" ToParse="No" Visible="yes" />
+
+               <DATA Column="IsBasePart" ToParse="Yes" Visible="No">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="True" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="NPD1Component" ToParse="Yes" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="NPD1" ToParse="No" Visible="yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="NPD1Component" ToParse="Yes" Visible="No">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="NPD2Component" ToParse="Yes" Visible="Yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="False" />
+
+            <TOKENS>
+               <DATA Column="NPD2" ToParse="No" Visible="yes">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Column="NPD2Component" ToParse="Yes" Visible="No">
+                  <CONDITION ConditionOperator="NotEqual" ConditionOperand1="" StateOfValue="Raw" />
+               </DATA>
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Description" ToParse="yes" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="GeometricIndustryStandard" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab\tab\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Schedule1" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Schedule2" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Commodity Type" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="PressureRating" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Materials Grade" ToParse="NO" Visible="yes" />
+
+               <TEXT Value="\tab " ToParse="no" Visible="yes" />
+
+               <DATA Column="Tag" ToParse="NO" Visible="yes" />
+
+               <DATA Column="CommodityCode" ToParse="NO" Visible="yes" />
+
+               <TEXT Value=" \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY Name="Reference Location" Description="">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DRuntimeQuery.CClosestReference" Action="" Arg=""/>
+	<SQL Timeout="0"/>
+	<QUERY_PARAMETERS Name="Reference Location" Site="User" Path="Reference Location.rqp"/>
+</REPORT_QUERY>

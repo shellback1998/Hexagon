@@ -1,0 +1,9 @@
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Release\NetNameRuleTraining.vbprojResolveAssemblyReference.cache
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Release\NetNameRuleTraining.Resources.resources
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Release\NetNameRuleTraining.vbproj.GenerateResource.Cache
+C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\Custom Symbols\NetNameRuleTraining.dll
+C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\Custom Symbols\NetNameRuleTraining.pdb
+C:\Program Files (x86)\Smart3D\3DRefData\SharedContent\Custom Symbols\NetNameRuleTraining.xml
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Release\NetNameRuleTraining.dll
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Release\NetNameRuleTraining.xml
+C:\Users\Student\documents\visual studio 2010\Projects\NetNameRuleTraining\NetNameRuleTraining\obj\Release\NetNameRuleTraining.pdb

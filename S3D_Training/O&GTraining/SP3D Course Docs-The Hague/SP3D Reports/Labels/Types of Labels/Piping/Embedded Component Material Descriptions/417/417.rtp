@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="417" Description="Comp sch/thk 1x3b">
+	<QUERIES>
+		<QUERY Name="417" Site="User" Description="Query to get the schedule thickness of first and third ports of pipe component" Path="417.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="417" Site="User" Description="GetTwoPorts_bore format" Path="417.rfm"/>
+</REPORT_TEMPLATE>

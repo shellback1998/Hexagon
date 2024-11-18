@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="MemberSystem"
+ Description="Query for ToolTip for MemberSystem Location"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.SQLQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <SQL
+    Timeout="0">
+      <![CDATA[ 
+               Select  
+                jln.length As Length,
+                jln.rootpointZ As z1,
+                jln.endZ As z2,
+                jname1.itemname As SystemName
+               From SPSMemberSystem mems
+               Join Jline jln on (jln.oid = mems.oid)
+               Join XSystemTree xtree on (xtree.oidDestination = mems.oid)
+               Join JNamedItem jname1 on (jname1.oid = xtree.oidOrigin)
+               WHERE mems.oid = ?
+              ]]>
+   </SQL>
+
+   <QUERY_PARAMETERS
+    Name="ByOID"
+    Site="User"
+    Path="Structure ToolTip for MemberSystem Location.rqp" />
+</REPORT_QUERY>
+

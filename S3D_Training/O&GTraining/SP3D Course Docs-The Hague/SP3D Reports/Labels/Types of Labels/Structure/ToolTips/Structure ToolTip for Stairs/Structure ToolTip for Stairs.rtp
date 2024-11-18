@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Structure ToolTip for Stairs"
+ Description="Tooltip for Stairs">
+   <QUERIES>
+      <QUERY
+       Name="Stair"
+       Site="User"
+       Description=" "
+       Path="Structure ToolTip for Stairs.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Stair"
+    Site="User"
+    Description=" "
+    Path="Structure ToolTip for Stairs.rfm" />
+</REPORT_TEMPLATE>
+

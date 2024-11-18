@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Electrical CableTray Nominal Width" Description="TrayWidth"><QUERIES><QUERY Name="Electrical CableTray Nominal Width" Site="User" Path="Electrical CableTray Nominal Width.rqe"/></QUERIES><FORMATTING Name="Electrical CableTray Nominal Width" Site="User" Path="Electrical CableTray Nominal Width.rfm"/></REPORT_TEMPLATE>

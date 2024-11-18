@@ -1,0 +1,100 @@
+Type=OleDll
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINDOWS\system32\STDOLE2.TLB#OLE Automation
+Reference=*\G{987845F3-8016-11D3-8FA5-080036DF2204}#1.0#0#C:\Programme\SmartPlant\3D\CommonApp\Client\Bin\CAppInterfaces.dll#Ingr SP3D CommonApp Interfaces Type Library V2
+Reference=*\G{46378ED6-9979-11D1-BD4B-080036F41703}#1.1#0#C:\Programme\SmartPlant\3D\Core\Client\Bin\IMSCommandManager2.dll#Ingr SmartPlant 3D CommandManager v 2.1 Library
+Reference=*\G{C07A8108-BF64-11D1-BD6B-080036F41703}#1.1#0#C:\Programme\SmartPlant\3D\Core\Client\Bin\IMSICDPInterfacesTlb.dll#Ingr SmartPlant 3D ICDPInterfaces v 1.0 Library
+Reference=*\G{71D03A36-8FCE-11D4-AC7B-001000CB0031}#1.0#0#C:\Programme\SmartPlant\3D\SmartPlantStructure\Middle\Bin\SPSMembers.dll#Ingr SPSMembers Entities 1.0 Type Library
+Reference=*\G{6FFA4BE0-4114-11D1-B831-000000000000}#1.0#0#C:\Programme\SmartPlant\3D\Core\Shared\Bin\AutoMath.dll#Ingr SmartPlant 3D AutoMath v 1.0 Library
+Reference=*\G{0A3F3F7E-B754-11D2-A946-00104B3646B4}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\CableEntities.dll#Ingr Route Cable Entities v 1.0 Library
+Reference=*\G{9AD863B7-D0E6-11D2-BEFD-08003600FD7A}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\CableWayEntities.dll#Ingr Route Cableway Entities v 1.0 Library
+Reference=*\G{8894DA3B-9D6E-11D1-BE27-08003651A403}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\RouteEntities.dll#Ingr Route Entities v 1.0 Library 
+Reference=*\G{417DE8E7-3A65-4106-A4CC-BD7E9541BBCA}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\ConduitEntities.dll#Ingr Route Conduit Entities  1.0 Type Library
+Reference=*\G{5A09C11C-FB49-4024-A913-8D9FC0A207A9}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\ConnectionItems.dll#Ingr ConnectionItems Entities 1.0 Type Library
+Reference=*\G{DA2E78DE-6CDD-4C24-ABF2-1E3E76303E6D}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\CableMarkerEntity.dll#SP3D CableMarkerEntity 1.0 Type Library
+Object={F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0; COMDLG32.OCX
+Reference=*\G{92B05EEE-515D-11D2-858A-08003601A303}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\ComponentOccurrence.dll#Ingr Route Component Occurrence v 1.0 Library
+Reference=*\G{CC4A84D6-467B-11D1-9744-080036104103}#1.0#0#C:\Programme\SmartPlant\3D\Core\Client\Bin\Trader.dll#Ingr SmartPlant 3D Trader v 1.0 Library
+Reference=*\G{E012C272-3EE3-4C69-9321-4FAEFCB50E20}#1.0#0#C:\Programme\SmartPlant\3D\CommonApp\Client\Bin\CmnAppErrHndlr.dll#Ingr Sp3d CommonApp Error Handler v1.0
+Reference=*\G{7E6BEE9C-7353-11D1-BE9A-0060973D47FF}#1.1#0#C:\Programme\SmartPlant\3D\Core\Client\Bin\Working_Set.dll#Ingr SmartPlant 3D Working Set v 1.1 Library
+Reference=*\G{5A600C20-CBD5-11D1-9556-0060973D4824}#1.0#0#C:\Programme\SmartPlant\3D\Core\Middle\Bin\Geom3d.dll#Ingr SmartPlant 3D Core Geometry 1.0 Type Library
+Reference=*\G{9EED6816-3C33-11D1-BE53-0060973D47FF}#1.0#0#C:\Programme\SmartPlant\3D\Core\Client\Bin\TransactionManager.dll#Ingr SmartPlant 3D Transaction Manager v 1.0 Library
+Reference=*\G{BBAB2CF8-9AF3-11D4-BA35-009027955FAD}#1.0#0#C:\Programme\SmartPlant\3D\HangersAndSupports\Middle\Bin\SupportServices.dll#Ingr SmartPlant 3D Supports Support Entities 1.0 Type Library
+Reference=*\G{8363D665-B787-11D1-AA8B-00C04FB15261}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\PipeEntities.dll#Ingr Route Pipe Entities v 1.0 Library
+Object={831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0; MSCOMCTL.OCX
+Reference=*\G{652C1726-CFDF-11D1-850B-080036DE8E03}#1.0#0#C:\Programme\SmartPlant\3D\Core\Middle\Bin\Attributes.dll#Ingr SmartPlant 3D Attributes v 1.0 Library
+Reference=*\G{0F1A5536-5DCF-4B4D-9792-1CF27707F581}#1.0#0#C:\Programme\SmartPlant\3D\CommonSchema\Middle\bin\AnalysisHlpers.dll#AnalysisHlpers 1.0 Type Library
+Reference=*\G{385B359B-3888-11D2-A5DB-0060974CBE24}#1.0#0#C:\Programme\SmartPlant\3D\CommonSchema\Middle\bin\ProjMgmt.dll#Ingr SP3D ProjMgmt 1.0 Type Library
+Reference=*\G{EB455E83-23A0-45E8-9385-E7929CA616AB}#1.0#0#C:\Programme\SmartPlant\3D\RefData\Middle\Bin\RefDataSupports.dll#Ingr RefDataSupports Entities 1.0 Type Library
+Reference=*\G{0EB628E0-671D-11D1-BE0C-080036B88703}#1.0#0#C:\Programme\SmartPlant\3D\Core\Middle\Bin\IMSSymbolEntities.dll#Ingr SmartPlant 3D Symbol Entities v 1.0 Library
+Reference=*\G{3259E28A-3587-11D5-8108-001000E5AA93}#1.0#0#C:\Programme\SmartPlant\3D\SmartPlantStructure\Middle\Bin\SPSSlabs.dll#Ingr SmartPlant3d - Slabs Entities 1.0 Type Library
+Reference=*\G{47F40B3C-9539-11D4-9D40-001000A5BAEB}#1.0#0#C:\Programme\SmartPlant\3D\CommonStruct\Middle\Bin\StructGeneric.dll#Ingr StructGeneric Entities 1.0 Type Library
+Reference=*\G{24304766-A880-4A8F-A244-F544634C1621}#1.0#0#C:\Programme\SmartPlant\3D\HangersAndSupports\Middle\Bin\SP3DSupportEntityUtil.dll#SP3D SupportEntityUtil 1.0 Type Library
+Reference=*\G{88260482-DA93-11D2-8E3D-00104B34EC79}#1.0#0#C:\Programme\SmartPlant\3D\Equipment\Middle\Bin\EquipmentHelpers.dll#Ingr SP3D EquipmentHelpers 1.0 Type Library
+Reference=*\G{A45ED81C-571F-4A6E-AA00-FEC8FF833D19}#1.0#0#C:\Programme\SmartPlant\3D\HangersAndSupports\Middle\Bin\HgrSupFilterServices.dll#Ingr SmartPlant 3D Supports Filter Services 1.0 Type Library
+Reference=*\G{11936A5C-3A67-4E48-8E47-12722B1F1719}#1.0#0#C:\Programme\SmartPlant\3D\HangersAndSupports\Middle\Bin\HgrPortServices.dll#Ingr SmartPlant 3D Supports Port Services 1.0 Type Library
+Reference=*\G{59EC7356-3273-11D5-8FEA-0050DA064951}#1.0#0#C:\Programme\SmartPlant\3D\CommonRoute\Middle\Bin\PmfgSpool.dll#Ingr SmartPlant 3D PipingMfg Spool Entities 1.0 Type Library
+Reference=*\G{76679548-E396-479F-A076-6F16A984697C}#1.0#0#C:\Programme\SmartPlant\3D\CommonStruct\Middle\Bin\StructPorts.dll#Ingr Common Structure Ports Entities 1.0 Type Library
+Class=ShowObject; ShowObject.cls
+Form=frmShowElement.frm
+Module=CoreTraderKeys; ..\XRoot\Container\Include\CoreTraderKeys.bas
+Module=modHelper; modHelper.bas
+Module=modLogAS; modLogAS.bas
+Class=clsObject; clsObject.cls
+Module=modSpecial; modSpecial.bas
+Class=clsShow; clsShow.cls
+Class=clsEmpty; clsEmpty.cls
+Form=frmMessages.frm
+Startup="(None)"
+HelpFile=""
+Title="ShowElement"
+ExeName32="ShowElement2009_1.dll"
+Command32=""
+Name="ShowElement"
+HelpContextID="0"
+Description="Show a selected SP3d Object"
+CompatibleMode="1"
+CompatibleEXE32="ShowElement-ref.dll"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionComments="In Sp3dTools menu, add: ShowElement.ShowObject"
+VersionCompanyName="Intergraph (Deutschland) GmbH"
+VersionProductName="Show Sp3d Element"
+CondComp="VERSION = 7"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+ThreadingModel=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[TaskList]
+Num=1
+
+[TASK1]
+Description=warum wird treeview auf falsche position gesetzt
+Status=0
+Priority=1
+
+[TASK2]
+Description=
+Status=
+Priority=
+AssignedTo=
+Comment=

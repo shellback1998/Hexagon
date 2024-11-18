@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Interference Position X (East)" Description="Interference Position X (East)">
+	<QUERIES>
+		<QUERY Name="Interference Position X (East)" Site="User" Description="Position of Interference" Path="Interference Position X (East).rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Interference Position X (East)" Site="User" Description="" Path="Interference Position X (East).rfm"/>
+</REPORT_TEMPLATE>

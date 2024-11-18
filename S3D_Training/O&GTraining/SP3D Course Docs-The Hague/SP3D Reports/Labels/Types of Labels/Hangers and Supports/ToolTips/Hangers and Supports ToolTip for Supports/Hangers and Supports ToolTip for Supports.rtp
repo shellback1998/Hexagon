@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<REPORT_TEMPLATE
+ Name="Hangers and Supports ToolTip for Supports"
+ Description="Tooltip for Supports">
+   <QUERIES>
+      <QUERY
+       Name="Support"
+       Site="User"
+       Path="Hangers and Supports ToolTip for Supports.rqe" />
+   </QUERIES>
+
+   <FORMATTING
+    Name="Support"
+    Site="User"
+    Path="Hangers and Supports ToolTip for Supports.rfm" />
+</REPORT_TEMPLATE>
+

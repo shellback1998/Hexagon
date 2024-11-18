@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Isometric Pipe Line Reference" Description="Example of MetaTemplate for Labeling"><QUERIES><QUERY Name="Piping Isometric Pipe Line Reference" Site="User" Path="Piping Isometric Pipe Line Reference.rqe"/></QUERIES><FORMATTING Name="Piping Isometric Pipe Line Reference" Site="User" Path="Piping Isometric Pipe Line Reference.rfm"/></REPORT_TEMPLATE>

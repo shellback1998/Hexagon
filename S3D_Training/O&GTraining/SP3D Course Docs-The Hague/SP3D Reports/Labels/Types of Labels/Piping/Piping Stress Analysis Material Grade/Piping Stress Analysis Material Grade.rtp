@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Stress Analysis Material Grade" Description="Material Grade Name per part, for export to stress analysis">
+	<QUERIES>
+		<QUERY Name="Piping Stress Analysis Material Grade" Site="User" Path="Piping Stress Analysis Material Grade.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="Piping Stress Analysis Material Grade" Site="User" Path="Piping Stress Analysis Material Grade.rfm"/>
+</REPORT_TEMPLATE>

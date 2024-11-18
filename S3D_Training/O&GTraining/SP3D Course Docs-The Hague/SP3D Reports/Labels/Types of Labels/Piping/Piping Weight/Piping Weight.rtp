@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Weight" Description="Dry weight"><QUERIES><QUERY Name="Piping Weight" Site="User" Path="Piping Weight.rqe"/></QUERIES><FORMATTING Name="Piping Weight" Site="User" Path="Piping Weight.rfm"/></REPORT_TEMPLATE>

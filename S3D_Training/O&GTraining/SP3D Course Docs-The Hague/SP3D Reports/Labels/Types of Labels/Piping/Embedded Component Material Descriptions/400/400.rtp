@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="400" Description="Comp Commodity Code"><QUERIES><QUERY Name="400" Site="User" Path="400.rqe"/></QUERIES><FORMATTING Name="400" Site="User" Path="400.rfm"/></REPORT_TEMPLATE>

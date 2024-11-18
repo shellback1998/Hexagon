@@ -1,0 +1,149 @@
+'==========================================================================================================
+    'Add your code here for the declaration of the Public Custom Methods used to manage new members
+    
+    'Add new member(NozzleN1) to the definition
+    Set oMemberDescription = Nothing
+    Set oMemberDescription = oMemberDescriptions.AddMember("NozzleN1", 1, "CMConstructNozzleN1", imsCOOKIE_ID_USS_LIB)
+    oMemberDescription.SetCMSetInputs imsCOOKIE_ID_USS_LIB, "CMSetInputsNozzleN1"
+    oMemberDescription.SetCMFinalConstruct imsCOOKIE_ID_USS_LIB, "CMFinalConstructNozzleN1"
+    oMemberDescription.SetCMConditional imsCOOKIE_ID_USS_LIB, "CMConditionalNozzleN1"
+    oMemberDescription.SetCMCount imsCOOKIE_ID_USS_LIB, "CMCountNozzleN1"
+    oMemberDescription.SetCMRelease imsCOOKIE_ID_USS_LIB, "CMReleaseNozzleN1"
+
+    'Add properties for (NozzleN1)
+    Set oPropertyDescriptions = Nothing
+    Set oPropertyDescriptions = oMemberDescription
+    oPropertyDescriptions.AddProperty "NozzleN1Properties", 1, IID_IJDATTRIBUTES, "CMEvaluateNozzleN1", imsCOOKIE_ID_USS_LIB
+    oPropertyDescriptions.AddProperty "NozzleN1GeometryProperties", 2, IID_IJDGEOMETRY, "CMEvaluateGeometryNozzleN1", imsCOOKIE_ID_USS_LIB
+
+'==========================================================================================================
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Implementation of IJEquipUserAttrMgmt
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Private Function IJEquipUserAttrMgmt_OnAttributeChange(ByVal pIJDAttrs As IJDAttributes, ByVal CollAllDisplayedValues As Object, ByVal pAttrToChange As IJEquipAttrDescriptor, ByVal varNewAttrValue As Variant) As String
+    Const METHOD = "IJEquipUserAttrMgmt_OnAttributeChange"
+    On Error GoTo ErrorHandler
+            
+' Add code here
+
+    Dim oMemberDescription As IJDMemberDescription
+    Set oMemberDescription = m_oEquipCADHelper.GetMemberDescriptionFromChild(pIJDAttrs)
+
+    Select Case oMemberDescription.Name
+        Case "NozzleN1"
+            Select Case UCase(pAttrToChange.InterfaceName)
+                Case "IJDELETABLEMEMBER"
+                    If UCase(pAttrToChange.AttrName) = "CANBEDELETED" Then
+                        m_oEquipCADHelper.MakeMemberDeletable oMemberDescription, pIJDAttrs, CBool(varNewAttrValue)
+                    End If
+                Case Else
+                    '
+            End Select
+        Case Else
+            '
+    End Select
+
+    IJEquipUserAttrMgmt_OnAttributeChange = ""
+    
+    Exit Function
+ErrorHandler:
+    IJEquipUserAttrMgmt_OnAttributeChange = "ERROR"
+    HandleError MODULE, METHOD
+End Function
+
+'=====================================================================================================================================================
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Custom Methods for NozzleN1
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Public Sub CMConstructNozzleN1(ByVal pMemberDescription As IJDMemberDescription, _
+                                  ByVal pResourceManager As IUnknown, _
+                                  ByRef pObject As Object)
+    Const METHOD = "CMConstructNozzleN1"
+    On Error GoTo ErrorHandler
+        
+    'Create Nozzle
+    m_oEquipCADHelper.CreateNozzleFromPH pMemberDescription, pResourceManager, pObject, 1
+    
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+
+'------------------
+Public Sub CMFinalConstructNozzleN1(ByVal pMemberDesc As IJDMemberDescription)
+    Const METHOD = "CMFinalConstructNozzleN1"
+    On Error GoTo ErrorHandler
+
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+'----------------------------------
+Public Sub CMSetInputsNozzleN1(ByVal pMemberDesc As IJDMemberDescription)
+    Const METHOD = "CMSetInputsNozzleN1"
+    On Error GoTo ErrorHandler
+
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+'-------------------------------------
+Public Sub CMEvaluateNozzleN1(ByVal oPropertyDescription As IJDPropertyDescription, pObject As Object)
+    Const METHOD = "CMEvaluateNozzleN1"
+    On Error GoTo ErrorHandler
+
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+'----------------------------------------
+Public Sub CMEvaluateGeometryNozzleN1(ByVal oPropertyDescription As IJDPropertyDescription, pObject As Object)
+    Const METHOD = "CMEvaluateGeometryNozzleN1"
+    On Error GoTo ErrorHandler
+    
+    'Transform the nozzle so that it behaves like a rigid body inside the equipment
+    m_oEquipCADHelper.TransformNozzleWrtPH oPropertyDescription, pObject, 1
+        
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+'-------------------------------------------
+Public Sub CMConditionalNozzleN1(ByVal pMemberDesc As IJDMemberDescription, ByRef IsNeeded As Boolean)
+    Const METHOD = "CMConditionalNozzleN1"
+    On Error GoTo ErrorHandler
+        
+
+    IsNeeded = m_oEquipCADHelper.CheckMemberConditional(pMemberDesc)
+    
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+'------------------------------------------
+Public Sub CMCountNozzleN1(ByVal pMemberDesc As IJDMemberDescription, ByRef Count As Long)
+    Const METHOD = "CMCountNozzleN1"
+    On Error GoTo ErrorHandler
+    
+
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+'----------------------------------------------
+Public Sub CMReleaseNozzleN1(ByVal pMemberDesc As IJDMemberDescription)
+    Const METHOD = "CMReleaseNozzleN1"
+    On Error GoTo ErrorHandler
+    
+
+    Exit Sub
+ErrorHandler:
+    HandleError MODULE, METHOD
+End Sub
+
+================================================================

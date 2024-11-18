@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Piping Pipe Insulation Thickness" Description="Get UOM Formatted Thickness of Pipe Insulation"><QUERIES><QUERY Name="Piping Pipe Insulation Thickness" Site="User" Path="Piping Pipe Insulation Thickness.rqe"/></QUERIES><FORMATTING Name="Piping Pipe Insulation Thickness" Site="User" Path="Piping Pipe Insulation Thickness.rfm"/></REPORT_TEMPLATE>

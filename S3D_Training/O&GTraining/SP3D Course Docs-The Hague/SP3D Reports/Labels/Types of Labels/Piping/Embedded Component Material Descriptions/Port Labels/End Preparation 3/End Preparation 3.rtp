@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="End Preparation 3" Description="End preparation of port 3">
+	<QUERIES>
+		<QUERY Name="End Preparation 3" Site="User" Description="Query to get the end preparation from Straight pipe, port 3" Path="End Preparation 3.rqe"/>
+	</QUERIES>
+	<FORMATTING Name="End Preparation 3" Site="User" Description="End preparation of port 3" Path="End Preparation 3.rfm"/>
+</REPORT_TEMPLATE>

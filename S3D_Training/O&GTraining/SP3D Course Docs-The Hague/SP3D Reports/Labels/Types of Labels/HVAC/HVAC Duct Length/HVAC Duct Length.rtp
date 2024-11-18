@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="HVAC Duct Length" Description="Length"><QUERIES><QUERY Name="HVAC Duct Length" Site="User" Path="HVAC Duct Length.rqe"/></QUERIES><FORMATTING Name="HVAC Duct Length" Site="User" Path="HVAC Duct Length.rfm"/></REPORT_TEMPLATE>

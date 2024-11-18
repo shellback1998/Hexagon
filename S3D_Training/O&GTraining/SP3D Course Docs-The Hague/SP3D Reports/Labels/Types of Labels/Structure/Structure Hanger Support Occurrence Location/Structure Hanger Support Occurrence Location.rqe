@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_QUERY
+ Name="Structure Hanger Support Occurrence Location"
+ Description=" "
+ TemplateVersion="07.00.44.16"
+ RequiresFilter="No">
+   <DESIGN_TIME
+    Progid="SP3DReportsQueryBuilder.COMQuery"
+    Action=""
+    Arg="" />
+
+   <RUN_TIME
+    Progid="SP3DRuntimeQuery.CQueryInterpreter"
+    Action=""
+    Arg="" />
+
+   <RETURNED_PROPERTIES>
+      <RETURNED_PROPERTY
+       Name="X"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJDCoordinateSystem"
+             DestinationProperty="o0"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJHgrSupport"
+                   RelationCollection="CoordinateSystem"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Y"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJDCoordinateSystem"
+             DestinationProperty="o1"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJHgrSupport"
+                   RelationCollection="CoordinateSystem"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+
+      <RETURNED_PROPERTY
+       Name="Z"
+       SQLType="Double">
+         <PATHS>
+            <PATH
+             SourceType="IJHgrSupport"
+             SourceBOC=""
+             DestinationInterface="IJDCoordinateSystem"
+             DestinationProperty="o2"
+             DestinationBOC=""
+             Concatenate="No"
+             PathSeparator="\">
+               <STROKES>
+                  <STROKE
+                   Interface="IJHgrSupport"
+                   RelationCollection="CoordinateSystem"
+                   Recursive="No"
+                   Filter="First"
+                   IsVirtualRelationship="No"
+                   ExitValue="1" />
+               </STROKES>
+            </PATH>
+         </PATHS>
+      </RETURNED_PROPERTY>
+   </RETURNED_PROPERTIES>
+</REPORT_QUERY>
+

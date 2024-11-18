@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Structure Slab Surface Area" Description="Surface area"><QUERIES><QUERY Name="Structure Slab Surface Area" Site="User" Path="Structure Slab Surface Area.rqe"/></QUERIES><FORMATTING Name="Structure Slab Surface Area" Site="User" Path="Structure Slab Surface Area.rfm"/></REPORT_TEMPLATE>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="IFCObject Name" Description="IFC Name for object">
+   <DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg="" />
+
+   <RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg="" />
+
+   <LAYOUT_TEMPLATE Type="Internal" />
+
+<!--
+Get the part A name from IJNamedItem and then navigate through 
+its Parent-Child relation until the first parent that support IJSystem.
+
+A general rule should be as follows:
+
+Part A | Parent System Name |Part B | Parent System Name
+Pipe  | Pipeline system1    |Elbow |  Pipeline system2
+Pump | Area01 system        |Pipe  | Eqp system
+-->
+   <RTF_LABEL>
+      <BLOCKS>
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value="{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 MS Shell Dlg;}}\viewkind4\uc1\pard\lang1033\f0\fs17" ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+		 <BLOCK Action="Visible">
+		 	<TOKENS>
+               <DATA Column="Name" ToParse="yes" Visible="yes" />
+            </TOKENS>
+         </BLOCK>			
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="MSTNELEMENT" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="FileName" ToParse="yes" Visible="yes" />
+
+               <TEXT Value=" " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="ELECTRICAL" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="Parent" ToParse="yes" Visible="yes" />
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="GrandParent" ToParse="yes" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="EQUIPMENT" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="Parent" ToParse="yes" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="Any" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="HANGER" StateOfValue="Raw" />
+               </DATA>
+
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="PIPING" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+              <DATA Column="PipeRun" ToParse="yes" Visible="yes" />
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="PipeLine" ToParse="yes" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="SPACE" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="Parent" ToParse="yes" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <RULE RuleOperator="All" RuleOperand="True" />
+
+            <TOKENS>
+               <DATA Visible="No" Column="ObjectType">
+                  <CONDITION ConditionOperator="Equal" ConditionOperand1="STRUCTURE" StateOfValue="Raw" />
+               </DATA>
+
+               <TEXT Value="-" ToParse="no" Visible="yes" />
+
+               <DATA Column="GreatGrandParent" ToParse="yes" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+
+         <BLOCK Action="Visible">
+            <TOKENS>
+               <TEXT Value=" \par } " ToParse="no" Visible="yes" />
+            </TOKENS>
+         </BLOCK>
+      </BLOCKS>
+   </RTF_LABEL>
+</REPORT_FORMATTING>
+

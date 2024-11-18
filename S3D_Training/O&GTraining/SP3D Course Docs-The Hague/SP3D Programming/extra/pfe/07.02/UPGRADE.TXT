@@ -1,0 +1,111 @@
+    ===================================================================== 
+        UPGRADING TO PFE32 0.07.002 FROM PFE32 0.06.002 OR EARLIER
+    =====================================================================
+
+IF YOU'VE BEEN USING VERSION 0.06.002 OR EARLIER OF THE 32-BIT EDITION OF PFE,
+    YOU SHOULD READ THIS FILE CAREFULLY BEFORE YOU BEGIN TO USE 0.07.002
+
+THIS FILE DOES NOT AFFECT YOU:
+    - IF YOU'VE NOT USED PFE BEFORE
+    - IF YOU ARE USING THE 16-BIT EDITION
+    - IF YOU'VE BEEN USING PFE32 0.07.001
+
+
+------------------------------------------------------------------------------
+
+=================================================
+USE OF THE WINDOWS REGISTRY IN THE 32-BIT EDITION
+=================================================
+
+The 32-Bit Edition now stores all configuration information in the registry,
+private to each logged-on user of the workstation. Some facilities available
+previously for using multiple ini files have been removed, but roughly
+equivalent feature have been added.
+
+Configuration data is now held in the registry under the key
+
+              HKEY_CURRENT_USER\Software\AP\PFE
+
+You can have multiple configuration sets, equivalent to multiple ini files, for
+each user. Each set has a name of up to 32 characters, containing alphanumerics,
+spaces, underscore, hyphens or dots; case is retained but is not significant.
+
+One configuration set is marked as the "default startup set", and PFE will use
+this by default unless you include the new command line option "/r" to specify
+a set. The default startup set will be called "DefaultConfiguration" unless you
+say otherwise, so that
+
+               pfe32
+
+starts PFE with "DefaultConfiguration" and
+
+               pfe32 /r "Edit Sources"
+
+starts it with "Edit Sources". Note the use of quotes around a configuration
+name that contains spaces.
+
+A new utility INI2REG converts old ini files into registry configuration sets
+for you; you'll need to run this before you start to convert your old ini file.
+The use of this utility is described below.
+
+The Options Preferences command now has a "Configuration Sets" panel to manage
+configurations. You can create empty sets, delete sets, and copy the contents
+of existing sets to new ones.
+
+The "/r" option also affects the DDE interface that PFE offers to other
+applications and to other instances of itself. Normally, the DDE service name
+that is created will be "PFE32"; but using "/r" causes this to change to be
+"PFE32" followed by the name of the registry configuration set.
+
+The effect of this is to enable you to run single instances of PFE and keep the
+use of configuration sets consistent between them. For example, you might have
+shortcuts that start PFE with configuration sets "Set A" and "Set B"; by
+default you will run only one instance using each set.
+
+You can, of course, use the "/m" option to force multiple instances to run as
+before
+
+The Options Preferences "Configuration Sets" panel also allows you to export
+data from a configuration set into a file, and to import from these files into
+existing configuration sets. This allows portability of configurations between
+users and between 32-Bit systems; the files are compatible across all hardware
+platforms. There is no provision to move configration data between 16-Bit and
+32-Bit systems.
+
+
+
+============================================
+CONVERTING PFE32.INI TO THE WINDOWS REGISTRY
+============================================
+
+Conversion of your standard PFE32.INI file (or any other PFE initialisation
+file that you have for the 32-Bit Edition) into the registry is a very simple
+operation.
+
+1. From Windows Explorer, start the utility program INI2REG.EXE that performs
+   the conversion for you. You must not have an instance of PFE version
+   0.07.002 running at this point or the utility will not start.
+
+2. You'll see an introductory panel with some descriptive text; click
+   on "Continue" once you've read this.
+
+3. Now you'll see the main conversion dialog that does the work. At the top
+   you'll see the name of the initialisation file to be converted; by default
+   this is the standard file that you've been using with your earlier release
+   of PFE. You can click on "Browse for file" to locate a different one if
+   you wish.
+
+4. Next, select the name of the registry configuration set that the
+   initialisation file is to be converted into. By default, the edit control
+   will show the name of the standard set "DefaultConfiguration", and you're
+   recommended to convert your main (or only) initialisation file into this
+   set.
+
+5. Finally, click on "Convert File" to copy the data into the Windows Registry
+
+You'll now be able to start version 0.07.002 of PFE, and your previous
+configuration will be there for you.
+
+Once you've performed the conversion, you need not retain your old
+initialisation files on your disk.
+

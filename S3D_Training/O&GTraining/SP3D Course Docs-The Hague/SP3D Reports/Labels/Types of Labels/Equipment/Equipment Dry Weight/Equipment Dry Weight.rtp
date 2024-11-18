@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_TEMPLATE Name="Equipment Dry Weight" Description="Dry weight"><QUERIES><QUERY Name="Equipment Dry Weight" Site="User" Path="Equipment Dry Weight.rqe"/></QUERIES><FORMATTING Name="Equipment Dry Weight" Site="User" Path="Equipment Dry Weight.rfm"/></REPORT_TEMPLATE>

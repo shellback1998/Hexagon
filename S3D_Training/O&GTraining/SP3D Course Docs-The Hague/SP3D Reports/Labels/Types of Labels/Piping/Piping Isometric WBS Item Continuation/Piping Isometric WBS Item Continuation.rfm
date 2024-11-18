@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT_FORMATTING Name="Piping Isometric WBS Item Continuation" Description="WBS Item Continuation Label for Isometrics">
+	<DESIGN_TIME Progid="SP3DLabelFormatDesigner.RTFLabel" Action="" Arg=""/>
+	<RUN_TIME Progid="SP3DLabelsFormat.FormatLabel" Action="RTFLabel" Arg=""/>
+	<LAYOUT_TEMPLATE Type="Internal"/>
+	<RTF_LABEL>
+		<POINTS/>
+		<VECTORS/>
+		<BLOCKS>
+			<BLOCK Action="Visible">
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="Purpose" Visible="No">
+						<!--Iso Drawing=195, Iso Drawing - Tracing=200, Iso Drawing - Stress=205,
+							Iso Drawing - System=210, Iso Drawing - Fabrication=215 /-->
+                  		<CONDITION ConditionOperator="Between" ConditionOperand1="195" ConditionOperand2="215" StateOfValue="Raw" />
+					</DATA>
+					<DATA Column="WBS Name" ToParse="NO" Visible="yes"/>
+				</TOKENS>
+			</BLOCK>
+			<BLOCK>
+				<RULE RuleOperator="Any" RuleOperand="True"/>
+				<TOKENS>
+					<DATA Column="Purpose" Visible="No">
+						<CONDITION ConditionOperator="NotBetween" ConditionOperand1="195" ConditionOperand2="215" StateOfValue="Raw"/>
+					</DATA>
+					<DATA Column="Pipeline Name" ToParse="NO" Visible="yes"/>
+				</TOKENS>
+			</BLOCK>
+		</BLOCKS>
+	</RTF_LABEL>
+</REPORT_FORMATTING>

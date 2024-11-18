@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTING_PARAMETERS Name="425" Description="Example of Parameters on the range">
+	<DESIGN_TIME Progid="" Action="" Arg=""/>
+	<RUN_TIME Progid="" Action="" Arg=""/>
+	<UOMS>
+		<UOM Name="FacetoFaceUnits" Type="DISTANCE" Primary="mm" Secondary="" Tertiary="" UnitsDisplayed="yes" PrecisionType="Decimal" DecimalPrecision="0" FractionalPrecision="" LeadingZero="yes" TrailingZeros="yes" ReduceFraction=""/>
+	</UOMS>
+	<MATRIXES>
+	</MATRIXES>
+</FORMATTING_PARAMETERS>
