@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<REPORT_TEMPLATE Name="WBS Iso Grouping Query - Stress" Description="Label to name WBS Stress groups"><QUERIES><QUERY Name="WBS Iso Grouping Query - Stress" Site="User" Path="WBS Iso Grouping Query - Stress.rqe"/></QUERIES><FORMATTING Name="WBS Iso Grouping Query - Stress" Site="User" Path="WBS Iso Grouping Query - Stress.rfm"/></REPORT_TEMPLATE>
